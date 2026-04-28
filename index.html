@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Proof Bartending | Luxury Mobile Bartending</title>
+  <meta name="description" content="Luxury mobile bartending for weddings, private events, and brand activations across LA, Long Beach, and OC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/fullproof-fp-seal.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --black: #050505;
+      --charcoal: #11100e;
+      --ivory: #eee3cf;
+      --muted: rgba(238, 227, 207, 0.72);
+      --soft: rgba(238, 227, 207, 0.54);
+      --gold: #c8a46a;
+      --copper: #b8793f;
+      --line: rgba(238, 227, 207, 0.16);
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ivory);
+      background: var(--black);
+      font-family: Inter, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 20;
+      border-bottom: 1px solid rgba(238, 227, 207, 0.14);
+      background: rgba(5, 5, 5, 0.76);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 40px));
+      min-height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      width: 232px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(238, 227, 207, 0.78);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border: 1px solid rgba(200, 164, 106, 0.72);
+      color: var(--ivory);
+      background: rgba(5, 5, 5, 0.38);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .button.solid {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .button:hover {
+      border-color: var(--ivory);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 66%;
+      opacity: 0.78;
+      filter: saturate(0.92) contrast(1.05);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 0.22) 54%, rgba(5, 5, 5, 0.68)),
+        linear-gradient(0deg, rgba(5, 5, 5, 0.82), transparent 52%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 150px 0 82px;
+    }
+
+    .hero-mark {
+      width: min(560px, 92vw);
+      margin-bottom: 32px;
+    }
+
+    .service-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 44px;
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: clamp(0.72rem, 1.6vw, 0.88rem);
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .service-area span:nth-child(2) {
+      color: var(--ivory);
+    }
+
+    .service-area i {
+      width: 28px;
+      height: 1px;
+      background: rgba(200, 164, 106, 0.62);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 800;
+      line-height: 0.98;
+    }
+
+    h1 {
+      max-width: 880px;
+      font-size: clamp(3.2rem, 8vw, 7.9rem);
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      margin: 28px 0 0;
+      color: rgba(238, 227, 207, 0.82);
+      font-size: clamp(1.05rem, 2vw, 1.26rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .section {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 92px 0;
+    }
+
+    .eyebrow {
+      margin: 0 0 30px;
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      max-width: 840px;
+      font-size: clamp(2.5rem, 5.8vw, 5.8rem);
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 0;
+      color: rgba(238, 227, 207, 0.82);
+      font-size: clamp(1.08rem, 2vw, 1.34rem);
+    }
+
+    .body-copy {
+      color: var(--muted);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .promise-grid,
+    .service-grid,
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .promise,
+    .service-card,
+    .included-card {
+      min-height: 246px;
+      padding: 32px;
+      background: rgba(17, 16, 14, 0.96);
+    }
+
+    .promise strong,
+    .service-card span,
+    .included-card span {
+      display: block;
+      margin-bottom: 44px;
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .promise h3,
+    .service-card h3,
+    .included-card h3 {
+      font-size: 1.55rem;
+    }
+
+    .promise p,
+    .service-card p,
+    .included-card p {
+      margin: 16px 0 0;
+      color: var(--soft);
+    }
+
+    .photo-band {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 620px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .photo-panel {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+    }
+
+    .photo-panel img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-panel:first-child img {
+      object-position: 50% 72%;
+    }
+
+    .photo-panel:last-child img {
+      object-position: 50% 50%;
+    }
+
+    .setup-showcase {
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: var(--charcoal);
+      overflow: hidden;
+    }
+
+    .setup-showcase img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .setup-showcase + .included-grid {
+      margin-top: 1px;
+    }
+
+    .ice-section {
+      background:
+        radial-gradient(circle at 20% 10%, rgba(200, 164, 106, 0.14), transparent 32%),
+        #080807;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .ice-wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 92px 0;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .ice-image {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--charcoal);
+    }
+
+    .ice-image img {
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 48%;
+    }
+
+    .press-note {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .press-note strong {
+      color: var(--ivory);
+    }
+
+    .ice-list {
+      display: grid;
+      gap: 1px;
+      margin-top: 32px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .ice-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 22px;
+      padding: 22px;
+      background: rgba(17, 16, 14, 0.88);
+    }
+
+    .ice-item strong {
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .ice-item span {
+      color: var(--muted);
+    }
+
+    .press-link {
+      display: inline-flex;
+      margin-top: 16px;
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(200, 164, 106, 0.55);
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-image {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--charcoal);
+    }
+
+    .about-image img {
+      height: 100%;
+      object-fit: cover;
+      object-position: 52% 50%;
+    }
+
+    .steps {
+      display: grid;
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+      padding: 30px;
+      background: rgba(17, 16, 14, 0.96);
+    }
+
+    .step strong {
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .step h3 {
+      font-size: 1.5rem;
+    }
+
+    .step p {
+      margin: 10px 0 0;
+      color: var(--soft);
+    }
+
+    .contact {
+      width: min(860px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 104px 0;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(2.8rem, 7vw, 6.4rem);
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 24px auto 0;
+      color: var(--muted);
+    }
+
+    .contact .hero-actions {
+      justify-content: center;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      background: #030303;
+    }
+
+    .footer-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 38px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+      color: rgba(238, 227, 207, 0.56);
+      font-size: 0.88rem;
+    }
+
+    .footer-seal {
+      width: 70px;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links a:not(.button) {
+        display: none;
+      }
+
+      .intro,
+      .ice-wrap,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .promise-grid,
+      .service-grid,
+      .included-grid,
+      .photo-band {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav-logo {
+        width: 176px;
+      }
+
+      .button {
+        min-height: 42px;
+        padding: 0 13px;
+        font-size: 0.66rem;
+      }
+
+      .hero-inner,
+      .section,
+      .ice-wrap {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .hero-inner {
+        padding: 130px 0 62px;
+      }
+
+      .section,
+      .ice-wrap {
+        padding: 70px 0;
+      }
+
+      .service-area {
+        gap: 10px;
+        letter-spacing: 0.12em;
+      }
+
+      .service-area i {
+        width: 14px;
+      }
+
+      .promise,
+      .service-card,
+      .included-card,
+      .step {
+        padding: 24px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .ice-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-logo" href="#top" aria-label="Full Proof Bartending home">
+        <img src="assets/fullproof-horizontal-lockup.svg" alt="Full Proof Bartending" />
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#setup">Setup</a>
+        <a href="#included">Included</a>
+        <a href="#ice">Ice</a>
+        <a href="#about">About</a>
+        <a class="button" href="#contact">Book</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Luxury mobile bartending">
+      <img class="hero-photo" src="assets/photos/hero-cocktail.jpg" alt="Cocktail with clear ice and citrus garnish" />
+      <div class="hero-inner">
+        <img class="hero-mark" src="assets/fullproof-primary-wordmark.svg" alt="Full Proof Bartending" />
+        <div class="service-area" aria-label="Service area">
+          <span>LA</span><i></i><span>Long Beach</span><i></i><span>OC</span>
+        </div>
+        <h1>Luxury mobile bartending for private events.</h1>
+        <p class="hero-copy">Full Proof brings polished bar service, custom cocktails, a self-contained craft bar setup, and hand-carved clear ice to weddings, private parties, and brand events.</p>
+        <div class="hero-actions">
+          <a class="button solid" href="#contact">Request availability</a>
+          <a class="button" href="#services">Explore services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">What you are hiring</p>
+          <h2 class="section-title">A calm, capable bar team that makes hosting feel easier.</h2>
+        </div>
+        <div>
+          <p class="lead">The bar should feel like it belongs at your event: prepared, attractive, efficient, and easy for guests to enjoy.</p>
+          <p class="body-copy">Full Proof handles the details that shape the guest experience: service flow, cocktail direction, garnish presentation, batching needs, shopping guidance, professional bar setup, cleanup, and hand-carved clear cubes served at every event.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="promise-grid">
+        <article class="promise">
+          <strong>01</strong>
+          <h3>Professional Service</h3>
+          <p>Friendly, composed bartending that keeps lines moving and guests taken care of without turning the bar into a spectacle.</p>
+        </article>
+        <article class="promise">
+          <strong>02</strong>
+          <h3>Custom Drink Direction</h3>
+          <p>Signature cocktails, classics, batching, nonalcoholic options, and garnish choices tailored to the event.</p>
+        </article>
+        <article class="promise">
+          <strong>03</strong>
+          <h3>Premium Details</h3>
+          <p>A self-contained craft bar setup, premium compostable drinkware, intentional presentation, and hand-carved clear ice.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="photo-band" aria-label="Cocktail and clear ice photography">
+      <div class="photo-panel">
+        <img src="assets/photos/coupe-cocktail.jpg" alt="Served coupe cocktail with citrus garnish" />
+      </div>
+      <div class="photo-panel">
+        <img src="assets/photos/clear-ice-cube.jpg" alt="Large clear ice cube on a cutting board" />
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <p class="eyebrow">Services</p>
+      <h2 class="section-title">Built for events where the bar matters.</h2>
+      <div class="service-grid" style="margin-top: 42px;">
+        <article class="service-card">
+          <span>Weddings</span>
+          <h3>Cocktail hour to last call</h3>
+          <p>Bar planning, signature drinks, guest flow, and polished service for one of the most visible parts of the night.</p>
+        </article>
+        <article class="service-card">
+          <span>Private Events</span>
+          <h3>Hosting without the scramble</h3>
+          <p>Birthdays, dinners, house parties, holiday gatherings, and milestone celebrations with the bar handled.</p>
+        </article>
+        <article class="service-card">
+          <span>Brand Events</span>
+          <h3>Hospitality with intention</h3>
+          <p>Launches, client hosting, retail activations, and corporate moments where presentation and pacing matter.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="setup">
+      <p class="eyebrow">Professional bar setup</p>
+      <h2 class="section-title">A real craft bar brought to your event.</h2>
+      <div class="setup-showcase">
+        <img src="assets/photos/professional-bar-setup.png" alt="Professional self-contained mobile bar setup with tools, rinser, garnish station, ice well, and Tossware drinkware" />
+      </div>
+      <div class="included-grid">
+        <article class="included-card">
+          <span>Self-contained</span>
+          <h3>Power and running water</h3>
+          <p>The bar arrives event-ready with the utilities needed to work cleanly, efficiently, and professionally.</p>
+        </article>
+        <article class="included-card">
+          <span>Equipment</span>
+          <h3>Built for proper service</h3>
+          <p>Rinser, LED lighting, organized tools, and the ability to operate an ice press on-site for specialty service.</p>
+        </article>
+        <article class="included-card">
+          <span>Presentation</span>
+          <h3>No folding-table energy</h3>
+          <p>Every package includes Tossware premium compostable drinkware, so the guest experience feels polished from setup to last call.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="included">
+      <p class="eyebrow">What is included</p>
+      <h2 class="section-title">A complete bar plan, not just someone pouring drinks.</h2>
+      <div class="included-grid" style="margin-top: 42px;">
+        <article class="included-card">
+          <span>Before</span>
+          <h3>Planning</h3>
+          <p>Guest count, timeline, drink style, shopping list, batching plan, bar layout, clear-ice plan, drinkware, and service needs.</p>
+        </article>
+        <article class="included-card">
+          <span>During</span>
+          <h3>Service</h3>
+          <p>Craft bar setup, bartending, garnish presentation, clear cube service, guest interaction, station maintenance, and flow management.</p>
+        </article>
+        <article class="included-card">
+          <span>After</span>
+          <h3>Closeout</h3>
+          <p>Bar breakdown, cleanup of the service area, and a smooth end to the night without extra host stress.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ice-section" id="ice">
+      <div class="ice-wrap">
+        <div class="ice-image">
+          <img src="assets/photos/clear-ice-column.jpg" alt="Large clear ice block showing clarity and texture" />
+        </div>
+        <div id="expertise">
+          <p class="eyebrow">The clear-ice advantage</p>
+          <h2 class="section-title">Signature clear ice is included because details change the drink.</h2>
+          <p class="lead">Full Proof is a mobile bartending service first: polished hosting, thoughtful cocktails, smooth service, and a bar that looks composed from the first pour to the final cleanup.</p>
+          <p class="body-copy">Clear ice is the differentiator. Before Full Proof, founder Joe Willeford started a clear-ice program from zero: no prior ice experience, no inherited playbook, just a need he saw before most bartenders were paying attention. He learned to operate a Clinebell ice maker, slab 300-pound blocks with a chainsaw, rebuild a Biro meat saw for ice cutting, and market the finished product to bars and restaurants across Los Angeles County. That operation later became Cold Standard Ice and continues today as Clear Standard Ice.</p>
+          <div class="ice-list" aria-label="Clear ice options">
+            <div class="ice-item">
+              <strong>Proof</strong>
+              <span>Ten early bar and restaurant clients earned through a self-built program that later became Cold Standard Ice.</span>
+            </div>
+            <div class="ice-item">
+              <strong>Included</strong>
+              <span>Hand-carved clear cubes for cocktails served at every Full Proof event.</span>
+            </div>
+            <div class="ice-item">
+              <strong>Add-ons</strong>
+              <span>Pressed spheres, Collins spears, specialty cuts, extra clear-ice volume, and elevated presentation.</span>
+            </div>
+          </div>
+          <div class="press-note">
+            <p><strong>Distiller Magazine</strong> cited Joe Willeford of Clear Ice LA in “How to Start a Big Clear Ice Program.” Credit also belongs to the people who helped shape the craft, including Camper English and Jimmy Yeager, and to earlier clear-ice pioneers such as Penny Pound Ice in Los Angeles and Hundred Weight Ice in New York City.</p>
+            <a class="press-link" href="https://distilling.com/distillermagazine/big-clear-ice/" target="_blank" rel="noopener">Read the article</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="about">
+        <div class="about-image">
+          <img src="assets/photos/founder-bar.jpg" alt="Full Proof bartender behind an outdoor bar" />
+        </div>
+        <div>
+          <p class="eyebrow">Behind the bar</p>
+          <h2 class="section-title">Experienced, prepared, and easy to work with.</h2>
+          <p class="lead">The goal is simple: make the bar feel handled, so you can actually be present at your event.</p>
+          <p class="body-copy">Full Proof brings practical event sense, cocktail knowledge, clear communication, and a premium eye for details. Joe is proudly from Atlanta, Georgia, and carries the legacy of Southern hospitality into the way Full Proof serves: warm, attentive, prepared, and never overdone. The result is a bar experience that feels elevated without feeling stiff.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Booking flow</p>
+      <h2 class="section-title">How it works.</h2>
+      <div class="steps" style="margin-top: 42px;">
+        <article class="step">
+          <strong>Step 01</strong>
+          <div>
+            <h3>Send the basics</h3>
+            <p>Date, location, guest count, event type, and the kind of bar experience you want.</p>
+          </div>
+        </article>
+        <article class="step">
+          <strong>Step 02</strong>
+          <div>
+            <h3>Build the bar plan</h3>
+            <p>We align on service length, staffing, shopping needs, menu direction, bar setup, Tossware drinkware, included clear cubes, specialty ice add-ons, and logistics.</p>
+          </div>
+        </article>
+        <article class="step">
+          <strong>Step 03</strong>
+          <div>
+            <h3>Host with confidence</h3>
+            <p>Full Proof arrives prepared, sets the bar, serves the event, and closes down cleanly.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="eyebrow">Now booking</p>
+      <h2>Tell us about the event.</h2>
+      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings.</p>
+      <div class="hero-actions">
+        <a class="button solid" href="mailto:hello@fullproofbartending.com?subject=Full%20Proof%20Bartending%20Inquiry">Request availability</a>
+        <a class="button" href="#services">Review services</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <img class="footer-seal" src="assets/fullproof-fp-seal.svg" alt="FP seal" />
+      <span>Full Proof Bartending</span>
+      <span>LA | Long Beach | OC</span>
+    </div>
+  </footer>
+</body>
+</html>

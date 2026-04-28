@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 90" role="img" aria-labelledby="title desc">
+  <title id="title">Full Proof service area line</title>
+  <desc id="desc">Service area lockup reading LA, Long Beach, OC.</desc>
+  <rect width="740" height="90" fill="none"/>
+  <text x="370" y="54"
+    text-anchor="middle"
+    fill="#EEE3CF"
+    font-family="Montserrat, Inter, Helvetica, Arial, sans-serif"
+    font-size="24"
+    font-weight="500"
+    letter-spacing="7">
+    LA <tspan fill="#C8A46A">| LONG BEACH |</tspan> OC
+  </text>
+</svg>

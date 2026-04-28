@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 250" role="img" aria-labelledby="title desc">
+  <title id="title">Full Proof brand color palette</title>
+  <desc id="desc">Brand palette with black, charcoal, ivory, champagne gold, and copper.</desc>
+  <rect width="1100" height="250" fill="#050505"/>
+  <g font-family="Montserrat, Inter, Helvetica, Arial, sans-serif" font-size="22" letter-spacing="2">
+    <rect x="50" y="50" width="160" height="120" fill="#050505" stroke="#2A2622"/>
+    <text x="50" y="210" fill="#EEE3CF">#050505</text>
+    <rect x="250" y="50" width="160" height="120" fill="#11100E" stroke="#2A2622"/>
+    <text x="250" y="210" fill="#EEE3CF">#11100E</text>
+    <rect x="450" y="50" width="160" height="120" fill="#EEE3CF"/>
+    <text x="450" y="210" fill="#EEE3CF">#EEE3CF</text>
+    <rect x="650" y="50" width="160" height="120" fill="#C8A46A"/>
+    <text x="650" y="210" fill="#EEE3CF">#C8A46A</text>
+    <rect x="850" y="50" width="160" height="120" fill="#B8793F"/>
+    <text x="850" y="210" fill="#EEE3CF">#B8793F</text>
+  </g>
+</svg>

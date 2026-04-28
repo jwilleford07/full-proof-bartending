@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 260" role="img" aria-labelledby="title desc">
+  <title id="title">Full Proof Bartending horizontal lockup</title>
+  <desc id="desc">Horizontal lockup with the FP seal and Full Proof Bartending wordmark.</desc>
+  <rect width="1420" height="260" fill="none"/>
+  <g transform="translate(80 54)">
+    <circle cx="76" cy="76" r="66" fill="none" stroke="#C8A46A" stroke-width="4"/>
+    <circle cx="76" cy="76" r="55" fill="none" stroke="#EEE3CF" stroke-width="2"/>
+    <text x="76" y="91"
+      text-anchor="middle"
+      fill="#EEE3CF"
+      font-family="Playfair Display, Didot, Bodoni 72, Georgia, serif"
+      font-size="66"
+      font-weight="800"
+      letter-spacing="-5">
+      FP
+    </text>
+  </g>
+  <path d="M270 52 V208" stroke="#C8A46A" stroke-width="2"/>
+  <text x="340" y="118"
+    fill="#EEE3CF"
+    font-family="Playfair Display, Didot, Bodoni 72, Georgia, serif"
+    font-size="88"
+    font-weight="800"
+    letter-spacing="3">
+    FULL PROOF
+  </text>
+  <text x="344" y="179"
+    fill="#C8A46A"
+    font-family="Montserrat, Inter, Helvetica, Arial, sans-serif"
+    font-size="24"
+    font-weight="500"
+    letter-spacing="21">
+    BARTENDING
+  </text>
+</svg>
