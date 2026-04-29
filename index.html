@@ -385,7 +385,28 @@
       object-fit: cover;
     }
 
-    .setup-showcase + .included-grid {
+    .setup-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--line);
+      border-top: 0;
+      background: var(--line);
+    }
+
+    .setup-detail {
+      min-height: 260px;
+      background: var(--charcoal);
+      overflow: hidden;
+    }
+
+    .setup-detail img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .setup-showcase + .setup-detail-grid,
+    .setup-detail-grid + .included-grid {
       margin-top: 1px;
     }
 
@@ -607,6 +628,7 @@
       .service-grid,
       .package-grid,
       .included-grid,
+      .setup-detail-grid,
       .gallery-grid,
       .photo-band {
         grid-template-columns: 1fr;
@@ -731,8 +753,8 @@
       <div class="proof-inner">
         <span>LA · Long Beach · OC</span>
         <span>Private events & weddings</span>
-        <span>Professional setup & cleanup</span>
-        <span>Clear ice included</span>
+        <span>Full bar, sink & rinser</span>
+        <span>Quoted in Distiller Magazine</span>
       </div>
     </section>
 
@@ -829,8 +851,20 @@
     <section class="section" id="setup">
       <p class="eyebrow">Professional bar setup</p>
       <h2 class="section-title">A real craft bar brought to your event.</h2>
+      <p class="lead" style="margin-top: 24px;">The setup is modular but composed: a full black bar, self-contained sink and rinser, organized tools, garnish station, Tossware drinkware, water service, and ice capability arranged for clean guest-facing service.</p>
       <div class="setup-showcase">
-        <img src="assets/photos/full-mobile-bar-sink-rinser.jpg" alt="Full Proof self-contained mobile bar setup with sink, rinser, bottles, tools, glassware, and garnish station" />
+        <img src="assets/photos/black-mobile-bar-full-setup.jpg" alt="Full Proof black mobile bar with side sink, rinser, garnish station, water service, tools, and drinkware" />
+      </div>
+      <div class="setup-detail-grid" aria-label="Full Proof bar setup details">
+        <div class="setup-detail">
+          <img src="assets/photos/mobile-bar-tools-rinser-detail.jpg" alt="Organized mobile bar tools, bottles, rinser, strainer, cutting board, and clear ice tins" />
+        </div>
+        <div class="setup-detail">
+          <img src="assets/photos/mobile-bar-garnish-detail.jpg" alt="Dehydrated fruit and garnish station with apple, dragon fruit, pear, citrus, and mint" />
+        </div>
+        <div class="setup-detail">
+          <img src="assets/photos/mobile-bar-water-detail.jpg" alt="Glass water dispenser set on the Full Proof mobile bar" />
+        </div>
       </div>
       <div class="included-grid">
         <article class="included-card">
@@ -904,23 +938,23 @@
           <p class="eyebrow">The clear-ice advantage</p>
           <h2 class="section-title">Signature clear ice is included because details change the drink.</h2>
           <p class="lead">Full Proof is a mobile bartending service first: polished hosting, thoughtful cocktails, smooth service, and a bar that looks composed from the first pour to the final cleanup.</p>
-          <p class="body-copy">Clear ice is the differentiator. Before Full Proof, founder Joe Willeford started a clear-ice program from zero: no prior ice experience, no inherited playbook, just a need he saw before most bartenders were paying attention. He learned to operate a Clinebell ice maker, slab 300-pound blocks with a chainsaw, rebuild a Biro meat saw for ice cutting, and market the finished product to bars and restaurants across Los Angeles County. That operation later became Cold Standard Ice and continues today as Clear Standard Ice.</p>
+          <p class="body-copy">Clear ice is the differentiator. Before Full Proof, founder Joe Willeford started a clear-ice program from zero: no prior ice experience, no inherited playbook, just a need he saw before most bartenders were paying attention. He consulted with Camper English before starting the business, learned to operate a Clinebell ice maker, slab 300-pound blocks with a chainsaw, rebuild a Biro meat saw for ice cutting, and market the finished product to bars and restaurants across Los Angeles County. That operation later became Cold Standard Ice and continues today as Clear Standard Ice.</p>
           <div class="ice-list" aria-label="Clear ice options">
             <div class="ice-item">
-              <strong>Proof</strong>
-              <span>Ten early bar and restaurant clients earned through a self-built program that later became Cold Standard Ice.</span>
+              <strong>Press</strong>
+              <span>Quoted by Camper English in Distiller Magazine’s “How to Start a Big Clear Ice Program” on Clinebell equipment and large-format clear ice production.</span>
+            </div>
+            <div class="ice-item">
+              <strong>Network</strong>
+              <span>The work connects Full Proof to the serious clear-ice world, including Camper English’s directional-freezing research and Jimmy Yeager’s professional ice production lineage.</span>
             </div>
             <div class="ice-item">
               <strong>Included</strong>
-              <span>Hand-carved clear cubes for cocktails served at every Full Proof event.</span>
-            </div>
-            <div class="ice-item">
-              <strong>Add-ons</strong>
-              <span>Pressed spheres, Collins spears, specialty cuts, extra clear-ice volume, and elevated presentation.</span>
+              <span>Hand-carved clear cubes for cocktails served at every Full Proof event, with pressed spheres, Collins spears, specialty cuts, and extra clear-ice volume available as add-ons.</span>
             </div>
           </div>
           <div class="press-note">
-            <p><strong>Distiller Magazine</strong> cited Joe Willeford of Clear Ice LA in “How to Start a Big Clear Ice Program.” Credit also belongs to the people who helped shape the craft, including Camper English and Jimmy Yeager, and to earlier clear-ice pioneers such as Penny Pound Ice in Los Angeles and Hundred Weight Ice in New York City.</p>
+            <p><strong>Featured clear-ice credibility:</strong> Distiller Magazine quoted Joe Willeford of Clear Ice LA in Camper English’s article “How to Start a Big Clear Ice Program.” The same article discusses Jimmy Yeager’s long-running professional ice work in Aspen. That matters because Full Proof is not just adding pretty cubes — the ice program was built from real production knowledge.</p>
             <a class="press-link" href="https://distilling.com/distillermagazine/big-clear-ice/" target="_blank" rel="noopener">Read the article</a>
           </div>
         </div>
