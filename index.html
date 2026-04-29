@@ -333,6 +333,31 @@
       margin-top: 1px;
     }
 
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 1px;
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .gallery-item {
+      min-height: 310px;
+      background: var(--charcoal);
+      overflow: hidden;
+    }
+
+    .gallery-item.large {
+      grid-row: span 2;
+      min-height: 621px;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+    }
+
     .ice-section {
       background:
         radial-gradient(circle at 20% 10%, rgba(200, 164, 106, 0.14), transparent 32%),
@@ -525,8 +550,14 @@
       .promise-grid,
       .service-grid,
       .included-grid,
+      .gallery-grid,
       .photo-band {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-item.large {
+        grid-row: auto;
+        min-height: 360px;
       }
     }
 
@@ -612,7 +643,7 @@
 
   <main id="top">
     <section class="hero" aria-label="Luxury mobile bartending">
-      <img class="hero-photo" src="assets/photos/hero-cocktail.jpg" alt="Cocktail with clear ice and citrus garnish" />
+      <img class="hero-photo" src="assets/photos/hero-rooftop-bartending.jpg" alt="Full Proof bartender serving guests at a rooftop event" />
       <div class="hero-inner">
         <img class="hero-mark" src="assets/fullproof-primary-wordmark.svg" alt="Full Proof Bartending" />
         <div class="service-area" aria-label="Service area">
@@ -662,10 +693,10 @@
 
     <section class="photo-band" aria-label="Cocktail and clear ice photography">
       <div class="photo-panel">
-        <img src="assets/photos/coupe-cocktail.jpg" alt="Served coupe cocktail with citrus garnish" />
+        <img src="assets/photos/bartender-service-action.jpg" alt="Full Proof bartender preparing cocktails at an outdoor private event" />
       </div>
       <div class="photo-panel">
-        <img src="assets/photos/clear-ice-cube.jpg" alt="Large clear ice cube on a cutting board" />
+        <img src="assets/photos/cocktail-clear-ice-closeup.jpg" alt="Finished cocktail with clear ice and citrus garnish" />
       </div>
     </section>
 
@@ -695,7 +726,7 @@
       <p class="eyebrow">Professional bar setup</p>
       <h2 class="section-title">A real craft bar brought to your event.</h2>
       <div class="setup-showcase">
-        <img src="assets/photos/professional-bar-setup.png" alt="Professional self-contained mobile bar setup with tools, rinser, garnish station, ice well, and Tossware drinkware" />
+        <img src="assets/photos/event-bar-setup-menu.jpg" alt="Outdoor Full Proof mobile bar setup with menu cards, tools, bottles, garnish station, and service equipment" />
       </div>
       <div class="included-grid">
         <article class="included-card">
@@ -738,10 +769,32 @@
       </div>
     </section>
 
+    <section class="section" aria-label="Full Proof event and cocktail gallery">
+      <p class="eyebrow">Event proof</p>
+      <h2 class="section-title">Real bar service, finished drinks, and clear ice details.</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="assets/photos/mobile-bar-setup-real.jpg" alt="Full Proof illuminated mobile bar with bottles and service station" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/photos/bartender-shaking-cocktail.jpg" alt="Bartender shaking a cocktail behind the mobile bar" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/photos/cocktail-bottles-bar.jpg" alt="Cocktail served with premium bottles and citrus garnish" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/photos/branded-clear-cube-cocktail.jpg" alt="Cocktail served over a branded clear ice cube" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/photos/espresso-martini.jpg" alt="Espresso martini served at a Full Proof event" />
+        </div>
+      </div>
+    </section>
+
     <section class="ice-section" id="ice">
       <div class="ice-wrap">
         <div class="ice-image">
-          <img src="assets/photos/clear-ice-column.jpg" alt="Large clear ice block showing clarity and texture" />
+          <img src="assets/photos/premium-spirits-clear-ice.jpg" alt="Premium spirits arranged with hand-cut clear ice blocks" />
         </div>
         <div id="expertise">
           <p class="eyebrow">The clear-ice advantage</p>
@@ -773,7 +826,7 @@
     <section class="section" id="about">
       <div class="about">
         <div class="about-image">
-          <img src="assets/photos/founder-bar.jpg" alt="Full Proof bartender behind an outdoor bar" />
+          <img src="assets/photos/founder-behind-bar.jpg" alt="Full Proof founder behind the bar at an outdoor event" />
         </div>
         <div>
           <p class="eyebrow">Behind the bar</p>
