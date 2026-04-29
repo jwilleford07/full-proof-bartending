@@ -206,6 +206,39 @@
       margin-top: 36px;
     }
 
+    .hero-note {
+      max-width: 650px;
+      margin: 18px 0 0;
+      color: rgba(238, 227, 207, 0.74);
+      font-size: 0.98rem;
+    }
+
+    .proof-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(17, 16, 14, 0.98);
+    }
+
+    .proof-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 18px 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      color: rgba(238, 227, 207, 0.82);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .proof-inner span {
+      padding: 0 18px;
+      border-left: 1px solid var(--line);
+    }
+
     .section {
       width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
@@ -247,6 +280,7 @@
 
     .promise-grid,
     .service-grid,
+    .package-grid,
     .included-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -257,6 +291,7 @@
 
     .promise,
     .service-card,
+    .package-card,
     .included-card {
       min-height: 246px;
       padding: 32px;
@@ -265,6 +300,7 @@
 
     .promise strong,
     .service-card span,
+    .package-card span,
     .included-card span {
       display: block;
       margin-bottom: 44px;
@@ -278,12 +314,31 @@
 
     .promise h3,
     .service-card h3,
+    .package-card h3,
     .included-card h3 {
       font-size: 1.55rem;
     }
 
+    .package-price {
+      display: block;
+      margin-top: 18px;
+      color: var(--ivory);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .package-note {
+      max-width: 760px;
+      margin: 28px 0 0;
+      color: var(--muted);
+    }
+
     .promise p,
     .service-card p,
+    .package-card p,
     .included-card p {
       margin: 16px 0 0;
       color: var(--soft);
@@ -549,10 +604,21 @@
 
       .promise-grid,
       .service-grid,
+      .package-grid,
       .included-grid,
       .gallery-grid,
       .photo-band {
         grid-template-columns: 1fr;
+      }
+
+      .proof-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 0;
+      }
+
+      .proof-inner span {
+        border-left: 0;
+        padding: 0;
       }
 
       .gallery-item.large {
@@ -632,6 +698,7 @@
       </a>
       <div class="nav-links">
         <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
         <a href="#setup">Setup</a>
         <a href="#included">Included</a>
         <a href="#ice">Ice</a>
@@ -652,9 +719,19 @@
         <h1>Luxury mobile bartending for private events.</h1>
         <p class="hero-copy">Full Proof brings polished bar service, custom cocktails, a self-contained craft bar setup, and hand-carved clear ice to weddings, private parties, and brand events.</p>
         <div class="hero-actions">
-          <a class="button solid" href="#contact">Request availability</a>
-          <a class="button" href="#services">Explore services</a>
+          <a class="button solid" href="#contact">Check availability & get a quote</a>
+          <a class="button" href="#packages">View packages</a>
         </div>
+        <p class="hero-note">Tell us your date, location, guest count, and event type. We’ll confirm availability and recommend the right bar setup.</p>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Full Proof service proof points">
+      <div class="proof-inner">
+        <span>LA · Long Beach · OC</span>
+        <span>Private events & weddings</span>
+        <span>Professional setup & cleanup</span>
+        <span>Clear ice included</span>
       </div>
     </section>
 
@@ -722,6 +799,32 @@
       </div>
     </section>
 
+    <section class="section" id="packages">
+      <p class="eyebrow">Initial service packages</p>
+      <h2 class="section-title">Simple starting points for a better event bar.</h2>
+      <div class="package-grid" style="margin-top: 42px;">
+        <article class="package-card">
+          <span>Essentials</span>
+          <h3>Polished bar service for smaller gatherings</h3>
+          <strong class="package-price">Starting at $950</strong>
+          <p>Best for intimate private events. Includes one bartender, service planning, professional bar tools, Tossware drinkware, setup, cleanup, and hand-carved clear cubes.</p>
+        </article>
+        <article class="package-card">
+          <span>Signature</span>
+          <h3>Custom cocktails with the Full Proof setup</h3>
+          <strong class="package-price">Starting at $1,450</strong>
+          <p>Best for birthdays, dinners, showers, and cocktail-forward parties. Adds signature drink direction, garnish planning, batching guidance, and the self-contained craft bar setup.</p>
+        </article>
+        <article class="package-card">
+          <span>Full Proof</span>
+          <h3>Premium service for weddings and brand events</h3>
+          <strong class="package-price">Starting at $1,950</strong>
+          <p>Best for larger or higher-touch events. Includes expanded planning, elevated clear-ice presentation, staffing recommendations, menu polish, and a full event bar plan.</p>
+        </article>
+      </div>
+      <p class="package-note">Final quotes depend on guest count, service length, staffing, location, menu complexity, and specialty ice. Alcohol is typically client-provided; Full Proof helps plan the shopping list and bar quantities.</p>
+    </section>
+
     <section class="section" id="setup">
       <p class="eyebrow">Professional bar setup</p>
       <h2 class="section-title">A real craft bar brought to your event.</h2>
@@ -749,22 +852,22 @@
 
     <section class="section" id="included">
       <p class="eyebrow">What is included</p>
-      <h2 class="section-title">A complete bar plan, not just someone pouring drinks.</h2>
+      <h2 class="section-title">Clear enough to book, flexible enough for your event.</h2>
       <div class="included-grid" style="margin-top: 42px;">
         <article class="included-card">
-          <span>Before</span>
-          <h3>Planning</h3>
-          <p>Guest count, timeline, drink style, shopping list, batching plan, bar layout, clear-ice plan, drinkware, and service needs.</p>
+          <span>Full Proof provides</span>
+          <h3>Bar service and setup</h3>
+          <p>Professional bartender, bar tools, self-contained craft bar setup, Tossware premium compostable drinkware, clear cubes, setup, service, and cleanup.</p>
         </article>
         <article class="included-card">
-          <span>During</span>
-          <h3>Service</h3>
-          <p>Craft bar setup, bartending, garnish presentation, clear cube service, guest interaction, station maintenance, and flow management.</p>
+          <span>You provide</span>
+          <h3>Alcohol and event basics</h3>
+          <p>Hosts typically provide alcohol and venue access. Full Proof helps with quantities, shopping guidance, timeline, menu direction, and service logistics.</p>
         </article>
         <article class="included-card">
-          <span>After</span>
-          <h3>Closeout</h3>
-          <p>Bar breakdown, cleanup of the service area, and a smooth end to the night without extra host stress.</p>
+          <span>Add-ons</span>
+          <h3>Upgrade the bar</h3>
+          <p>Pressed spheres, Collins spears, specialty clear-ice cuts, extra clear-ice volume, additional bartenders, batched cocktails, and custom menu signage.</p>
         </article>
       </div>
     </section>
@@ -845,7 +948,7 @@
           <strong>Step 01</strong>
           <div>
             <h3>Send the basics</h3>
-            <p>Date, location, guest count, event type, and the kind of bar experience you want.</p>
+            <p>Date, location, guest count, event type, and the kind of bar experience you want. We’ll reply with availability, package direction, and next steps.</p>
           </div>
         </article>
         <article class="step">
@@ -868,10 +971,10 @@
     <section class="contact" id="contact">
       <p class="eyebrow">Now booking</p>
       <h2>Tell us about the event.</h2>
-      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings.</p>
+      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Send your date, location, guest count, and event type to get availability and a recommended starting package.</p>
       <div class="hero-actions">
-        <a class="button solid" href="mailto:hello@fullproofbartending.com?subject=Full%20Proof%20Bartending%20Inquiry">Request availability</a>
-        <a class="button" href="#services">Review services</a>
+        <a class="button solid" href="mailto:hello@fullproofbartending.com?subject=Full%20Proof%20Bartending%20Inquiry&body=Event%20date%3A%0ALocation%3A%0AGuest%20count%3A%0AEvent%20type%3A%0AInterested%20package%3A%0A">Check availability & get a quote</a>
+        <a class="button" href="#packages">Review packages</a>
       </div>
     </section>
   </main>
