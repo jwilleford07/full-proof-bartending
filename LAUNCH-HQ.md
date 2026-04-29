@@ -1,5 +1,11 @@
 # Full Proof Bartending Launch HQ
 
+## Agent System
+
+The working launch agent system lives in `agent-system/`.
+
+Start with `agent-system/hermes-system-prompt.md` for the main Hermes prompt, then use `agent-system/telegram-command-menu.md` for Telegram shortcuts and `agent-system/launch-backlog.md` as the active working board.
+
 ## Core Positioning
 
 Full Proof Bartending is a luxury mobile bartending service for private events across LA, Long Beach, and OC. The brand should sell confidence: a complete, polished bar experience that looks premium, runs cleanly, and lets hosts feel fully handled.
@@ -58,4 +64,3 @@ Owns outreach to planners, venues, caterers, private chefs, event rental compani
 ### Content and Social Proof
 
 Turns events, setup details, ice craft, and founder story into simple content that supports booking.
-
