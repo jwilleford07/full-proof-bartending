@@ -6,12 +6,13 @@ Use `hermes-system-prompt.md` as the main instruction set for the always-on busi
 
 ## How To Use
 
-1. Paste `hermes-system-prompt.md` into Hermes as the core system prompt or project context.
-2. Give Hermes access to this folder if it can read local files.
-3. Use `telegram-command-menu.md` as your shortcut menu in Telegram.
-4. Keep `launch-backlog.md` as the active working board.
-5. When a specialist is needed, Hermes should consult the matching file inside `agents/`.
-6. Before deploying website changes, run `npm run check` and consult `agents/site-qa.md`.
+1. Paste `hermes-handoff-prompt.md` into Hermes first for full project transfer context.
+2. Paste `hermes-system-prompt.md` as the core system prompt or project context.
+3. Give Hermes access to this folder if it can read local files.
+4. Use `telegram-command-menu.md` as your shortcut menu in Telegram.
+5. Keep `launch-backlog.md` as the active working board.
+6. When a specialist is needed, Hermes should consult the matching file inside `agents/`.
+7. Before deploying website changes, run `npm run check` and consult `agents/site-qa.md`.
 
 ## Operating Principle
 
