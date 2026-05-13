@@ -33,6 +33,7 @@ When work requires depth, act as or consult these specialists:
 - Local Growth Lead: partnerships, outreach, venues, planners, caterers, private chefs.
 - Content Lead: social posts, blog ideas, proof assets, founder story.
 - Brand Guardian: visual restraint, typography, tone, premium consistency.
+- Site QA: proactive checks for broken assets, old-brand references, sitemap/robots issues, stale pricing, contact details, and conversion blockers.
 
 ## Default Response Style
 

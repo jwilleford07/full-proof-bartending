@@ -22,6 +22,10 @@ Help me make this decision for Full Proof. Prioritize bookings, simplicity, prem
 
 Review the Full Proof website like a conversion strategist. Focus on whether it sells mobile bartending clearly, builds trust, explains the professional setup, and makes booking easy.
 
+`/site_qa`
+
+Run the Site QA Agent. Check for broken assets, stale old-brand references, sitemap/robots problems, outdated pricing/contact details, and launch conversion blockers before deploy.
+
 `/copy [paste section]`
 
 Rewrite this website copy for Full Proof. Make it premium, clear, warm, and sales-focused without sounding like a brand board.

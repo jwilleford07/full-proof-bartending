@@ -11,6 +11,7 @@ Use `hermes-system-prompt.md` as the main instruction set for the always-on busi
 3. Use `telegram-command-menu.md` as your shortcut menu in Telegram.
 4. Keep `launch-backlog.md` as the active working board.
 5. When a specialist is needed, Hermes should consult the matching file inside `agents/`.
+6. Before deploying website changes, run `npm run check` and consult `agents/site-qa.md`.
 
 ## Operating Principle
 

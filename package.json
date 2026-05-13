@@ -1,0 +1,13 @@
+{
+  "name": "full-proof-bartending",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static launch site for Full Proof Bartending.",
+  "scripts": {
+    "check": "node scripts/check-site.mjs",
+    "validate": "npm run check"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
