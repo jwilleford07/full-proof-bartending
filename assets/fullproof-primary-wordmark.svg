@@ -13,11 +13,14 @@
   </text>
   <text x="600" y="226"
     text-anchor="middle"
-    fill="#C8A46A"
+    fill="#D3AE68"
+    stroke="#050505"
+    stroke-width="1.15"
+    paint-order="stroke fill"
     font-family="Montserrat, Inter, Helvetica, Arial, sans-serif"
-    font-size="30"
-    font-weight="500"
-    letter-spacing="24">
+    font-size="31"
+    font-weight="700"
+    letter-spacing="22">
     BARTENDING
   </text>
 </svg>
