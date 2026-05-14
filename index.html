@@ -290,10 +290,19 @@
       background: var(--line);
     }
 
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
     .promise,
     .service-card,
     .package-card,
-    .included-card {
+    .included-card,
+    .faq-item {
       min-height: 246px;
       padding: 32px;
       background: rgba(17, 16, 14, 0.96);
@@ -316,7 +325,8 @@
     .promise h3,
     .service-card h3,
     .package-card h3,
-    .included-card h3 {
+    .included-card h3,
+    .faq-item h3 {
       font-size: 1.55rem;
     }
 
@@ -340,7 +350,8 @@
     .promise p,
     .service-card p,
     .package-card p,
-    .included-card p {
+    .included-card p,
+    .faq-item p {
       margin: 16px 0 0;
       color: var(--soft);
     }
@@ -360,9 +371,16 @@
       overflow: hidden;
     }
 
-    .photo-panel img {
+    .photo-panel img,
+    .setup-showcase img,
+    .setup-detail img,
+    .gallery-item img,
+    .ice-image img,
+    .about-image img {
       height: 100%;
       object-fit: cover;
+      filter: saturate(0.95) contrast(1.05); /* Unifies photos with a slightly cinematic/premium grade */
+      transition: filter 0.4s ease;
     }
 
     .photo-panel:first-child img {
@@ -380,11 +398,6 @@
       overflow: hidden;
     }
 
-    .setup-showcase img {
-      height: 100%;
-      object-fit: cover;
-    }
-
     .setup-detail-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -398,11 +411,6 @@
       min-height: 260px;
       background: var(--charcoal);
       overflow: hidden;
-    }
-
-    .setup-detail img {
-      height: 100%;
-      object-fit: cover;
     }
 
     .setup-showcase + .setup-detail-grid,
@@ -426,16 +434,6 @@
     }
 
     .gallery-item.large {
-      grid-row: span 2;
-      min-height: 621px;
-    }
-
-    .gallery-item img {
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .ice-section {
       background:
         radial-gradient(circle at 20% 10%, rgba(200, 164, 106, 0.14), transparent 32%),
         #080807;
@@ -461,8 +459,6 @@
     }
 
     .ice-image img {
-      height: 100%;
-      object-fit: cover;
       object-position: 50% 48%;
     }
 
@@ -533,8 +529,6 @@
     }
 
     .about-image img {
-      height: 100%;
-      object-fit: cover;
       object-position: 52% 50%;
     }
 
@@ -613,6 +607,81 @@
       width: 70px;
     }
 
+    .inquiry-form {
+      max-width: 650px;
+      margin: 42px auto 0;
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-row .form-group {
+      margin-bottom: 0;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ivory);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(17, 16, 14, 0.96);
+      border: 1px solid var(--line);
+      color: var(--ivory);
+      font-family: Inter, Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+      border-radius: 0;
+      appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--soft);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewBox='0 0 24 24' stroke='%23c8a46a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+    .form-actions {
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .form-actions .button {
+      width: 100%;
+      cursor: pointer;
+    }
+
     @media (max-width: 920px) {
       .nav-links a:not(.button) {
         display: none;
@@ -630,7 +699,8 @@
       .included-grid,
       .setup-detail-grid,
       .gallery-grid,
-      .photo-band {
+      .photo-band,
+      .faq-grid {
         grid-template-columns: 1fr;
       }
 
@@ -651,6 +721,11 @@
     }
 
     @media (max-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
       .nav {
         width: min(100% - 28px, var(--max));
       }
@@ -692,7 +767,8 @@
       .promise,
       .service-card,
       .included-card,
-      .step {
+      .step,
+      .faq-item {
         padding: 24px;
       }
 
@@ -726,6 +802,7 @@
         <a href="#included">Included</a>
         <a href="#ice">Ice</a>
         <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
         <a class="button" href="#contact">Book</a>
       </div>
     </nav>
@@ -823,29 +900,29 @@
     </section>
 
     <section class="section" id="packages">
-      <p class="eyebrow">Launch pricing</p>
-      <h2 class="section-title">Approachable base service, premium bar details when you want them.</h2>
+      <p class="eyebrow">Packages</p>
+      <h2 class="section-title">Straightforward base service, premium bar details when you want them.</h2>
       <div class="package-grid" style="margin-top: 42px;">
         <article class="package-card">
           <span>Standard Service</span>
           <h3>One bartender for a clean, capable event bar</h3>
           <strong class="package-price">$599 / 3 hours<br>$699 / 4 hours</strong>
-          <p>Best for smaller private events. Includes one bartender, service planning, professional bar tools, setup, cleanup, basic bar guidance, and launch clear ice cubes.</p>
+          <p>Best for smaller private events. Includes one bartender, service planning, professional bar tools, Tossware premium compostable drinkware, setup, cleanup, basic bar guidance, and launch clear ice cubes.</p>
         </article>
         <article class="package-card">
           <span>Launch Clear Ice</span>
           <h3>Hand-carved clear cubes included</h3>
-          <strong class="package-price">Included for launch</strong>
-          <p>Clear ice cubes are included with standard service during launch. You get the Full Proof detail guests notice first, while specialty ice and cocktail moments stay available as add-ons.</p>
+          <strong class="package-price">Portfolio-window inclusion</strong>
+          <p>Our launch hospitality upgrade: hand-carved clear cubes bundled into standard service while we build our published portfolio. Pressed shapes, spears, branding, and extra ice volume stay available as add-ons.</p>
         </article>
         <article class="package-card">
           <span>Add-on Menu</span>
           <h3>Build the event into a premium bar experience</h3>
           <strong class="package-price">Quoted by event</strong>
-          <p>Signature cocktails, mobile bar setup, smoked cocktails, smoke bubbles, pressed ice shapes, dehydrated citrus, extra service time, additional bartender, batching, and custom menu cards can be added as needed.</p>
+          <p>Ice artistry (pressed shapes, spears, branding, extra volume), signature cocktails and batching, extended hours and extra bartenders, smoked presentations and smoke bubbles where permitted, garnish upgrades, custom menu cards, and full mobile craft bar deployment — scoped and quoted to fit the event.</p>
         </article>
       </div>
-      <p class="package-note">Base service keeps booking approachable. Alcohol is typically client-provided; Full Proof helps plan quantities and the shopping list. Final quotes depend on guest count, service length, staffing, location, menu complexity, and add-ons.</p>
+      <p class="package-note">Base rates stay easy to understand; customization layers land in the quote where they belong. Alcohol is typically client-provided; Full Proof supplies quantities and a shopping list once the menu is set. Every quote reflects guest count, active service hours, staffing, travel and load-in, menu ambition, bar footprint, and add-ons.</p>
     </section>
 
     <section class="section" id="setup">
@@ -857,7 +934,7 @@
       </div>
       <div class="setup-detail-grid" aria-label="Full Proof bar setup details">
         <div class="setup-detail">
-          <img src="assets/photos/bartender-side-mobile-bar-setup.jpg" alt="Bartender-side view of the Full Proof mobile bar with organized bottles, garnish tins, bar mats, and cocktail tools" />
+          <img src="assets/photos/full-mobile-bar-sink-rinser.jpg" alt="Bartender-side view of the Full Proof mobile bar with organized bottles, garnish tins, bar mats, and cocktail tools" />
         </div>
         <div class="setup-detail">
           <img src="assets/photos/mobile-bar-tools-rinser-detail.jpg" alt="Organized mobile bar tools, bottles, rinser, strainer, cutting board, and clear ice tins" />
@@ -886,6 +963,9 @@
           <p>Every package includes Tossware premium compostable drinkware, so the guest experience feels polished from setup to last call.</p>
         </article>
       </div>
+      <div class="hero-actions" style="margin-top: 42px;">
+        <a class="button solid" href="#contact">Check availability</a>
+      </div>
     </section>
 
     <section class="section" id="included">
@@ -895,7 +975,7 @@
         <article class="included-card">
           <span>Full Proof provides</span>
           <h3>Bar service and setup</h3>
-          <p>One bartender, service planning, professional bar tools, launch clear ice cubes, setup, service, and cleanup. Premium drinkware and the full mobile bar setup can be added when the event calls for it.</p>
+          <p>One bartender, service planning, professional bar tools, Tossware premium compostable drinkware, launch clear ice cubes, setup, service, and cleanup. The full self-contained mobile craft bar can be quoted when the footprint and guest flow call for it.</p>
         </article>
         <article class="included-card">
           <span>You provide</span>
@@ -915,7 +995,7 @@
       <h2 class="section-title">Real bar service, finished drinks, and clear ice details.</h2>
       <div class="gallery-grid">
         <div class="gallery-item large">
-          <img src="assets/photos/bartender-side-mobile-bar-setup.jpg" alt="Full Proof bartender-side mobile bar setup at an outdoor event with organized tools, bottles, cups, and rinser" />
+          <img src="assets/photos/event-bar-setup-menu.jpg" alt="Full Proof event bar setup with custom menu signage" />
         </div>
         <div class="gallery-item">
           <img src="assets/photos/bartender-shaking-cocktail.jpg" alt="Bartender shaking a cocktail behind the mobile bar" />
@@ -960,6 +1040,9 @@
             <p><strong>Featured clear-ice credibility:</strong> Distiller Magazine quoted Joe Willeford of Clear Ice LA in Camper English’s article “How to Start a Big Clear Ice Program.” The same article discusses Jimmy Yeager’s long-running professional ice work in Aspen. That matters because Full Proof is not just adding pretty cubes — the ice program was built from real production knowledge.</p>
             <a class="press-link" href="https://distilling.com/distillermagazine/big-clear-ice/" target="_blank" rel="noopener">Read the article</a>
           </div>
+          <div class="hero-actions" style="margin-top: 32px;">
+            <a class="button solid" href="#contact">Book your event</a>
+          </div>
         </div>
       </div>
     </section>
@@ -993,7 +1076,7 @@
           <strong>Step 02</strong>
           <div>
             <h3>Build the bar plan</h3>
-            <p>We align on service length, staffing, shopping needs, menu direction, bar setup, launch clear ice cubes, optional mobile bar setup, premium add-ons, and logistics.</p>
+            <p>We align on service length, staffing, shopping needs, menu direction, bar footprint (station vs. full mobile craft bar), launch clear ice cubes under our portfolio-window inclusion, premium add-ons, and logistics.</p>
           </div>
         </article>
         <article class="step">
@@ -1006,13 +1089,92 @@
       </div>
     </section>
 
+    <section class="section" id="faq">
+      <p class="eyebrow">Common Questions</p>
+      <h2 class="section-title">Details for hosts.</h2>
+      <div class="faq-grid" style="margin-top: 42px;">
+        <article class="faq-item">
+          <h3>Do you provide the alcohol?</h3>
+          <p>Full Proof operates as a dry-hire service, meaning the host provides the alcohol. This avoids retail markups and gives you full control over the selection. Once we lock in your menu, we provide a detailed shopping list with exact quantities so purchasing is straightforward.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What do you need from the venue?</h3>
+          <p>Our standard bar setup is flexible and can operate in most spaces. If your event scope includes our full mobile craft bar, we require access to standard power and running water to run the self-contained sink, rinser, and lighting.</p>
+        </article>
+        <article class="faq-item">
+          <h3>How much ice do you bring?</h3>
+          <p>Every Full Proof package includes hand-carved clear ice cubes for the cocktails we serve. If your event requires extra ice volume, specialty pressed shapes, or standard ice for chilling beer and wine, we can scope that into your custom quote.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What is the booking process?</h3>
+          <p>Start by sharing your event date, location, guest count, and the type of gathering. We’ll confirm availability and collaborate on a bar plan—including menu direction and staffing. On the day of the event, our team arrives fully prepared to set up, serve, and clean up.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <p class="eyebrow">Now booking</p>
       <h2>Tell us about the event.</h2>
-      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Send your date, location, guest count, and event type to get availability and a recommended base service and add-on plan.</p>
-      <div class="hero-actions">
-        <a class="button solid" href="mailto:joe@fullproofbartending.com?subject=Full%20Proof%20Bartending%20Inquiry&body=Event%20date%3A%0ALocation%3A%0AGuest%20count%3A%0AEvent%20type%3A%0AService%20hours%3A%0AAdd-ons%20interested%20in%3A%0A">Check availability & get a quote</a>
+      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Send your date, location, guest count, and event type for availability, a clear base-service anchor, and add-ons scoped to how you want the bar to feel.</p>
+      
+      <form class="inquiry-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden" style="display: none;">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Event Date</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="location">Location / Venue</label>
+            <input type="text" id="location" name="location" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guests">Guest Count</label>
+            <input type="number" id="guests" name="guests" required />
+          </div>
+          <div class="form-group">
+            <label for="type">Event Type</label>
+            <select id="type" name="type" required>
+              <option value="" disabled selected>Select event type</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Private Event">Private Event</option>
+              <option value="Brand Event">Brand Event</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="interest">Package / Service Interest</label>
+          <textarea id="interest" name="interest" rows="3" placeholder="Tell us what you're looking for (e.g., standard service, specialty ice, signature cocktails)..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="button solid">Check availability & get a quote</button>
+        </div>
+      </form>
+
+      <div class="hero-actions" style="justify-content: center; margin-top: 32px;">
         <a class="button" href="#packages">Review packages</a>
+        <a class="button" href="mailto:joe@fullproofbartending.com">Email us</a>
         <a class="button" href="tel:+15624448030">Call or text (562) 444-8030</a>
       </div>
     </section>
@@ -1022,6 +1184,7 @@
     <div class="footer-inner">
       <img class="footer-seal" src="assets/fullproof-fp-seal.svg" alt="FP seal" />
       <span>Full Proof Bartending</span>
+      <span><a href="planner.html" style="text-decoration: underline; color: var(--gold);">Event Bar Planner</a></span>
       <span>LA | Long Beach | OC</span>
     </div>
   </footer>
