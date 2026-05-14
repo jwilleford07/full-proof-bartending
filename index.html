@@ -371,9 +371,16 @@
       overflow: hidden;
     }
 
-    .photo-panel img {
+    .photo-panel img,
+    .setup-showcase img,
+    .setup-detail img,
+    .gallery-item img,
+    .ice-image img,
+    .about-image img {
       height: 100%;
       object-fit: cover;
+      filter: saturate(0.95) contrast(1.05); /* Unifies photos with a slightly cinematic/premium grade */
+      transition: filter 0.4s ease;
     }
 
     .photo-panel:first-child img {
@@ -391,11 +398,6 @@
       overflow: hidden;
     }
 
-    .setup-showcase img {
-      height: 100%;
-      object-fit: cover;
-    }
-
     .setup-detail-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -409,11 +411,6 @@
       min-height: 260px;
       background: var(--charcoal);
       overflow: hidden;
-    }
-
-    .setup-detail img {
-      height: 100%;
-      object-fit: cover;
     }
 
     .setup-showcase + .setup-detail-grid,
@@ -437,16 +434,6 @@
     }
 
     .gallery-item.large {
-      grid-row: span 2;
-      min-height: 621px;
-    }
-
-    .gallery-item img {
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .ice-section {
       background:
         radial-gradient(circle at 20% 10%, rgba(200, 164, 106, 0.14), transparent 32%),
         #080807;
@@ -472,8 +459,6 @@
     }
 
     .ice-image img {
-      height: 100%;
-      object-fit: cover;
       object-position: 50% 48%;
     }
 
@@ -544,8 +529,6 @@
     }
 
     .about-image img {
-      height: 100%;
-      object-fit: cover;
       object-position: 52% 50%;
     }
 
