@@ -1618,8 +1618,8 @@
         </div>
 
         <div class="form-actions">
-          <button type="submit" class="button solid">Submit reservation request</button>
-          <p class="form-note">For Launch Standard, Joe confirms availability before the secure deposit step. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
+          <button id="reservation-submit" type="submit" class="button solid">Submit reservation request</button>
+          <p class="form-note">For Launch Standard, submit the form and continue to the secure deposit step. If your event is unavailable, the date-hold deposit will be refunded. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
         </div>
       </form>
 
@@ -1645,9 +1645,43 @@
     </div>
   </footer>
   <script>
+    const reservationForm = document.querySelector("#event-inquiry");
+    const reservationSubmit = document.querySelector("#reservation-submit");
     const packageChoice = document.querySelector("#package-choice");
     const bookingIntent = document.querySelector("#booking-intent");
     const paymentTiming = document.querySelector("#payment-timing");
+    const directDepositPackages = [
+      "Launch Standard - 3 hours - 50% deposit request",
+      "Launch Standard - 4 hours - 50% deposit request",
+    ];
+
+    function formDataToPayload(form) {
+      const data = new FormData(form);
+      const payload = {};
+
+      for (const [key, value] of data.entries()) {
+        if (payload[key]) {
+          payload[key] = Array.isArray(payload[key]) ? [...payload[key], value] : [payload[key], value];
+        } else {
+          payload[key] = value;
+        }
+      }
+
+      return payload;
+    }
+
+    function shouldUseStripeCheckout() {
+      return directDepositPackages.includes(packageChoice?.value)
+        && bookingIntent?.value === "Ready to reserve with 50% deposit"
+        && paymentTiming?.value === "Send secure deposit step after availability is confirmed";
+    }
+
+    function updateSubmitLabel() {
+      if (!reservationSubmit) return;
+      reservationSubmit.textContent = shouldUseStripeCheckout()
+        ? "Continue to secure deposit"
+        : "Submit reservation request";
+    }
 
     document.querySelectorAll(".package-choice-link").forEach((link) => {
       link.addEventListener("click", () => {
@@ -1667,8 +1701,52 @@
         } else if (paymentTiming) {
           paymentTiming.value = "I want a quote before deposit";
         }
+
+        updateSubmitLabel();
       });
     });
+
+    [packageChoice, bookingIntent, paymentTiming].forEach((field) => {
+      field?.addEventListener("change", updateSubmitLabel);
+    });
+
+    reservationForm?.addEventListener("submit", async (event) => {
+      if (!shouldUseStripeCheckout()) return;
+
+      event.preventDefault();
+      reservationSubmit.disabled = true;
+      reservationSubmit.textContent = "Opening secure checkout...";
+
+      const formData = new FormData(reservationForm);
+      const encodedForm = new URLSearchParams(formData);
+
+      try {
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encodedForm.toString(),
+        });
+
+        const response = await fetch("/.netlify/functions/create-checkout-session", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formDataToPayload(reservationForm)),
+        });
+        const checkout = await response.json();
+
+        if (!response.ok || !checkout.url) {
+          throw new Error(checkout.error || "Stripe Checkout could not be opened.");
+        }
+
+        window.location.href = checkout.url;
+      } catch (error) {
+        reservationSubmit.disabled = false;
+        reservationSubmit.textContent = "Submit reservation request";
+        alert("The secure deposit step is not available yet. Your event details were still sent. Joe will follow up with the payment link.");
+      }
+    });
+
+    updateSubmitLabel();
   </script>
 </body>
 </html>
