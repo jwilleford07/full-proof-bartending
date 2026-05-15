@@ -5,7 +5,7 @@
 - Confirm Netlify is deploying the GitHub repo and serving the current homepage.
 - Review the live site for broken or blank images after each deploy.
 - Add a simple inquiry path: name, date, location, guest count, event type, package interest.
-- Create a one-page package sheet for calls and follow-ups.
+- ~~Create a one-page package sheet for calls and follow-ups.~~ → `agent-system/package-sheet.md`
 - Write a first version of the client quote response.
 
 ## Website

@@ -78,24 +78,30 @@ Brand assets:
 
 Photo assets currently referenced by `index.html`:
 
-- `assets/photos/hero-rooftop-bartending.jpg`
 - `assets/photos/bartender-service-action.jpg`
 - `assets/photos/cocktail-clear-ice-closeup.jpg`
 - `assets/photos/bartender-side-mobile-bar-setup.jpg`
-- `assets/photos/mobile-bar-tools-rinser-detail.jpg`
-- `assets/photos/mobile-bar-garnish-detail.jpg`
-- `assets/photos/mobile-bar-water-detail.jpg`
-- `assets/photos/bartender-shaking-cocktail.jpg`
+- `assets/photos/professional-bar-setup.png`
+- `assets/photos/clear-ice-column.jpg`
+- `assets/photos/clear-ice-cube.jpg`
+- `assets/photos/coupe-cocktail.jpg`
 - `assets/photos/cocktail-bottles-bar.jpg`
 - `assets/photos/branded-clear-cube-cocktail.jpg`
 - `assets/photos/espresso-martini.jpg`
 - `assets/photos/premium-spirits-clear-ice.jpg`
-- `assets/photos/founder-behind-bar.jpg`
 
-Old or risky image assets still present but should not be reintroduced without review:
+Old, risky, or deleted image assets that should not be reintroduced without Joe's approval:
 
 - `assets/photos/mobile-bar-setup-real.jpg` - old front-facing bar with “Two for the Road” branding.
 - `assets/photos/black-mobile-bar-full-setup.jpg` - parking-lot setup image.
+- `assets/photos/hero-rooftop-bartending.jpg` - AI-looking rooftop scene.
+- `assets/photos/full-mobile-bar-sink-rinser.jpg` - casual indoor/home setup.
+- `assets/photos/mobile-bar-tools-rinser-detail.jpg` - parking lot and car visible.
+- `assets/photos/event-bar-setup-menu.jpg` - backyard folding-table setup.
+- `assets/photos/mobile-bar-garnish-detail.jpg` - ambiguous garnish detail, weak standalone proof.
+- `assets/photos/mobile-bar-water-detail.jpg` - ambiguous water detail, weak standalone proof.
+- `assets/photos/bartender-shaking-cocktail.jpg` - casual indoor action shot.
+- `assets/photos/founder-behind-bar.jpg` - cluttered flash photo.
 
 Agent system:
 
