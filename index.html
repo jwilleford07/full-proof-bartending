@@ -372,6 +372,45 @@
       gap: 12px;
     }
 
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: var(--line);
+      text-align: left;
+    }
+
+    .path-card {
+      padding: 28px;
+      background: rgba(17, 16, 14, 0.96);
+    }
+
+    .path-card strong {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .path-card h3 {
+      font-size: 1.45rem;
+    }
+
+    .path-card p {
+      margin: 12px 0 22px;
+      color: var(--soft);
+    }
+
+    .path-card .button + .button {
+      margin-top: 10px;
+    }
+
     .form-note {
       margin: 14px 0 0;
       color: var(--muted);
@@ -675,6 +714,7 @@
       max-width: 650px;
       margin: 42px auto 0;
       text-align: left;
+      scroll-margin-top: 110px;
     }
 
     .form-row {
@@ -765,7 +805,8 @@
       .setup-detail-grid,
       .gallery-grid,
       .photo-band,
-      .faq-grid {
+      .faq-grid,
+      .path-grid {
         grid-template-columns: 1fr;
       }
 
@@ -889,10 +930,10 @@
         <p class="hero-copy">Full Proof brings polished bar service, custom cocktail direction, and hand-carved clear ice backed by 11+ years behind the bar and 20 years in hospitality.</p>
         <div class="hero-actions">
           <a class="button solid" href="#contact">Check your date</a>
+          <a class="button" href="#event-inquiry">Reserve date hold</a>
           <a class="button" href="tel:+15624448030">Text Full Proof</a>
-          <a class="button" href="#packages">View packages</a>
         </div>
-        <p class="hero-note">Send the event basics, email Joe, text directly, or reserve a standard-service date hold. Menu and final bar details can be locked in after the date is secured.</p>
+        <p class="hero-note">Use the form, email Joe, text directly, or ask to reserve Launch Standard with a date-hold deposit. Menu and final bar details can be locked in after the date is secured.</p>
       </div>
     </section>
 
@@ -934,6 +975,26 @@
           <strong>03</strong>
           <h3>Premium Details</h3>
           <p>Premium compostable drinkware, thoughtful garnish direction, intentional presentation, and hand-carved clear ice.</p>
+        </article>
+      </div>
+      <div class="path-grid" aria-label="Booking paths">
+        <article class="path-card">
+          <strong>Form</strong>
+          <h3>Check the date</h3>
+          <p>Best when you want availability, package direction, or a clean quote before deciding.</p>
+          <a class="button solid wide" href="#event-inquiry">Fill out the form</a>
+        </article>
+        <article class="path-card">
+          <strong>Fast contact</strong>
+          <h3>Text or email Joe</h3>
+          <p>Best for close-in events, quick questions, planner intros, or confirming whether Full Proof fits.</p>
+          <a class="button wide" href="tel:+15624448030">Text Full Proof</a>
+        </article>
+        <article class="path-card">
+          <strong>Date hold</strong>
+          <h3>Reserve standard service</h3>
+          <p>Best when you already know you need bar service. Request the date hold now and finalize drinks later.</p>
+          <a class="button wide" href="#event-inquiry">Start date hold</a>
         </article>
       </div>
     </section>
@@ -1000,8 +1061,8 @@
           <p>If you already know you need polished bar service, reserve standard service with a date-hold deposit. Joe will confirm availability and finalize scope, menu direction, and shopping guidance after the date is secured.</p>
         </div>
         <div class="booking-panel-actions">
-          <a class="button solid wide" href="#contact">Ask about a date hold</a>
-          <a class="button wide" href="#contact">Request a custom quote</a>
+          <a class="button solid wide" href="#event-inquiry">Reserve Launch Standard</a>
+          <a class="button wide" href="#event-inquiry">Request a custom quote</a>
           <a class="button wide" href="tel:+15624448030">Text before booking</a>
         </div>
       </div>
@@ -1043,7 +1104,8 @@
         </article>
       </div>
       <div class="hero-actions" style="margin-top: 42px;">
-        <a class="button solid" href="#contact">Check availability</a>
+        <a class="button solid" href="#contact">Check your date</a>
+        <a class="button" href="#event-inquiry">Reserve date hold</a>
       </div>
     </section>
 
@@ -1120,7 +1182,8 @@
             <a class="press-link" href="https://distilling.com/distillermagazine/big-clear-ice/" target="_blank" rel="noopener">Read the article</a>
           </div>
           <div class="hero-actions" style="margin-top: 32px;">
-            <a class="button solid" href="#contact">Book your event</a>
+            <a class="button solid" href="#contact">Check your date</a>
+            <a class="button" href="#event-inquiry">Ask about clear ice upgrades</a>
           </div>
         </div>
       </div>
@@ -1202,9 +1265,31 @@
     <section class="contact" id="contact">
       <p class="eyebrow">Now booking</p>
       <h2>Check your date.</h2>
-      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Send the details below, email Joe, text directly, or reserve standard service with a date-hold deposit.</p>
+      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Pick the path that fits where you are: form, email, text, or date-hold request.</p>
+
+      <div class="path-grid" aria-label="Contact and booking options">
+        <article class="path-card">
+          <strong>Best default</strong>
+          <h3>Send event details</h3>
+          <p>Use the form for date, location, guest count, service window, and package direction.</p>
+          <a class="button solid wide" href="#event-inquiry">Use the form</a>
+        </article>
+        <article class="path-card">
+          <strong>Direct</strong>
+          <h3>Email or text</h3>
+          <p>Use this for quick questions, close-in events, planner intros, or follow-up after submitting.</p>
+          <a class="button wide" href="mailto:joe@fullproofbartending.com?subject=Full%20Proof%20event%20inquiry">Email Joe</a>
+          <a class="button wide" href="tel:+15624448030">Text Joe</a>
+        </article>
+        <article class="path-card">
+          <strong>Ready</strong>
+          <h3>Start a date hold</h3>
+          <p>Choose “Ready to reserve” in the form. Joe will confirm availability and send the date-hold deposit step.</p>
+          <a class="button wide" href="#event-inquiry">Reserve standard service</a>
+        </article>
+      </div>
       
-      <form class="inquiry-form" name="full-proof-event-inquiry" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+      <form id="event-inquiry" class="inquiry-form" name="full-proof-event-inquiry" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="full-proof-event-inquiry" />
         <p class="hidden" style="display: none;">
           <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
@@ -1277,7 +1362,7 @@
               <option value="" disabled selected>Select one</option>
               <option value="Checking availability">Checking availability</option>
               <option value="Ready for a quote">Ready for a quote</option>
-              <option value="Ready to reserve">Ready to reserve the date</option>
+              <option value="Ready to reserve Launch Standard">Ready to reserve Launch Standard</option>
               <option value="Planner or vendor inquiry">Planner or vendor inquiry</option>
             </select>
           </div>
@@ -1287,6 +1372,7 @@
           <label>What are you interested in?</label>
           <div class="checkbox-grid">
             <label><input type="checkbox" name="interest" value="Launch Standard Service" /> Launch Standard Service</label>
+            <label><input type="checkbox" name="interest" value="Date-hold deposit" /> Date-hold deposit</label>
             <label><input type="checkbox" name="interest" value="Signature cocktails" /> Signature cocktails</label>
             <label><input type="checkbox" name="interest" value="Clear ice upgrades" /> Clear ice upgrades</label>
             <label><input type="checkbox" name="interest" value="Extra bartender" /> Extra bartender</label>
