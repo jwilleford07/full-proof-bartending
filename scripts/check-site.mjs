@@ -20,16 +20,33 @@ const bannedPatterns = [
   /TWO FOR THE ROAD/i,
   /mobile-bar-setup-real\.jpg/i,
   /black-mobile-bar-full-setup\.jpg/i,
+  /professional-bar-setup\.(?:png|jpe?g|webp)/i,
+  /reserve-standard-service\.html/i,
+];
+
+const bannedPublicFiles = [
+  "assets/photos/professional-bar-setup.png",
+  "assets/photos/bartender-service-action.jpg",
+  "assets/photos/bartender-shaking-cocktail.jpg",
+  "assets/photos/bartender-side-mobile-bar-setup.jpg",
+  "assets/photos/event-bar-setup-menu.jpg",
+  "assets/photos/founder-behind-bar.jpg",
+  "assets/photos/full-mobile-bar-sink-rinser.jpg",
+  "assets/photos/hero-rooftop-bartending.jpg",
+  "assets/photos/mobile-bar-garnish-detail.jpg",
+  "assets/photos/mobile-bar-tools-rinser-detail.jpg",
+  "assets/photos/mobile-bar-water-detail.jpg",
 ];
 
 const requiredHomepagePatterns = [
   /joe@fullproofbartending\.com/i,
   /\(?562\)?[\s.-]*444[\s.-]*8030/,
-  /Check availability/i,
-  /Standard Service/i,
-  /\$599\s*\/\s*3 hours/i,
-  /\$699\s*\/\s*4 hours/i,
-  /Launch Clear Ice/i,
+  /Check your date/i,
+  /Launch Standard/i,
+  /\$749\s*\/\s*3 hours/i,
+  /\$899\s*\/\s*4 hours/i,
+  /date-hold deposit/i,
+  /full-proof-event-inquiry/i,
   /Los Angeles/i,
   /Long Beach/i,
   /Orange County|OC/i,
@@ -45,6 +62,10 @@ function read(relativePath) {
 
 for (const file of requiredFiles) {
   if (!exists(file)) failures.push(`Missing required file: ${file}`);
+}
+
+for (const file of bannedPublicFiles) {
+  if (exists(file)) failures.push(`Banned public-facing old/weak photo remains: ${file}`);
 }
 
 const htmlFiles = fs
@@ -74,9 +95,19 @@ for (const file of htmlFiles) {
   }
 
   const imageRefs = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)];
+  const localImageRefs = [];
   for (const [tag, src] of imageRefs) {
     if (!/alt=["'][^"']+["']/i.test(tag)) {
       failures.push(`${file} image is missing useful alt text: ${src}`);
+    }
+    if (/^assets\/photos\//i.test(src)) localImageRefs.push(src);
+  }
+
+  if (file === "index.html") {
+    const counts = new Map();
+    for (const src of localImageRefs) counts.set(src, (counts.get(src) || 0) + 1);
+    for (const [src, count] of counts) {
+      if (count > 1) failures.push(`Homepage repeats image ${count} times: ${src}`);
     }
   }
 }

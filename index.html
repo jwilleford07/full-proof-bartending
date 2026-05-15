@@ -110,6 +110,10 @@
       color: var(--black);
     }
 
+    .button.wide {
+      width: 100%;
+    }
+
     .button:hover {
       border-color: var(--ivory);
     }
@@ -345,6 +349,61 @@
       max-width: 760px;
       margin: 28px 0 0;
       color: var(--muted);
+    }
+
+    .booking-panel {
+      margin-top: 42px;
+      padding: 32px;
+      border: 1px solid var(--line);
+      background: rgba(17, 16, 14, 0.82);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .booking-panel p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .booking-panel-actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .form-note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: rgba(17, 16, 14, 0.72);
+    }
+
+    .checkbox-grid label {
+      display: flex;
+      gap: 10px;
+      margin: 0;
+      color: var(--muted);
+      font-family: Inter, Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .checkbox-grid input {
+      width: auto;
+      margin-top: 5px;
+      accent-color: var(--gold);
     }
 
     .promise p,
@@ -694,7 +753,8 @@
 
       .intro,
       .ice-wrap,
-      .about {
+      .about,
+      .booking-panel {
         grid-template-columns: 1fr;
       }
 
@@ -787,6 +847,10 @@
         gap: 8px;
       }
 
+      .checkbox-grid {
+        grid-template-columns: 1fr;
+      }
+
       .footer-inner {
         align-items: flex-start;
         flex-direction: column;
@@ -808,7 +872,7 @@
         <a href="#ice">Ice</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
-        <a class="button" href="#contact">Book</a>
+        <a class="button" href="#contact">Check date</a>
       </div>
     </nav>
   </header>
@@ -821,13 +885,14 @@
         <div class="service-area" aria-label="Service area">
           <span>LA</span><i></i><span>Long Beach</span><i></i><span>OC</span>
         </div>
-        <h1>Luxury mobile bartending for private events.</h1>
-        <p class="hero-copy">Full Proof brings polished bar service, custom cocktails, a self-contained craft bar setup, and hand-carved clear ice backed by 11+ years behind the bar and 20 years in hospitality.</p>
+        <h1>Luxury mobile bartending for events where the bar matters.</h1>
+        <p class="hero-copy">Full Proof brings polished bar service, custom cocktail direction, and hand-carved clear ice backed by 11+ years behind the bar and 20 years in hospitality.</p>
         <div class="hero-actions">
-          <a class="button solid" href="#contact">Check availability & get a quote</a>
+          <a class="button solid" href="#contact">Check your date</a>
+          <a class="button" href="tel:+15624448030">Text Full Proof</a>
           <a class="button" href="#packages">View packages</a>
         </div>
-        <p class="hero-note">Tell us your date, location, guest count, and event type. We’ll confirm availability and recommend the right bar setup.</p>
+        <p class="hero-note">Send the event basics, email Joe, text directly, or reserve a standard-service date hold. Menu and final bar details can be locked in after the date is secured.</p>
       </div>
     </section>
 
@@ -835,7 +900,7 @@
       <div class="proof-inner">
         <span>LA · Long Beach · OC</span>
         <span>11+ years bartending</span>
-        <span>Full bar, sink & rinser</span>
+        <span>Clear ice included</span>
         <span>Quoted in Distiller Magazine</span>
       </div>
     </section>
@@ -868,7 +933,7 @@
         <article class="promise">
           <strong>03</strong>
           <h3>Premium Details</h3>
-          <p>A self-contained craft bar setup, premium compostable drinkware, intentional presentation, and hand-carved clear ice.</p>
+          <p>Premium compostable drinkware, thoughtful garnish direction, intentional presentation, and hand-carved clear ice.</p>
         </article>
       </div>
     </section>
@@ -909,63 +974,72 @@
       <h2 class="section-title">Straightforward base service, premium bar details when you want them.</h2>
       <div class="package-grid" style="margin-top: 42px;">
         <article class="package-card">
-          <span>Standard Service</span>
+          <span>Launch Standard</span>
           <h3>One bartender for a clean, capable event bar</h3>
-          <strong class="package-price">$599 / 3 hours<br>$699 / 4 hours</strong>
-          <p>Best for smaller private events. Includes one bartender, service planning, professional bar tools, Tossware premium compostable drinkware, setup, cleanup, basic bar guidance, and launch clear ice cubes.</p>
+          <strong class="package-price">Launch special from $749 / 3 hours<br>$899 / 4 hours</strong>
+          <p>Best for smaller private events. Includes one bartender, service planning, professional bar tools, Tossware premium compostable drinkware, setup, cleanup, basic bar guidance, and hand-carved clear ice cubes for cocktails served by Full Proof.</p>
         </article>
         <article class="package-card">
-          <span>Launch Clear Ice</span>
-          <h3>Hand-carved clear cubes included</h3>
-          <strong class="package-price">Portfolio-window inclusion</strong>
-          <p>Our launch hospitality upgrade: hand-carved clear cubes bundled into standard service while we build our published portfolio. Pressed shapes, spears, branding, and extra ice volume stay available as add-ons.</p>
+          <span>Signature Bar Experience</span>
+          <h3>Custom cocktails and a more intentional guest experience</h3>
+          <strong class="package-price">From $1,250</strong>
+          <p>For events where drinks and presentation matter. Adds signature cocktail direction, batching guidance where useful, garnish direction, expanded shopping support, and clear ice presentation details.</p>
         </article>
         <article class="package-card">
-          <span>Add-on Menu</span>
-          <h3>Build the event into a premium bar experience</h3>
-          <strong class="package-price">Quoted by event</strong>
-          <p>Ice artistry (pressed shapes, spears, branding, extra volume), signature cocktails and batching, extended hours and extra bartenders, smoked presentations and smoke bubbles where permitted, garnish upgrades, custom menu cards, and full mobile craft bar deployment — scoped and quoted to fit the event.</p>
+          <span>Weddings & Brand Events</span>
+          <h3>Higher-touch planning for visible moments</h3>
+          <strong class="package-price">Custom quotes from $2,400</strong>
+          <p>For weddings, brand activations, corporate hosting, and high-design private events. Scope can include additional bartenders, extended service, menu cards, specialty ice, and deeper timeline coordination.</p>
         </article>
       </div>
-      <p class="package-note">Base rates stay easy to understand; customization layers land in the quote where they belong. Alcohol is typically client-provided; Full Proof supplies quantities and a shopping list once the menu is set. Every quote reflects guest count, active service hours, staffing, travel and load-in, menu ambition, bar footprint, and add-ons.</p>
+      <p class="package-note">Launch pricing keeps the first booking step approachable while Full Proof builds its published event portfolio. Alcohol is typically client-provided; Full Proof supplies quantities and a shopping list once the menu is set. Every quote reflects guest count, active service hours, staffing, travel and load-in, menu ambition, and premium add-ons.</p>
+      <div class="booking-panel">
+        <div>
+          <p class="eyebrow" style="margin-bottom: 14px;">Ready to move?</p>
+          <h3>Hold the date now. Finalize the menu later.</h3>
+          <p>If you already know you need polished bar service, reserve standard service with a date-hold deposit. Joe will confirm availability and finalize scope, menu direction, and shopping guidance after the date is secured.</p>
+        </div>
+        <div class="booking-panel-actions">
+          <a class="button solid wide" href="#contact">Ask about a date hold</a>
+          <a class="button wide" href="#contact">Request a custom quote</a>
+          <a class="button wide" href="tel:+15624448030">Text before booking</a>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="setup">
-      <p class="eyebrow">Professional bar setup</p>
-      <h2 class="section-title">A real craft bar brought to your event.</h2>
-      <p class="lead" style="margin-top: 24px;">The setup is modular but composed: a full black bar, self-contained sink and rinser, organized tools, garnish station, Tossware drinkware, water service, and ice capability arranged for clean guest-facing service.</p>
-      <div class="setup-showcase">
-        <img src="assets/photos/bartender-side-mobile-bar-setup.jpg" alt="Full Proof bartender-side mobile bar setup at a golden-hour outdoor event with organized tools, bottles, cups, and rinser" />
-      </div>
-      <div class="setup-detail-grid" aria-label="Full Proof bar setup details">
-        <div class="setup-detail">
-          <img src="assets/photos/professional-bar-setup.png" alt="Full Proof black mobile bar setup with organized tools, garnishes, clear ice, and service equipment" />
-        </div>
+      <p class="eyebrow">Professional bar planning</p>
+      <h2 class="section-title">The bar should feel handled before the first guest arrives.</h2>
+      <p class="lead" style="margin-top: 24px;">Full Proof plans the service flow, menu direction, glassware/drinkware, ice, garnish, tools, shopping guidance, and load-in details so the event bar feels composed instead of improvised.</p>
+      <div class="setup-detail-grid" aria-label="Full Proof bar planning details" style="margin-top: 42px;">
         <div class="setup-detail">
           <img src="assets/photos/clear-ice-column.jpg" alt="Large clear ice column prepared for premium cocktail service" />
         </div>
         <div class="setup-detail">
-          <img src="assets/photos/cocktail-bottles-bar.jpg" alt="Cocktail with premium spirits and citrus garnish" />
+          <img src="assets/photos/collins-spear.jpg" alt="Tall hand-cut clear ice spear catching warm outdoor light" />
         </div>
         <div class="setup-detail">
-          <img src="assets/photos/clear-ice-cube.jpg" alt="Large hand-cut clear ice cube for cocktail service" />
+          <img src="assets/photos/ice-diamonds-spheres.jpg" alt="Clear ice diamonds and spheres prepared for premium cocktail service" />
+        </div>
+        <div class="setup-detail">
+          <img src="assets/photos/gin-tonic-rosemary.jpg" alt="Gin and tonic with rosemary, orange twist, and large clear ice" />
         </div>
       </div>
       <div class="included-grid">
         <article class="included-card">
-          <span>Self-contained</span>
-          <h3>Power and running water</h3>
-          <p>The bar arrives event-ready with the utilities needed to work cleanly, efficiently, and professionally.</p>
+          <span>Before the event</span>
+          <h3>Clear scope and shopping guidance</h3>
+          <p>You get a recommended service plan, menu direction, and alcohol quantities so the host is not guessing at the store.</p>
         </article>
         <article class="included-card">
-          <span>Equipment</span>
-          <h3>Built for proper service</h3>
-          <p>Rinser, LED lighting, organized tools, and the ability to operate an ice press on-site for specialty service.</p>
+          <span>During service</span>
+          <h3>Calm pacing and clean execution</h3>
+          <p>The bar is run with line flow, batching, garnish, glassware, ice, and guest experience in mind.</p>
         </article>
         <article class="included-card">
           <span>Presentation</span>
           <h3>No folding-table energy</h3>
-          <p>Every package includes Tossware premium compostable drinkware, so the guest experience feels polished from setup to last call.</p>
+          <p>Every package includes premium drinkware and clear ice details, so the guest experience feels polished from first pour to last call.</p>
         </article>
       </div>
       <div class="hero-actions" style="margin-top: 42px;">
@@ -980,7 +1054,7 @@
         <article class="included-card">
           <span>Full Proof provides</span>
           <h3>Bar service and setup</h3>
-          <p>One bartender, service planning, professional bar tools, Tossware premium compostable drinkware, launch clear ice cubes, setup, service, and cleanup. The full self-contained mobile craft bar can be quoted when the footprint and guest flow call for it.</p>
+          <p>One bartender, service planning, professional bar tools, Tossware premium compostable drinkware, hand-carved clear ice cubes, setup, service, and cleanup. Premium upgrades are scoped when the footprint, guest flow, or event design calls for more.</p>
         </article>
         <article class="included-card">
           <span>You provide</span>
@@ -1000,16 +1074,16 @@
       <h2 class="section-title">Real bar service, finished drinks, and clear ice details.</h2>
       <div class="gallery-grid">
         <div class="gallery-item large">
-          <img src="assets/photos/professional-bar-setup.png" alt="Professional Full Proof mobile bar setup with clear ice, garnishes, and organized tools" />
+          <img src="assets/photos/tall-rock.jpg" alt="Large clear ice rock with warm light and clean texture" />
         </div>
         <div class="gallery-item">
-          <img src="assets/photos/coupe-cocktail.jpg" alt="Clear cocktail served in a coupe with citrus garnish" />
+          <img src="assets/photos/manhattan-up.jpg" alt="Manhattan-style cocktail served up with citrus garnish" />
         </div>
         <div class="gallery-item">
           <img src="assets/photos/cocktail-bottles-bar.jpg" alt="Cocktail served with premium bottles and citrus garnish" />
         </div>
         <div class="gallery-item">
-          <img src="assets/photos/branded-clear-cube-cocktail.jpg" alt="Cocktail served over a branded clear ice cube" />
+          <img src="assets/photos/clear-stamp-on-ice.jpg" alt="Stamped clear ice detail showing custom ice capability" />
         </div>
         <div class="gallery-item">
           <img src="assets/photos/espresso-martini.jpg" alt="Espresso martini served at a Full Proof event" />
@@ -1020,7 +1094,7 @@
     <section class="ice-section" id="ice">
       <div class="ice-wrap">
         <div class="ice-image">
-          <img src="assets/photos/premium-spirits-clear-ice.jpg" alt="Premium spirits arranged with hand-cut clear ice blocks" />
+          <img src="assets/photos/white-negroni-ingredients.jpg" alt="White Negroni ingredients arranged for custom cocktail direction" />
         </div>
         <div id="expertise">
           <p class="eyebrow">The clear-ice advantage</p>
@@ -1055,7 +1129,7 @@
     <section class="section" id="about">
       <div class="about">
         <div class="about-image">
-          <img src="assets/photos/bartender-service-action.jpg" alt="Full Proof founder preparing cocktails at an outdoor private event" />
+          <img src="assets/photos/founder-portrait.jpg" alt="Full Proof founder Joe Willeford at an outdoor private event" />
         </div>
         <div>
           <p class="eyebrow">Behind the bar</p>
@@ -1073,22 +1147,22 @@
         <article class="step">
           <strong>Step 01</strong>
           <div>
-            <h3>Send the basics</h3>
-            <p>Date, location, guest count, event type, and the kind of bar experience you want. We’ll reply with availability, package direction, and next steps.</p>
+            <h3>Check your date</h3>
+            <p>Use the form, email, or text with your date, location, guest count, event type, and service window. If the event is soon, text after submitting.</p>
           </div>
         </article>
         <article class="step">
           <strong>Step 02</strong>
           <div>
-            <h3>Build the bar plan</h3>
-            <p>We align on service length, staffing, shopping needs, menu direction, bar footprint (station vs. full mobile craft bar), launch clear ice cubes under our portfolio-window inclusion, premium add-ons, and logistics.</p>
+            <h3>Hold the date or build the quote</h3>
+            <p>Reserve standard service with a date-hold deposit, or get a custom quote for weddings, brand events, larger guest counts, signature cocktails, and premium ice work.</p>
           </div>
         </article>
         <article class="step">
           <strong>Step 03</strong>
           <div>
-            <h3>Host with confidence</h3>
-            <p>Full Proof arrives prepared, sets the bar, serves the event, and closes down cleanly.</p>
+            <h3>Finalize menu later</h3>
+            <p>Once the date is secured, Full Proof finalizes service length, staffing, menu direction, shopping list, clear ice needs, and logistics.</p>
           </div>
         </article>
       </div>
@@ -1104,7 +1178,7 @@
         </article>
         <article class="faq-item">
           <h3>What do you need from the venue?</h3>
-          <p>Our standard bar setup is flexible and can operate in most spaces. If your event scope includes our full mobile craft bar, we require access to standard power and running water to run the self-contained sink, rinser, and lighting.</p>
+          <p>Most events need a clean service area, access for load-in, and enough space for bar tools, ice, garnish, and drinkware. If the event scope requires additional equipment, power, water, or deeper venue coordination, we confirm that before the quote is finalized.</p>
         </article>
         <article class="faq-item">
           <h3>How much ice do you bring?</h3>
@@ -1112,18 +1186,26 @@
         </article>
         <article class="faq-item">
           <h3>What is the booking process?</h3>
-          <p>Start by sharing your event date, location, guest count, and the type of gathering. We’ll confirm availability and collaborate on a bar plan—including menu direction and staffing. On the day of the event, our team arrives fully prepared to set up, serve, and clean up.</p>
+          <p>Start by sharing the event basics. If standard service fits, you can reserve the date with a deposit and finalize the menu later. If the event needs more detail, Joe will recommend the right package and quote the scope clearly.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I reserve before choosing cocktails?</h3>
+          <p>Yes. The date, service window, guest count, and event type matter first. Menu direction, shopping list, signature cocktails, and premium ice details can be finalized after the date is held.</p>
+        </article>
+        <article class="faq-item">
+          <h3>How much is the deposit?</h3>
+          <p>Standard service can be held with a date-hold deposit. Larger weddings, brand events, and custom quotes may require a higher deposit because staffing, prep, and logistics are more involved.</p>
         </article>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <p class="eyebrow">Now booking</p>
-      <h2>Tell us about the event.</h2>
-      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Send your date, location, guest count, and event type for availability, a clear base-service anchor, and add-ons scoped to how you want the bar to feel.</p>
+      <h2>Check your date.</h2>
+      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Send the details below, email Joe, text directly, or reserve standard service with a date-hold deposit.</p>
       
-      <form class="inquiry-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
+      <form class="inquiry-form" name="full-proof-event-inquiry" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="full-proof-event-inquiry" />
         <p class="hidden" style="display: none;">
           <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
         </p>
@@ -1131,55 +1213,107 @@
         <div class="form-row">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" autocomplete="name" required />
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-preference">Preferred contact method</label>
+            <select id="contact-preference" name="contact_preference" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Text">Text</option>
+              <option value="Call">Call</option>
+              <option value="Email">Email</option>
+            </select>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="date">Event Date</label>
-            <input type="date" id="date" name="date" required />
+            <input type="date" id="date" name="event_date" required />
           </div>
           <div class="form-group">
-            <label for="location">Location / Venue</label>
-            <input type="text" id="location" name="location" required />
+            <label for="service-window">Service Window</label>
+            <input type="text" id="service-window" name="service_window" placeholder="Example: 5-9 PM" required />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="guests">Guest Count</label>
-            <input type="number" id="guests" name="guests" required />
+            <label for="location">Location / Venue</label>
+            <input type="text" id="location" name="location" autocomplete="street-address" required />
           </div>
           <div class="form-group">
+            <label for="guests">Guest Count</label>
+            <input type="number" id="guests" name="guest_count" min="1" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
             <label for="type">Event Type</label>
-            <select id="type" name="type" required>
+            <select id="type" name="event_type" required>
               <option value="" disabled selected>Select event type</option>
               <option value="Wedding">Wedding</option>
               <option value="Private Event">Private Event</option>
               <option value="Brand Event">Brand Event</option>
+              <option value="Corporate Event">Corporate Event</option>
               <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="booking-intent">Where are you in the process?</label>
+            <select id="booking-intent" name="booking_intent" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Checking availability">Checking availability</option>
+              <option value="Ready for a quote">Ready for a quote</option>
+              <option value="Ready to reserve">Ready to reserve the date</option>
+              <option value="Planner or vendor inquiry">Planner or vendor inquiry</option>
             </select>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="interest">Package / Service Interest</label>
-          <textarea id="interest" name="interest" rows="3" placeholder="Tell us what you're looking for (e.g., standard service, specialty ice, signature cocktails)..."></textarea>
+          <label>What are you interested in?</label>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="interest" value="Launch Standard Service" /> Launch Standard Service</label>
+            <label><input type="checkbox" name="interest" value="Signature cocktails" /> Signature cocktails</label>
+            <label><input type="checkbox" name="interest" value="Clear ice upgrades" /> Clear ice upgrades</label>
+            <label><input type="checkbox" name="interest" value="Extra bartender" /> Extra bartender</label>
+            <label><input type="checkbox" name="interest" value="Custom menu cards" /> Custom menu cards</label>
+            <label><input type="checkbox" name="interest" value="Wedding or brand event quote" /> Wedding or brand event quote</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Anything else Joe should know?</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Tell us about the event, drinks you like, venue details, timeline, or the kind of bar experience you want."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="source">How did you hear about Full Proof?</label>
+          <input type="text" id="source" name="source" placeholder="Google, Instagram, referral, planner, venue..." />
         </div>
 
         <div class="form-actions">
-          <button type="submit" class="button solid">Check availability & get a quote</button>
+          <button type="submit" class="button solid">Send event details</button>
+          <p class="form-note">If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
         </div>
       </form>
 
       <div class="hero-actions" style="justify-content: center; margin-top: 32px;">
         <a class="button" href="#packages">Review packages</a>
-        <a class="button" href="mailto:joe@fullproofbartending.com">Email us</a>
+        <a class="button" href="mailto:joe@fullproofbartending.com?subject=Full%20Proof%20event%20inquiry">Email Joe</a>
         <a class="button" href="tel:+15624448030">Call or text (562) 444-8030</a>
       </div>
     </section>
