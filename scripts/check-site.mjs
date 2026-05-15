@@ -7,9 +7,13 @@ const warnings = [];
 
 const requiredFiles = [
   "index.html",
+  "custom-mobile-bar/index.html",
+  "clear-ice/index.html",
+  "smoked-cocktails/index.html",
   "robots.txt",
   "sitemap.xml",
   "netlify.toml",
+  "assets/css/addon-pages.css",
   "assets/fullproof-primary-wordmark.svg",
   "assets/fullproof-horizontal-lockup.svg",
   "assets/fullproof-fp-seal.svg",
@@ -48,6 +52,9 @@ const requiredHomepagePatterns = [
   /date-hold deposit/i,
   /full-proof-event-inquiry/i,
   /self-contained/i,
+  /Full custom mobile bar/i,
+  /Smoked cocktails or smoke bubbles/i,
+  /Select all that apply/i,
   /generator/i,
   /fresh and gray water/i,
   /110v pump/i,
@@ -66,6 +73,18 @@ function read(relativePath) {
   return fs.readFileSync(path.join(root, relativePath), "utf8");
 }
 
+function walkHtml(dir = root) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    if (entry.name === ".git" || entry.name === "node_modules") continue;
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) files.push(...walkHtml(fullPath));
+    if (entry.isFile() && entry.name.endsWith(".html")) files.push(path.relative(root, fullPath));
+  }
+  return files;
+}
+
 for (const file of requiredFiles) {
   if (!exists(file)) failures.push(`Missing required file: ${file}`);
 }
@@ -74,9 +93,7 @@ for (const file of bannedPublicFiles) {
   if (exists(file)) failures.push(`Banned public-facing old/weak photo remains: ${file}`);
 }
 
-const htmlFiles = fs
-  .readdirSync(root)
-  .filter((file) => file.endsWith(".html"));
+const htmlFiles = walkHtml();
 
 if (!htmlFiles.length) failures.push("No HTML files found.");
 
@@ -96,7 +113,9 @@ for (const file of htmlFiles) {
     });
 
   for (const ref of localRefs) {
-    const cleanRef = ref.split("#")[0].split("?")[0];
+    let cleanRef = ref.split("#")[0].split("?")[0];
+    if (cleanRef.startsWith("/")) cleanRef = cleanRef.slice(1);
+    if (cleanRef && !cleanRef.includes(".")) cleanRef = path.join(cleanRef, "index.html");
     if (cleanRef && !exists(cleanRef)) failures.push(`${file} references missing file: ${ref}`);
   }
 
@@ -136,6 +155,11 @@ if (exists("sitemap.xml")) {
   const sitemap = read("sitemap.xml");
   if (!/<loc>https:\/\/fullproofbartending\.com\/<\/loc>/i.test(sitemap)) {
     failures.push("sitemap.xml must include the canonical homepage URL.");
+  }
+  for (const slug of ["custom-mobile-bar", "clear-ice", "smoked-cocktails"]) {
+    if (!new RegExp(`<loc>https://fullproofbartending\\.com/${slug}/</loc>`).test(sitemap)) {
+      failures.push(`sitemap.xml must include /${slug}/.`);
+    }
   }
 }
 

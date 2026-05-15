@@ -290,7 +290,8 @@
     .promise-grid,
     .service-grid,
     .package-grid,
-    .included-grid {
+    .included-grid,
+    .addon-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
@@ -310,6 +311,7 @@
     .service-card,
     .package-card,
     .included-card,
+    .addon-card,
     .faq-item {
       min-height: 246px;
       padding: 32px;
@@ -319,7 +321,8 @@
     .promise strong,
     .service-card span,
     .package-card span,
-    .included-card span {
+    .included-card span,
+    .addon-card span {
       display: block;
       margin-bottom: 44px;
       color: var(--gold);
@@ -334,6 +337,7 @@
     .service-card h3,
     .package-card h3,
     .included-card h3,
+    .addon-card h3,
     .faq-item h3 {
       font-size: 1.55rem;
     }
@@ -374,6 +378,22 @@
     .booking-panel-actions {
       display: grid;
       gap: 12px;
+    }
+
+    .addon-grid {
+      margin-top: 42px;
+    }
+
+    .addon-card {
+      display: flex;
+      min-height: 300px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .addon-card p {
+      margin: 16px 0 28px;
+      color: var(--soft);
     }
 
     .path-grid {
@@ -433,19 +453,33 @@
 
     .checkbox-grid label {
       display: flex;
+      min-height: 54px;
+      align-items: center;
       gap: 10px;
       margin: 0;
+      padding: 14px;
+      border: 1px solid rgba(238, 227, 207, 0.14);
+      background: rgba(5, 5, 5, 0.32);
       color: var(--muted);
       font-family: Inter, Helvetica, Arial, sans-serif;
       font-size: 0.95rem;
       font-weight: 400;
       letter-spacing: 0;
       text-transform: none;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .checkbox-grid label:has(input:checked) {
+      border-color: rgba(200, 164, 106, 0.86);
+      background: rgba(200, 164, 106, 0.16);
+      color: var(--ivory);
     }
 
     .checkbox-grid input {
       width: auto;
-      margin-top: 5px;
+      flex: 0 0 auto;
+      margin: 0;
       accent-color: var(--gold);
     }
 
@@ -453,6 +487,7 @@
     .service-card p,
     .package-card p,
     .included-card p,
+    .addon-card p,
     .faq-item p {
       margin: 16px 0 0;
       color: var(--soft);
@@ -597,6 +632,28 @@
 
     .ice-image img {
       object-position: 50% 48%;
+    }
+
+    .ice-video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .ice-video {
+      min-height: 300px;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .ice-video video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .press-note {
@@ -836,11 +893,13 @@
       .service-grid,
       .package-grid,
       .included-grid,
+      .addon-grid,
       .setup-detail-grid,
       .gallery-grid,
       .photo-band,
       .faq-grid,
-      .path-grid {
+      .path-grid,
+      .ice-video-grid {
         grid-template-columns: 1fr;
       }
 
@@ -982,6 +1041,7 @@
         <a href="#services">Services</a>
         <a href="#packages">Packages</a>
         <a href="#setup">Setup</a>
+        <a href="#addons">Add-ons</a>
         <a href="#included">Included</a>
         <a href="#ice">Ice</a>
         <a href="#about">About</a>
@@ -1196,6 +1256,37 @@
       </div>
     </section>
 
+    <section class="section" id="addons">
+      <p class="eyebrow">Premium add-ons</p>
+      <h2 class="section-title">Three ways to make the bar feel unmistakably custom.</h2>
+      <div class="addon-grid">
+        <article class="addon-card">
+          <div>
+            <span>Full custom bar</span>
+            <h3>Bring the complete craft bar build.</h3>
+            <p>For events that need the full footprint: running water, rinser, sink, ice well, organized tools, styled service, and the confidence of a real cocktail bar.</p>
+          </div>
+          <a class="button wide" href="/custom-mobile-bar/">Explore the bar build</a>
+        </article>
+        <article class="addon-card">
+          <div>
+            <span>Clear ice</span>
+            <h3>Production knowledge in the glass.</h3>
+            <p>Hand-cut cubes are included, with spheres, Collins spears, diamonds, floral cubes, stamped cubes, and event ice production scoped when the moment calls for it.</p>
+          </div>
+          <a class="button wide" href="/clear-ice/">Read the clear ice story</a>
+        </article>
+        <article class="addon-card">
+          <div>
+            <span>Smoke theater</span>
+            <h3>Smoked cocktails and smoke bubbles.</h3>
+            <p>Smoked Old Fashioneds, aromatic service moments, bubbles, foams, and visual details that create a premium moment without turning the bar into a gimmick.</p>
+          </div>
+          <a class="button wide" href="/smoked-cocktails/">See smoked cocktail options</a>
+        </article>
+      </div>
+    </section>
+
     <section class="section" aria-label="Full Proof event and cocktail gallery">
       <p class="eyebrow">Event proof</p>
       <h2 class="section-title">Real bar service, finished drinks, and clear ice details.</h2>
@@ -1227,13 +1318,13 @@
     <section class="ice-section" id="ice">
       <div class="ice-wrap">
         <div class="ice-image">
-          <img src="assets/photos/white-negroni-ingredients.jpg" alt="White Negroni ingredients arranged for custom cocktail direction" />
+          <img src="assets/photos/clinebell-block.jpg" alt="Large Clinebell clear ice block before carving" />
         </div>
         <div id="expertise">
           <p class="eyebrow">The clear-ice advantage</p>
           <h2 class="section-title">Signature clear ice is included because details change the drink.</h2>
           <p class="lead">Full Proof is a mobile bartending service first: polished hosting, thoughtful cocktails, smooth service, and a bar that looks composed from the first pour to the final cleanup.</p>
-          <p class="body-copy">Clear ice is the differentiator built on top of real bartending and hospitality experience. Joe built Clear Ice LA from the ground up into a clear cocktail ice business with 10 bar and restaurant clients before bringing in a partner and leading the rebrand into Cold Standard Ice. He consulted with Camper English before launch, was later quoted in Distiller Magazine’s “How to Start a Big Clear Ice Program,” and connected with Jimmy Yeager for professional ice production insight that is almost impossible to find outside people who have actually done the work.</p>
+          <p class="body-copy">Clear ice is the differentiator built on top of real bartending and hospitality experience. Joe built Clear Ice LA from the ground up into a clear cocktail ice business with 10 bar and restaurant clients before bringing in a partner and leading the rebrand into Cold Standard Ice. He consulted with Camper English before launch, connected with Jimmy Yeager for professional production insight, bought a Clinebell, rented commercial kitchen space, and learned the entire process from production to marketing to billing by doing it himself.</p>
           <div class="ice-list" aria-label="Clear ice options">
             <div class="ice-item">
               <strong>Press</strong>
@@ -1254,7 +1345,20 @@
           </div>
           <div class="hero-actions" style="margin-top: 32px;">
             <a class="button solid" href="#contact">Check your date</a>
-            <a class="button" href="#event-inquiry">Ask about clear ice upgrades</a>
+            <a class="button" href="/clear-ice/">Explore the clear ice story</a>
+          </div>
+        </div>
+      </div>
+      <div class="ice-wrap" style="padding-top: 0;">
+        <div class="ice-video-grid" style="grid-column: 1 / -1;">
+          <div class="ice-video">
+            <video src="assets/video/bandsaw-clear-ice.mp4" autoplay muted loop playsinline aria-label="Bandsaw cutting a clear ice block"></video>
+          </div>
+          <div class="ice-video">
+            <video src="assets/video/hand-carved-diamond.mp4" autoplay muted loop playsinline aria-label="Hand-carved clear ice diamond"></video>
+          </div>
+          <div class="ice-video">
+            <video src="assets/video/stamped-clear-ice-light.mp4" autoplay muted loop playsinline aria-label="Stamped clear ice catching light"></video>
           </div>
         </div>
       </div>
@@ -1440,12 +1544,14 @@
         </div>
 
         <div class="form-group">
-          <label>What are you interested in?</label>
+          <label>What are you interested in? <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Select all that apply.</span></label>
           <div class="checkbox-grid">
             <label><input type="checkbox" name="interest" value="Launch Standard Service" /> Launch Standard Service</label>
             <label><input type="checkbox" name="interest" value="50% date-hold deposit" /> 50% date-hold deposit</label>
             <label><input type="checkbox" name="interest" value="Signature cocktails" /> Signature cocktails</label>
             <label><input type="checkbox" name="interest" value="Clear ice upgrades" /> Clear ice upgrades</label>
+            <label><input type="checkbox" name="interest" value="Full custom mobile bar" /> Full custom mobile bar</label>
+            <label><input type="checkbox" name="interest" value="Smoked cocktails or smoke bubbles" /> Smoked cocktails or smoke bubbles</label>
             <label><input type="checkbox" name="interest" value="Extra bartender" /> Extra bartender</label>
             <label><input type="checkbox" name="interest" value="Custom menu cards" /> Custom menu cards</label>
             <label><input type="checkbox" name="interest" value="Wedding or brand event quote" /> Wedding or brand event quote</label>
