@@ -23,7 +23,7 @@ Avoid sounding promotional or discounter: no “discount,” “deal,” “% of
 
 - One professional bartender for active service (setup/cleanup outside guest-facing hours as quoted).
 - Service planning: timeline touchpoints, pour logic, menu direction, shopping guidance for client-provided alcohol.
-- Professional bar tools and a **composed, guest-ready bar station** appropriate to the contract (see “Setup tiers” below — full mobile unit vs. streamlined station is scoped in quote).
+- Professional bar tools and a **composed, guest-ready bar station** appropriate to the contract (see “Setup tiers” below — the full mobile unit is self-sustained and does not depend on venue power or water).
 - **Tossware premium compostable drinkware** for all Full Proof–served beverages unless the host opts into glassware they supply.
 - **Hand-carved clear ice cubes** for cocktails served at the event — included during the **launch / portfolio window** (see framing below).
 - Cleanup aligned with venue rules and the agreed scope.
@@ -60,7 +60,7 @@ Full Proof should never read “folding-table bar.” The **difference is equipm
 | Tier | Client-facing name | What it is | Typical margin lever |
 |------|---------------------|------------|----------------------|
 | **A** | Professional bar station | Composed back bar, organized tools, garnish and execution at event-grade presentation — scoped to venue layout | Base-friendly; upsell time/menu depth |
-| **B** | Full mobile craft bar | Self-contained unit: power, running water, rinser, LED, modular layout | Higher quoted minimums; travel/setup complexity |
+| **B** | Full mobile craft bar | Self-sustained unit: generator power, fresh and gray water, 110v pump, running water, rinsers, dump sinks, wash sinks, hand-wash station, clean prep surfaces, professional ice well, chilled condiment displays, napkins, straws, service mats, glass drying mats, organized tools, and optional ice press / smoke / bubble / foam capabilities | Higher quoted minimums; travel/setup complexity |
 
 **Rule:** Tier B is **quoted**, not buried as assumed. If marketing says “full mobile bar,” ensure the quote reflects Tier B.
 
@@ -131,7 +131,7 @@ Quote **per event**. Bundle where it simplifies the buying decision.
 
 ### Tier B upsell
 
-“When events call for the **full self-contained mobile craft bar** (running water, rinser, integrated lighting), we quote that as a dedicated line item so production and load-in match what guests experience.”
+“When events call for the **full self-contained mobile craft bar**, we bring the infrastructure: generator power, fresh and gray water, pump-driven running water, rinsers, sinks, hand-wash capability, ice well, clean prep surfaces, organized tools, and the bar details guests expect from a serious cocktail program.”
 
 ### Closing line
 

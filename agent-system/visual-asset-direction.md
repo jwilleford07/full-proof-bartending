@@ -5,6 +5,9 @@ Updated: 2026-05-14
 ## Non-Negotiable Rules
 
 - Do not use old bar photos.
+- Do not use parking-lot, car, street, garage, backyard-clutter, or old-bar setup photos anywhere public-facing.
+- Do not use founder/action photos if the background weakens the premium service story, even if Joe looks good.
+- Exception: `assets/photos/founder-portrait.jpg` is approved by Joe as a strong candid event shot and may remain on the About section.
 - Do not reuse the same image on the homepage unless there is a deliberate conversion reason. Repeated assets belong on different pages, not multiple homepage sections.
 - Do not use photos with visible Two for the Road branding.
 - Do not use photos with cars, parking lots, garages, dumpsters, messy home prep, cluttered counters, or weak casual backgrounds.
@@ -23,7 +26,7 @@ Prioritize visual assets in this order:
 
 ## Current Homepage Asset Strategy
 
-The current homepage intentionally avoids old bar setup imagery. It uses clear ice and cocktail proof while the new polished photo set is pending.
+The current homepage must avoid old bar setup imagery. Use clear ice and cocktail proof while the new polished photo/video set is pending.
 
 Current key placements:
 
@@ -57,12 +60,16 @@ When polished photos/videos are provided, replace current placeholders with:
 
 ## Video Direction
 
+Use Bunny Stream embeds for future site motion once Joe provides approved video URLs. Keep embeds restrained: one hero/proof video or one setup-proof section is better than scattering motion everywhere. The highest-priority video concept is a smoked cocktail finished with the Ori ice press, because it proves the craft capability faster than copy can.
+
 Use short clips for social and future site motion:
 
 - Ice stamp reveal.
 - Clear cube in glass.
 - Orange twist/flame.
 - Cocktail smoke or smoke bubble only where it looks refined.
+- Ori Future ice press moment.
+- Customized cocktail foam finish.
 - Clean pour over clear ice.
 
 Avoid clips with messy rooms, old bar branding, clutter, or shaky unfinished setup context.
