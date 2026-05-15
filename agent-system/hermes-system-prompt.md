@@ -6,9 +6,11 @@ Your job is to help launch, sell, and operate the business. Be practical, direct
 
 ## Brand Position
 
-Full Proof Bartending provides premium mobile bartending for private events. The service includes polished bar service, thoughtful cocktails, hand-carved clear ice, premium compostable Tossware drinkware, and a professional self-contained craft bar setup with power, running water, rinser, LED lighting, organized tools, and ice press capability.
+Full Proof Bartending provides premium mobile bartending for private events. The service includes polished Southern hospitality, thoughtful cocktails, hand-carved clear ice, premium compostable Tossware drinkware, Crew Supply Co bottles and tools, and a professional self-contained craft bar setup with generator-capable power, fresh and gray water, pump-driven running water, rinsers, sinks, organized tools, and ice press capability.
 
-The founder built a clear ice program from zero: learning a Klein bell ice maker, slabbing 300 lb blocks with a chainsaw, rebuilding a Biro meat saw to cut ice, and earning bar and restaurant clients across Los Angeles County. That ice expertise is a moat, but the business sells full-service mobile bartending.
+Joe has 20 years in hospitality, 11+ years in the Los Angeles restaurant and bar scene, seven years of LA craft cocktail work, high-volume event experience, and banquet captain experience. His cocktail background includes batching, kegging cocktails, advanced garnishes, clarified juices, milk punches, custom syrups, tinctures, bitters, and drink history.
+
+The founder built Clear Ice LA from zero into a clear cocktail ice business with 10 bar and restaurant clients, then brought in a partner and led the rebrand into Cold Standard Ice. He consulted with Camper English before launch, was later quoted in Distiller Magazine’s “How to Start a Big Clear Ice Program,” and connected with Jimmy Yeager for professional clear-ice production advice. That ice expertise is a moat, but the business sells full-service mobile bartending.
 
 The hospitality tone should draw from Southern roots and Atlanta heritage: warm, attentive, composed, and guest-first. Avoid corny Southern cliches.
 

@@ -217,6 +217,10 @@
       font-size: 0.98rem;
     }
 
+    .mobile-booking-bar {
+      display: none;
+    }
+
     .proof-strip {
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -457,8 +461,8 @@
     .photo-band {
       width: 100%;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      min-height: 620px;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
@@ -481,11 +485,11 @@
       transition: filter 0.4s ease;
     }
 
-    .photo-panel:first-child img {
-      object-position: 50% 72%;
+    .photo-panel--center img {
+      object-position: 50% 35%;
     }
 
-    .photo-panel:last-child img {
+    .photo-panel--right img {
       object-position: 50% 50%;
     }
 
@@ -518,7 +522,7 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr 0.9fr;
       gap: 1px;
       margin-top: 42px;
       border: 1px solid var(--line);
@@ -532,8 +536,38 @@
     }
 
     .gallery-item.large {
-      grid-row: span 2;
+      grid-column: 1;
+      grid-row: 1 / span 2;
       min-height: 621px;
+    }
+
+    .gallery-item--manhattan {
+      grid-column: 2 / span 2;
+      grid-row: 1;
+    }
+
+    .gallery-item--branded {
+      grid-column: 4;
+      grid-row: 1;
+    }
+
+    .gallery-item--clear-stamp {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .gallery-item--espresso {
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    .gallery-item--gin-tonic {
+      grid-column: 4;
+      grid-row: 2;
+    }
+
+    .gallery-item--gin-tonic img {
+      object-position: 50% 42%;
     }
 
     .ice-section {
@@ -821,12 +855,26 @@
       }
 
       .gallery-item.large {
+        grid-column: auto;
         grid-row: auto;
         min-height: 360px;
+      }
+
+      .gallery-item--manhattan,
+      .gallery-item--branded,
+      .gallery-item--clear-stamp,
+      .gallery-item--espresso,
+      .gallery-item--gin-tonic {
+        grid-column: auto;
+        grid-row: auto;
       }
     }
 
     @media (max-width: 640px) {
+      body {
+        padding-bottom: 82px;
+      }
+
       .form-row {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -841,9 +889,15 @@
       }
 
       .button {
-        min-height: 42px;
-        padding: 0 13px;
-        font-size: 0.66rem;
+        width: 100%;
+        min-height: 48px;
+        padding: 0 14px;
+        font-size: 0.68rem;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
       }
 
       .hero-inner,
@@ -896,6 +950,25 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .mobile-booking-bar {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 30;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px 14px;
+        border-top: 1px solid var(--line);
+        background: rgba(5, 5, 5, 0.94);
+        backdrop-filter: blur(16px);
+      }
+
+      .mobile-booking-bar .button {
+        min-height: 48px;
+      }
     }
   </style>
 </head>
@@ -927,20 +1000,20 @@
           <span>LA</span><i></i><span>Long Beach</span><i></i><span>OC</span>
         </div>
         <h1>Luxury mobile bartending for events where the bar matters.</h1>
-        <p class="hero-copy">Full Proof brings a fully self-contained professional cocktail bar, polished service, custom drink direction, and hand-carved clear ice backed by 11+ years behind the bar and 20 years in hospitality.</p>
+        <p class="hero-copy">Full Proof brings a fully self-contained professional cocktail bar, polished Southern hospitality, custom drink direction, and hand-carved clear ice backed by 11+ years behind the bar and 20 years in hospitality.</p>
         <div class="hero-actions">
           <a class="button solid" href="#contact">Check your date</a>
-          <a class="button" href="#event-inquiry">Reserve date hold</a>
+          <a class="button" href="#event-inquiry">Book now</a>
           <a class="button" href="tel:+15624448030">Text Full Proof</a>
         </div>
-        <p class="hero-note">Use the form, email Joe, text directly, or ask to reserve Launch Standard with a date-hold deposit. Menu and final bar details can be locked in after the date is secured.</p>
+        <p class="hero-note">Use the form, email Joe, text directly, or start a 50% date-hold request for Launch Standard. Menu and final bar details can be locked in after the date is secured.</p>
       </div>
     </section>
 
     <section class="proof-strip" aria-label="Full Proof service proof points">
       <div class="proof-inner">
         <span>LA · Long Beach · OC</span>
-        <span>11+ years bartending</span>
+        <span>11+ years in LA bars</span>
         <span>Self-contained bar system</span>
         <span>Clear ice included</span>
       </div>
@@ -954,7 +1027,7 @@
         </div>
         <div>
           <p class="lead">The bar should feel like it belongs at your event: prepared, attractive, self-sustained, efficient, and easy for guests to enjoy.</p>
-          <p class="body-copy">Full Proof handles the details that shape the guest experience: service flow, cocktail direction, garnish presentation, batching needs, shopping guidance, professional bar setup, sanitation, cleanup, and hand-carved clear cubes served at every event. The experience is layered: 20 years in hospitality, 11+ years behind the bar, private event service since 2017, and seven years of Los Angeles craft cocktail bartending translated into a mobile bar system most event bars simply do not bring.</p>
+          <p class="body-copy">Full Proof handles the details that shape the guest experience: service flow, cocktail direction, garnish presentation, batching needs, shopping guidance, professional bar setup, sanitation, cleanup, and hand-carved clear cubes served at every event. The experience is layered: Southern hospitality roots, 20 years in hospitality, 11+ years behind the bar, private event service since 2017, banquet captain experience, and seven years of Los Angeles craft cocktail bartending translated into a mobile bar system most event bars simply do not bring.</p>
         </div>
       </div>
     </section>
@@ -992,19 +1065,25 @@
         </article>
         <article class="path-card">
           <strong>Date hold</strong>
-          <h3>Reserve standard service</h3>
-          <p>Best when you already know you need bar service. Request the date hold now and finalize drinks later.</p>
-          <a class="button wide" href="#event-inquiry">Start date hold</a>
+          <h3>Book now</h3>
+          <p>Best when you already know you need bar service. Start a 50% date-hold request now and finalize drinks later.</p>
+          <a class="button wide" href="#event-inquiry">Start 50% date hold</a>
         </article>
       </div>
     </section>
 
-    <section class="photo-band" aria-label="Cocktail and clear ice photography">
-      <div class="photo-panel">
-        <img src="assets/photos/branded-clear-cube-cocktail.jpg" alt="Cocktail served over a branded clear ice cube" />
+    <section class="photo-band" aria-label="Luxury event bar photography">
+      <div class="photo-panel photo-panel--center">
+        <img
+          src="assets/photos/photo-band-wedding-cheers.png"
+          alt="Wedding guests toasting with rocks glasses over clear ice and premium spirits"
+        />
       </div>
-      <div class="photo-panel">
-        <img src="assets/photos/cocktail-clear-ice-closeup.jpg" alt="Finished cocktail with clear ice and citrus garnish" />
+      <div class="photo-panel photo-panel--right">
+        <img
+          src="assets/photos/cocktail-bottles-bar.jpg"
+          alt="Classic cocktail with premium spirits, clear ice, and garnish"
+        />
       </div>
     </section>
 
@@ -1037,8 +1116,8 @@
         <article class="package-card">
           <span>Launch Standard</span>
           <h3>One bartender for a clean, capable event bar</h3>
-          <strong class="package-price">Launch special from $749 / 3 hours<br>$899 / 4 hours</strong>
-          <p>Best for smaller private events. Includes one bartender, service planning, professional bar tools, Tossware premium compostable drinkware, clean bar setup, cleanup, basic bar guidance, and hand-carved clear ice cubes for cocktails served by Full Proof.</p>
+          <strong class="package-price">From $749 / 3 hours<br>$899 / 4 hours</strong>
+          <p>Best for smaller private events. Includes one bartender, service planning, Crew Supply Co bottles and tools, Tossware premium compostable drinkware, clean bar setup, cleanup, basic bar guidance, and hand-carved clear ice cubes for cocktails served by Full Proof.</p>
         </article>
         <article class="package-card">
           <span>Signature Bar Experience</span>
@@ -1058,10 +1137,10 @@
         <div>
           <p class="eyebrow" style="margin-bottom: 14px;">Ready to move?</p>
           <h3>Hold the date now. Finalize the menu later.</h3>
-          <p>If you already know you need polished bar service, reserve standard service with a date-hold deposit. Joe will confirm availability and finalize scope, menu direction, and shopping guidance after the date is secured.</p>
+          <p>If you already know you need polished bar service, start a 50% date-hold request for standard service. Joe will confirm availability before collecting the deposit, then finalize scope, menu direction, and shopping guidance after the date is secured.</p>
         </div>
         <div class="booking-panel-actions">
-          <a class="button solid wide" href="#event-inquiry">Reserve Launch Standard</a>
+          <a class="button solid wide" href="#event-inquiry">Book now</a>
           <a class="button wide" href="#event-inquiry">Request a custom quote</a>
           <a class="button wide" href="tel:+15624448030">Text before booking</a>
         </div>
@@ -1071,27 +1150,27 @@
     <section class="section" id="setup">
       <p class="eyebrow">Self-contained bar system</p>
       <h2 class="section-title">A real cocktail bar, brought to your event.</h2>
-      <p class="lead" style="margin-top: 24px;">Full Proof does not depend on a venue bar, folding table, house sink, or borrowed utility setup. We bring the infrastructure that lets bar service run cleanly: generator power, fresh and gray water jugs, a 110v pump, running water, rinsers, dump sinks, wash sinks, a hand-wash station, clean cutting-board surfaces, professional ice well, chilled condiment displays, black cocktail napkins, straws, service mats, glass drying mats, and professional bar tools.</p>
+      <p class="lead" style="margin-top: 24px;">Full Proof does not depend on a venue bar, folding table, house sink, or borrowed utility setup. We bring the infrastructure that lets bar service run cleanly: generator power, fresh and gray water jugs, a 110v pump, running water, an integrated Decent Espresso rinser, a custom utility sink, a hand-wash station, a custom portable stainless steel ice bin, clean cutting-board surfaces, chilled condiment displays, black cocktail napkins, straws, service mats, glass drying mats, Crew Supply Co bottles and tools, and premium Tossware drinkware.</p>
       <div class="included-grid" style="margin-top: 42px;">
         <article class="included-card">
           <span>Infrastructure</span>
           <h3>Power, water, sinks, and sanitation</h3>
-          <p>Generator support, fresh and gray water, pump-driven running water, rinsers, dump sinks, wash sinks, and hand-wash capability come with the bar plan when the event calls for the full setup.</p>
+          <p>Generator support, fresh and gray water, pump-driven running water, an integrated Decent Espresso rinser, custom utility sink, and hand-wash station come with the bar plan when the event calls for the full setup.</p>
         </article>
         <article class="included-card">
           <span>Service build</span>
           <h3>Everything a cocktail bar expects</h3>
-          <p>Professional ice well, chilled condiment displays, clean cutting-board surfaces, napkins, straws, service mats, glass drying mats, organized tools, and the mise en place needed for real cocktail service.</p>
+          <p>A custom portable stainless steel ice bin, chilled condiment displays, clean cutting-board surfaces, napkins, straws, service mats, glass drying mats, Crew Supply Co bottles and tools, premium Tossware drinkware, and the mise en place needed for real cocktail service.</p>
         </article>
         <article class="included-card">
           <span>Craft capability</span>
           <h3>Los Angeles cocktail experience, mobile</h3>
-          <p>Smoking gun, bubble system, ice press capability, customized cocktail foams, clear ice, garnish work, and seven years of LA craft cocktail experience behind the build.</p>
+          <p>Smoking gun, bubble system, Ori Future ice press capability, customized cocktail foams, clear ice, advanced garnish work, batching, kegging, clarified juices, milk punches, tinctures, bitters, and seven years of LA craft cocktail experience behind the build.</p>
         </article>
       </div>
       <div class="hero-actions" style="margin-top: 42px;">
         <a class="button solid" href="#contact">Check your date</a>
-        <a class="button" href="#event-inquiry">Reserve date hold</a>
+        <a class="button" href="#event-inquiry">Book now</a>
       </div>
     </section>
 
@@ -1102,7 +1181,7 @@
         <article class="included-card">
           <span>Full Proof provides</span>
           <h3>Self-contained bar service</h3>
-          <p>One bartender, service planning, professional tools, Tossware premium compostable drinkware, hand-carved clear ice cubes, generator-ready power, fresh and gray water, pump-driven running water, sanitation, setup, service, and cleanup. Premium upgrades are scoped when the footprint, guest flow, or event design calls for more.</p>
+          <p>One bartender, service planning, Crew Supply Co bottles and tools, Tossware premium compostable drinkware, hand-carved clear ice cubes, generator-ready power, fresh and gray water, pump-driven running water, integrated rinser, custom utility sink, custom stainless ice bin, sanitation, setup, service, and cleanup. Premium upgrades are scoped when the footprint, guest flow, or event design calls for more.</p>
         </article>
         <article class="included-card">
           <span>You provide</span>
@@ -1124,17 +1203,23 @@
         <div class="gallery-item large">
           <img src="assets/photos/tall-rock.jpg" alt="Large clear ice rock with warm light and clean texture" />
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item gallery-item--manhattan">
           <img src="assets/photos/manhattan-up.jpg" alt="Manhattan-style cocktail served up with citrus garnish" />
         </div>
-        <div class="gallery-item">
-          <img src="assets/photos/cocktail-bottles-bar.jpg" alt="Cocktail served with premium bottles and citrus garnish" />
+        <div class="gallery-item gallery-item--branded">
+          <img src="assets/photos/branded-clear-cube-cocktail.jpg" alt="Cocktail served over a branded clear ice cube" />
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item gallery-item--clear-stamp">
           <img src="assets/photos/clear-stamp-on-ice.jpg" alt="Stamped clear ice detail showing custom ice capability" />
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item gallery-item--espresso">
           <img src="assets/photos/espresso-martini.jpg" alt="Espresso martini served at a Full Proof event" />
+        </div>
+        <div class="gallery-item gallery-item--gin-tonic">
+          <img
+            src="assets/photos/gallery-gin-tonic-rosemary.png"
+            alt="Gin and tonic with clear ice, rosemary, and orange peel on marble"
+          />
         </div>
       </div>
     </section>
@@ -1148,7 +1233,7 @@
           <p class="eyebrow">The clear-ice advantage</p>
           <h2 class="section-title">Signature clear ice is included because details change the drink.</h2>
           <p class="lead">Full Proof is a mobile bartending service first: polished hosting, thoughtful cocktails, smooth service, and a bar that looks composed from the first pour to the final cleanup.</p>
-          <p class="body-copy">Clear ice is the differentiator built on top of real bartending and hospitality experience. After an early bartending partnership changed course, founder Joe Willeford turned the reset into a clear-ice operation: no prior ice experience, no inherited playbook, just a need he saw before most bartenders were paying attention. He consulted with Camper English before starting the business, learned to operate a Clinebell ice maker, slab 300-pound blocks with a chainsaw, rebuild a Biro meat saw for ice cutting, and market the finished product to bars and restaurants across Los Angeles County. That operation later became Cold Standard Ice and continues today as Clear Standard Ice.</p>
+          <p class="body-copy">Clear ice is the differentiator built on top of real bartending and hospitality experience. Joe built Clear Ice LA from the ground up into a clear cocktail ice business with 10 bar and restaurant clients before bringing in a partner and leading the rebrand into Cold Standard Ice. He consulted with Camper English before launch, was later quoted in Distiller Magazine’s “How to Start a Big Clear Ice Program,” and connected with Jimmy Yeager for professional ice production insight that is almost impossible to find outside people who have actually done the work.</p>
           <div class="ice-list" aria-label="Clear ice options">
             <div class="ice-item">
               <strong>Press</strong>
@@ -1156,7 +1241,7 @@
             </div>
             <div class="ice-item">
               <strong>Network</strong>
-              <span>The work connects Full Proof to the serious clear-ice world, including Camper English’s directional-freezing research and Jimmy Yeager’s professional ice production lineage.</span>
+              <span>The work connects Full Proof directly to two respected voices in modern clear ice: Camper English’s directional-freezing research and Jimmy Yeager’s professional production lineage.</span>
             </div>
             <div class="ice-item">
               <strong>Included</strong>
@@ -1164,7 +1249,7 @@
             </div>
           </div>
           <div class="press-note">
-            <p><strong>Featured clear-ice credibility:</strong> Distiller Magazine quoted Joe Willeford of Clear Ice LA in Camper English’s article “How to Start a Big Clear Ice Program.” The same article discusses Jimmy Yeager’s long-running professional ice work in Aspen. That matters because Full Proof is not just adding pretty cubes — the ice program was built from real production knowledge.</p>
+            <p><strong>Featured clear-ice credibility:</strong> Distiller Magazine quoted Joe Willeford of Clear Ice LA in Camper English’s article “How to Start a Big Clear Ice Program.” That matters because Full Proof is not just adding pretty cubes — the ice program was built from real production knowledge, professional consultation, and years of hands-on service to Los Angeles bars and restaurants.</p>
             <a class="press-link" href="https://distilling.com/distillermagazine/big-clear-ice/" target="_blank" rel="noopener">Read the article</a>
           </div>
           <div class="hero-actions" style="margin-top: 32px;">
@@ -1184,7 +1269,7 @@
           <p class="eyebrow">Behind the bar</p>
           <h2 class="section-title">Experienced, prepared, and easy to work with.</h2>
           <p class="lead">The goal is simple: make the bar feel handled, so you can actually be present at your event.</p>
-          <p class="body-copy">Full Proof brings practical event sense, cocktail knowledge, clear communication, and a premium eye for details. Joe brings 20 years in hospitality, 11+ years behind the bar, private event bartending experience dating back to 2017, and seven years of craft cocktail work in Los Angeles. He also built a clear cocktail ice business from zero prior ice experience into a company servicing 10 bars and restaurants around LA County. Joe is proudly from Atlanta, Georgia, and carries the legacy of Southern hospitality into the way Full Proof serves: warm, attentive, prepared, and never overdone.</p>
+          <p class="body-copy">Full Proof brings practical event sense, cocktail knowledge, clear communication, and a premium eye for details. Joe brings 20 years in hospitality, 11+ years grinding in the Los Angeles restaurant and bar scene, high-volume event experience, banquet captain experience, and seven years of craft cocktail work shaped by batching, clarified drinks, custom syrups, tinctures, bitters, garnish systems, and drink history. He is proudly from Atlanta, Georgia, and carries the legacy of Southern hospitality into the way Full Proof serves: warm, attentive, prepared, and never overdone.</p>
         </div>
       </div>
     </section>
@@ -1204,7 +1289,7 @@
           <strong>Step 02</strong>
           <div>
             <h3>Hold the date or build the quote</h3>
-            <p>Reserve standard service with a date-hold deposit, or get a custom quote for weddings, brand events, larger guest counts, signature cocktails, and premium ice work.</p>
+            <p>Start a 50% date-hold request for standard service, or get a custom quote for weddings, brand events, larger guest counts, signature cocktails, and premium ice work.</p>
           </div>
         </article>
         <article class="step">
@@ -1227,7 +1312,7 @@
         </article>
         <article class="faq-item">
           <h3>What do you need from the venue?</h3>
-          <p>A clean place to load in and enough space for the bar footprint. Full Proof brings the professional mobile bar infrastructure: generator-capable power, fresh and gray water, a 110v pump, running water, rinsers, dump sinks, wash sinks, hand-wash station, ice well, prep surfaces, service mats, glass drying mats, and organized tools. We do not need the venue to provide a bar, sink, running water, or house power for the full setup.</p>
+          <p>A clean place to load in and enough space for the bar footprint. Full Proof brings the professional mobile bar infrastructure: generator-capable power, fresh and gray water, a 110v pump, running water, integrated Decent Espresso rinser, custom utility sink, custom portable stainless steel ice bin, prep surfaces, service mats, glass drying mats, and organized tools. We do not need the venue to provide a bar, sink, running water, or house power for the full setup.</p>
         </article>
         <article class="faq-item">
           <h3>How much ice do you bring?</h3>
@@ -1243,7 +1328,7 @@
         </article>
         <article class="faq-item">
           <h3>How much is the deposit?</h3>
-          <p>Standard service can be held with a date-hold deposit. Larger weddings, brand events, and custom quotes may require a higher deposit because staffing, prep, and logistics are more involved.</p>
+          <p>Launch Standard can be held with a 50% date-hold deposit after availability is confirmed. Larger weddings, brand events, and custom quotes may require a different deposit because staffing, prep, and logistics are more involved.</p>
         </article>
       </div>
     </section>
@@ -1269,9 +1354,9 @@
         </article>
         <article class="path-card">
           <strong>Ready</strong>
-          <h3>Start a date hold</h3>
-          <p>Choose “Ready to reserve” in the form. Joe will confirm availability and send the date-hold deposit step.</p>
-          <a class="button wide" href="#event-inquiry">Reserve standard service</a>
+          <h3>Book now</h3>
+          <p>Choose “Ready to book with 50% deposit” in the form. Joe will confirm availability and send the secure date-hold step.</p>
+          <a class="button wide" href="#event-inquiry">Start 50% date hold</a>
         </article>
       </div>
       
@@ -1348,7 +1433,7 @@
               <option value="" disabled selected>Select one</option>
               <option value="Checking availability">Checking availability</option>
               <option value="Ready for a quote">Ready for a quote</option>
-              <option value="Ready to reserve Launch Standard">Ready to reserve Launch Standard</option>
+              <option value="Ready to book with 50% deposit">Ready to book with 50% deposit</option>
               <option value="Planner or vendor inquiry">Planner or vendor inquiry</option>
             </select>
           </div>
@@ -1358,7 +1443,7 @@
           <label>What are you interested in?</label>
           <div class="checkbox-grid">
             <label><input type="checkbox" name="interest" value="Launch Standard Service" /> Launch Standard Service</label>
-            <label><input type="checkbox" name="interest" value="Date-hold deposit" /> Date-hold deposit</label>
+            <label><input type="checkbox" name="interest" value="50% date-hold deposit" /> 50% date-hold deposit</label>
             <label><input type="checkbox" name="interest" value="Signature cocktails" /> Signature cocktails</label>
             <label><input type="checkbox" name="interest" value="Clear ice upgrades" /> Clear ice upgrades</label>
             <label><input type="checkbox" name="interest" value="Extra bartender" /> Extra bartender</label>
@@ -1390,6 +1475,11 @@
       </div>
     </section>
   </main>
+
+  <div class="mobile-booking-bar" aria-label="Quick booking actions">
+    <a class="button solid" href="#event-inquiry">Book now</a>
+    <a class="button" href="tel:+15624448030">Text Joe</a>
+  </div>
 
   <footer class="footer">
     <div class="footer-inner">

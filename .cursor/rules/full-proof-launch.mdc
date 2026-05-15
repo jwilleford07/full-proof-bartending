@@ -62,6 +62,13 @@ The website is a static Netlify site.
 - Static SEO files: `robots.txt`, `sitemap.xml`
 - Do not remove `package.json` or `scripts/check-site.mjs`
 
+Conversion review rules:
+
+- Optimize mobile first. A phone visitor should immediately see what Full Proof does, where it serves, how to check a date, how to text Joe, and how to start a date hold.
+- After building or editing the website, review it a second time as a wealthy Newport Beach private-event buyer looking for a luxury bartender. Fix anything that feels cheap, confusing, too wordy, under-proofed, or hard to book.
+- Keep a visible `Book now` / date-hold path, but do not imply the menu must be finalized before the date can be reserved.
+- For direct booking, frame the first online step as a 50% date-hold deposit after availability is confirmed. Future versions should move toward fully self-serve online booking.
+
 Image rules:
 
 - Remove or avoid home-bar clutter, parking lots, cars, and old-brand elements.

@@ -16,14 +16,14 @@ Avoid sounding promotional or discounter: no “discount,” “deal,” “% of
 
 **Public pricing**
 
-- **Launch special from $749 / 3 hours**
+- **From $749 / 3 hours**
 - **$899 / 4 hours**
 
 **Always include (every booking)**
 
 - One professional bartender for active service (setup/cleanup outside guest-facing hours as quoted).
 - Service planning: timeline touchpoints, pour logic, menu direction, shopping guidance for client-provided alcohol.
-- Professional bar tools and a **composed, guest-ready bar station** appropriate to the contract (see “Setup tiers” below — the full mobile unit is self-sustained and does not depend on venue power or water).
+- Crew Supply Co bottles and tools plus a **composed, guest-ready bar station** appropriate to the contract (see “Setup tiers” below — the full mobile unit is self-sustained and does not depend on venue power or water).
 - **Tossware premium compostable drinkware** for all Full Proof–served beverages unless the host opts into glassware they supply.
 - **Hand-carved clear ice cubes** for cocktails served at the event — included during the **launch / portfolio window** (see framing below).
 - Cleanup aligned with venue rules and the agreed scope.
@@ -59,8 +59,8 @@ Full Proof should never read “folding-table bar.” The **difference is equipm
 
 | Tier | Client-facing name | What it is | Typical margin lever |
 |------|---------------------|------------|----------------------|
-| **A** | Professional bar station | Composed back bar, organized tools, garnish and execution at event-grade presentation — scoped to venue layout | Base-friendly; upsell time/menu depth |
-| **B** | Full mobile craft bar | Self-sustained unit: generator power, fresh and gray water, 110v pump, running water, rinsers, dump sinks, wash sinks, hand-wash station, clean prep surfaces, professional ice well, chilled condiment displays, napkins, straws, service mats, glass drying mats, organized tools, and optional ice press / smoke / bubble / foam capabilities | Higher quoted minimums; travel/setup complexity |
+| **A** | Professional bar station | Composed back bar, Crew Supply Co bottles and tools, garnish and execution at event-grade presentation — scoped to venue layout | Base-friendly; upsell time/menu depth |
+| **B** | Full mobile craft bar | Self-sustained unit: generator power, fresh and gray water, 110v pump, running water, integrated Decent Espresso rinser, custom utility sink, hand-wash capability, clean prep surfaces, custom portable stainless steel ice bin, chilled condiment displays, napkins, straws, service mats, glass drying mats, Crew Supply Co bottles and tools, premium Tossware drinkware, and optional ice press / smoke / bubble / foam capabilities | Higher quoted minimums; travel/setup complexity |
 
 **Rule:** Tier B is **quoted**, not buried as assumed. If marketing says “full mobile bar,” ensure the quote reflects Tier B.
 
@@ -114,7 +114,7 @@ Quote **per event**. Bundle where it simplifies the buying decision.
 | Spirits, wine, beer, mixers (unless contracted otherwise) | **Client-provided**; Full Proof provides shopping list and quantities |
 | Venue access, permits host holds | **Client** |
 | Glassware (optional upgrade path) | **Client** unless contracted rental/supply |
-| Bar equipment, tools, Tossware, execution ice baseline | **Full Proof** per quote |
+| Bar equipment, Crew Supply Co bottles and tools, Tossware premium drinkware, execution ice baseline | **Full Proof** per quote |
 | Specialty ice beyond baseline | **Quoted add-on** |
 
 ---
@@ -131,7 +131,7 @@ Quote **per event**. Bundle where it simplifies the buying decision.
 
 ### Tier B upsell
 
-“When events call for the **full self-contained mobile craft bar**, we bring the infrastructure: generator power, fresh and gray water, pump-driven running water, rinsers, sinks, hand-wash capability, ice well, clean prep surfaces, organized tools, and the bar details guests expect from a serious cocktail program.”
+“When events call for the **full self-contained mobile craft bar**, we bring the infrastructure: generator power, fresh and gray water, pump-driven running water, integrated Decent Espresso rinser, custom utility sink, hand-wash capability, custom stainless ice bin, clean prep surfaces, Crew Supply Co bottles and tools, Tossware premium drinkware, and the bar details guests expect from a serious cocktail program.”
 
 ### Closing line
 
@@ -145,8 +145,27 @@ Published packages section should always:
 
 - Use section eyebrow **Packages** (pricing lives in the cards; avoids noisy “sale” signaling).
 - Show **Launch Standard** dollar amounts exactly as listed above (QA-enforced).
-- Include clear date-hold and form language (QA-enforced).
+- Include clear `Book now`, 50% date-hold, and form language (QA-enforced).
 - Present add-ons as **quoted by event**, grouped conceptually (ice, menu, staffing, logistics).
+
+---
+
+## Date-Hold / Book Now Flow
+
+Public booking language should make the next step feel easy without pretending the full event can be finalized before talking to Joe.
+
+Approved framing:
+
+- `Book now`
+- `Start a 50% date-hold request`
+- `Hold the date now. Finalize the menu later.`
+- `Joe will confirm availability before collecting the deposit.`
+
+Current booking rule:
+
+- Launch Standard can be held with a **50% date-hold deposit after availability is confirmed**.
+- The website should collect booking intent through the form first, then Joe sends the secure payment step.
+- Future version: move toward fully self-serve online booking once availability, contracts, and payment flow are reliable.
 
 ---
 
