@@ -45,7 +45,7 @@ const bannedPublicFiles = [
 const requiredHomepagePatterns = [
   /joe@fullproofbartending\.com/i,
   /\(?562\)?[\s.-]*444[\s.-]*8030/,
-  /Check your date/i,
+  /Reserve your date/i,
   /Launch Standard/i,
   /\$749\s*\/\s*3 hours/i,
   /\$899\s*\/\s*4 hours/i,

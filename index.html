@@ -101,6 +101,8 @@
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.14em;
+      line-height: 1.25;
+      text-align: center;
       text-transform: uppercase;
     }
 
@@ -357,6 +359,19 @@
       max-width: 760px;
       margin: 28px 0 0;
       color: var(--muted);
+    }
+
+    .package-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .deposit-note {
+      display: block;
+      margin-top: 10px;
+      color: var(--soft);
+      font-size: 0.9rem;
     }
 
     .booking-panel {
@@ -1046,7 +1061,7 @@
         <a href="#ice">Ice</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
-        <a class="button" href="#contact">Check date</a>
+        <a class="button" href="#event-inquiry">Reserve date</a>
       </div>
     </nav>
   </header>
@@ -1062,11 +1077,11 @@
         <h1>Luxury mobile bartending for events where the bar matters.</h1>
         <p class="hero-copy">Full Proof brings a fully self-contained professional cocktail bar, polished Southern hospitality, custom drink direction, and hand-carved clear ice backed by 11+ years behind the bar and 20 years in hospitality.</p>
         <div class="hero-actions">
-          <a class="button solid" href="#contact">Check your date</a>
-          <a class="button" href="#event-inquiry">Book now</a>
+          <a class="button solid" href="#event-inquiry">Reserve your date</a>
+          <a class="button" href="#contact">Check availability first</a>
           <a class="button" href="tel:+15624448030">Text Full Proof</a>
         </div>
-        <p class="hero-note">Use the form, email Joe, text directly, or start a 50% date-hold request for Launch Standard. Menu and final bar details can be locked in after the date is secured.</p>
+        <p class="hero-note">Reserve Launch Standard with a 50% date-hold request, or check availability first if you are still comparing options. Menu and final bar details can be locked in after the date is secured.</p>
       </div>
     </section>
 
@@ -1113,9 +1128,9 @@
       <div class="path-grid" aria-label="Booking paths">
         <article class="path-card">
           <strong>Form</strong>
-          <h3>Check the date</h3>
+          <h3>Check availability first</h3>
           <p>Best when you want availability, package direction, or a clean quote before deciding.</p>
-          <a class="button solid wide" href="#event-inquiry">Fill out the form</a>
+          <a class="button wide" href="#event-inquiry">Check availability</a>
         </article>
         <article class="path-card">
           <strong>Fast contact</strong>
@@ -1125,9 +1140,9 @@
         </article>
         <article class="path-card">
           <strong>Date hold</strong>
-          <h3>Book now</h3>
-          <p>Best when you already know you need bar service. Start a 50% date-hold request now and finalize drinks later.</p>
-          <a class="button wide" href="#event-inquiry">Start 50% date hold</a>
+          <h3>Reserve your date</h3>
+          <p>Best when you already know you need bar service. Start the Launch Standard date-hold path now and finalize drinks later.</p>
+          <a class="button solid wide" href="#event-inquiry">Reserve your date</a>
         </article>
       </div>
     </section>
@@ -1178,29 +1193,40 @@
           <h3>One bartender for a clean, capable event bar</h3>
           <strong class="package-price">From $749 / 3 hours<br>$899 / 4 hours</strong>
           <p>Best for smaller private events. Includes one bartender, service planning, Crew Supply Co bottles and tools, Tossware premium compostable drinkware, clean bar setup, cleanup, basic bar guidance, and hand-carved clear ice cubes for cocktails served by Full Proof.</p>
+          <div class="package-actions">
+            <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Standard - 3 hours - 50% deposit request">Reserve 3 hours - $374.50 deposit</a>
+            <a class="button wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Standard - 4 hours - 50% deposit request">Reserve 4 hours - $449.50 deposit</a>
+          </div>
+          <small class="deposit-note">Secure payment link follows after date and service window are confirmed.</small>
         </article>
         <article class="package-card">
           <span>Signature Bar Experience</span>
           <h3>Custom cocktails and a more intentional guest experience</h3>
           <strong class="package-price">From $1,250</strong>
           <p>For events where drinks and presentation matter. Adds signature cocktail direction, batching guidance where useful, garnish direction, expanded shopping support, and clear ice presentation details.</p>
+          <div class="package-actions">
+            <a class="button wide package-choice-link" href="#event-inquiry" data-package-choice="Signature Bar Experience quote">Request Signature quote</a>
+          </div>
         </article>
         <article class="package-card">
           <span>Weddings & Brand Events</span>
           <h3>Higher-touch planning for visible moments</h3>
           <strong class="package-price">Custom quotes from $2,400</strong>
           <p>For weddings, brand activations, corporate hosting, and high-design private events. Scope can include additional bartenders, extended service, menu cards, specialty ice, and deeper timeline coordination.</p>
+          <div class="package-actions">
+            <a class="button wide package-choice-link" href="#event-inquiry" data-package-choice="Wedding or brand event custom quote">Request event quote</a>
+          </div>
         </article>
       </div>
       <p class="package-note">Launch pricing keeps the first booking step approachable while Full Proof builds its published event portfolio. Alcohol is typically client-provided; Full Proof supplies quantities and a shopping list once the menu is set. Every quote reflects guest count, active service hours, staffing, travel and load-in, menu ambition, and premium add-ons.</p>
       <div class="booking-panel">
         <div>
-          <p class="eyebrow" style="margin-bottom: 14px;">Ready to move?</p>
+          <p class="eyebrow" style="margin-bottom: 14px;">Ready to reserve?</p>
           <h3>Hold the date now. Finalize the menu later.</h3>
-          <p>If you already know you need polished bar service, start a 50% date-hold request for standard service. Joe will confirm availability before collecting the deposit, then finalize scope, menu direction, and shopping guidance after the date is secured.</p>
+          <p>If you already know you need polished bar service, start the Launch Standard date-hold path. Joe will confirm availability before the secure deposit step, then finalize scope, menu direction, and shopping guidance after the date is secured.</p>
         </div>
         <div class="booking-panel-actions">
-          <a class="button solid wide" href="#event-inquiry">Book now</a>
+          <a class="button solid wide" href="#event-inquiry">Reserve your date</a>
           <a class="button wide" href="#event-inquiry">Request a custom quote</a>
           <a class="button wide" href="tel:+15624448030">Text before booking</a>
         </div>
@@ -1229,8 +1255,8 @@
         </article>
       </div>
       <div class="hero-actions" style="margin-top: 42px;">
-        <a class="button solid" href="#contact">Check your date</a>
-        <a class="button" href="#event-inquiry">Book now</a>
+        <a class="button solid" href="#event-inquiry">Reserve your date</a>
+        <a class="button" href="#contact">Check availability first</a>
       </div>
     </section>
 
@@ -1344,7 +1370,7 @@
             <a class="press-link" href="https://distilling.com/distillermagazine/big-clear-ice/" target="_blank" rel="noopener">Read the article</a>
           </div>
           <div class="hero-actions" style="margin-top: 32px;">
-            <a class="button solid" href="#contact">Check your date</a>
+            <a class="button solid" href="#event-inquiry">Reserve your date</a>
             <a class="button" href="/clear-ice/">Explore the clear ice story</a>
           </div>
         </div>
@@ -1379,27 +1405,27 @@
     </section>
 
     <section class="section">
-      <p class="eyebrow">Booking flow</p>
+      <p class="eyebrow">Reservation flow</p>
       <h2 class="section-title">How it works.</h2>
       <div class="steps" style="margin-top: 42px;">
         <article class="step">
           <strong>Step 01</strong>
           <div>
-            <h3>Check your date</h3>
-            <p>Use the form, email, or text with your date, location, guest count, event type, and service window. If the event is soon, text after submitting.</p>
+            <h3>Share the essentials</h3>
+            <p>Send the date, location, guest count, event type, and service window so Full Proof can confirm the event is serviceable.</p>
           </div>
         </article>
         <article class="step">
           <strong>Step 02</strong>
           <div>
-            <h3>Hold the date or build the quote</h3>
-            <p>Start a 50% date-hold request for standard service, or get a custom quote for weddings, brand events, larger guest counts, signature cocktails, and premium ice work.</p>
+            <h3>Reserve or quote</h3>
+            <p>For Launch Standard, request the 50% date-hold path. For weddings, brand events, larger guest counts, signature cocktails, and premium ice work, request a custom quote.</p>
           </div>
         </article>
         <article class="step">
           <strong>Step 03</strong>
           <div>
-            <h3>Finalize menu later</h3>
+            <h3>Finalize details later</h3>
             <p>Once the date is secured, Full Proof finalizes service length, staffing, menu direction, shopping list, clear ice needs, and logistics.</p>
           </div>
         </article>
@@ -1424,7 +1450,7 @@
         </article>
         <article class="faq-item">
           <h3>What is the booking process?</h3>
-          <p>Start by sharing the event basics. If standard service fits, you can reserve the date with a deposit and finalize the menu later. If the event needs more detail, Joe will recommend the right package and quote the scope clearly.</p>
+          <p>Start by sharing the event basics. If Launch Standard fits, you can reserve the date with a deposit and finalize the menu later. If the event needs more detail, Joe will recommend the right package and quote the scope clearly.</p>
         </article>
         <article class="faq-item">
           <h3>Can I reserve before choosing cocktails?</h3>
@@ -1432,22 +1458,22 @@
         </article>
         <article class="faq-item">
           <h3>How much is the deposit?</h3>
-          <p>Launch Standard can be held with a 50% date-hold deposit after availability is confirmed. Larger weddings, brand events, and custom quotes may require a different deposit because staffing, prep, and logistics are more involved.</p>
+          <p>Launch Standard can be held with a 50% date-hold deposit after availability is confirmed: $374.50 for the 3-hour service or $449.50 for the 4-hour service. Larger weddings, brand events, and custom quotes may require a different deposit because staffing, prep, and logistics are more involved.</p>
         </article>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <p class="eyebrow">Now booking</p>
-      <h2>Check your date.</h2>
-      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Pick the path that fits where you are: form, email, text, or date-hold request.</p>
+      <h2>Reserve your date.</h2>
+      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Use the form to reserve Launch Standard, check availability first, or request a custom quote.</p>
 
       <div class="path-grid" aria-label="Contact and booking options">
         <article class="path-card">
           <strong>Best default</strong>
-          <h3>Send event details</h3>
-          <p>Use the form for date, location, guest count, service window, and package direction.</p>
-          <a class="button solid wide" href="#event-inquiry">Use the form</a>
+          <h3>Reserve Launch Standard</h3>
+          <p>Use this if you want the 3-hour or 4-hour date-hold path and can finalize the menu after the date is secured.</p>
+          <a class="button solid wide" href="#event-inquiry">Reserve your date</a>
         </article>
         <article class="path-card">
           <strong>Direct</strong>
@@ -1457,10 +1483,10 @@
           <a class="button wide" href="tel:+15624448030">Text Joe</a>
         </article>
         <article class="path-card">
-          <strong>Ready</strong>
-          <h3>Book now</h3>
-          <p>Choose “Ready to book with 50% deposit” in the form. Joe will confirm availability and send the secure date-hold step.</p>
-          <a class="button wide" href="#event-inquiry">Start 50% date hold</a>
+          <strong>Still deciding</strong>
+          <h3>Check availability first</h3>
+          <p>Choose this if you are comparing options, need package direction, or want a quote before starting the deposit path.</p>
+          <a class="button wide" href="#event-inquiry">Check availability</a>
         </article>
       </div>
       
@@ -1532,19 +1558,42 @@
             </select>
           </div>
           <div class="form-group">
+            <label for="package-choice">Package path</label>
+            <select id="package-choice" name="package_choice" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Launch Standard - 3 hours - 50% deposit request">Launch Standard, 3 hours - $374.50 deposit request</option>
+              <option value="Launch Standard - 4 hours - 50% deposit request">Launch Standard, 4 hours - $449.50 deposit request</option>
+              <option value="Signature Bar Experience quote">Signature Bar Experience quote</option>
+              <option value="Wedding or brand event custom quote">Wedding or brand event custom quote</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
             <label for="booking-intent">Where are you in the process?</label>
             <select id="booking-intent" name="booking_intent" required>
               <option value="" disabled selected>Select one</option>
               <option value="Checking availability">Checking availability</option>
               <option value="Ready for a quote">Ready for a quote</option>
-              <option value="Ready to book with 50% deposit">Ready to book with 50% deposit</option>
+              <option value="Ready to reserve with 50% deposit">Ready to reserve with 50% deposit</option>
+              <option value="Planner or vendor inquiry">Planner or vendor inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="payment-timing">Deposit timing</label>
+            <select id="payment-timing" name="payment_timing" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Send secure deposit step after availability is confirmed">Send secure deposit step after availability is confirmed</option>
+              <option value="I want a quote before deposit">I want a quote before deposit</option>
               <option value="Planner or vendor inquiry">Planner or vendor inquiry</option>
             </select>
           </div>
         </div>
 
         <div class="form-group">
-          <label>What are you interested in? <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Select all that apply.</span></label>
+          <label>Add-ons and upgrades <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Select all that apply.</span></label>
           <div class="checkbox-grid">
             <label><input type="checkbox" name="interest" value="Launch Standard Service" /> Launch Standard Service</label>
             <label><input type="checkbox" name="interest" value="50% date-hold deposit" /> 50% date-hold deposit</label>
@@ -1569,8 +1618,8 @@
         </div>
 
         <div class="form-actions">
-          <button type="submit" class="button solid">Send event details</button>
-          <p class="form-note">If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
+          <button type="submit" class="button solid">Submit reservation request</button>
+          <p class="form-note">For Launch Standard, Joe confirms availability before the secure deposit step. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
         </div>
       </form>
 
@@ -1583,7 +1632,7 @@
   </main>
 
   <div class="mobile-booking-bar" aria-label="Quick booking actions">
-    <a class="button solid" href="#event-inquiry">Book now</a>
+    <a class="button solid" href="#event-inquiry">Reserve date</a>
     <a class="button" href="tel:+15624448030">Text Joe</a>
   </div>
 
@@ -1595,5 +1644,31 @@
       <span>LA | Long Beach | OC</span>
     </div>
   </footer>
+  <script>
+    const packageChoice = document.querySelector("#package-choice");
+    const bookingIntent = document.querySelector("#booking-intent");
+    const paymentTiming = document.querySelector("#payment-timing");
+
+    document.querySelectorAll(".package-choice-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        const choice = link.dataset.packageChoice;
+        if (packageChoice && choice) {
+          packageChoice.value = choice;
+        }
+
+        if (bookingIntent && choice?.includes("deposit")) {
+          bookingIntent.value = "Ready to reserve with 50% deposit";
+        } else if (bookingIntent) {
+          bookingIntent.value = "Ready for a quote";
+        }
+
+        if (paymentTiming && choice?.includes("deposit")) {
+          paymentTiming.value = "Send secure deposit step after availability is confirmed";
+        } else if (paymentTiming) {
+          paymentTiming.value = "I want a quote before deposit";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
