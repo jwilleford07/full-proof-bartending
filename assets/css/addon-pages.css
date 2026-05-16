@@ -232,6 +232,7 @@ h1 {
 .media-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
   gap: 1px;
   margin-top: 42px;
   border: 1px solid var(--line);
