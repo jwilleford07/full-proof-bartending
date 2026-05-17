@@ -110,7 +110,7 @@ a {
   height: 100%;
   object-fit: cover;
   opacity: 0.72;
-  filter: saturate(0.92) contrast(1.06);
+  filter: saturate(1.06) contrast(1.05) brightness(1.02);
 }
 
 .hero::after {
@@ -338,6 +338,7 @@ h1 {
 .media video {
   height: 100%;
   object-fit: cover;
+  filter: saturate(1.08) contrast(1.04) brightness(1.02);
 }
 
 .story-list {

@@ -646,8 +646,41 @@
     .about-image img {
       height: 100%;
       object-fit: cover;
-      filter: saturate(0.95) contrast(1.05); /* Unifies photos with a slightly cinematic/premium grade */
+      filter: saturate(1.08) contrast(1.04) brightness(1.02);
       transition: filter 0.4s ease;
+    }
+
+    .flavor-strip {
+      display: grid;
+      grid-template-columns: 0.95fr 1.1fr 0.95fr;
+      gap: 1px;
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .flavor-tile {
+      min-height: 360px;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .flavor-tile.feature {
+      min-height: 460px;
+    }
+
+    .flavor-tile img {
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.12) contrast(1.04) brightness(1.04);
+    }
+
+    .flavor-tile--bright img {
+      object-position: 50% 44%;
+    }
+
+    .flavor-tile--glass img {
+      object-position: 50% 50%;
     }
 
     .photo-panel--center img {
@@ -1028,6 +1061,7 @@
       .addon-grid,
       .setup-detail-grid,
       .gallery-grid,
+      .flavor-strip,
       .photo-band,
       .faq-grid,
       .path-grid,
@@ -1280,6 +1314,17 @@
         <div>
           <p class="lead">The bar should feel like it belongs at your event: prepared, attractive, self-sustained, efficient, and easy for guests to enjoy.</p>
           <p class="body-copy">Full Proof handles the details that shape the guest experience: service flow, cocktail direction, garnish presentation, batching needs, shopping guidance, professional bar setup, sanitation, cleanup, and hand-carved clear cubes served at every event. The experience is layered: Southern hospitality roots, 20 years in hospitality, 11+ years behind the bar, private event service since 2017, banquet captain experience, and seven years of Los Angeles craft cocktail bartending translated into a mobile bar system most event bars simply do not bring.</p>
+        </div>
+      </div>
+      <div class="flavor-strip" aria-label="Bright cocktail ingredients and finished drinks">
+        <div class="flavor-tile flavor-tile--bright">
+          <img src="assets/photos/bright-spirits-orange.jpg" alt="Bright cocktail ingredients with citrus and premium bottles" />
+        </div>
+        <div class="flavor-tile feature">
+          <img src="assets/photos/golden-coupe-cocktail.jpg" alt="Golden coupe cocktail with orange peel garnish" />
+        </div>
+        <div class="flavor-tile flavor-tile--glass">
+          <img src="assets/photos/clear-ice-rock-black.jpg" alt="Crystal clear ice in a rocks glass against a dark background" />
         </div>
       </div>
     </section>
