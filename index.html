@@ -296,6 +296,12 @@
       font-size: clamp(2.5rem, 5.8vw, 5.8rem);
     }
 
+    .section-title + .lead,
+    .section-title + .body-copy,
+    .eyebrow + .lead {
+      margin-top: 28px;
+    }
+
     .lead {
       max-width: 720px;
       margin: 0;
@@ -304,7 +310,12 @@
     }
 
     .body-copy {
+      margin: 24px 0 0;
       color: var(--muted);
+    }
+
+    .lead + .body-copy {
+      margin-top: 26px;
     }
 
     .intro {
@@ -1398,7 +1409,7 @@
     <section class="section" id="setup">
       <p class="eyebrow">Self-contained bar system</p>
       <h2 class="section-title">A real cocktail bar, brought to your event.</h2>
-      <p class="lead" style="margin-top: 24px;">Full Proof does not depend on a venue bar, folding table, house sink, or borrowed utility setup. We bring the infrastructure that lets bar service run cleanly: generator power, fresh and gray water jugs, a 110v pump, running water, an integrated Decent Espresso rinser, a custom utility sink, a hand-wash station, a custom portable stainless steel ice bin, clean cutting-board surfaces, chilled condiment displays, black cocktail napkins, straws, service mats, glass drying mats, Crew Supply Co bottles and tools, and premium Tossware drinkware.</p>
+      <p class="lead">Full Proof does not depend on a venue bar, folding table, house sink, or borrowed utility setup. We bring the infrastructure that lets bar service run cleanly: generator power, fresh and gray water jugs, a 110v pump, running water, an integrated Decent Espresso rinser, a custom utility sink, a hand-wash station, a custom portable stainless steel ice bin, clean cutting-board surfaces, chilled condiment displays, black cocktail napkins, straws, service mats, glass drying mats, Crew Supply Co bottles and tools, and premium Tossware drinkware.</p>
       <div class="included-grid" style="margin-top: 42px;">
         <article class="included-card">
           <span>Infrastructure</span>
