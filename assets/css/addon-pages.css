@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 108px;
 }
 
 body {
@@ -185,6 +186,7 @@ h1 {
 
 .section {
   padding: 92px 0;
+  scroll-margin-top: 108px;
 }
 
 .split {
@@ -378,6 +380,10 @@ h1 {
 }
 
 @media (max-width: 640px) {
+  html {
+    scroll-padding-top: 96px;
+  }
+
   .nav,
   .hero-inner,
   .section,
@@ -395,6 +401,7 @@ h1 {
 
   .section {
     padding: 70px 0;
+    scroll-margin-top: 96px;
   }
 
   .button {

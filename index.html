@@ -28,6 +28,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 178px;
     }
 
     body {
@@ -277,7 +278,7 @@
       width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
       padding: 92px 0;
-      scroll-margin-top: 96px;
+      scroll-margin-top: 178px;
     }
 
     .eyebrow {
@@ -729,12 +730,13 @@
         #080807;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
+      scroll-margin-top: 178px;
     }
 
     .ice-wrap {
       width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
-      padding: 92px 0;
+      padding: 120px 0;
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
       gap: 56px;
@@ -923,7 +925,7 @@
       max-width: 650px;
       margin: 42px auto 0;
       text-align: left;
-      scroll-margin-top: 110px;
+      scroll-margin-top: 178px;
     }
 
     .form-row {
@@ -1049,6 +1051,10 @@
     }
 
     @media (max-width: 640px) {
+      html {
+        scroll-padding-top: 136px;
+      }
+
       body {
         padding-bottom: 82px;
       }
@@ -1091,6 +1097,12 @@
       .section,
       .ice-wrap {
         padding: 70px 0;
+        scroll-margin-top: 136px;
+      }
+
+      .ice-section,
+      .inquiry-form {
+        scroll-margin-top: 136px;
       }
 
       .service-area {
@@ -1448,7 +1460,7 @@
           <div>
             <span>Clear ice</span>
             <h3>Production knowledge in the glass.</h3>
-            <p>Hand-cut cubes are included, with spheres, Collins spears, diamonds, floral cubes, stamped cubes, and event ice production scoped when the moment calls for it.</p>
+            <p>Hand-cut cubes are included, with spheres, Collins spears, diamonds, stamped cubes, and event ice production scoped when the moment calls for it.</p>
           </div>
           <a class="button wide" href="/clear-ice/">Read the clear ice story</a>
         </article>
