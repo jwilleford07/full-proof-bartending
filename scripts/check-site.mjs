@@ -8,6 +8,7 @@ const warnings = [];
 const requiredFiles = [
   "index.html",
   "custom-mobile-bar/index.html",
+  "why-mobile-bartender/index.html",
   "clear-ice/index.html",
   "smoked-cocktails/index.html",
   "robots.txt",
@@ -158,7 +159,7 @@ if (exists("sitemap.xml")) {
   if (!/<loc>https:\/\/fullproofbartending\.com\/<\/loc>/i.test(sitemap)) {
     failures.push("sitemap.xml must include the canonical homepage URL.");
   }
-  for (const slug of ["custom-mobile-bar", "clear-ice", "smoked-cocktails"]) {
+  for (const slug of ["custom-mobile-bar", "why-mobile-bartender", "clear-ice", "smoked-cocktails"]) {
     if (!new RegExp(`<loc>https://fullproofbartending\\.com/${slug}/</loc>`).test(sitemap)) {
       failures.push(`sitemap.xml must include /${slug}/.`);
     }

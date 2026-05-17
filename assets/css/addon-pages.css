@@ -207,6 +207,75 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.math-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1px;
+  margin-top: 42px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.math-card {
+  padding: 34px;
+  background: rgba(17, 16, 14, 0.96);
+}
+
+.math-card.featured {
+  background:
+    linear-gradient(135deg, rgba(200, 164, 106, 0.16), rgba(17, 16, 14, 0.96) 46%),
+    rgba(17, 16, 14, 0.96);
+}
+
+.math-card strong {
+  display: block;
+  color: var(--ivory);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.math-card small {
+  display: block;
+  margin-top: 8px;
+  color: var(--soft);
+  font-size: 0.95rem;
+}
+
+.math-list {
+  display: grid;
+  gap: 1px;
+  margin-top: 26px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.math-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  padding: 16px 18px;
+  background: rgba(5, 5, 5, 0.42);
+  color: var(--muted);
+}
+
+.math-row.total {
+  color: var(--ivory);
+  background: rgba(200, 164, 106, 0.12);
+  font-weight: 700;
+}
+
+.callout {
+  margin-top: 42px;
+  padding: 34px;
+  border: 1px solid rgba(200, 164, 106, 0.38);
+  background: rgba(200, 164, 106, 0.1);
+}
+
+.callout p {
+  margin: 0;
+}
+
 .card {
   min-height: 240px;
   padding: 30px;
@@ -298,6 +367,7 @@ h1 {
   .split,
   .grid,
   .grid.two,
+  .math-grid,
   .media-grid {
     grid-template-columns: 1fr;
   }
@@ -336,6 +406,11 @@ h1 {
   .story-list div {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+
+  .math-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .footer-inner {
