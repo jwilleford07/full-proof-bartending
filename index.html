@@ -58,6 +58,30 @@
       backdrop-filter: blur(18px);
     }
 
+    .promo-banner {
+      border-bottom: 1px solid rgba(200, 164, 106, 0.34);
+      background: rgba(200, 164, 106, 0.14);
+      color: var(--ivory);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      line-height: 1.35;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .promo-banner a {
+      display: block;
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+
+    .promo-banner strong {
+      color: var(--gold);
+    }
+
     .nav {
       width: min(var(--max), calc(100% - 40px));
       min-height: 76px;
@@ -299,6 +323,85 @@
       gap: 1px;
       border: 1px solid var(--line);
       background: var(--line);
+    }
+
+    .addon-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .launch-special {
+      border-top: 1px solid rgba(200, 164, 106, 0.28);
+      border-bottom: 1px solid rgba(200, 164, 106, 0.28);
+      background:
+        linear-gradient(135deg, rgba(200, 164, 106, 0.16), rgba(5, 5, 5, 0) 42%),
+        linear-gradient(90deg, rgba(17, 16, 14, 0.98), rgba(5, 5, 5, 0.96));
+    }
+
+    .launch-panel {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: stretch;
+    }
+
+    .launch-copy,
+    .launch-offer {
+      border: 1px solid rgba(238, 227, 207, 0.16);
+      background: rgba(5, 5, 5, 0.32);
+      padding: 34px;
+    }
+
+    .launch-offer {
+      display: grid;
+      align-content: space-between;
+      gap: 28px;
+    }
+
+    .launch-price {
+      color: var(--ivory);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      font-weight: 800;
+      line-height: 0.95;
+    }
+
+    .launch-price small {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-family: Inter, Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .promo-code {
+      display: inline-flex;
+      width: fit-content;
+      margin-top: 22px;
+      padding: 10px 14px;
+      border: 1px solid rgba(200, 164, 106, 0.72);
+      color: var(--gold);
+      background: rgba(200, 164, 106, 0.1);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .launch-list {
+      display: grid;
+      gap: 12px;
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+
+    .launch-list li {
+      padding-left: 18px;
+      border-left: 2px solid rgba(200, 164, 106, 0.48);
     }
 
     .faq-grid {
@@ -900,7 +1003,8 @@
       .intro,
       .ice-wrap,
       .about,
-      .booking-panel {
+      .booking-panel,
+      .launch-panel {
         grid-template-columns: 1fr;
       }
 
@@ -1048,6 +1152,9 @@
 </head>
 <body>
   <header class="site-header">
+    <div class="promo-banner">
+      <a href="#launch-special"><strong>Launch Special:</strong> $699 Founding Host rate. First 10 clients save $100 with code FOUNDER.</a>
+    </div>
     <nav class="nav" aria-label="Main navigation">
       <a class="nav-logo" href="#top" aria-label="Full Proof Bartending home">
         <img src="assets/fullproof-horizontal-lockup.svg" alt="Full Proof Bartending" />
@@ -1081,7 +1188,7 @@
           <a class="button" href="#contact">Check availability first</a>
           <a class="button" href="tel:+15624448030">Text Full Proof</a>
         </div>
-        <p class="hero-note">Reserve Launch Standard with a 50% date-hold request, or check availability first if you are still comparing options. Menu and final bar details can be locked in after the date is secured.</p>
+        <p class="hero-note">Reserve the Launch Special with a 50% date-hold request, or check availability first if you are still comparing options. Menu and final bar details can be locked in after the date is secured.</p>
       </div>
     </section>
 
@@ -1091,6 +1198,31 @@
         <span>11+ years in LA bars</span>
         <span>Self-contained bar system</span>
         <span>Clear ice included</span>
+      </div>
+    </section>
+
+    <section class="section launch-special" id="launch-special" aria-label="Launch special">
+      <div class="launch-panel">
+        <div class="launch-copy">
+          <p class="eyebrow">Launch Special</p>
+          <h2 class="section-title">Professional-grade service at an accessible launch rate.</h2>
+          <p class="lead">Full Proof is building its first public event portfolio, but Joe is not new to the work: 20 years in hospitality, 11+ years behind the bar, LA craft cocktail experience, private-event service since 2017, and real clear-ice production knowledge.</p>
+          <p class="body-copy">The soft launch is June 13 for a rooftop party, with select dates available before then. This offer is for hosts who see the opportunity: founder-led mobile bartending from the person planning the menu, preparing the syrups, handling the clear ice, setting the bar, and serving the room. Few public reviews should not read as inexperience. It means you can book the professional standard early, before the portfolio catches up to the skill.</p>
+          <span class="promo-code">Use code FOUNDER for $100 off</span>
+        </div>
+        <div class="launch-offer">
+          <div>
+            <p class="eyebrow" style="margin-bottom: 16px;">Founding Host Rate</p>
+            <div class="launch-price">$699<small>3 hours, up to 40 guests. 50% date-hold deposit: $349.50. First 10 launch clients save $100 with code FOUNDER and lock the $699 base rate for future good-fit single-bartender events.</small></div>
+            <ul class="launch-list">
+              <li>Clear ice for Full Proof-served cocktails.</li>
+              <li>House syrups, fresh lemon and lime juice, bitters, premium garnishes, napkins, straws, and bar picks.</li>
+              <li>3 signature mocktails built with the same care as the cocktail menu.</li>
+              <li>Menu direction, shopping guidance, setup, service, and cleanup.</li>
+            </ul>
+          </div>
+          <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special - 3 hours - 50% deposit request">Reserve Launch Special</a>
+        </div>
       </div>
     </section>
 
@@ -1141,7 +1273,7 @@
         <article class="path-card">
           <strong>Date hold</strong>
           <h3>Reserve your date</h3>
-          <p>Best when you already know you need bar service. Start the Launch Standard date-hold path now and finalize drinks later.</p>
+          <p>Best when you already know you need bar service. Start the Launch Special date-hold path now and finalize drinks later.</p>
           <a class="button solid wide" href="#event-inquiry">Reserve your date</a>
         </article>
       </div>
@@ -1189,15 +1321,15 @@
       <h2 class="section-title">Straightforward base service, premium bar details when you want them.</h2>
       <div class="package-grid" style="margin-top: 42px;">
         <article class="package-card">
-          <span>Launch Standard</span>
+          <span>Launch Special</span>
           <h3>One bartender for a clean, capable event bar</h3>
-          <strong class="package-price">From $749 / 3 hours<br>$899 / 4 hours</strong>
-          <p>Best for smaller private events. Includes one bartender, service planning, Crew Supply Co bottles and tools, Tossware premium compostable drinkware, clean bar setup, cleanup, basic bar guidance, and hand-carved clear ice cubes for cocktails served by Full Proof.</p>
+          <strong class="package-price">$699 / 3 hours<br>$849 / 4 hours</strong>
+          <p>Best for smaller private events. Includes one bartender, service planning, house syrups, fresh lemon and lime juice, standard bitters, premium garnishes, standard disposable PET cups, clean bar setup, cleanup, basic bar guidance, and hand-carved clear ice cubes for cocktails served by Full Proof.</p>
           <div class="package-actions">
-            <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Standard - 3 hours - 50% deposit request">Reserve 3 hours - $374.50 deposit</a>
-            <a class="button wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Standard - 4 hours - 50% deposit request">Reserve 4 hours - $449.50 deposit</a>
+            <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special - 3 hours - 50% deposit request">Reserve 3 hours - $349.50 deposit</a>
+            <a class="button wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special - 4 hours - 50% deposit request">Reserve 4 hours - $424.50 deposit</a>
           </div>
-          <small class="deposit-note">Secure payment link follows after date and service window are confirmed.</small>
+          <small class="deposit-note">First 10 launch clients can use promo code FOUNDER for $100 off the first eligible booking.</small>
         </article>
         <article class="package-card">
           <span>Signature Bar Experience</span>
@@ -1223,7 +1355,7 @@
         <div>
           <p class="eyebrow" style="margin-bottom: 14px;">Ready to reserve?</p>
           <h3>Hold the date now. Finalize the menu later.</h3>
-          <p>If you already know you need polished bar service, start the Launch Standard date-hold path. Joe will confirm availability before the secure deposit step, then finalize scope, menu direction, and shopping guidance after the date is secured.</p>
+          <p>If you already know you need polished bar service, start the Launch Special date-hold path. Joe will confirm availability before the secure deposit step, then finalize scope, menu direction, and shopping guidance after the date is secured.</p>
         </div>
         <div class="booking-panel-actions">
           <a class="button solid wide" href="#event-inquiry">Reserve your date</a>
@@ -1277,14 +1409,14 @@
         <article class="included-card">
           <span>Add-ons</span>
           <h3>Upgrade the bar</h3>
-          <p>Signature cocktails, full mobile craft bar deployment, smoked cocktails, smoke bubbles, customized foams, Ori Future ice press moments, pressed ice shapes, dehydrated citrus, extra service time, additional bartenders, batching, and custom menu signage.</p>
+          <p>Signature cocktails, full mobile craft bar deployment, fresh espresso martini service, smoked cocktails, smoke bubbles, customized foams, Ori Future ice press moments, pressed ice shapes, dehydrated citrus, extra service time, additional bartenders, batching, and custom menu signage.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="addons">
       <p class="eyebrow">Premium add-ons</p>
-      <h2 class="section-title">Three ways to make the bar feel unmistakably custom.</h2>
+      <h2 class="section-title">Four ways to make the bar feel unmistakably custom.</h2>
       <div class="addon-grid">
         <article class="addon-card">
           <div>
@@ -1309,6 +1441,14 @@
             <p>Smoked Old Fashioneds, aromatic service moments, bubbles, foams, and visual details that create a premium moment without turning the bar into a gimmick.</p>
           </div>
           <a class="button wide" href="/smoked-cocktails/">See smoked cocktail options</a>
+        </article>
+        <article class="addon-card">
+          <div>
+            <span>Espresso martinis</span>
+            <h3>Fresh espresso when the service flow allows.</h3>
+            <p>Espresso can be pulled during setup or downtime for service-ready martinis, with to-order pulls reserved for small VIP moments or slower service windows.</p>
+          </div>
+          <a class="button wide" href="#event-inquiry">Ask about espresso service</a>
         </article>
       </div>
     </section>
@@ -1419,7 +1559,7 @@
           <strong>Step 02</strong>
           <div>
             <h3>Reserve or quote</h3>
-            <p>For Launch Standard, request the 50% date-hold path. For weddings, brand events, larger guest counts, signature cocktails, and premium ice work, request a custom quote.</p>
+            <p>For the Launch Special, request the 50% date-hold path. For weddings, brand events, larger guest counts, signature cocktails, and premium ice work, request a custom quote.</p>
           </div>
         </article>
         <article class="step">
@@ -1450,7 +1590,7 @@
         </article>
         <article class="faq-item">
           <h3>What is the booking process?</h3>
-          <p>Start by sharing the event basics. If Launch Standard fits, you can reserve the date with a deposit and finalize the menu later. If the event needs more detail, Joe will recommend the right package and quote the scope clearly.</p>
+          <p>Start by sharing the event basics. If the Launch Special fits, you can reserve the date with a deposit and finalize the menu later. If the event needs more detail, Joe will recommend the right package and quote the scope clearly.</p>
         </article>
         <article class="faq-item">
           <h3>Can I reserve before choosing cocktails?</h3>
@@ -1458,7 +1598,7 @@
         </article>
         <article class="faq-item">
           <h3>How much is the deposit?</h3>
-          <p>Launch Standard can be held with a 50% date-hold deposit after availability is confirmed: $374.50 for the 3-hour service or $449.50 for the 4-hour service. Larger weddings, brand events, and custom quotes may require a different deposit because staffing, prep, and logistics are more involved.</p>
+          <p>The Launch Special can be held with a 50% date-hold deposit after availability is confirmed: $349.50 for the 3-hour service or $424.50 for the 4-hour service. Promo code FOUNDER takes $100 off the first eligible booking for the first 10 launch clients. Larger weddings, brand events, and custom quotes may require a different deposit because staffing, prep, and logistics are more involved.</p>
         </article>
       </div>
     </section>
@@ -1466,12 +1606,12 @@
     <section class="contact" id="contact">
       <p class="eyebrow">Now booking</p>
       <h2>Reserve your date.</h2>
-      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Use the form to reserve Launch Standard, check availability first, or request a custom quote.</p>
+      <p>Serving LA, Long Beach, and OC with premium mobile bartending for private events, weddings, and brand gatherings. Use the form to reserve the Launch Special, check availability first, or request a custom quote.</p>
 
       <div class="path-grid" aria-label="Contact and booking options">
         <article class="path-card">
           <strong>Best default</strong>
-          <h3>Reserve Launch Standard</h3>
+          <h3>Reserve Launch Special</h3>
           <p>Use this if you want the 3-hour or 4-hour date-hold path and can finalize the menu after the date is secured.</p>
           <a class="button solid wide" href="#event-inquiry">Reserve your date</a>
         </article>
@@ -1561,13 +1701,18 @@
             <label for="package-choice">Package path</label>
             <select id="package-choice" name="package_choice" required>
               <option value="" disabled selected>Select one</option>
-              <option value="Launch Standard - 3 hours - 50% deposit request">Launch Standard, 3 hours - $374.50 deposit request</option>
-              <option value="Launch Standard - 4 hours - 50% deposit request">Launch Standard, 4 hours - $449.50 deposit request</option>
+              <option value="Launch Special - 3 hours - 50% deposit request">Launch Special, 3 hours - $349.50 deposit request</option>
+              <option value="Launch Special - 4 hours - 50% deposit request">Launch Special, 4 hours - $424.50 deposit request</option>
               <option value="Signature Bar Experience quote">Signature Bar Experience quote</option>
               <option value="Wedding or brand event custom quote">Wedding or brand event custom quote</option>
               <option value="Not sure yet">Not sure yet</option>
             </select>
           </div>
+        </div>
+
+        <div class="form-group">
+          <label for="promo-code">Promo code <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Optional.</span></label>
+          <input type="text" id="promo-code" name="promo_code" placeholder="FOUNDER" autocomplete="off" />
         </div>
 
         <div class="form-row">
@@ -1595,12 +1740,13 @@
         <div class="form-group">
           <label>Add-ons and upgrades <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Select all that apply.</span></label>
           <div class="checkbox-grid">
-            <label><input type="checkbox" name="interest" value="Launch Standard Service" /> Launch Standard Service</label>
+            <label><input type="checkbox" name="interest" value="Launch Special Service" /> Launch Special Service</label>
             <label><input type="checkbox" name="interest" value="50% date-hold deposit" /> 50% date-hold deposit</label>
             <label><input type="checkbox" name="interest" value="Signature cocktails" /> Signature cocktails</label>
             <label><input type="checkbox" name="interest" value="Clear ice upgrades" /> Clear ice upgrades</label>
             <label><input type="checkbox" name="interest" value="Full custom mobile bar" /> Full custom mobile bar</label>
             <label><input type="checkbox" name="interest" value="Smoked cocktails or smoke bubbles" /> Smoked cocktails or smoke bubbles</label>
+            <label><input type="checkbox" name="interest" value="Fresh espresso martini service" /> Fresh espresso martini service</label>
             <label><input type="checkbox" name="interest" value="Extra bartender" /> Extra bartender</label>
             <label><input type="checkbox" name="interest" value="Custom menu cards" /> Custom menu cards</label>
             <label><input type="checkbox" name="interest" value="Wedding or brand event quote" /> Wedding or brand event quote</label>
@@ -1619,7 +1765,7 @@
 
         <div class="form-actions">
           <button id="reservation-submit" type="submit" class="button solid">Submit reservation request</button>
-          <p class="form-note">For Launch Standard, submit the form and continue to the secure deposit step. If your event is unavailable, the date-hold deposit will be refunded. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
+          <p class="form-note">For the Launch Special, submit the form and continue to the secure deposit step after availability is confirmed. Enter FOUNDER if you are one of the first 10 launch clients. If your event is unavailable, the date-hold deposit will be refunded. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
         </div>
       </form>
 
@@ -1651,8 +1797,8 @@
     const bookingIntent = document.querySelector("#booking-intent");
     const paymentTiming = document.querySelector("#payment-timing");
     const directDepositPackages = [
-      "Launch Standard - 3 hours - 50% deposit request",
-      "Launch Standard - 4 hours - 50% deposit request",
+      "Launch Special - 3 hours - 50% deposit request",
+      "Launch Special - 4 hours - 50% deposit request",
     ];
 
     function formDataToPayload(form) {

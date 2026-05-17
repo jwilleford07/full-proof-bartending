@@ -1,19 +1,40 @@
 const Stripe = require("stripe");
 
 const packages = {
-  "Launch Standard - 3 hours - 50% deposit request": {
-    name: "Launch Standard - 3 hour date hold",
-    amount: 37450,
-    description: "50% date-hold deposit for Full Proof Bartending Launch Standard service.",
+  "Launch Special - 3 hours - 50% deposit request": {
+    name: "Launch Special - 3 hour date hold",
+    amount: 34950,
+    description: "50% date-hold deposit for Full Proof Bartending Launch Special service.",
   },
-  "Launch Standard - 4 hours - 50% deposit request": {
-    name: "Launch Standard - 4 hour date hold",
-    amount: 44950,
-    description: "50% date-hold deposit for Full Proof Bartending Launch Standard service.",
+  "Launch Special - 4 hours - 50% deposit request": {
+    name: "Launch Special - 4 hour date hold",
+    amount: 42450,
+    description: "50% date-hold deposit for Full Proof Bartending Launch Special service.",
   },
 };
 
-function metadataFrom(data) {
+const FOUNDER_PROMO_CODE = "FOUNDER";
+const FOUNDER_DISCOUNT_AMOUNT = 10000;
+
+function normalizedPromoCode(data) {
+  return String(data.promo_code || "").trim().toUpperCase();
+}
+
+function packageWithPromo(selectedPackage, data) {
+  const promoCode = normalizedPromoCode(data);
+  const promoApplied = promoCode === FOUNDER_PROMO_CODE;
+
+  return {
+    ...selectedPackage,
+    amount: Math.max(0, selectedPackage.amount - (promoApplied ? FOUNDER_DISCOUNT_AMOUNT : 0)),
+    description: promoApplied
+      ? `${selectedPackage.description} FOUNDER launch promo applied.`
+      : selectedPackage.description,
+    promo_applied: promoApplied ? FOUNDER_PROMO_CODE : "",
+  };
+}
+
+function metadataFrom(data, checkoutPackage) {
   const fields = {
     name: data.name,
     phone: data.phone,
@@ -24,6 +45,8 @@ function metadataFrom(data) {
     guest_count: data.guest_count,
     event_type: data.event_type,
     package_choice: data.package_choice,
+    promo_code: normalizedPromoCode(data),
+    promo_applied: checkoutPackage.promo_applied,
     booking_intent: data.booking_intent,
     payment_timing: data.payment_timing,
     interests: Array.isArray(data.interest) ? data.interest.join(", ") : data.interest,
@@ -80,6 +103,7 @@ exports.handler = async (event) => {
 
   const origin = event.headers.origin || process.env.URL || "https://fullproofbartending.com";
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+  const checkoutPackage = packageWithPromo(selectedPackage, data);
 
   try {
     const session = await stripe.checkout.sessions.create({
@@ -90,15 +114,15 @@ exports.handler = async (event) => {
           price_data: {
             currency: "usd",
             product_data: {
-              name: selectedPackage.name,
-              description: selectedPackage.description,
+              name: checkoutPackage.name,
+              description: checkoutPackage.description,
             },
-            unit_amount: selectedPackage.amount,
+            unit_amount: checkoutPackage.amount,
           },
           quantity: 1,
         },
       ],
-      metadata: metadataFrom(data),
+      metadata: metadataFrom(data, checkoutPackage),
       success_url: `${origin}/success.html?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/#event-inquiry`,
     });
