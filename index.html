@@ -100,9 +100,9 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 18px;
       font-family: Montserrat, Inter, sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -272,6 +272,45 @@
     .proof-inner span {
       padding: 0 18px;
       border-left: 1px solid var(--line);
+    }
+
+    .site-index {
+      width: 100%;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 15% 12%, rgba(200, 164, 106, 0.16), transparent 30%),
+        linear-gradient(180deg, rgba(26, 24, 20, 0.98), rgba(12, 11, 10, 0.98));
+    }
+
+    .site-index-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 76px 0 86px;
+    }
+
+    .site-index .intro {
+      align-items: end;
+    }
+
+    .site-index-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .site-index .path-grid {
+      margin-top: 38px;
+    }
+
+    .site-index .path-card {
+      min-height: 238px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-index .path-card p {
+      flex: 1;
     }
 
     .section {
@@ -1046,6 +1085,10 @@
         display: none;
       }
 
+      .site-index .intro {
+        align-items: start;
+      }
+
       .intro,
       .ice-wrap,
       .about,
@@ -1131,6 +1174,7 @@
 
       .hero-inner,
       .section,
+      .site-index-inner,
       .ice-wrap {
         width: min(100% - 28px, var(--max));
       }
@@ -1144,6 +1188,7 @@
       }
 
       .section,
+      .site-index-inner,
       .ice-wrap {
         padding: 70px 0;
         scroll-margin-top: 136px;
@@ -1197,8 +1242,8 @@
         left: 0;
         z-index: 30;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        grid-template-columns: 0.8fr 1fr 0.8fr;
+        gap: 8px;
         padding: 10px 14px;
         border-top: 1px solid var(--line);
         background: rgba(5, 5, 5, 0.94);
@@ -1207,6 +1252,8 @@
 
       .mobile-booking-bar .button {
         min-height: 48px;
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
       }
     }
   </style>
@@ -1221,14 +1268,12 @@
         <img src="assets/fullproof-horizontal-lockup.svg" alt="Full Proof Bartending" />
       </a>
       <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#packages">Packages</a>
-        <a href="/why-mobile-bartender/">Costs</a>
-        <a href="#setup">Setup</a>
+        <a href="#site-index">Start Here</a>
+        <a href="#launch-special">Launch</a>
+        <a href="#packages">Pricing</a>
+        <a href="/why-mobile-bartender/">Cost Math</a>
+        <a href="#ice">Clear Ice</a>
         <a href="#addons">Add-ons</a>
-        <a href="#included">Included</a>
-        <a href="#ice">Ice</a>
-        <a href="#about">About</a>
         <a href="#faq">FAQ</a>
         <a class="button" href="#event-inquiry">Reserve date</a>
       </div>
@@ -1260,6 +1305,63 @@
         <span>11+ years in LA bars</span>
         <span>Self-contained bar system</span>
         <span>Clear ice included</span>
+      </div>
+    </section>
+
+    <section class="site-index" id="site-index" aria-label="Full Proof website index">
+      <div class="site-index-inner">
+        <div class="intro">
+          <div>
+            <p class="eyebrow">Start Here</p>
+            <h2 class="section-title">Find the part of the bar you need.</h2>
+          </div>
+          <div>
+            <p class="lead">Book simply, or explore the details that make Full Proof different: launch pricing, clear ice, custom add-ons, concierge support, and the cost math behind hosting at home.</p>
+            <div class="site-index-actions">
+              <a class="button solid" href="#event-inquiry">Reserve date</a>
+              <a class="button" href="#packages">Compare packages</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-grid" aria-label="Full Proof navigation index">
+          <article class="path-card">
+            <strong>Book first</strong>
+            <h3>Launch special</h3>
+            <p>$699 Founding Host rate, date-hold deposit, and FOUNDER promo details for the first launch clients.</p>
+            <a class="button wide" href="#launch-special">See launch offer</a>
+          </article>
+          <article class="path-card">
+            <strong>Pricing</strong>
+            <h3>Packages and deposits</h3>
+            <p>Compare the base service, signature bar, weddings, larger events, and custom quote paths.</p>
+            <a class="button wide" href="#packages">Review packages</a>
+          </article>
+          <article class="path-card">
+            <strong>Value</strong>
+            <h3>Why mobile is cheaper</h3>
+            <p>The 50-person LA cocktail-tab math compared with a dedicated Full Proof event bar.</p>
+            <a class="button wide" href="/why-mobile-bartender/">See the math</a>
+          </article>
+          <article class="path-card">
+            <strong>Signature detail</strong>
+            <h3>Clear ice story</h3>
+            <p>Clinebell production, hand-cut cubes, stamped ice, spheres, diamonds, and event-ready volume.</p>
+            <a class="button wide" href="#ice">Explore clear ice</a>
+          </article>
+          <article class="path-card">
+            <strong>Upgrade moments</strong>
+            <h3>Add-ons and theater</h3>
+            <p>Full custom bar, smoked cocktails, smoke bubbles, fresh espresso, ORI press moments, and more.</p>
+            <a class="button wide" href="#addons">View add-ons</a>
+          </article>
+          <article class="path-card">
+            <strong>Hands-off hosting</strong>
+            <h3>Concierge and FAQ</h3>
+            <p>Total Wine guidance, liquor and ice support, setup, breakdown, and common planning questions.</p>
+            <a class="button wide" href="#faq">Read FAQs</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1916,8 +2018,9 @@
   </main>
 
   <div class="mobile-booking-bar" aria-label="Quick booking actions">
-    <a class="button solid" href="#event-inquiry">Reserve date</a>
-    <a class="button" href="tel:+15624448030">Text Joe</a>
+    <a class="button" href="#site-index">Start</a>
+    <a class="button solid" href="#event-inquiry">Reserve</a>
+    <a class="button" href="tel:+15624448030">Text</a>
   </div>
 
   <footer class="footer">
