@@ -15,8 +15,7 @@ Make offers simple enough to buy and premium enough to justify a higher rate. Av
 
 ## Offer Principles
 
-- Every package includes the professional setup and Tossware premium compostable drinkware.
+- All packages include professional service, clear scope, and a composed bar setup. Do not imply cups or garnishes are included in Basic; those belong in the $799 Cups + Garnishes path or a custom quote.
 - Hand-carved clear ice is included as a signature detail.
 - Pressed spheres, specialty cuts, and custom ice can be add-ons.
 - Simplicity beats cleverness.
-

@@ -2,6 +2,8 @@
 
 Updated: 2026-05-14
 
+2026-05-18 note: prior chat direction was reviewed again, then Joe clarified that underutilized older photos can be edited and upscaled to fit the theme. Do not use weak raw images as-is; use tight crops, cleanup, contrast, and upscale passes so the final public asset feels intentional.
+
 ## Non-Negotiable Rules
 
 - Do not use old bar photos.

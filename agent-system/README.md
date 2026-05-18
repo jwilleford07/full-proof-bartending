@@ -1,8 +1,20 @@
 # Full Proof Bartending Agent System
 
-This folder is the operating system for launching Full Proof Bartending.
+This folder is the operating system for launching and running Full Proof Bartending.
 
-Cursor is the default cockpit for now because it can edit files, run checks, commit, push, and keep the website/content system in the repo. Hermes can still use the same prompts later as a lighter planning or Telegram-style assistant.
+Codex is the default cockpit for now because it can edit files, run checks, manage recurring automations, and keep the website/content system in the repo. Cursor can still use the same prompts when you want an IDE-style editing session, and Hermes can use them as a lighter planning or Telegram-style assistant.
+
+## Core Business Agents
+
+- `agents/general-manager.md` - owns priorities, delegation, and weekly direction.
+- `agents/sales-accounting-manager.md` - owns leads, quotes, deposits, and simple money follow-up.
+- `agents/marketing-manager.md` - owns content, social proof, outreach angles, and local demand.
+- `agents/operations-lead.md` - owns event workflow, pack lists, setup, service, strike, and follow-up.
+- `agents/website-conversion.md` - owns site flow, offer clarity, CTAs, trust, and inquiry conversion.
+- `agents/site-qa.md` - checks the site before deploy.
+
+Use `automation-guide.md` for the recurring cadence and steering prompts.
+Use `visual-asset-direction.md` and `asset-source-map.md` before adding or replacing public-facing media.
 
 ## How To Use In Cursor
 

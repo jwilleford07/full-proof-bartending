@@ -14,7 +14,7 @@ Full Proof Bartending is a luxury mobile bartending service for private events a
 
 - Professional self-contained craft bar setup.
 - Power, running water, rinser, LED lighting, organized tools, and ice press capability.
-- Tossware premium compostable drinkware included in every package.
+- Cups and standard garnishes included in the $799 launch path or scoped into custom quotes.
 - Hand-carved clear ice included at every event.
 - Specialty ice add-ons including pressed spheres, Collins spears, and specialty cuts.
 - Founder expertise from building a clear ice program from zero into real Los Angeles bar and restaurant accounts.

@@ -10,5 +10,4 @@ This is a static website. Open `index.html` directly in a browser or deploy the 
 
 ## Brand Position
 
-Full Proof is not a bartender behind a folding table. It is a premium mobile bar experience built around warm hospitality, precise craft, clear ice expertise, and a fully equipped setup with running water, power, rinser, LED lighting, organized tools, and Tossware premium compostable drinkware included.
-
+Full Proof is not a bartender behind a folding table. It is a premium mobile bar experience built around warm hospitality, precise craft, clear ice expertise, and a fully equipped setup with running water, power, rinser, LED lighting, and organized tools. Launch pricing separates the entry service from the cups-and-garnishes package so hosts can choose the simplest fit.

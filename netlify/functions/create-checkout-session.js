@@ -1,15 +1,17 @@
 const Stripe = require("stripe");
 
 const packages = {
-  "Launch Special - 3 hours - 50% deposit request": {
-    name: "Launch Special - 3 hour date hold",
-    amount: 34950,
-    description: "50% date-hold deposit for Full Proof Bartending Launch Special service.",
+  "Launch Special Basic - 3 hours - 50% deposit": {
+    name: "Launch Special Basic - 50% date hold",
+    totalAmount: 69900,
+    founderEligible: true,
+    description: "50% date-hold deposit for Full Proof Bartending Launch Special Basic service.",
   },
-  "Launch Special - 4 hours - 50% deposit request": {
-    name: "Launch Special - 4 hour date hold",
-    amount: 42450,
-    description: "50% date-hold deposit for Full Proof Bartending Launch Special service.",
+  "Launch Special Cups + Garnishes - 3 hours - 50% deposit": {
+    name: "Launch Special with cups and garnishes - 50% date hold",
+    totalAmount: 79900,
+    founderEligible: false,
+    description: "50% date-hold deposit for Full Proof Bartending Launch Special with cups and garnishes.",
   },
 };
 
@@ -22,13 +24,15 @@ function normalizedPromoCode(data) {
 
 function packageWithPromo(selectedPackage, data) {
   const promoCode = normalizedPromoCode(data);
-  const promoApplied = promoCode === FOUNDER_PROMO_CODE;
+  const promoApplied = promoCode === FOUNDER_PROMO_CODE && selectedPackage.founderEligible;
+  const totalAmount = Math.max(0, selectedPackage.totalAmount - (promoApplied ? FOUNDER_DISCOUNT_AMOUNT : 0));
 
   return {
     ...selectedPackage,
-    amount: Math.max(0, selectedPackage.amount - (promoApplied ? FOUNDER_DISCOUNT_AMOUNT : 0)),
+    totalAmount,
+    amount: Math.round(totalAmount / 2),
     description: promoApplied
-      ? `${selectedPackage.description} FOUNDER launch promo applied.`
+      ? `${selectedPackage.description} FOUNDER Basic launch promo applied to the first booking.`
       : selectedPackage.description,
     promo_applied: promoApplied ? FOUNDER_PROMO_CODE : "",
   };
@@ -45,10 +49,11 @@ function metadataFrom(data, checkoutPackage) {
     guest_count: data.guest_count,
     event_type: data.event_type,
     package_choice: data.package_choice,
+    package_total: checkoutPackage.totalAmount ? `$${(checkoutPackage.totalAmount / 100).toFixed(2)}` : "",
+    deposit_amount: checkoutPackage.amount ? `$${(checkoutPackage.amount / 100).toFixed(2)}` : "",
     promo_code: normalizedPromoCode(data),
     promo_applied: checkoutPackage.promo_applied,
     booking_intent: data.booking_intent,
-    payment_timing: data.payment_timing,
     interests: Array.isArray(data.interest) ? data.interest.join(", ") : data.interest,
   };
 

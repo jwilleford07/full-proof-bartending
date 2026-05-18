@@ -31,7 +31,7 @@ The former public anchor of `$599 / 3 hours` and `$699 / 4 hours` was approachab
 
 Use this structure publicly:
 
-- **Launch Standard:** launch special from `$749 / 3 hours` and `$899 / 4 hours`.
+- **Current launch structure:** Basic at `$699 / 3 hours`, Cups + Garnishes at `$799 / 3 hours`, first 10 `FOUNDER` Basic bookings at `$599`.
 - **Signature Bar Experience:** from `$1,250`.
 - **Weddings & Brand Events:** custom quotes from `$2,400`.
 

@@ -426,6 +426,12 @@
       line-height: 1.5;
     }
 
+    .launch-price + .launch-price {
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(238, 227, 207, 0.14);
+    }
+
     .promo-code {
       display: inline-flex;
       width: fit-content;
@@ -513,6 +519,32 @@
       max-width: 760px;
       margin: 28px 0 0;
       color: var(--muted);
+    }
+
+    .package-card figure {
+      height: 180px;
+      margin: -32px -32px 28px;
+      border-bottom: 1px solid var(--line);
+      background: var(--charcoal);
+      overflow: hidden;
+    }
+
+    .package-card figure img {
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.06) contrast(1.04) brightness(0.96);
+    }
+
+    .package-card--basic figure img {
+      object-position: 50% 52%;
+    }
+
+    .package-card--cups figure img {
+      object-position: 58% 56%;
+    }
+
+    .package-card--custom figure img {
+      object-position: 50% 50%;
     }
 
     .package-actions {
@@ -727,7 +759,7 @@
     }
 
     .photo-panel--right img {
-      object-position: 50% 50%;
+      object-position: 72% 46%;
     }
 
     .setup-showcase {
@@ -757,6 +789,66 @@
       margin-top: 1px;
     }
 
+    .equipment-proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .equipment-proof-card {
+      background: var(--charcoal);
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: minmax(240px, 0.82fr) auto;
+    }
+
+    .equipment-proof-card figure {
+      margin: 0;
+      background: #f4f1ec;
+      overflow: hidden;
+    }
+
+    .equipment-proof-card img {
+      height: 100%;
+      object-fit: contain;
+      padding: 18px;
+    }
+
+    .equipment-proof-card--photo figure {
+      background: var(--charcoal);
+    }
+
+    .equipment-proof-card--photo img {
+      object-fit: cover;
+      padding: 0;
+    }
+
+    .equipment-proof-card div {
+      padding: 24px;
+    }
+
+    .equipment-proof-card span {
+      display: block;
+      color: var(--gold);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .equipment-proof-card h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      margin-bottom: 10px;
+    }
+
+    .equipment-proof-card p {
+      color: var(--muted);
+    }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr 0.9fr 0.9fr;
@@ -776,6 +868,10 @@
       grid-column: 1;
       grid-row: 1 / span 2;
       min-height: 621px;
+    }
+
+    .gallery-item--ice-block img {
+      object-position: 50% 52%;
     }
 
     .gallery-item--manhattan {
@@ -1026,6 +1122,10 @@
       margin-bottom: 0;
     }
 
+    .form-row .form-group:only-child {
+      grid-column: 1 / -1;
+    }
+
     .form-group label {
       display: block;
       margin-bottom: 8px;
@@ -1103,6 +1203,7 @@
       .included-grid,
       .addon-grid,
       .setup-detail-grid,
+      .equipment-proof-grid,
       .gallery-grid,
       .flavor-strip,
       .photo-band,
@@ -1261,7 +1362,7 @@
 <body>
   <header class="site-header">
     <div class="promo-banner">
-      <a href="#launch-special"><strong>Launch Special:</strong> $699 Founding Host rate. First 10 clients save $100 with code FOUNDER.</a>
+      <a href="#launch-special"><strong>Launch Special:</strong> Basic is $699. First 10 FOUNDER bookings get Basic for $599 and keep the $699 base rate for similar future parties.</a>
     </div>
     <nav class="nav" aria-label="Main navigation">
       <a class="nav-logo" href="#top" aria-label="Full Proof Bartending home">
@@ -1295,7 +1396,7 @@
           <a class="button" href="#contact">Check availability first</a>
           <a class="button" href="tel:+15624448030">Text Full Proof</a>
         </div>
-        <p class="hero-note">Reserve the Launch Special with a 50% date-hold request, or check availability first if you are still comparing options. Menu and final bar details can be locked in after the date is secured.</p>
+        <p class="hero-note">For good-fit private parties, choose Basic at $699 or Cups + Garnishes at $799, then continue to the 50% date-hold step. FOUNDER makes the first 10 Basic bookings $599 and locks the $699 base rate for similar future parties.</p>
       </div>
     </section>
 
@@ -1328,7 +1429,7 @@
           <article class="path-card">
             <strong>Book first</strong>
             <h3>Launch special</h3>
-            <p>$699 Founding Host rate, date-hold deposit, and FOUNDER promo details for the first launch clients.</p>
+            <p>$699 Basic, $799 with cups and garnishes, 50% date-hold deposit, and first-10 FOUNDER rate-lock details.</p>
             <a class="button wide" href="#launch-special">See launch offer</a>
           </article>
           <article class="path-card">
@@ -1352,7 +1453,7 @@
           <article class="path-card">
             <strong>Upgrade moments</strong>
             <h3>Add-ons and theater</h3>
-            <p>Full custom bar, smoked cocktails, smoke bubbles, fresh espresso, ORI press moments, and more.</p>
+            <p>Full custom bar, smoked cocktails, smoke bubbles, Nespresso Mini espresso martinis, ORI press moments, and more.</p>
             <a class="button wide" href="#addons">View add-ons</a>
           </article>
           <article class="path-card">
@@ -1371,21 +1472,22 @@
           <p class="eyebrow">Launch Special</p>
           <h2 class="section-title">Professional-grade service at an accessible launch rate.</h2>
           <p class="lead">Full Proof is building its first public event portfolio, but Joe is not new to the work: 20 years in hospitality, 11+ years behind the bar, LA craft cocktail experience, private-event service since 2017, and real clear-ice production knowledge.</p>
-          <p class="body-copy">The soft launch is June 13 for a rooftop party, with select dates available before then. This is an early opportunity to book one of the newest mobile bartending services in the LA, Long Beach, and OC corridor: founder-led, credentialed, and built around details most event bars do not offer, from hand-carved clear ice to house syrups, thoughtful mocktails, smoked cocktails, and fresh espresso martinis.</p>
-          <span class="promo-code">Use code FOUNDER for $100 off</span>
+          <p class="body-copy">The soft launch is June 13 for a rooftop party, with select dates available before then. This is an early opportunity to book one of the newest mobile bartending services in the LA, Long Beach, and OC corridor: founder-led, credentialed, and built around details most event bars do not offer, from hand-carved clear ice to house syrups, thoughtful mocktails, smoked cocktails, and Nespresso Mini espresso martinis.</p>
+          <span class="promo-code">First 10 FOUNDER bookings: Basic is $599</span>
         </div>
         <div class="launch-offer">
           <div>
             <p class="eyebrow" style="margin-bottom: 16px;">Founding Host Rate</p>
-            <div class="launch-price">$699<small>3 hours, up to 40 guests. 50% date-hold deposit: $349.50. First 10 launch clients save $100 with code FOUNDER and lock the $699 base rate for future good-fit single-bartender events.</small></div>
+            <div class="launch-price">$699<small>Basic launch service for 3 hours and up to 40 guests. 50% date-hold deposit: $349.50. Host provides alcohol, drinkware, and garnish groceries from Joe's list unless upgraded.</small></div>
+            <div class="launch-price">$799<small>Includes Full Proof-provided service cups and a standard garnish kit. 50% date-hold deposit: $399.50. FOUNDER applies to Basic, not the cups-and-garnishes upgrade.</small></div>
             <ul class="launch-list">
               <li>Clear ice for Full Proof-served cocktails.</li>
-              <li>House syrups, fresh lemon and lime juice, bitters, premium garnishes, napkins, straws, and bar picks.</li>
+              <li>House syrups, fresh lemon and lime juice, standard bitters, menu direction, shopping guidance, setup, service, and cleanup.</li>
               <li>3 signature mocktails built with the same care as the cocktail menu.</li>
-              <li>Menu direction, shopping guidance, setup, service, and cleanup.</li>
+              <li>First 10 FOUNDER clients keep the $699 base rate for future similar small private parties.</li>
             </ul>
           </div>
-          <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special - 3 hours - 50% deposit request">Reserve Launch Special</a>
+          <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special Basic - 3 hours - 50% deposit">Reserve Launch Special</a>
         </div>
       </div>
     </section>
@@ -1397,8 +1499,8 @@
           <h2 class="section-title">A private craft bar can be cheaper than taking everyone out.</h2>
         </div>
         <div>
-          <p class="lead">A 50-person LA cocktail night can turn into 400 drinks fast. At restaurant pricing, tax, and tip, that tab can run past $10,000 before private-room minimums, transportation, long waits, and inconsistent drinks enter the picture.</p>
-          <p class="body-copy">Full Proof lets you host in your own home or venue with a dedicated bartender, clear ice, fresh syrups, premium garnishes, mocktails, and optional showpieces like smoked cocktails and espresso martinis. The impressive option can also be the practical one.</p>
+          <p class="lead">A 50-person LA cocktail night can turn into 300 drinks in three hours. At restaurant pricing, tax, and tip, that tab can run past $7,000 before private-room minimums, transportation, long waits, and inconsistent drinks enter the picture.</p>
+          <p class="body-copy">Full Proof lets you host in your own home or venue with a dedicated bartender, clear ice, fresh syrups, thoughtful mocktails, and optional showpieces like smoked cocktails and espresso martinis. The impressive option can also be the practical one.</p>
           <div class="hero-actions">
             <a class="button solid" href="/why-mobile-bartender/">See the math</a>
             <a class="button" href="#event-inquiry">Check your date</a>
@@ -1480,8 +1582,8 @@
       </div>
       <div class="photo-panel photo-panel--right">
         <img
-          src="assets/photos/cocktail-bottles-bar.jpg"
-          alt="Classic cocktail with premium spirits, clear ice, and garnish"
+          src="assets/photos/joe-pouring-at-event-bar.jpg"
+          alt="Joe Willeford pouring a cocktail at an outdoor private event bar"
         />
       </div>
     </section>
@@ -1512,42 +1614,51 @@
       <p class="eyebrow">Packages</p>
       <h2 class="section-title">Straightforward base service, premium bar details when you want them.</h2>
       <div class="package-grid" style="margin-top: 42px;">
-        <article class="package-card">
-          <span>Launch Special</span>
+        <article class="package-card package-card--basic">
+          <figure>
+            <img src="assets/photos/clear-ice-column.jpg" alt="Hand-carved clear ice column for Full Proof cocktails" loading="eager" />
+          </figure>
+          <span>Launch Special Basic</span>
           <h3>One bartender for a clean, capable event bar</h3>
-          <strong class="package-price">$699 / 3 hours<br>$849 / 4 hours</strong>
-          <p>Best for smaller private events. Includes one bartender, service planning, house syrups, fresh lemon and lime juice, standard bitters, premium garnishes, standard disposable PET cups, clean bar setup, cleanup, basic bar guidance, and hand-carved clear ice cubes for cocktails served by Full Proof.</p>
+          <strong class="package-price">$699 / 3 hours</strong>
+          <p>Best for smaller private events where the host wants the strongest entry price. Includes one bartender, service planning, house syrups, fresh lemon and lime juice, standard bitters, clean bar setup, cleanup, basic bar guidance, and hand-carved clear ice cubes for cocktails served by Full Proof. Host provides alcohol, drinkware, and garnish groceries from Joe's shopping list.</p>
           <div class="package-actions">
-            <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special - 3 hours - 50% deposit request">Reserve 3 hours - $349.50 deposit</a>
-            <a class="button wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special - 4 hours - 50% deposit request">Reserve 4 hours - $424.50 deposit</a>
+            <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special Basic - 3 hours - 50% deposit">Reserve Basic - $349.50 deposit</a>
           </div>
-          <small class="deposit-note">First 10 launch clients can use promo code FOUNDER for $100 off the first eligible booking.</small>
+          <small class="deposit-note">First 10 FOUNDER bookings get Basic for $599, with a $299.50 deposit, and keep the $699 base rate for future similar parties.</small>
         </article>
-        <article class="package-card">
-          <span>Signature Bar Experience</span>
-          <h3>Custom cocktails and a more intentional guest experience</h3>
-          <strong class="package-price">From $1,250</strong>
-          <p>For events where drinks and presentation matter. Adds signature cocktail direction, batching guidance where useful, garnish direction, expanded shopping support, and clear ice presentation details.</p>
+        <article class="package-card package-card--cups">
+          <figure>
+            <img src="assets/photos/cups-garnish-tool-detail.jpg" alt="Prepared garnish kit and clean mobile bar work surface" loading="eager" />
+          </figure>
+          <span>Cups + Garnishes</span>
+          <h3>Launch Special with more handled for the host</h3>
+          <strong class="package-price">$799 / 3 hours</strong>
+          <p>Includes the Basic launch service plus Full Proof-provided service cups and a standard garnish kit, so the host has fewer small items to source. Best when you want the same aggressive launch price with less shopping friction.</p>
           <div class="package-actions">
-            <a class="button wide package-choice-link" href="#event-inquiry" data-package-choice="Signature Bar Experience quote">Request Signature quote</a>
+            <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special Cups + Garnishes - 3 hours - 50% deposit">Reserve Cups + Garnishes - $399.50 deposit</a>
           </div>
+          <small class="deposit-note">FOUNDER applies to Basic, not the cups-and-garnishes upgrade. Alcohol remains host-provided unless quoted separately.</small>
         </article>
-        <article class="package-card">
-          <span>Weddings & Brand Events</span>
-          <h3>Higher-touch planning for visible moments</h3>
+        <article class="package-card package-card--custom">
+          <figure>
+            <img src="assets/photos/clear-ice-blocks-staging.jpg" alt="Large clear ice blocks staged for premium cocktail service" loading="eager" />
+          </figure>
+          <span>Custom Events</span>
+          <h3>Weddings, brand events, larger parties, and premium bar moments</h3>
           <strong class="package-price">Custom quotes from $2,400</strong>
-          <p>For weddings, brand activations, corporate hosting, and high-design private events. Scope can include additional bartenders, extended service, menu cards, specialty ice, and deeper timeline coordination.</p>
+          <p>For weddings, brand activations, corporate hosting, high-design private events, extended service, extra bartenders, full custom bar deployment, specialty ice, menu cards, and deeper timeline coordination.</p>
           <div class="package-actions">
             <a class="button wide package-choice-link" href="#event-inquiry" data-package-choice="Wedding or brand event custom quote">Request event quote</a>
           </div>
         </article>
       </div>
-      <p class="package-note">Launch pricing keeps the first booking step approachable while Full Proof builds its published event portfolio. Alcohol is typically client-provided; Full Proof supplies quantities and a shopping list once the menu is set. Every quote reflects guest count, active service hours, staffing, travel and load-in, menu ambition, and premium add-ons.</p>
+      <p class="package-note">Launch pricing is intentionally aggressive while Full Proof builds its published event portfolio. The $699 Basic price gets the bar in the room; the $799 path removes cups and standard garnishes from the host's shopping list. Every quote still reflects guest count, active service hours, staffing, travel and load-in, menu ambition, and premium add-ons.</p>
       <div class="booking-panel">
         <div>
           <p class="eyebrow" style="margin-bottom: 14px;">Ready to reserve?</p>
           <h3>Hold the date now. Finalize the menu later.</h3>
-          <p>If you already know you need polished bar service, start the Launch Special date-hold path. Joe will confirm availability before the secure deposit step, then finalize scope, menu direction, shopping guidance, and any liquor or ice concierge support after the date is secured.</p>
+          <p>If you already know you need polished bar service, start the Launch Special date-hold path. Submit the event basics, continue to the secure 50% deposit step, and Joe will confirm the date, then finalize scope, menu direction, shopping guidance, and any liquor or ice concierge support.</p>
         </div>
         <div class="booking-panel-actions">
           <a class="button solid wide" href="#event-inquiry">Reserve your date</a>
@@ -1560,7 +1671,39 @@
     <section class="section" id="setup">
       <p class="eyebrow">Self-contained bar system</p>
       <h2 class="section-title">A real cocktail bar, brought to your event.</h2>
-      <p class="lead">Full Proof does not depend on a venue bar, folding table, house sink, or borrowed utility setup. We bring the infrastructure that lets bar service run cleanly: generator power, fresh and gray water jugs, a 110v pump, running water, an integrated Decent Espresso rinser, a custom utility sink, a hand-wash station, a custom portable stainless steel ice bin, clean cutting-board surfaces, chilled condiment displays, black cocktail napkins, straws, service mats, glass drying mats, Crew Supply Co bottles and tools, and premium Tossware drinkware.</p>
+      <p class="lead">Full Proof does not depend on a venue bar, folding table, house sink, or borrowed utility setup. We bring the infrastructure that lets bar service run cleanly: generator power, fresh and gray water jugs, a 110v pump, running water, an integrated Decent Espresso rinser, a custom utility sink, a hand-wash station, a custom portable stainless steel ice bin, clean cutting-board surfaces, chilled condiment displays, service mats, glass drying mats, and Crew Supply Co bottles and tools. Service cups and standard garnishes are included in the $799 launch path or scoped into custom quotes.</p>
+      <div class="equipment-proof-grid" aria-label="Equipment proof">
+        <article class="equipment-proof-card equipment-proof-card--photo">
+          <figure>
+            <img src="assets/photos/clear-ice-cube-crate-blue.jpg" alt="Blue crate filled with hand-cut clear ice cubes ready for event service" loading="eager" />
+          </figure>
+          <div>
+            <span>Service prep</span>
+            <h3>Event-ready clear ice inventory</h3>
+            <p>Hand-cut cube inventory is staged ahead of service so the bar can pour with consistency and still feel premium at speed.</p>
+          </div>
+        </article>
+        <article class="equipment-proof-card equipment-proof-card--photo">
+          <figure>
+            <img src="assets/photos/clear-ice-brand-stamp-trio.jpg" alt="Three specialty clear ice cubes with stamped and branded designs" loading="eager" />
+          </figure>
+          <div>
+            <span>Branding and VIP moments</span>
+            <h3>Stamped and custom cube capability</h3>
+            <p>Stamped cubes, branded details, and specialty forms can be scoped for whiskey pours, launches, gift tables, and host moments.</p>
+          </div>
+        </article>
+        <article class="equipment-proof-card">
+          <figure>
+            <img src="assets/photos/nespresso-essenza-mini-stock.webp" alt="Nespresso Essenza Mini compact espresso machine for espresso martini service" loading="eager" />
+          </figure>
+          <div>
+            <span>Espresso add-on</span>
+            <h3>Nespresso Mini espresso service</h3>
+            <p>A compact espresso station can be added for espresso martinis and after-dinner service without turning the event into a cafe buildout.</p>
+          </div>
+        </article>
+      </div>
       <div class="included-grid" style="margin-top: 42px;">
         <article class="included-card">
           <span>Infrastructure</span>
@@ -1570,7 +1713,7 @@
         <article class="included-card">
           <span>Service build</span>
           <h3>Everything a cocktail bar expects</h3>
-          <p>A custom portable stainless steel ice bin, chilled condiment displays, clean cutting-board surfaces, napkins, straws, service mats, glass drying mats, Crew Supply Co bottles and tools, premium Tossware drinkware, and the mise en place needed for real cocktail service.</p>
+          <p>A custom portable stainless steel ice bin, chilled condiment displays, clean cutting-board surfaces, service mats, glass drying mats, Crew Supply Co bottles and tools, and the mise en place needed for real cocktail service. Cups, napkins, straws, and standard garnishes are handled in the $799 launch path or custom quote.</p>
         </article>
         <article class="included-card">
           <span>Craft capability</span>
@@ -1591,17 +1734,17 @@
         <article class="included-card">
           <span>Full Proof provides</span>
           <h3>Self-contained bar service</h3>
-          <p>One bartender, service planning, Crew Supply Co bottles and tools, Tossware premium compostable drinkware, hand-carved clear ice cubes, generator-ready power, fresh and gray water, pump-driven running water, integrated rinser, custom utility sink, custom stainless ice bin, sanitation, setup, service, and cleanup. Premium upgrades are scoped when the footprint, guest flow, or event design calls for more.</p>
+          <p>One bartender, service planning, Crew Supply Co bottles and tools, hand-carved clear ice cubes, generator-ready power, fresh and gray water, pump-driven running water, integrated rinser, custom utility sink, custom stainless ice bin, sanitation, setup, service, and cleanup. Cups and a standard garnish kit are included in the $799 launch path or scoped into custom quotes.</p>
         </article>
         <article class="included-card">
           <span>You provide</span>
           <h3>Alcohol and access</h3>
-          <p>Hosts typically provide alcohol and a place to load in and serve. If you want the easier path, Full Proof can provide Total Wine shopping guidance and liquor and ice concierge coordination so you can be as involved as you want to be, including barely at all.</p>
+          <p>Hosts typically provide alcohol, access, and any items outside the selected package. Basic launch hosts provide drinkware and garnish groceries from Joe's list; the $799 launch path lets Full Proof handle service cups and standard garnishes.</p>
         </article>
         <article class="included-card">
           <span>Add-ons</span>
           <h3>Upgrade the bar</h3>
-          <p>Signature cocktails, full mobile craft bar deployment, fresh espresso martini service, smoked cocktails, smoke bubbles, customized foams, Ori Future ice press moments, pressed ice shapes, dehydrated citrus, extra service time, additional bartenders, batching, and custom menu signage.</p>
+          <p>Signature cocktails, full mobile craft bar deployment, Nespresso Mini espresso martini service, smoked cocktails, smoke bubbles, customized foams, Ori Future ice press moments, pressed ice shapes, dehydrated citrus, extra service time, additional bartenders, batching, and custom menu signage.</p>
         </article>
         <article class="included-card">
           <span>Complimentary closeout</span>
@@ -1681,8 +1824,8 @@
         <article class="addon-card">
           <div>
             <span>Espresso martinis</span>
-            <h3>Fresh espresso when the service flow allows.</h3>
-            <p>Espresso can be pulled during setup or downtime for service-ready martinis, with to-order pulls reserved for small VIP moments or slower service windows.</p>
+            <h3>Nespresso Mini service when the flow allows.</h3>
+            <p>Espresso martinis can be scoped around a compact Nespresso Mini station, with service-ready batching for busy parties and to-order pulls reserved for small VIP moments.</p>
           </div>
           <a class="button wide" href="#event-inquiry">Ask about espresso service</a>
         </article>
@@ -1693,8 +1836,8 @@
       <p class="eyebrow">Event proof</p>
       <h2 class="section-title">Real bar service, finished drinks, and clear ice details.</h2>
       <div class="gallery-grid">
-        <div class="gallery-item large">
-          <img src="assets/photos/tall-rock.jpg" alt="Large clear ice rock with warm light and clean texture" />
+        <div class="gallery-item large gallery-item--ice-block">
+          <img src="assets/photos/bombay-sapphire-bottle-frozen-clear-ice.jpg" alt="Bombay Sapphire bottle frozen inside a large clear ice block for a custom event moment" />
         </div>
         <div class="gallery-item gallery-item--manhattan">
           <img src="assets/photos/manhattan-up.jpg" alt="Manhattan-style cocktail served up with citrus garnish" />
@@ -1710,8 +1853,8 @@
         </div>
         <div class="gallery-item gallery-item--gin-tonic">
           <img
-            src="assets/photos/gallery-gin-tonic-rosemary.png"
-            alt="Gin and tonic with clear ice, rosemary, and orange peel on marble"
+            src="assets/photos/basil-citrus-highball.jpg"
+            alt="Bright citrus highball with clear ice and fresh basil garnish"
           />
         </div>
       </div>
@@ -1787,15 +1930,15 @@
         <article class="step">
           <strong>Step 01</strong>
           <div>
-            <h3>Share the essentials</h3>
-            <p>Send the date, location, guest count, event type, and service window so Full Proof can confirm the event is serviceable.</p>
+          <h3>Share the essentials</h3>
+          <p>Send the date, location, guest count, event type, and service window so Full Proof can confirm the event is serviceable.</p>
           </div>
         </article>
         <article class="step">
           <strong>Step 02</strong>
           <div>
-            <h3>Reserve or quote</h3>
-            <p>For the Launch Special, request the 50% date-hold path. For weddings, brand events, larger guest counts, signature cocktails, and premium ice work, request a custom quote.</p>
+          <h3>Reserve or quote</h3>
+          <p>For the Launch Special, choose Basic or Cups + Garnishes and continue to the 50% date-hold step. For weddings, brand events, larger guest counts, signature cocktails, and premium ice work, request a custom quote.</p>
           </div>
         </article>
         <article class="step">
@@ -1830,7 +1973,7 @@
         </article>
         <article class="faq-item">
           <h3>What is the booking process?</h3>
-          <p>Start by sharing the event basics. If the Launch Special fits, you can reserve the date with a deposit and finalize the menu later. If the event needs more detail, Joe will recommend the right package and quote the scope clearly.</p>
+          <p>Start by sharing the event basics. If the Launch Special fits, choose Basic at $699 or Cups + Garnishes at $799, then continue to the 50% date-hold deposit. Menu direction and shopping details can be finalized after the date is held. If the event needs more detail, Joe will recommend the right custom quote.</p>
         </article>
         <article class="faq-item">
           <h3>Can I reserve before choosing cocktails?</h3>
@@ -1838,7 +1981,7 @@
         </article>
         <article class="faq-item">
           <h3>How much is the deposit?</h3>
-          <p>The Launch Special can be held with a 50% date-hold deposit after availability is confirmed: $349.50 for the 3-hour service or $424.50 for the 4-hour service. Promo code FOUNDER takes $100 off the first eligible booking for the first 10 launch clients. Larger weddings, brand events, and custom quotes may require a different deposit because staffing, prep, and logistics are more involved.</p>
+          <p>The Launch Special uses a 50% date-hold deposit: $349.50 for Basic or $399.50 for Cups + Garnishes. For the first 10 eligible bookings, promo code FOUNDER makes Basic $599 with a $299.50 deposit and locks the $699 base rate for similar future parties. Larger weddings, brand events, and custom quotes may require a different deposit because staffing, prep, and logistics are more involved.</p>
         </article>
       </div>
     </section>
@@ -1852,7 +1995,7 @@
         <article class="path-card">
           <strong>Best default</strong>
           <h3>Reserve Launch Special</h3>
-          <p>Use this if you want the 3-hour or 4-hour date-hold path and can finalize the menu after the date is secured.</p>
+          <p>Use this if you want Basic at $699 or Cups + Garnishes at $799 and can finalize the menu after the date is secured.</p>
           <a class="button solid wide" href="#event-inquiry">Reserve your date</a>
         </article>
         <article class="path-card">
@@ -1941,9 +2084,8 @@
             <label for="package-choice">Package path</label>
             <select id="package-choice" name="package_choice" required>
               <option value="" disabled selected>Select one</option>
-              <option value="Launch Special - 3 hours - 50% deposit request">Launch Special, 3 hours - $349.50 deposit request</option>
-              <option value="Launch Special - 4 hours - 50% deposit request">Launch Special, 4 hours - $424.50 deposit request</option>
-              <option value="Signature Bar Experience quote">Signature Bar Experience quote</option>
+              <option value="Launch Special Basic - 3 hours - 50% deposit">Launch Special Basic - $699 / $349.50 deposit</option>
+              <option value="Launch Special Cups + Garnishes - 3 hours - 50% deposit">Launch Special Cups + Garnishes - $799 / $399.50 deposit</option>
               <option value="Wedding or brand event custom quote">Wedding or brand event custom quote</option>
               <option value="Not sure yet">Not sure yet</option>
             </select>
@@ -1962,16 +2104,7 @@
               <option value="" disabled selected>Select one</option>
               <option value="Checking availability">Checking availability</option>
               <option value="Ready for a quote">Ready for a quote</option>
-              <option value="Ready to reserve with 50% deposit">Ready to reserve with 50% deposit</option>
-              <option value="Planner or vendor inquiry">Planner or vendor inquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="payment-timing">Deposit timing</label>
-            <select id="payment-timing" name="payment_timing" required>
-              <option value="" disabled selected>Select one</option>
-              <option value="Send secure deposit step after availability is confirmed">Send secure deposit step after availability is confirmed</option>
-              <option value="I want a quote before deposit">I want a quote before deposit</option>
+              <option value="Reserve Launch Special with 50% deposit">Reserve Launch Special with 50% deposit</option>
               <option value="Planner or vendor inquiry">Planner or vendor inquiry</option>
             </select>
           </div>
@@ -1980,8 +2113,7 @@
         <div class="form-group">
           <label>Add-ons and upgrades <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Select all that apply.</span></label>
           <div class="checkbox-grid">
-            <label><input type="checkbox" name="interest" value="Launch Special Service" /> Launch Special Service</label>
-            <label><input type="checkbox" name="interest" value="50% date-hold deposit" /> 50% date-hold deposit</label>
+            <label><input type="checkbox" name="interest" value="Cups and garnishes package" /> Cups and garnishes package</label>
             <label><input type="checkbox" name="interest" value="Signature cocktails" /> Signature cocktails</label>
             <label><input type="checkbox" name="interest" value="Clear ice upgrades" /> Clear ice upgrades</label>
             <label><input type="checkbox" name="interest" value="Full custom mobile bar" /> Full custom mobile bar</label>
@@ -2005,7 +2137,7 @@
 
         <div class="form-actions">
           <button id="reservation-submit" type="submit" class="button solid">Submit reservation request</button>
-          <p class="form-note">For the Launch Special, submit the form and continue to the secure deposit step after availability is confirmed. Enter FOUNDER if you are one of the first 10 launch clients. If your event is unavailable, the date-hold deposit will be refunded. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
+          <p class="form-note">For the Launch Special, submit the form and continue to the secure 50% date-hold step. Enter FOUNDER if you are one of the first 10 launch clients; Basic becomes $599 and your deposit becomes $299.50. If your event is unavailable or outside the launch footprint, the deposit will be refunded or moved only with your approval. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
         </div>
       </form>
 
@@ -2036,10 +2168,9 @@
     const reservationSubmit = document.querySelector("#reservation-submit");
     const packageChoice = document.querySelector("#package-choice");
     const bookingIntent = document.querySelector("#booking-intent");
-    const paymentTiming = document.querySelector("#payment-timing");
     const directDepositPackages = [
-      "Launch Special - 3 hours - 50% deposit request",
-      "Launch Special - 4 hours - 50% deposit request",
+      "Launch Special Basic - 3 hours - 50% deposit",
+      "Launch Special Cups + Garnishes - 3 hours - 50% deposit",
     ];
 
     function formDataToPayload(form) {
@@ -2059,14 +2190,13 @@
 
     function shouldUseStripeCheckout() {
       return directDepositPackages.includes(packageChoice?.value)
-        && bookingIntent?.value === "Ready to reserve with 50% deposit"
-        && paymentTiming?.value === "Send secure deposit step after availability is confirmed";
+        && bookingIntent?.value === "Reserve Launch Special with 50% deposit";
     }
 
     function updateSubmitLabel() {
       if (!reservationSubmit) return;
       reservationSubmit.textContent = shouldUseStripeCheckout()
-        ? "Continue to secure deposit"
+        ? "Continue to secure 50% deposit"
         : "Submit reservation request";
     }
 
@@ -2077,23 +2207,17 @@
           packageChoice.value = choice;
         }
 
-        if (bookingIntent && choice?.includes("deposit")) {
-          bookingIntent.value = "Ready to reserve with 50% deposit";
+        if (bookingIntent && directDepositPackages.includes(choice)) {
+          bookingIntent.value = "Reserve Launch Special with 50% deposit";
         } else if (bookingIntent) {
           bookingIntent.value = "Ready for a quote";
-        }
-
-        if (paymentTiming && choice?.includes("deposit")) {
-          paymentTiming.value = "Send secure deposit step after availability is confirmed";
-        } else if (paymentTiming) {
-          paymentTiming.value = "I want a quote before deposit";
         }
 
         updateSubmitLabel();
       });
     });
 
-    [packageChoice, bookingIntent, paymentTiming].forEach((field) => {
+    [packageChoice, bookingIntent].forEach((field) => {
       field?.addEventListener("change", updateSubmitLabel);
     });
 

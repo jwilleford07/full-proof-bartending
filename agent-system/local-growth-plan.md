@@ -61,7 +61,7 @@ Tone: warm, professional, guest-first—aligned with Full Proof’s hospitality 
 >  
 > I’m Joe Willeford, founder of **Full Proof Bartending** — luxury mobile bartending for weddings, private parties, and corporate gatherings across Los Angeles, Long Beach, and Orange County.  
 >  
-> We bring a self-contained craft bar (running water, power, rinser, lighting), hand-carved clear ice, and premium compostable drinkware so the bar photographs beautifully and runs smoothly for your team and guests.  
+> We bring a self-contained craft bar plan, hand-carved clear ice, organized service tools, and an optional cups-and-garnishes package so the bar photographs beautifully and runs smoothly for your team and guests.  
 >  
 > I’m actively building relationships with planners and vendors I trust, and I’d love to learn how you like to coordinate bar service on [their specialty] events. If you’re open, I can share a short capability sheet and availability — or stop by for coffee if you’re local to [their area].  
 >  

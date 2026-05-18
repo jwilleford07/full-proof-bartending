@@ -18,6 +18,9 @@ const requiredFiles = [
   "assets/fullproof-primary-wordmark.svg",
   "assets/fullproof-horizontal-lockup.svg",
   "assets/fullproof-fp-seal.svg",
+  "assets/photos/decent-rinser-stock.jpg",
+  "assets/photos/ori-glazer-ice-press-stock.jpg",
+  "assets/photos/nespresso-essenza-mini-stock.webp",
 ];
 
 const bannedPatterns = [
@@ -27,6 +30,8 @@ const bannedPatterns = [
   /black-mobile-bar-full-setup\.jpg/i,
   /professional-bar-setup\.(?:png|jpe?g|webp)/i,
   /reserve-standard-service\.html/i,
+  /payment-timing/i,
+  /Ready to reserve with 50% deposit/i,
 ];
 
 const bannedPublicFiles = [
@@ -50,8 +55,10 @@ const requiredHomepagePatterns = [
   /Launch Special/i,
   /FOUNDER/i,
   /\$699\s*\/\s*3 hours/i,
-  /\$849\s*\/\s*4 hours/i,
-  /fresh espresso/i,
+  /\$799\s*\/\s*3 hours/i,
+  /Cups \+ Garnishes/i,
+  /Basic becomes \$599/i,
+  /Nespresso Mini/i,
   /date-hold deposit/i,
   /full-proof-event-inquiry/i,
   /self-contained/i,

@@ -49,12 +49,12 @@ Use publicly as:
 
 ### Self-Contained Bar Build
 
-Full Proof can operate without relying on a venue bar, house sink, running water, or house power. The professional mobile setup includes generator-capable power, fresh and gray water jugs, a 110v pump, pump-driven running water, an integrated Decent Espresso rinser, a custom utility sink, hand-wash capability, clean prep surfaces, a custom portable stainless steel ice bin, chilled condiment displays, service mats, glass drying mats, Crew Supply Co bottles and tools, and premium Tossware drinkware.
+Full Proof can operate without relying on a venue bar, house sink, running water, or house power. The professional mobile setup includes generator-capable power, fresh and gray water jugs, a 110v pump, pump-driven running water, an integrated Decent Espresso rinser, a custom utility sink, hand-wash capability, clean prep surfaces, a custom portable stainless steel ice bin, chilled condiment displays, service mats, glass drying mats, and Crew Supply Co bottles and tools. Service cups and standard garnishes belong in the $799 launch path or a custom quote.
 
 Use publicly as:
 
 - `A self-contained mobile cocktail bar with power, running water, rinser, sink, ice, prep, and sanitation built in.`
-- `Integrated Decent Espresso rinser, custom utility sink, custom stainless ice bin, Crew Supply Co bottles and tools, and premium Tossware drinkware.`
+- `Integrated Decent Espresso rinser, custom utility sink, custom stainless ice bin, and Crew Supply Co bottles and tools.`
 - `A real cocktail bar brought to the event, not a folding table and borrowed venue sink.`
 
 ### Clear Ice Authority
@@ -86,7 +86,7 @@ Full Proof combines Southern hospitality, Los Angeles craft cocktail experience,
 - Fewer can run a real cocktail program.
 - Fewer can manage service flow and event coordination.
 - Fewer bring their own self-contained bar infrastructure.
-- Fewer have invested in specific bar-build details like an integrated Decent Espresso rinser, custom utility sink, custom portable stainless steel ice bin, Crew Supply Co bottles and tools, and Tossware premium drinkware.
+- Fewer have invested in specific bar-build details like an integrated Decent Espresso rinser, custom utility sink, custom portable stainless steel ice bin, and Crew Supply Co bottles and tools.
 - Almost none have built a clear cocktail ice company, served LA bar/restaurant accounts, consulted with Camper English, and connected with Jimmy Yeager.
 
 This is the moat.

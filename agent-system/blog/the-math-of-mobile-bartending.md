@@ -2,7 +2,7 @@
 
 When you are planning a private event, the bar is usually one of the first things you think about. It’s the gathering point. It sets the tone. 
 
-But when you start getting quotes from mobile bartending services, you might experience a moment of sticker shock. You see a flat service fee—say, $599 or $699—and then you realize: *"Wait, I have to provide the alcohol on top of this?"*
+But when you start getting quotes from mobile bartending services, you might experience a moment of sticker shock. You see a flat service fee—say, $699 or $799—and then you realize: *"Wait, I have to provide the alcohol on top of this?"*
 
 At first glance, a flat rate plus a trip to Total Wine feels like a big number. But when you break down the actual math of how "dry hire" bartending works, you realize it is the single most cost-effective way to host a premium event—while actually getting a better experience.
 
@@ -40,8 +40,8 @@ You are paying $2,500 just for the drinks. And you are drinking from their menu,
 
 Let's run the exact same 30-person, 4-hour party scenario with Full Proof Bartending:
 
-1. **The Service Fee:** $699 (for a 4-hour Standard Service)
-   *This includes the bartender, the bar tools, premium compostable drinkware, menu planning, and our signature hand-carved clear ice.*
+1. **The Service Fee:** $699 for Basic or $799 with Cups + Garnishes
+   *This includes the bartender, bar tools, menu planning, and our signature hand-carved clear ice. The $799 path adds service cups and a standard garnish kit.*
 
 2. **The Alcohol (Retail Cost):** ~$350 to $400
    *If you are serving 120 drinks, you need about 7-8 bottles of spirits. At Total Wine or Costco, decent mid-tier to premium spirits (Tito's, Maker's Mark, Espolòn) run $25-$40 a bottle. Add in mixers, juices, and a wine/beer buffer, and a $400 budget is actually very generous.*
@@ -54,7 +54,7 @@ By paying the flat fee and buying your alcohol at retail, you just saved **over 
 
 ## What the Flat Fee Actually Buys You
 
-When you understand the savings on the alcohol, the $599 flat fee stops looking like an expense and starts looking like an investment in the event itself. 
+When you understand the savings on the alcohol, the $699 Basic fee stops looking like an expense and starts looking like an investment in the event itself. 
 
 But what are you actually paying for? You aren't just paying someone an hourly rate to pour liquids into a cup. You are buying back your own time and elevating the room.
 
@@ -68,7 +68,7 @@ We bring the efficiency and quality of a brick-and-mortar cocktail bar to your b
 At a venue, you are sharing the bartender with everyone else in the building. A private bartender is there exclusively for your guests. We learn what your VIPs are drinking. We keep water flowing. We pace the room. It’s warm, attentive, Southern California hospitality, tailored entirely to your crowd.
 
 ### 4. A composed visual anchor.
-A folding table with plastic handles of vodka looks like a college party. Our self-contained bar setup, organized tools, and premium Tossware signal to your guests that they are somewhere special. 
+A folding table with plastic handles of vodka looks like a college party. Our self-contained bar setup, organized tools, clear ice, and optional cups-and-garnishes package signal to your guests that they are somewhere special. 
 
 ---
 

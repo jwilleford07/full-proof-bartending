@@ -39,13 +39,13 @@ Since we are a mobile service without a public storefront, ensure your address i
 
 Adding specific services with rich descriptions and clear pricing captures long-tail searches and builds immediate trust.
 
-**Standard Service (3 Hours)**
-- **Price:** $599
-- **Description:** Premium mobile bartending service for up to 3 hours. Includes one professional bartender, customized menu planning, shopping guidance, premium Tossware drinkware, a composed bar station, and our signature hand-carved clear ice cubes. Ideal for intimate private events.
-
-**Standard Service (4 Hours)**
+**Launch Special Basic (3 Hours)**
 - **Price:** $699
-- **Description:** Premium mobile bartending service for up to 4 hours. Includes a professional bartender, customized menu planning, premium Tossware drinkware, a composed bar station, and our signature hand-carved clear ice. Perfect for weddings and extended corporate events.
+- **Description:** Premium mobile bartending service for good-fit private events. Includes one professional bartender, menu direction, shopping guidance, a composed bar station, and signature hand-carved clear ice cubes. Host provides alcohol, cups, and garnish groceries from our list. First 10 FOUNDER bookings get Basic for $599.
+
+**Launch Special with Cups + Garnishes (3 Hours)**
+- **Price:** $799
+- **Description:** Launch Special Basic plus Full Proof-provided service cups and a standard garnish kit, so hosts have fewer small items to source.
 
 **Full Mobile Craft Bar Setup**
 - **Price:** Custom Quote
@@ -64,7 +64,7 @@ Photos are the strongest proof point for the brand. Avoid stock photos. Upload h
 **Essential Photo Categories to Upload:**
 1. **The Bar Setup:** Wide and detailed shots of the Tier B self-contained bar. Show the LED lighting, organized tools, running water/rinser, and clean aesthetic.
 2. **The Ice (Visual Moat):** Close-ups of the hand-carved clear ice in the glass, and the ice press in action.
-3. **The Drinks:** Beautifully garnished cocktails served in the premium Tossware.
+3. **The Drinks:** Beautifully garnished cocktails and clear ice details in clean, event-ready glassware or service cups.
 4. **Action Shots:** You (Joe) behind the bar, demonstrating composed, attentive service and Southern hospitality.
 5. **Event Context:** Wide shots showing the bar integrated into a beautiful event space or party.
 
@@ -78,8 +78,8 @@ Google allows business owners to ask and answer their own questions. Seed these 
 **Q:** What areas do you serve?
 **A:** We are based in Long Beach, CA, and provide premium private event and wedding bartending across Los Angeles, Orange County, and the broader Southern California area.
 
-**Q:** What is included in your standard mobile bar package?
-**A:** Our standard service includes a professional bartender, custom menu planning, premium compostable Tossware, our signature hand-carved clear ice cubes, and a beautifully composed bar station.
+**Q:** What is included in your launch mobile bar package?
+**A:** Launch Special Basic includes one professional bartender, menu direction, shopping guidance, a composed bar station, and our signature hand-carved clear ice cubes. The $799 Cups + Garnishes path adds service cups and a standard garnish kit.
 
 ## 6. Action Items for Joe
 

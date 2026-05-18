@@ -1,177 +1,95 @@
 # Offers & Packages — Full Proof Bartending
 
-Internal reference for package structure, add-ons, quoting, and launch-window framing. Aligns with `agents/offer-architect.md`, `hermes-handoff-prompt.md`, and live homepage copy in `index.html`.
+Internal reference for package structure, add-ons, quoting, and launch-window framing. Keep this aligned with `index.html`, `package-sheet.md`, and the Sales & Accounting Manager.
 
 ## Positioning
 
-- **Primary sale:** Premium mobile bartending — calm service, composed bar presence, thoughtful cocktails.
-- **Signature proof:** Hand-carved clear ice is a visible premium detail, not a gimmick or the entire brand story.
-- **Economics:** Keep **published base rates approachable** to reduce sticker shock and start conversations. Capture **margin in add-ons** (time, staffing, ice artistry, menu depth, logistics intensity).
+- **Primary sale:** premium mobile bartending with calm service, composed bar presence, and thoughtful cocktails.
+- **Signature proof:** hand-carved clear ice is a visible premium detail, not the whole brand story.
+- **Economics:** use aggressive launch pricing to get good-fit events booked, then protect margin with clear add-ons and scope control.
 
-Avoid sounding promotional or discounter: no “discount,” “deal,” “% off,” “flash sale,” or urgency hacks. Prefer **hospitality** and **portfolio-build** language.
+Avoid cheap-sounding language. Prefer "founder rate," "portfolio window," "launch path," and "good-fit private parties" over "deal" or "discount."
 
----
+## Published Launch Pricing
 
-## Standard Service (published anchor)
+| Package | Price | Deposit | Best fit |
+|---|---:|---:|---|
+| **Launch Special Basic** | **$699 / 3 hours** | **$349.50** | Hosts who want the strongest entry price and can provide drinkware and garnish groceries from Joe's list. |
+| **Launch Special Cups + Garnishes** | **$799 / 3 hours** | **$399.50** | Hosts who want service cups and a standard garnish kit handled by Full Proof. |
 
-**Public pricing**
+**FOUNDER:** first 10 eligible launch bookings get Basic for **$599** with a **$299.50** deposit and keep the **$699** base rate for future similar parties.
 
-- **From $749 / 3 hours**
-- **$899 / 4 hours**
+The `FOUNDER` code applies to Basic only. In public copy, always make the Basic result unmistakable: **FOUNDER makes Basic $599**.
 
-**Always include (every booking)**
+## Basic Includes
 
-- One professional bartender for active service (setup/cleanup outside guest-facing hours as quoted).
-- Service planning: timeline touchpoints, pour logic, menu direction, shopping guidance for client-provided alcohol.
-- Crew Supply Co bottles and tools plus a **composed, guest-ready bar station** appropriate to the contract (see “Setup tiers” below — the full mobile unit is self-sustained and does not depend on venue power or water).
-- **Tossware premium compostable drinkware** for all Full Proof–served beverages unless the host opts into glassware they supply.
-- **Hand-carved clear ice cubes** for cocktails served at the event — included during the **launch / portfolio window** (see framing below).
-- Cleanup aligned with venue rules and the agreed scope.
+- One professional bartender for active service.
+- Service planning, timeline touchpoints, pour logic, menu direction, and shopping guidance.
+- Crew Supply Co bottles and tools with a composed bar station appropriate to the quote.
+- House syrups, fresh lemon and lime juice, standard bitters, and menu guidance when included in scope.
+- Hand-carved clear ice cubes for cocktails served by Full Proof.
+- Setup, service, and cleanup aligned with venue rules.
 
-**Best-fit positioning**
+**Basic does not automatically include:** alcohol, service cups, garnish groceries, specialty ice, additional bartenders, extended service, full custom bar deployment, venue complexity, or premium production.
 
-- Smaller private events, tight footprints, or hosts who want premium execution without every theatrical extra.
+## Cups + Garnishes Adds
 
----
+- Service cups.
+- Standard garnish kit.
+- Fewer small shopping tasks for the host.
 
-## Launch window — clear ice & hospitality framing
+Alcohol remains host-provided unless contracted otherwise.
 
-**Business intent:** Early events build a publishable portfolio while maintaining luxury perception.
+## Setup Tiers
 
-**Approved language patterns** (pick one thread per touchpoint; do not stack hype)
+| Tier | Client-facing name | What it is |
+|---|---|---|
+| **A** | Professional bar station | Composed back bar, Crew Supply Co bottles and tools, mats, ice handling, and event-ready service flow. |
+| **B** | Full mobile craft bar | Self-sustained unit with generator-capable power, fresh and gray water, pump-driven running water, integrated rinser, custom utility sink, hand-wash capability, custom stainless ice bin, clean prep surfaces, and optional ice press / smoke / bubble / foam capabilities. |
 
-- “**Launch hospitality upgrade** — hand-carved clear ice cubes included on standard service while we build our published portfolio.”
-- “We’re **building our published portfolio**; early bookings receive **enhanced inclusions** so every event reflects how we execute.”
-- “**Portfolio-window inclusion** — clear ice cubes bundled into standard service during this phase.”
+Tier B is quoted. Do not bury it inside Basic unless the quote reflects the load-in, equipment, and setup time.
 
-**Avoid**
+## Add-on Menu
 
-- Anything that reads like a coupon (“special discount,” “limited-time deal,” “mark-down”).
-- Over-promising specialty ice (spheres, spears, branded blocks) as included — those stay **add-ons**.
+**Ice & presentation:** pressed spheres, Collins spears, specialty cuts, extra clear-ice volume, branded cubes, and premium garnish upgrades.
 
-**Operational note:** When the portfolio window closes, standard service still includes clear cubes **as the baseline Full Proof standard** unless pricing architecture intentionally changes — update this doc and `index.html` together when that happens.
+**Menu & production:** signature cocktail development, batching support, paired low- and no-alcohol options, espresso martinis, smoke, bubbles, foams, and custom menu cards.
 
----
+**Service & staffing:** additional bartenders, extended active service, late-night extensions, weddings, corporate events, and brand activations.
 
-## Setup tiers (quote logic)
+**Logistics:** travel, parking, difficult load-in, venue access, outdoor heat, tight prep windows, and unusual timing.
 
-Full Proof should never read “folding-table bar.” The **difference is equipment intensity**, not professionalism.
+## Quote Language
 
-| Tier | Client-facing name | What it is | Typical margin lever |
-|------|---------------------|------------|----------------------|
-| **A** | Professional bar station | Composed back bar, Crew Supply Co bottles and tools, garnish and execution at event-grade presentation — scoped to venue layout | Base-friendly; upsell time/menu depth |
-| **B** | Full mobile craft bar | Self-sustained unit: generator power, fresh and gray water, 110v pump, running water, integrated Decent Espresso rinser, custom utility sink, hand-wash capability, clean prep surfaces, custom portable stainless steel ice bin, chilled condiment displays, napkins, straws, service mats, glass drying mats, Crew Supply Co bottles and tools, premium Tossware drinkware, and optional ice press / smoke / bubble / foam capabilities | Higher quoted minimums; travel/setup complexity |
+### Opening Anchor
 
-**Rule:** Tier B is **quoted**, not buried as assumed. If marketing says “full mobile bar,” ensure the quote reflects Tier B.
+"For good-fit small private parties, Launch Special Basic is **$699 for 3 hours**. If you want Full Proof to handle service cups and standard garnishes, the launch path is **$799**. The first 10 eligible `FOUNDER` bookings get Basic for **$599** and keep the **$699** base rate for similar future parties."
 
----
+### Deposit
 
-## Add-on menu (margin layers)
+"To hold the date, the deposit is 50%: **$349.50** for Basic or **$399.50** for Cups + Garnishes. If `FOUNDER` applies to Basic, the deposit is **$299.50**."
 
-Quote **per event**. Bundle where it simplifies the buying decision.
+### Scope Protection
 
-### Ice & presentation
+"Alcohol is host-provided. Basic hosts also provide drinkware and garnish groceries from my list; the $799 path lets Full Proof handle service cups and the standard garnish kit."
 
-- Pressed spheres, Collins spears, specialty cuts, **extra clear-ice volume** beyond baseline cubes.
-- Branded or custom motif cubes (production + handling time).
-- Premium garnish program upgrades (e.g., expanded dehydrated fruit program beyond standard garnish handling).
+### Premium Upgrade
 
-### Menu & production
+"If you want the full self-contained mobile craft bar, extra service time, specialty ice, smoke, espresso, or additional staffing, I’ll quote those clearly so the event is priced to run well."
 
-- Signature cocktail development (tasting loops, naming, printed/embellished menu cards).
-- Batching execution support (prep timelines, vessel guidance, on-site finishing strategy).
-- Low- and no-alcohol cocktail parity (paired signatures).
+## Booking Flow
 
-### Service & staffing
+Public booking language should separate three decisions:
 
-- Additional bartender(s).
-- Extended active service hours; late-night extensions.
-- High-touch pacing for brand activations or VIP lanes.
+1. Package: Basic, Cups + Garnishes, or Custom Quote.
+2. Intent: checking availability, ready for quote, or reserve Launch Special with 50% deposit.
+3. Promo: optional `FOUNDER`.
 
-### Experience accents
+Do not ask visitors to choose both "Launch Special" and "50% deposit" as if those are separate add-ons.
 
-- Smoke-forward presentations where venue rules allow.
-- “Smoke bubbles” or similar theatrical accents — **only** when brand-appropriate and venue-safe.
+## Related Files
 
-### Logistics
-
-- Travel beyond core LA / Long Beach / OC corridor (define thresholds in quote).
-- Parking/load-in constraints, challenging access, or extended venue holds.
-
-**Upsell path (conversation order)**
-
-1. Guest count + service window → validate staffing and hours.
-2. Menu ambition → signatures + batching.
-3. Presentation → specialty ice + garnish depth + Tier B bar if not already in scope.
-4. Brand moments → custom ice / menus / activation pacing.
-
----
-
-## Client-provided vs Full Proof–provided
-
-| Item | Default |
-|------|---------|
-| Spirits, wine, beer, mixers (unless contracted otherwise) | **Client-provided**; Full Proof provides shopping list and quantities |
-| Venue access, permits host holds | **Client** |
-| Glassware (optional upgrade path) | **Client** unless contracted rental/supply |
-| Bar equipment, Crew Supply Co bottles and tools, Tossware premium drinkware, execution ice baseline | **Full Proof** per quote |
-| Specialty ice beyond baseline | **Quoted add-on** |
-
----
-
-## Quote language (copy-ready blocks)
-
-### Opening anchor (email)
-
-“Launch Standard mobile bartending service starts at **$749 for three hours** or **$899 for four hours** for events that fit our single-bartender footprint. Final quotes reflect guest count, service length, staffing, travel, menu complexity, and add-ons.”
-
-### Portfolio-window sentence (optional)
-
-“This season we’re **building our published portfolio**, so standard service currently includes **hand-carved clear ice cubes** as part of our **launch hospitality upgrade**.”
-
-### Tier B upsell
-
-“When events call for the **full self-contained mobile craft bar**, we bring the infrastructure: generator power, fresh and gray water, pump-driven running water, integrated Decent Espresso rinser, custom utility sink, hand-wash capability, custom stainless ice bin, clean prep surfaces, Crew Supply Co bottles and tools, Tossware premium drinkware, and the bar details guests expect from a serious cocktail program.”
-
-### Closing line
-
-“Alcohol is typically host-provided; once we lock the menu, we send a **shopping list with quantities** so purchasing is straightforward.”
-
----
-
-## Homepage alignment (`index.html`)
-
-Published packages section should always:
-
-- Use section eyebrow **Packages** (pricing lives in the cards; avoids noisy “sale” signaling).
-- Show **Launch Standard** dollar amounts exactly as listed above (QA-enforced).
-- Include clear `Book now`, 50% date-hold, and form language (QA-enforced).
-- Present add-ons as **quoted by event**, grouped conceptually (ice, menu, staffing, logistics).
-
----
-
-## Date-Hold / Book Now Flow
-
-Public booking language should make the next step feel easy without pretending the full event can be finalized before talking to Joe.
-
-Approved framing:
-
-- `Book now`
-- `Start a 50% date-hold request`
-- `Hold the date now. Finalize the menu later.`
-- `Joe will confirm availability before collecting the deposit.`
-
-Current booking rule:
-
-- Launch Standard can be held with a **50% date-hold deposit after availability is confirmed**.
-- The website should collect booking intent through the form first, then Joe sends the secure payment step.
-- Future version: move toward fully self-serve online booking once availability, contracts, and payment flow are reliable.
-
----
-
-## Related files
-
-- `agent-system/agents/offer-architect.md` — principles.
-- `agent-system/hermes-handoff-prompt.md` — business facts and positioning guardrails.
-- `agent-system/package-sheet.md` — one-page client-facing sheet (PDF / email attachment).
-- `agent-system/client-quote-response-template.md` — merge quote blocks into outbound replies as needed.
+- `agent-system/agents/offer-architect.md`
+- `agent-system/agents/sales-accounting-manager.md`
+- `agent-system/package-sheet.md`
+- `agent-system/client-quote-response-template.md`

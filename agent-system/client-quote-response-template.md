@@ -8,11 +8,11 @@ Thank you for reaching out. We have [Date] available and would be glad to handle
 
 The goal is to make the bar feel completely handled so you can actually be present at your event. Based on your guest count of [Guest Count], here is the recommended service plan to keep lines moving and your guests taken care of.
 
-### Recommended Plan: [Package Name, e.g., Standard Service]
+### Recommended Plan: [Package Name, e.g., Launch Special Basic]
 - **Service Time:** [X] hours of active service, plus setup and clean down.
 - **Staffing:** [X] professional bartender(s).
 - **The Setup:** Our self-contained mobile craft bar. It includes power, running water, a built-in rinser, and organized tools so the bar looks composed from the first pour to the end of the night.
-- **Drinkware:** Premium compostable Tossware.
+- **Drinkware / garnishes:** [Host-provided from Joe's list / included in Cups + Garnishes package / custom quote].
 - **Ice:** Hand-carved clear ice cubes are included for all cocktails.
 
 **Total Quote:** $[Amount]
@@ -41,6 +41,6 @@ joe@fullproofbartending.com
 
 *For a [Guest Count]-person party for [Duration] hours, you’re looking at about [Total Drinks] drinks. At a venue charging $16 a drink, plus the standard 20% service charge and taxes, your bar tab alone would be around $[Venue Cost].*
 
-*With Full Proof, the $699 service fee covers the professional bartender, setup, drinkware, and our hand-carved clear ice. Your alcohol, purchased at retail without a markup, will likely only run about $[Retail Cost]. That means your total cost is closer to $[Total Dry Hire Cost]—saving you around $[Savings] compared to a venue, while giving you a private craft bar experience without the lines.*
+*With Full Proof, the $699 Basic service fee covers the professional bartender, setup, planning, and hand-carved clear ice. The $799 Cups + Garnishes path adds service cups and a standard garnish kit. Your alcohol, purchased at retail without a markup, will likely only run about $[Retail Cost]. That means your total cost is closer to $[Total Dry Hire Cost]—saving you around $[Savings] compared to a venue, while giving you a private craft bar experience without the lines.*
 
 *Let me know if you’d like to see a custom shopping breakdown!*

@@ -41,9 +41,11 @@ Protect this framing:
 
 Current launch pricing:
 
-- Standard Service: `$599 / 3 hours`
-- Standard Service: `$699 / 4 hours`
-- Launch Clear Ice: included for launch
+- Launch Special Basic: `$699 / 3 hours`
+- Launch Special Cups + Garnishes: `$799 / 3 hours`
+- First 10 eligible `FOUNDER` bookings: Basic for `$599`
+- Founder rate lock: first 10 keep the `$699` base rate for similar future parties
+- Launch clear ice: included for Full Proof-served cocktails
 - Premium add-ons: quoted by event
 
 Use premium language:
@@ -195,7 +197,7 @@ Known audit issues already addressed or partially addressed:
 - `robots.txt` should point at sitemap: addressed.
 - Contact conversion needed improvement: phone CTA and mailto inquiry are live.
 - Old-brand proof imagery needed removal: old front-facing “Two for the Road” image is no longer referenced.
-- Pricing needed launch-friendly framing: standard service now starts at `$599 / 3 hours` and `$699 / 4 hours`, with clear ice included.
+- Pricing needed launch-friendly framing: Basic is `$699 / 3 hours`, Cups + Garnishes is `$799 / 3 hours`, first 10 `FOUNDER` Basic bookings are `$599`, and clear ice remains included for Full Proof-served cocktails.
 
 Still worth improving later:
 

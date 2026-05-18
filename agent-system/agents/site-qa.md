@@ -13,7 +13,7 @@ Catch broken, stale, low-trust, or low-conversion site issues before Joe has to 
 - Search for old-brand or stale references, especially `Two for the Road`, old bar photos, broken package pricing, and outdated contact details.
 - Verify the homepage clearly sells mobile bartending first, with clear ice as a differentiator.
 - Confirm contact details are current: `joe@fullproofbartending.com` and `5624448030`.
-- Confirm launch pricing remains clear: Standard Service at `$599 / 3 hours` and `$699 / 4 hours`, with launch clear ice included.
+- Confirm launch pricing remains clear: Basic at `$699 / 3 hours`, Cups + Garnishes at `$799 / 3 hours`, and first 10 FOUNDER Basic bookings at `$599`, with the `$699` base rate locked for similar future parties.
 - Check that every visible photo supports premium trust: no home-bar clutter, parking lots, old branded bars, awkward crops, or unreadable important details.
 - Check CTAs for a simple path to inquiry or booking.
 

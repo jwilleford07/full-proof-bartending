@@ -12,11 +12,12 @@
 
 - Make sure the hero sells mobile bartending immediately.
 - Keep the professional setup section prominent.
-- Add clear proof that every package includes Tossware premium compostable drinkware.
+- Keep Basic vs Cups + Garnishes package language clear; do not imply drinkware/garnishes are included in Basic.
 - Use the ice story as credibility, not the main sales pitch.
 - Add founder hospitality copy with Atlanta roots in a restrained way.
 - Add a clean gallery with no blank tiles.
 - Add a FAQ section for hosts.
+- Build an in-site menu builder after standard cocktails are indexed, with ingredient-overlap logic that helps hosts choose efficient drink combinations and reduce wasted inventory.
 
 ## Offers
 
@@ -24,6 +25,7 @@
 - Define clear ice inclusions.
 - Price specialty ice add-ons: pressed spheres, Collins spears, logo ice, custom garnish.
 - Define what the client provides versus what Full Proof provides.
+- Add menu-efficiency planning as a premium hospitality differentiator: overlapping ingredients, smarter shopping, fewer unused bottles, and NA riffs built from the same craft system.
 - Build a quote calculator later, only after the simple packages are clear.
 
 ## Operations
@@ -53,4 +55,3 @@
 - Automated quote builder.
 - Event recap email sequence.
 - Retainer partnerships.
-

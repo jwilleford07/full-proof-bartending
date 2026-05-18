@@ -11,7 +11,7 @@ The page needs to make one decision obvious at every point:
 
 - Check the date.
 - Contact Joe directly.
-- Ask to reserve Launch Standard with a date-hold deposit.
+- Ask to reserve Launch Special Basic or Cups + Garnishes with a date-hold deposit.
 
 ## What Was Weak
 
@@ -21,7 +21,7 @@ The site had a form, email, text, and date-hold language, but they were not pres
 
 ### Direct Booking Was Underdeveloped
 
-The site correctly says the menu can be finalized later, but the date-hold path was not prominent enough. Until Stripe or Square is ready, the honest version is a `Ready to reserve Launch Standard` form path that triggers the deposit step manually.
+The site correctly says the menu can be finalized later, but the date-hold path was not prominent enough. The honest version is a package choice plus `Reserve Launch Special with 50% deposit` intent, not a separate "deposit" add-on.
 
 ### The Form Was Stronger Than The Page Around It
 
@@ -42,9 +42,9 @@ The success page confirmed receipt, but did not explain what happens next. That 
   - `Reserve date hold`
   - `Text Full Proof`
 - Added `id="event-inquiry"` so CTAs can jump directly to the form.
-- Updated package CTA language to make `Reserve Launch Standard` a first-class action.
+- Updated package CTA language to make `Reserve Launch Special` a first-class action.
 - Added contact-section cards for form, direct contact, and date-hold request.
-- Added `Ready to reserve Launch Standard` as the booking-intent option.
+- Added `Reserve Launch Special with 50% deposit` as the booking-intent option.
 - Added `Date-hold deposit` as an interest checkbox.
 - Expanded `success.html` with next steps after form submission.
 
@@ -55,12 +55,12 @@ The success page confirmed receipt, but did not explain what happens next. That 
 True direct booking requires a Stripe or Square payment link. The current repo guidance says not to wire a payment link until Stripe or Square is ready. Once ready, add the link anywhere the site says:
 
 - `Reserve date hold`
-- `Reserve Launch Standard`
+- `Reserve Launch Special`
 - `Reserve standard service`
 
 Recommended first payment path:
 
-- Fixed date-hold deposit for Launch Standard.
+- Fixed date-hold deposit language for Launch Special.
 - Follow-up agreement and final scope after availability is confirmed.
 
 ### Photo Pass

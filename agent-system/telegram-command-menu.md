@@ -38,7 +38,7 @@ Give me stronger calls to action for Full Proof that feel premium and direct.
 
 `/packages`
 
-Draft a simple package structure for Full Proof Bartending, including clear ice, Tossware, professional setup, and optional add-ons like pressed spheres.
+Draft a simple package structure for Full Proof Bartending, including clear ice, the $699 Basic path, the $799 Cups + Garnishes path, professional setup, and optional add-ons like pressed spheres.
 
 `/quote`
 
@@ -75,4 +75,3 @@ Write a concise outreach DM for planners, venues, caterers, private chefs, or ph
 `/blog`
 
 Give me blog ideas that help Full Proof rank, build trust, and sell private event bartending.
-

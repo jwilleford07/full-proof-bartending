@@ -4,65 +4,62 @@
 
 ---
 
-## Standard Service
+## Launch Special
 
-| | |
-| --- | ---: |
-| **3 hours** | **$599** |
-| **4 hours** | **$699** |
+| Package | Price | 50% date-hold deposit |
+|---|---:|---:|
+| **Basic** | **$699 / 3 hours** | **$349.50** |
+| **Cups + Garnishes** | **$799 / 3 hours** | **$399.50** |
 
-*Pricing is for events that fit our single-bartender footprint. Your final quote reflects guest count, service length, staffing, travel, menu complexity, and any add-ons you choose.*
+**Founder offer:** the first 10 eligible bookings using `FOUNDER` get Basic for **$599** with a **$299.50** deposit, and keep the **$699** base rate for similar future parties.
+
+Pricing is for good-fit private events in the single-bartender launch footprint. Final quotes reflect guest count, service length, staffing, travel, menu complexity, and add-ons.
 
 ---
 
-## What’s included — every booking
+## Basic Includes
 
 **Professional bartending**  
-One skilled bartender for active service, with setup and breakdown coordinated outside guest-facing hours as agreed in your quote.
+One skilled bartender for active service, with setup and breakdown coordinated outside guest-facing hours as agreed.
 
 **Planning you can rely on**  
-Timeline touchpoints, pour logic, menu direction, and clear shopping guidance for host-provided alcohol.
+Timeline touchpoints, pour logic, menu direction, and shopping guidance for host-provided alcohol, drinkware, and garnish groceries.
 
 **A guest-ready bar**  
-Professional tools and a **composed, professional bar station** — never a folding-table afterthought. For larger production or self-contained needs, we scope a **full mobile craft bar** (running water, rinser, integrated lighting, modular layout) as its own line item so load-in matches what guests see.
+Professional tools and a composed bar station. For larger production or self-contained needs, the full mobile craft bar is scoped as its own line item.
 
-**Premium drinkware**  
-**Tossware premium compostable drinkware** for everything we pour, unless you prefer to supply glassware.
+**Clear ice**  
+Hand-carved clear ice cubes for cocktails served by Full Proof. Specialty cuts, extra volume, and branded or custom cubes remain quoted add-ons.
 
-**Clear ice — our visible standard**  
-**Hand-carved clear ice cubes** for cocktails we serve at your event. During our **launch / portfolio window**, this is bundled into standard service as a hospitality upgrade while we build our published body of work. Specialty cuts, extra volume, and branded or custom cubes remain available as **quoted add-ons** (see below).
-
-**Thoughtful closeout**  
-Cleanup aligned with venue rules and the scope we agree up front.
+**Closeout**  
+Cleanup aligned with venue rules and the scope agreed up front.
 
 ---
 
-## Add-ons — quoted per event
+## Cups + Garnishes Adds
 
-We bundle thoughtfully when it simplifies your decision. Common layers:
+Full Proof supplies service cups and a standard garnish kit so the host has fewer small items to source.
+
+Alcohol remains host-provided unless contracted otherwise.
+
+---
+
+## Add-ons
 
 **Ice & presentation**  
-Pressed spheres, Collins spears, specialty cuts, extra clear-ice volume, branded or custom motif cubes, and premium garnish program upgrades beyond standard handling.
+Pressed spheres, Collins spears, specialty cuts, extra clear-ice volume, branded cubes, and premium garnish upgrades.
 
 **Menu & production**  
-Signature cocktail development, batching execution support, and thoughtful low- and no-alcohol pairings.
+Signature cocktail development, batching support, and thoughtful low- and no-alcohol pairings.
 
 **Service & staffing**  
-Additional bartenders, extended or late-night service, and high-touch pacing for activations or VIP lanes.
+Additional bartenders, extended service, late-night extensions, and high-touch pacing for activations or VIP lanes.
 
 **Experience & logistics**  
-Venue-appropriate accents where rules allow, plus travel, access, and hold complexities beyond our typical corridor — each scoped in writing.
+Full custom bar deployment, smoked cocktails, smoke bubbles, espresso martini service, custom menu cards, travel, access, and venue complexity.
 
 ---
 
-## Host-provided — kept simple
+## Next Step
 
-Spirits, wine, beer, and mixers are **typically host-provided**. Once your menu is set, we send a **shopping list with quantities** so purchasing is straightforward. Venue access and permits stay with you unless we contract otherwise.
-
----
-
-## Next step
-
-Reply with your date, guest count, venue, and how long you’d like the bar open — we’ll confirm fit and send a clear, line-item quote.
-
-*Full Proof Bartending — thoughtful cocktails, composed service, proof you can see in the glass.*
+Reply with your date, guest count, venue, and how long you’d like the bar open. Full Proof will confirm fit and send a clear line-item quote.
