@@ -2,11 +2,11 @@
 
 ## Now
 
-- Confirm Netlify is deploying the GitHub repo and serving the current homepage.
-- Review the live site for broken or blank images after each deploy.
-- Add a simple inquiry path: name, date, location, guest count, event type, package interest.
+- ~~Confirm Netlify is deploying the GitHub repo and serving the current homepage.~~ Verified 2026-05-19: `fullproofbartending.com` returns HTTP 200 via Netlify.
+- ~~Review the live site for broken or blank images after each deploy.~~ Verified 2026-05-19: homepage images/videos return HTTP 200.
+- ~~Add a simple inquiry path: name, date, location, guest count, event type, package interest.~~ Live at `#event-inquiry` (`full-proof-event-inquiry` Netlify form).
 - ~~Create a one-page package sheet for calls and follow-ups.~~ → `agent-system/package-sheet.md`
-- Write a first version of the client quote response.
+- ~~Write a first version of the client quote response.~~ → `agent-system/client-quote-response-template.md`
 
 ## Website
 

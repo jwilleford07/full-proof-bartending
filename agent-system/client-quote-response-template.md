@@ -1,46 +1,144 @@
-# Client Quote Response Template
+# Client Quote Response — First Version
 
-**Subject:** Full Proof Bartending: Your [Event Type] on [Date]
+Use these after you have confirmed **date, location, guest count, and service window** fit the launch footprint. Do not send payment links or promise availability until those are checked.
 
-Hi [Name],
-
-Thank you for reaching out. We have [Date] available and would be glad to handle the bar for your [Event Type] in [Location]. 
-
-The goal is to make the bar feel completely handled so you can actually be present at your event. Based on your guest count of [Guest Count], here is the recommended service plan to keep lines moving and your guests taken care of.
-
-### Recommended Plan: [Package Name, e.g., Launch Special Basic]
-- **Service Time:** [X] hours of active service, plus setup and clean down.
-- **Staffing:** [X] professional bartender(s).
-- **The Setup:** Our self-contained mobile craft bar. It includes power, running water, a built-in rinser, and organized tools so the bar looks composed from the first pour to the end of the night.
-- **Drinkware / garnishes:** [Host-provided from Joe's list / included in Cups + Garnishes package / custom quote].
-- **Ice:** Hand-carved clear ice cubes are included for all cocktails.
-
-**Total Quote:** $[Amount]
-
-### Next Steps
-We operate with client-provided alcohol. Once we decide on the menu, I will provide a detailed shopping list so you know exactly what to buy and how much. 
-
-If you want to explore signature cocktails, specialty ice shapes, or extra service time, let me know and we can adjust the plan.
-
-To secure the date on our calendar, just reply to let me know this looks good. I will send over the agreement and an invoice for the 50% deposit.
-
-Looking forward to working with you,
-
-**Joe Willeford**
-Founder, Full Proof Bartending
-(562) 444-8030
-joe@fullproofbartending.com
+**Quick links:** `agent-system/package-sheet.md` · `agent-system/launch-pricing-special.md`
 
 ---
 
-### Optional Value Drop (Use when clients express budget concerns about the flat rate)
+## 1. Availability check (before a full quote)
 
-*Hi [Name],*
+Use when the inquiry is light, the date is not confirmed yet, or you need one more detail.
 
-*I totally understand wanting to make sure the budget makes sense. When looking at our flat fee, it helps to consider the math of "dry hire" versus paying a venue per-drink.*
+**Subject:** Re: Full Proof — [Date] in [City]
 
-*For a [Guest Count]-person party for [Duration] hours, you’re looking at about [Total Drinks] drinks. At a venue charging $16 a drink, plus the standard 20% service charge and taxes, your bar tab alone would be around $[Venue Cost].*
+Hi [Name],
 
-*With Full Proof, the $699 Basic service fee covers the professional bartender, setup, planning, and hand-carved clear ice. The $799 Cups + Garnishes path adds service cups and a standard garnish kit. Your alcohol, purchased at retail without a markup, will likely only run about $[Retail Cost]. That means your total cost is closer to $[Total Dry Hire Cost]—saving you around $[Savings] compared to a venue, while giving you a private craft bar experience without the lines.*
+Thanks for reaching out about [Event Type] on [Date] in [Location].
 
-*Let me know if you’d like to see a custom shopping breakdown!*
+I am checking the calendar for [service window, e.g. 5–9 PM] with a guest count around [Guest Count]. I will follow up shortly with either a clear yes and a line-item quote, or honest guidance if the event needs a custom scope (extra staff, travel, wedding production, etc.).
+
+If anything changes on your end—guest count, indoor/outdoor setup, or whether you want Basic or Cups + Garnishes—reply here or text (562) 444-8030.
+
+Best,  
+Joe
+
+---
+
+## 2. Launch Special Basic — standard quote ($699)
+
+**Subject:** Full Proof Bartending — [Event Type] on [Date]
+
+Hi [Name],
+
+Thank you for the details. **[Date] works** for a Launch Special in [Location], and I would be glad to handle the bar for your [Event Type].
+
+The goal is a calm, composed bar so you can stay with your guests—not manage ice, lines, or last-minute setup.
+
+### Recommended: Launch Special Basic — $699 / 3 hours
+- **Service:** 3 hours of active bar service for up to ~40 guests (we can adjust if your count is higher).
+- **Staffing:** One professional bartender, with setup and breakdown coordinated outside guest-facing time as agreed.
+- **Bar:** Guest-ready professional station with Full Proof tools and composed presentation. Full self-contained mobile craft bar is available as a scoped add-on if the venue needs it.
+- **Planning:** Menu direction, pour logic, timeline touchpoints, and a shopping list for **host-provided alcohol** (no markup on your bottles).
+- **Drinkware & garnishes:** You provide from the list I send after we align on the menu. *(If you prefer Full Proof to supply cups and a standard garnish kit, see Cups + Garnishes below.)*
+- **Ice:** Hand-carved clear ice cubes included for cocktails served by Full Proof.
+
+**Service fee:** **$699**  
+**Date-hold deposit (50%):** **$349.50** after we confirm this fits
+
+Menu and shopping details can be finalized **after** the date is held—you do not need every cocktail locked in today.
+
+### Next steps
+1. Reply **yes** if this scope looks right (or tell me if you want Cups + Garnishes or add-ons).
+2. I will send the agreement and a secure link for the **50% date-hold deposit**.
+3. We finalize menu direction and your shopping list before the event.
+
+If you are among the first 10 eligible Basic bookings and have **FOUNDER**, reply with the code and I will apply **$599** service / **$299.50** deposit on Basic only.
+
+Looking forward to it,
+
+**Joe Willeford**  
+Founder, Full Proof Bartending  
+(562) 444-8030 · joe@fullproofbartending.com
+
+---
+
+## 3. Launch Special Cups + Garnishes — standard quote ($799)
+
+Same as Basic, but swap the package block:
+
+### Recommended: Launch Special Cups + Garnishes — $799 / 3 hours
+- Everything in **Basic**, plus:
+- **Drinkware:** Service cups supplied by Full Proof for drinks we serve.
+- **Garnishes:** Standard garnish kit supplied by Full Proof so you have fewer small items to source.
+
+**Alcohol remains host-provided** unless we agree otherwise in writing.
+
+**Service fee:** **$799**  
+**Date-hold deposit (50%):** **$399.50**
+
+*Note: FOUNDER applies to Basic only, not this upgrade path.*
+
+---
+
+## 4. Not a launch fit — custom quote path
+
+Use for weddings, brand activations, 60+ guests without a second bartender plan, heavy travel, or production that exceeds the single-bartender launch scope.
+
+**Subject:** Full Proof Bartending — custom scope for [Event Type]
+
+Hi [Name],
+
+Thank you for reaching out. Your [Event Type] on [Date] in [Location] sounds like a strong fit for Full Proof, but it sits **outside the Launch Special footprint** because of [guest count / service length / wedding production / travel / venue complexity — pick what applies].
+
+I would recommend a **custom quote** so staffing, setup, ice program, and timeline are right-sized—not squeezed into a package that will feel tight on the night.
+
+To send a precise number, I need:
+- Confirmed **service window** (start/end of active bar service)
+- **Guest count** (realistic peak, not invite list only)
+- **Venue type** (home, rental, hotel, corporate campus, etc.)
+- Whether you want **cocktail-forward**, **beer & wine with a short cocktail list**, or **NA-forward** options
+- Any must-haves: second bartender, full mobile bar build, specialty ice, smoked cocktails, espresso service
+
+I will reply with a line-item quote and deposit amount once I have those.
+
+Best,  
+Joe
+
+---
+
+## 5. Short text / SMS (after availability confirmed)
+
+> Hi [Name] — Joe from Full Proof. [Date] in [Location] looks good for Launch Special [Basic $699 / Cups + Garnishes $799], 3 hr service, ~[Guest Count] guests. 50% deposit holds the date ($349.50 / $399.50). Menu can be finalized after. Want me to email the full breakdown + deposit link?
+
+---
+
+## 6. Internal checklist (before you send)
+
+- [ ] Date, location, guest count, and service window recorded
+- [ ] Launch vs custom scope decided (do not force weddings/large events into $699)
+- [ ] Package path matches what they asked for (Basic vs Cups + Garnishes)
+- [ ] FOUNDER only if eligible and Basic only
+- [ ] Deposit amount matches package ($349.50 / $399.50 / $299.50 with FOUNDER on Basic)
+- [ ] No payment link sent until Joe approves
+- [ ] Alcohol = host-provided unless explicitly quoted otherwise
+
+---
+
+## 7. Optional — budget comparison (use sparingly)
+
+Only when they are comparing to venue per-drink tabs, not as the opening pitch.
+
+Hi [Name],
+
+One way to think about it: for ~[Guest Count] guests over [X] hours, a venue bar at roughly $16/drink plus service charge and tax can land around **$[Venue Cost]** before you control the menu.
+
+Full Proof’s **$699 Basic** (or **$799** with cups and garnishes) is a flat service fee for professional bartending, planning, setup, and clear ice—your alcohol at retail, no markup. For many private events that lands meaningfully below a venue tab while keeping the bar in your space.
+
+Happy to walk through a shopping estimate if that helps.
+
+Joe
+
+---
+
+*Last updated: 2026-05-19. Align with live site pricing before sending.*
