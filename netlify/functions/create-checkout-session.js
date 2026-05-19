@@ -1,13 +1,13 @@
 const Stripe = require("stripe");
 
 const packages = {
-  "Launch Special Basic - 3 hours - 50% deposit": {
+  "Launch Special Basic": {
     name: "Launch Special Basic - 50% date hold",
     totalAmount: 69900,
     founderEligible: true,
     description: "50% date-hold deposit for Full Proof Bartending Launch Special Basic service.",
   },
-  "Launch Special Cups + Garnishes - 3 hours - 50% deposit": {
+  "Launch Special Cups + Garnishes": {
     name: "Launch Special with cups and garnishes - 50% date hold",
     totalAmount: 79900,
     founderEligible: false,
@@ -32,9 +32,10 @@ function packageWithPromo(selectedPackage, data) {
     totalAmount,
     amount: Math.round(totalAmount / 2),
     description: promoApplied
-      ? `${selectedPackage.description} FOUNDER Basic launch promo applied to the first booking.`
+      ? `${selectedPackage.description} FOUNDER launch promo applied to one of the first 10 Basic bookings.`
       : selectedPackage.description,
     promo_applied: promoApplied ? FOUNDER_PROMO_CODE : "",
+    founder_offer: promoApplied ? "First 10 Basic bookings only. $599 launch price with future rate lock." : "",
   };
 }
 
@@ -53,6 +54,7 @@ function metadataFrom(data, checkoutPackage) {
     deposit_amount: checkoutPackage.amount ? `$${(checkoutPackage.amount / 100).toFixed(2)}` : "",
     promo_code: normalizedPromoCode(data),
     promo_applied: checkoutPackage.promo_applied,
+    founder_offer: checkoutPackage.founder_offer,
     booking_intent: data.booking_intent,
     interests: Array.isArray(data.interest) ? data.interest.join(", ") : data.interest,
   };
