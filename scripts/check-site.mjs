@@ -58,7 +58,7 @@ const requiredHomepagePatterns = [
   /\$799\s*\/\s*3 hours/i,
   /Cups \+ Garnishes/i,
   /Basic becomes \$599/i,
-  /Nespresso Mini/i,
+  /fresh-pulled espresso/i,
   /date-hold deposit/i,
   /full-proof-event-inquiry/i,
   /self-contained/i,
