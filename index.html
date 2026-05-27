@@ -406,6 +406,87 @@
       border-left: 1px solid var(--line);
     }
 
+    .differentiator-section {
+      width: 100%;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 80% 10%, rgba(200, 164, 106, 0.12), transparent 34%),
+        linear-gradient(180deg, #080807, #11100e);
+    }
+
+    .differentiator-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 86px 0;
+    }
+
+    .differentiator-grid,
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 38px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .differentiator-card,
+    .review-card {
+      min-height: 230px;
+      padding: 28px;
+      background: rgba(5, 5, 5, 0.46);
+    }
+
+    .differentiator-card figure {
+      height: 190px;
+      margin: -28px -28px 26px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background: var(--charcoal);
+    }
+
+    .differentiator-card img {
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.16) contrast(1.06) brightness(1.04);
+    }
+
+    .differentiator-card span,
+    .review-card span {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .differentiator-card h3,
+    .review-card h3 {
+      font-size: 1.55rem;
+    }
+
+    .differentiator-card p,
+    .review-card p {
+      margin: 14px 0 0;
+      color: var(--soft);
+    }
+
+    .review-card {
+      min-height: 210px;
+      background:
+        linear-gradient(135deg, rgba(200, 164, 106, 0.12), transparent 46%),
+        rgba(17, 16, 14, 0.96);
+    }
+
+    .review-card.featured {
+      background:
+        linear-gradient(135deg, rgba(200, 164, 106, 0.22), rgba(17, 16, 14, 0.94) 48%),
+        rgba(17, 16, 14, 0.96);
+    }
+
     .site-index {
       width: 100%;
       border-bottom: 1px solid var(--line);
@@ -1336,6 +1417,8 @@
       .addon-grid,
       .setup-detail-grid,
       .equipment-proof-grid,
+      .differentiator-grid,
+      .review-grid,
       .gallery-grid,
       .flavor-strip,
       .photo-band,
@@ -1538,6 +1621,78 @@
         <span>11+ years in LA bars</span>
         <span>Self-contained bar system</span>
         <span>Clear ice included</span>
+      </div>
+    </section>
+
+    <section class="differentiator-section" aria-label="Why Full Proof is different">
+      <div class="differentiator-inner">
+        <div class="intro">
+          <div>
+            <p class="eyebrow">Why Full Proof</p>
+            <h2 class="section-title">The bar setup is the product.</h2>
+          </div>
+          <div>
+            <p class="lead">Most mobile bartenders sell labor. Full Proof sells the whole guest-facing bar experience: a contained setup, a faster service flow, better ice, and premium cocktail details that are only offered when the bar can support them.</p>
+            <div class="hero-actions">
+              <a class="button solid" href="#event-inquiry">Check your date</a>
+              <a class="button" href="#packages">See launch pricing</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="differentiator-grid">
+          <article class="differentiator-card">
+            <figure><img src="assets/photos/gobar-pro-rental-long-beach.png" alt="Compact Pro mobile bar setup for Full Proof launch events" /></figure>
+            <span>Contained bar</span>
+            <h3>No folding-table cocktail service.</h3>
+            <p>The compact Pro bar is included during launch, with an Elite upgrade when the bar needs more visual presence.</p>
+          </article>
+          <article class="differentiator-card">
+            <figure><img src="assets/photos/floral-clear-ice.jpg" alt="Floral clear ice block showing specialty ice capability" /></figure>
+            <span>Clear ice</span>
+            <h3>Production knowledge in every glass.</h3>
+            <p>Hand-carved clear cubes are included, with stamped cubes, ORI-pressed shapes, spheres, spears, and VIP ice moments available with the right bar setup.</p>
+          </article>
+          <article class="differentiator-card">
+            <figure><img src="assets/photos/smoke-board-action.jpg" alt="Smoked cocktail aromatics on a bar board" /></figure>
+            <span>Premium moments</span>
+            <h3>Smoke, espresso, ice, and garnish work.</h3>
+            <p>Smoked cocktails, fresh-pulled espresso martinis, clarified punches, garnish trays, and custom infusions are scoped only when the setup can make them look and run right.</p>
+          </article>
+        </div>
+
+        <div class="review-grid" aria-label="Full Proof Google review highlights">
+          <article class="review-card featured">
+            <span>5 Google reviews</span>
+            <h3>Hosts and guests are already noticing the difference.</h3>
+            <p>Full Proof is new as a public brand, but the early reviews are clear: the cocktails, pace, and hospitality feel polished.</p>
+          </article>
+          <article class="review-card">
+            <span>Brad P., Google review</span>
+            <h3>"Super calm, fast, and still making drinks that actually tasted good."</h3>
+            <p>Brad called Full Proof "an easy recommendation" for private parties, weddings, and events.</p>
+          </article>
+          <article class="review-card">
+            <span>Samii H., Google review</span>
+            <h3>"He makes a drink a full experience."</h3>
+            <p>Samii highlighted the drink knowledge, hospitality, and confidence that let hosts relax.</p>
+          </article>
+          <article class="review-card">
+            <span>Gwendelyn B., Google review</span>
+            <h3>"Professional &amp; always on time."</h3>
+            <p>Her guests raved about the bartenders and the specialty cocktails made for each person.</p>
+          </article>
+          <article class="review-card">
+            <span>Flavio C., Google review</span>
+            <h3>"The cocktails were really good and he stayed calm."</h3>
+            <p>Flavio pointed to the friendly energy, hospitality, and steady service during a busy party.</p>
+          </article>
+          <article class="review-card">
+            <span>Carrie, Google review</span>
+            <h3>"He makes it so easy."</h3>
+            <p>Carrie said the cocktails are delicious and guests will love having Joe behind the bar.</p>
+          </article>
+        </div>
       </div>
     </section>
 
