@@ -8,7 +8,7 @@ const packages = {
     description: "50% date-hold deposit for Full Proof Bartending Launch Special Basic service.",
   },
   "Launch Special Cups + Garnishes": {
-    name: "Launch Special with cups and garnishes - 50% date hold",
+    name: "Launch Special Cups + Garnishes - 50% date hold",
     totalAmount: 79900,
     founderEligible: false,
     description: "50% date-hold deposit for Full Proof Bartending Launch Special with cups and garnishes.",
