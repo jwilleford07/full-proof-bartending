@@ -14,6 +14,19 @@ const packages = {
 
 const FOUNDER_PROMO_CODE = "FOUNDER";
 const FOUNDER_DISCOUNT_AMOUNT = 10000;
+const PRODUCTION_ORIGIN = "https://fullproofbartending.com";
+const LOCAL_ORIGIN_PATTERN = /^https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?$/;
+
+function checkoutOriginFrom(headers = {}) {
+  const requestOrigin = headers.origin || headers.Origin || "";
+  const allowedOrigins = new Set([PRODUCTION_ORIGIN, process.env.URL].filter(Boolean));
+
+  if (allowedOrigins.has(requestOrigin) || LOCAL_ORIGIN_PATTERN.test(requestOrigin)) {
+    return requestOrigin;
+  }
+
+  return PRODUCTION_ORIGIN;
+}
 
 function normalizedPromoCode(data) {
   return String(data.promo_code || "").trim().toUpperCase();
@@ -107,7 +120,7 @@ exports.handler = async (event) => {
     };
   }
 
-  const origin = event.headers.origin || process.env.URL || "https://fullproofbartending.com";
+  const origin = checkoutOriginFrom(event.headers);
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
   const checkoutPackage = packageWithPromo(selectedPackage, data);
 
