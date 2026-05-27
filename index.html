@@ -109,7 +109,7 @@
               "name": "How much ice do you bring?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Every Full Proof package includes hand-cut clear ice cubes for cocktails served by the bar. Extra clear ice volume, specialty pressed shapes, or standard chilling ice can be scoped into the quote."
+                "text": "Every Full Proof package includes precision-cut clear ice from large-format blocks for cocktails served by the bar. Extra clear ice volume, specialty pressed shapes, sculpted forms, or standard chilling ice can be scoped into the quote."
               }
             },
             {
@@ -472,6 +472,56 @@
     .review-card p {
       margin: 14px 0 0;
       color: var(--soft);
+    }
+
+    .motion-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 38px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .motion-card {
+      position: relative;
+      min-height: 360px;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .motion-card video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.08) contrast(1.05) brightness(0.94);
+    }
+
+    .motion-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 56px 18px 18px;
+      background: linear-gradient(180deg, transparent, rgba(5, 5, 5, 0.86));
+    }
+
+    .motion-caption span {
+      display: block;
+      color: var(--gold);
+      font-family: Montserrat, Inter, sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .motion-caption strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--ivory);
+      font-size: 1rem;
     }
 
     .review-card {
@@ -1462,6 +1512,7 @@
       .setup-detail-grid,
       .equipment-proof-grid,
       .differentiator-grid,
+      .motion-grid,
       .review-grid,
       .gallery-grid,
       .flavor-strip,
@@ -1649,7 +1700,7 @@
           <span>Long Beach</span><i></i><span>North OC</span><i></i><span>LA</span>
         </div>
         <h1>Luxury mobile bartending for events where the bar matters.</h1>
-        <p class="hero-copy">Full Proof brings a fully self-contained professional cocktail bar, polished Southern hospitality, custom drink direction, and hand-cut clear ice backed by 11+ years behind the bar and 20 years in hospitality.</p>
+        <p class="hero-copy">Full Proof brings a fully self-contained professional cocktail bar, polished Southern hospitality, custom drink direction, and a true clear-ice program backed by 11+ years behind the bar and 20 years in hospitality.</p>
         <div class="hero-actions">
           <a class="button solid" href="#event-inquiry">Reserve your date</a>
           <a class="button" href="#contact">Check availability first</a>
@@ -1664,7 +1715,7 @@
         <span>Long Beach · North OC · LA</span>
         <span>11+ years in LA bars</span>
         <span>Self-contained bar system</span>
-        <span>Hand-cut clear ice included</span>
+        <span>Sculpted clear ice included</span>
       </div>
     </section>
 
@@ -1676,7 +1727,7 @@
             <h2 class="section-title">The bar setup is the product.</h2>
           </div>
           <div>
-            <p class="lead">Most mobile bartenders sell labor. Full Proof sells the whole guest-facing bar experience: a contained setup, a faster service flow, hand-cut clear ice from someone who has actually built an ice business, and premium cocktail details that are only offered when the bar can support them.</p>
+            <p class="lead">Most mobile bartenders sell labor. Full Proof sells the whole guest-facing bar experience: a contained setup, a faster service flow, professional clear ice from someone who has actually built an ice business, and premium cocktail details that are only offered when the bar can support them. The goal is not to upsell the biggest setup every time; it is to avoid saving a little on the bar and paying for it in clutter, slower service, and a weaker first impression.</p>
             <div class="hero-actions">
               <a class="button solid" href="#event-inquiry">Check your date</a>
               <a class="button" href="#packages">See launch pricing</a>
@@ -1695,13 +1746,44 @@
             <figure><img src="assets/photos/floral-clear-ice.jpg" alt="Floral clear ice block showing specialty ice capability" /></figure>
             <span>Clear ice</span>
             <h3>Production knowledge in every glass.</h3>
-            <p>Hand-cut clear cubes are included. Joe built Clear Ice LA, was quoted by Camper English in Distiller Magazine, and connected with Jimmy Yeager for production insight before bringing that ice discipline into Full Proof.</p>
+            <p>Precision-cut clear ice is included. Joe built Clear Ice LA, was quoted by Camper English in Distiller Magazine, and connected with Jimmy Yeager for production insight before bringing that ice discipline into Full Proof.</p>
           </article>
           <article class="differentiator-card">
             <figure><img src="assets/photos/smoke-board-action.jpg" alt="Smoked cocktail aromatics on a bar board" /></figure>
             <span>Premium moments</span>
             <h3>Smoke, espresso, ice, and garnish work.</h3>
             <p>Homia smoked cocktails, smoke bubbles, fresh-pulled espresso martinis, ORI-pressed shapes, garnish trays, and custom infusions are scoped only when the setup can make them look and run right.</p>
+          </article>
+        </div>
+
+        <div class="motion-grid" aria-label="Full Proof video proof clips">
+          <article class="motion-card">
+            <video src="assets/video/motion/clear-ice-flicker.mp4" poster="assets/video/posters/clear-ice-flicker.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Light moving through clear cocktail ice"></video>
+            <div class="motion-caption">
+              <span>Clear ice</span>
+              <strong>Large-format block work, cut for service.</strong>
+            </div>
+          </article>
+          <article class="motion-card">
+            <video src="assets/video/motion/smoke-box-reveal.mp4" poster="assets/video/posters/smoke-box-reveal.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Smoked cocktail reveal in a glass box"></video>
+            <div class="motion-caption">
+              <span>Smoke</span>
+              <strong>Aromatics that feel intentional, not gimmicky.</strong>
+            </div>
+          </article>
+          <article class="motion-card">
+            <video src="assets/video/motion/orange-peel-flame.mp4" poster="assets/video/posters/orange-peel-flame.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Orange peel flame expression over a cocktail"></video>
+            <div class="motion-caption">
+              <span>Garnish</span>
+              <strong>Small moments guests actually notice.</strong>
+            </div>
+          </article>
+          <article class="motion-card">
+            <video src="assets/video/motion/clear-ice-block-work.mp4" poster="assets/video/posters/clear-ice-block-work.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Clear ice block being cut and prepared"></video>
+            <div class="motion-caption">
+              <span>Production</span>
+              <strong>Ice program discipline behind the bar.</strong>
+            </div>
           </article>
         </div>
 
@@ -1790,7 +1872,7 @@
           <article class="path-card">
             <strong>Signature detail</strong>
             <h3>Clear ice story</h3>
-            <p>Clinebell production, hand-cut cubes, stamped ice, ORI-pressed shapes, spheres, diamonds, and event-ready volume.</p>
+            <p>Clinebell production, precision-cut cubes, stamped ice, ORI-pressed shapes, spheres, diamonds, and event-ready volume.</p>
             <a class="button wide" href="#ice">Explore clear ice</a>
           </article>
           <article class="path-card">
@@ -1815,7 +1897,7 @@
           <p class="eyebrow">Launch Special</p>
           <h2 class="section-title">Professional-grade service at an accessible launch rate.</h2>
           <p class="lead">Full Proof is building its first public event portfolio, but Joe is not new to the work: 20 years in hospitality, 11+ years behind the bar, LA craft cocktail experience, private-event service since 2017, and real clear-ice production knowledge.</p>
-        <p class="body-copy">The soft launch is June 13 for a rooftop party, with select dates available before then. Launch Special pricing stays live until the date is booked. This is an early opportunity to book a founder-led mobile bartending service in the Long Beach, North Orange County, and LA corridor: credentialed, calm, and built around details most event bars do not offer, from hand-cut clear ice to house syrups, thoughtful mocktails, smoked cocktails, and espresso martinis planned around the event flow.</p>
+        <p class="body-copy">The soft launch is June 13 for a rooftop party, with select dates available before then. Launch Special pricing stays live until the date is booked. This is an early opportunity to book a founder-led mobile bartending service in the Long Beach, North Orange County, and LA corridor: credentialed, calm, and built around details most event bars do not offer, from sculpted clear ice to house syrups, thoughtful mocktails, smoked cocktails, and espresso martinis planned around the event flow.</p>
           <span class="promo-code">FOUNDER is limited to the first 10 Basic bookings: $599 now, $699 locked for similar future parties.</span>
         </div>
         <div class="launch-offer">
@@ -1861,7 +1943,7 @@
         </div>
         <div>
           <p class="lead">The bar should feel like it belongs at your event: prepared, attractive, self-sustained, efficient, and easy for guests to enjoy.</p>
-          <p class="body-copy">Full Proof handles the details that shape the guest experience: service flow, cocktail direction, garnish presentation, batching needs, shopping guidance, professional bar setup, sanitation, cleanup, and hand-cut clear cubes served at every event. The experience is layered: Southern hospitality roots, 20 years in hospitality, 11+ years behind the bar, private event service since 2017, banquet captain experience, and seven years of Los Angeles craft cocktail bartending translated into a mobile bar system most event bars simply do not bring.</p>
+          <p class="body-copy">Full Proof handles the details that shape the guest experience: service flow, cocktail direction, garnish presentation, batching needs, shopping guidance, professional bar setup, sanitation, cleanup, and precision-cut clear ice served at every event. The experience is layered: Southern hospitality roots, 20 years in hospitality, 11+ years behind the bar, private event service since 2017, banquet captain experience, and seven years of Los Angeles craft cocktail bartending translated into a mobile bar system most event bars simply do not bring.</p>
         </div>
       </div>
       <div class="flavor-strip" aria-label="Bright cocktail ingredients and finished drinks">
@@ -1960,12 +2042,12 @@
       <div class="package-grid" style="margin-top: 42px;">
         <article class="package-card package-card--basic">
           <figure>
-            <img src="assets/photos/clear-ice-column.jpg" alt="Hand-cut clear ice column for Full Proof cocktails" loading="eager" />
+            <img src="assets/photos/clear-ice-column.jpg" alt="Large-format clear ice column for Full Proof cocktails" loading="eager" />
           </figure>
           <span>Launch Special Basic</span>
           <h3>One bartender for a clean, capable event bar</h3>
           <strong class="package-price">$699 / 3 hours</strong>
-          <p>Best for smaller private events where the host wants the strongest entry price. Includes one bartender, service planning, house syrups, fresh lemon and lime juice, standard bitters, the compact Pro bar setup during launch, cleanup, basic bar guidance, and hand-cut clear ice cubes for cocktails served by Full Proof. Host provides alcohol, drinkware, and garnish groceries from Joe's shopping list. Launch pricing stays open until booked.</p>
+          <p>Best for smaller private events where the host wants the strongest entry price. Includes one bartender, service planning, house syrups, fresh lemon and lime juice, standard bitters, the compact Pro bar setup during launch, cleanup, basic bar guidance, and precision-cut clear ice for cocktails served by Full Proof. Host provides alcohol, drinkware, and garnish groceries from Joe's shopping list. Launch pricing stays open until booked.</p>
           <div class="package-actions">
             <a class="button solid wide package-choice-link" href="#event-inquiry" data-package-choice="Launch Special Basic">Reserve Basic</a>
           </div>
@@ -2002,8 +2084,8 @@
       <div class="add-on-pricing" aria-label="Specialty ice and smoke pricing guide">
         <article>
           <span>Included baseline</span>
-          <h3>Hand-cut clear cubes</h3>
-          <p>Clear cubes for cocktails served by Full Proof are included. This is the standard, not the upsell.</p>
+          <h3>Precision-cut clear ice</h3>
+          <p>Clear ice for cocktails served by Full Proof is included. Clean service cubes are the standard, not the upsell.</p>
         </article>
         <article>
           <span>Live accessory</span>
@@ -2047,16 +2129,16 @@
     <section class="section" id="setup">
       <p class="eyebrow">Self-contained bar system</p>
       <h2 class="section-title">A real cocktail bar, brought to your event.</h2>
-      <p class="lead">Full Proof does not depend on a venue bar, folding table, house sink, or borrowed utility setup. During launch, the compact Pro bar setup is included, and the more visually impressive Elite bar is available as a $100 upgrade. We bring the infrastructure that lets bar service run cleanly: generator power, fresh and gray water jugs, a 110v pump, running water, an integrated Decent Espresso rinser, a custom utility sink, a hand-wash station, a custom portable stainless steel ice bin, clean cutting-board surfaces, a bar riser above the mats for bottles and tools, chilled condiment displays, service mats, glass drying mats, Crew Supply Co bottles and bar tools, and upgraded Tossware drinkware when cups are included.</p>
+      <p class="lead">Full Proof does not depend on a venue bar, folding table, house sink, or borrowed utility setup. During launch, the compact Pro bar setup is included, and the more visually impressive Elite bar is available as a $100 upgrade. The Pro bar is the smarter call for tight patios, rooftops, and awkward load-ins; the Elite bar is the move when the bar should anchor the room. Either way, the point is the same: do not save a little on the setup and lose it in clutter, line speed, and guest confidence. We bring the infrastructure that lets bar service run cleanly: generator power, fresh and gray water jugs, a 110v pump, running water, an integrated Decent Espresso rinser, a custom utility sink, a hand-wash station, a custom portable stainless steel ice bin, clean cutting-board surfaces, a bar riser above the mats for bottles and tools, chilled condiment displays, service mats, glass drying mats, Crew Supply Co bottles and bar tools, and upgraded Tossware drinkware when cups are included.</p>
       <div class="equipment-proof-grid" aria-label="Equipment proof">
         <article class="equipment-proof-card equipment-proof-card--photo">
           <figure>
-            <img src="assets/photos/clear-ice-cube-crate-blue.jpg" alt="Blue crate filled with hand-cut clear ice cubes ready for event service" loading="eager" />
+            <img src="assets/photos/clear-ice-cube-crate-blue.jpg" alt="Blue crate filled with precision-cut clear ice ready for event service" loading="eager" />
           </figure>
           <div>
             <span>Service prep</span>
             <h3>Event-ready clear ice inventory</h3>
-            <p>Hand-cut cube inventory is staged ahead of service so the bar can pour with consistency and still feel premium at speed.</p>
+            <p>Precision-cut inventory is staged ahead of service so the bar can pour with consistency and still feel premium at speed.</p>
           </div>
         </article>
         <article class="equipment-proof-card equipment-proof-card--photo">
@@ -2099,7 +2181,7 @@
         <article class="included-card">
           <span>Craft capability</span>
           <h3>Los Angeles cocktail experience, mobile</h3>
-          <p>Homia smoking system with assorted wood chips, spices, and smoke-bubble capability; ORI ice press capability; customized cocktail foams; hand-cut clear ice; custom infusions; clarified punches; advanced garnish work; batching; kegging; clarified juices; milk punches; tinctures; bitters; and seven years of LA craft cocktail experience behind the build.</p>
+          <p>Homia smoking system with assorted wood chips, spices, and smoke-bubble capability; ORI ice press capability; customized cocktail foams; precision clear-ice service; custom infusions; clarified punches; advanced garnish work; batching; kegging; clarified juices; milk punches; tinctures; bitters; and seven years of LA craft cocktail experience behind the build.</p>
         </article>
       </div>
       <div class="hero-actions" style="margin-top: 42px;">
@@ -2115,7 +2197,7 @@
         <article class="included-card">
           <span>Full Proof provides</span>
           <h3>Self-contained bar service</h3>
-          <p>One bartender, service planning, Crew Supply Co shakers, jiggers, mixing glass, spoons, and bottles, premium bar mats, hand-cut clear ice cubes, generator-ready power, fresh and gray water, pump-driven running water, integrated rinser, custom utility sink, custom stainless ice bin, sanitation, setup, service, and cleanup. Full Proof has direct Crew Supply Co. access and a Tossware wholesale account with custom drinkware options, so upgraded Tossware drinkware and a standard garnish kit can be included in the $799 launch path or scoped into custom quotes without making the package feel inflated.</p>
+          <p>One bartender, service planning, Crew Supply Co shakers, jiggers, mixing glass, spoons, and bottles, premium bar mats, precision-cut clear ice, generator-ready power, fresh and gray water, pump-driven running water, integrated rinser, custom utility sink, custom stainless ice bin, sanitation, setup, service, and cleanup. Full Proof has direct Crew Supply Co. access and a Tossware wholesale account with custom drinkware options, so upgraded Tossware drinkware and a standard garnish kit can be included in the $799 launch path or scoped into custom quotes without making the package feel inflated.</p>
         </article>
         <article class="included-card">
           <span>You provide</span>
@@ -2155,7 +2237,7 @@
         <article class="included-card">
           <span>Ice concierge</span>
           <h3>Clear ice, standard ice, and service needs.</h3>
-          <p>Hand-cut clear ice is included for Full Proof-served cocktails, and larger chilling or specialty ice needs can be coordinated into the event plan.</p>
+          <p>Precision-cut clear ice is included for Full Proof-served cocktails, and larger chilling or specialty ice needs can be coordinated into the event plan.</p>
         </article>
         <article class="included-card">
           <span>Setup and breakdown</span>
@@ -2190,7 +2272,7 @@
           <div>
             <span>Clear ice</span>
             <h3>Production knowledge in the glass.</h3>
-            <p>Hand-cut cubes are included. Spheres, Collins spears, diamonds, stamped cubes, and event ice production can be scoped when the drink earns it. ORI pressed shapes can be used live as an accent or pre-pressed in a guaranteed count for a featured round.</p>
+            <p>Precision-cut clear ice is included. Spheres, Collins spears, faceted diamonds, stamped cubes, and event ice production can be scoped when the drink earns it. ORI pressed shapes can be used live as an accent or pre-pressed in a guaranteed count for a featured round.</p>
           </div>
           <a class="button wide" href="/clear-ice/">Read the clear ice story</a>
         </article>
@@ -2244,13 +2326,13 @@
     <section class="ice-section" id="ice">
       <div class="ice-wrap">
         <div class="ice-image">
-          <img src="assets/photos/photo-band-clear-ice-hand-saw.png" alt="Hand-cutting a clear ice block during Full Proof clear ice production" />
+          <img src="assets/photos/photo-band-clear-ice-hand-saw.png" alt="Shaping a large-format clear ice block during Full Proof clear ice production" />
         </div>
         <div id="expertise">
           <p class="eyebrow">The clear-ice advantage</p>
-          <h2 class="section-title">Signature clear ice is included because details change the drink.</h2>
+          <h2 class="section-title">Signature clear ice is sculpted because details change the drink.</h2>
           <p class="lead">Full Proof is a mobile bartending service first: polished hosting, thoughtful cocktails, smooth service, and a bar that looks composed from the first pour to the final cleanup. Ice is where Joe is genuinely ahead of most event bartenders.</p>
-          <p class="body-copy">Every Full Proof event starts with hand-cut clear cubes, not bought-in novelty ice. Clear ice is the differentiator built on top of real bartending and hospitality experience. Joe built Clear Ice LA from the ground up into a clear cocktail ice business with 10 bar and restaurant clients before bringing in a partner and leading the rebrand into Cold Standard Ice. He consulted with Camper English before launch, connected with Jimmy Yeager for professional production insight, bought a Clinebell, rented commercial kitchen space, and learned the entire process from production to marketing to billing by doing it himself.</p>
+          <p class="body-copy">Every Full Proof event starts with clear ice produced from large-format blocks, then cut, shaped, and staged for service. This is not bought-in novelty ice. It is a real ice program built on top of bartending and hospitality experience. Joe built Clear Ice LA from the ground up into a clear cocktail ice business with 10 bar and restaurant clients before bringing in a partner and leading the rebrand into Cold Standard Ice. He consulted with Camper English before launch, connected with Jimmy Yeager for professional production insight, bought a Clinebell, rented commercial kitchen space, and learned the entire process from production to carving, storage, transport, marketing, and billing by doing it himself.</p>
           <div class="ice-list" aria-label="Clear ice options">
             <div class="ice-item">
               <strong>Press</strong>
@@ -2262,15 +2344,15 @@
             </div>
             <div class="ice-item">
               <strong>Included</strong>
-              <span>Hand-cut clear cubes for cocktails served at every Full Proof event, with Collins spears, specialty cuts, and extra clear-ice volume available as add-ons.</span>
+              <span>Precision-cut service ice for cocktails served at every Full Proof event, with Collins spears, sculpted forms, branded stamps, and extra clear-ice volume available as add-ons.</span>
             </div>
             <div class="ice-item">
               <strong>Pressed</strong>
-              <span>ORI GLAZER press capability can be added two ways: live accessory use when the bar has breathing room, or pre-pressed sphere, diamond, heart, Saturn, and skull shapes for a guaranteed featured round.</span>
+              <span>ORI GLAZER press capability can be added two ways: live accessory use when the bar has breathing room, or pre-pressed spheres, faceted diamonds, hearts, Saturns, and skulls for a guaranteed featured round.</span>
             </div>
           </div>
           <div class="press-note">
-            <p><strong>Featured clear-ice credibility:</strong> Distiller Magazine quoted Joe Willeford of Clear Ice LA in Camper English’s article “How to Start a Big Clear Ice Program.” That matters because Full Proof is not just adding pretty cubes — the ice program was built from real production knowledge, professional consultation, and years of hands-on service to Los Angeles bars and restaurants.</p>
+            <p><strong>Featured clear-ice credibility:</strong> Distiller Magazine quoted Joe Willeford of Clear Ice LA in Camper English’s article “How to Start a Big Clear Ice Program.” That matters because Full Proof is not just adding pretty cubes — the ice program was built from real production knowledge, professional consultation, block work, carving practice, and years of hands-on service to Los Angeles bars and restaurants.</p>
             <a class="press-link" href="https://distilling.com/distillermagazine/big-clear-ice/" target="_blank" rel="noopener">Read the article</a>
           </div>
           <div class="hero-actions" style="margin-top: 32px;">
@@ -2285,7 +2367,7 @@
             <video src="assets/video/bandsaw-clear-ice.mp4" autoplay muted loop playsinline aria-label="Bandsaw cutting a clear ice block"></video>
           </div>
           <div class="ice-video">
-            <video src="assets/video/hand-carved-diamond.mp4" autoplay muted loop playsinline aria-label="Hand-cut clear ice diamond"></video>
+            <video src="assets/video/hand-carved-diamond.mp4" autoplay muted loop playsinline aria-label="Hand-carved clear ice diamond"></video>
           </div>
           <div class="ice-video">
             <video src="assets/video/stamped-clear-ice-light.mp4" autoplay muted loop playsinline aria-label="Stamped clear ice catching light"></video>
@@ -2354,7 +2436,7 @@
         </article>
         <article class="faq-item">
           <h3>How much ice do you bring?</h3>
-          <p>Every Full Proof package includes hand-cut clear ice cubes for the cocktails we serve. If your event requires extra ice volume, standard ice for chilling beer and wine, or specialty ORI pressed shapes, we price that two ways: live press use as an accent when service flow allows, or a guaranteed pre-pressed count for a featured cocktail round. Under 40 guests can usually stay flat-rate; 40+ guests are custom.</p>
+          <p>Every Full Proof package includes precision-cut clear ice for the cocktails we serve. If your event requires extra ice volume, standard ice for chilling beer and wine, sculpted pieces, or specialty ORI pressed shapes, we price that two ways: live press use as an accent when service flow allows, or a guaranteed pre-pressed count for a featured cocktail round. Under 40 guests can usually stay flat-rate; 40+ guests are custom.</p>
         </article>
         <article class="faq-item">
           <h3>Are smoked cocktails and smoke bubbles included?</h3>
