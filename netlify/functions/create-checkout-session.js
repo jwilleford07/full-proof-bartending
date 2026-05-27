@@ -1,18 +1,15 @@
 const Stripe = require("stripe");
 
+const launchSpecialPackage = {
+  name: "Launch Special - 50% date hold",
+  totalAmount: 69900,
+  founderEligible: true,
+  description: "50% date-hold deposit for Full Proof Bartending Launch Special service with premium Tossware, standard garnishes, fresh citrus, clear ice, and Pro bar setup included.",
+};
+
 const packages = {
-  "Launch Special Basic": {
-    name: "Launch Special Basic - 50% date hold",
-    totalAmount: 69900,
-    founderEligible: true,
-    description: "50% date-hold deposit for Full Proof Bartending Launch Special Basic service.",
-  },
-  "Launch Special Cups + Garnishes": {
-    name: "Launch Special Cups + Garnishes - 50% date hold",
-    totalAmount: 79900,
-    founderEligible: false,
-    description: "50% date-hold deposit for Full Proof Bartending Launch Special with cups and garnishes.",
-  },
+  "Launch Special": launchSpecialPackage,
+  "Launch Special Basic": launchSpecialPackage,
 };
 
 const FOUNDER_PROMO_CODE = "FOUNDER";
@@ -32,10 +29,10 @@ function packageWithPromo(selectedPackage, data) {
     totalAmount,
     amount: Math.round(totalAmount / 2),
     description: promoApplied
-      ? `${selectedPackage.description} FOUNDER launch promo applied to one of the first 10 Basic bookings.`
+      ? `${selectedPackage.description} FOUNDER launch promo applied to one of the first 10 launch bookings.`
       : selectedPackage.description,
     promo_applied: promoApplied ? FOUNDER_PROMO_CODE : "",
-    founder_offer: promoApplied ? "First 10 Basic bookings only. $599 launch price with future rate lock." : "",
+    founder_offer: promoApplied ? "First 10 launch bookings only. $599 launch price with future rate lock." : "",
   };
 }
 
@@ -57,6 +54,8 @@ function metadataFrom(data, checkoutPackage) {
     founder_offer: checkoutPackage.founder_offer,
     booking_intent: data.booking_intent,
     interests: Array.isArray(data.interest) ? data.interest.join(", ") : data.interest,
+    notes: data.notes,
+    source: data.source,
   };
 
   return Object.fromEntries(
@@ -101,7 +100,7 @@ exports.handler = async (event) => {
   }
 
   const email = String(data.email || "").trim();
-  if (!email || !data.event_date || !data.service_window || !data.location || !data.guest_count) {
+  if (!email || !data.event_date || !data.location || !data.guest_count) {
     return {
       statusCode: 400,
       body: JSON.stringify({ error: "Missing required event details." }),
@@ -129,6 +128,9 @@ exports.handler = async (event) => {
           quantity: 1,
         },
       ],
+      payment_intent_data: {
+        description: checkoutPackage.name,
+      },
       metadata: metadataFrom(data, checkoutPackage),
       success_url: `${origin}/success.html?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/#event-inquiry`,
