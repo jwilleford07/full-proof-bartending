@@ -20,13 +20,6 @@ const goBarOptions = {
 };
 
 const premiumAddOnsRequiringGoBar = new Set([
-  "Clear ice upgrades",
-  "Smoked cocktails or smoke bubbles",
-  "Espresso martini service",
-  "Custom infusions",
-  "Organic California dehydrated citrus",
-  "Premium garnish styling",
-  "Custom menu display/signage",
   "Total Wine guidance + ice service",
 ]);
 
@@ -96,6 +89,7 @@ function metadataFrom(data, checkoutPackage) {
     direct_addons: checkoutPackage.direct_addons,
     booking_intent: data.booking_intent,
     interests: Array.isArray(data.interest) ? data.interest.join(", ") : data.interest,
+    premium_notes: data.premium_notes,
     notes: data.notes,
     source: data.source,
   };
@@ -160,7 +154,7 @@ exports.handler = async (event) => {
   if (hasPremiumAddOnWithoutGoBar(data)) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ error: "Premium upgrades require GoBar Pro or GoBar Elite." }),
+      body: JSON.stringify({ error: "Total Wine guidance + ice service requires GoBar Pro or GoBar Elite." }),
     };
   }
 

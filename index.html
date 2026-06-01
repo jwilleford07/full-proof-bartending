@@ -1234,6 +1234,14 @@
       accent-color: var(--gold);
     }
 
+    .checkbox-grid small {
+      display: block;
+      margin-top: 4px;
+      color: var(--soft);
+      font-size: 0.84rem;
+      line-height: 1.4;
+    }
+
     .promise p,
     .service-card p,
     .package-card p,
@@ -3019,23 +3027,20 @@
           <input type="text" id="promo-code" name="promo_code" placeholder="Optional" autocomplete="off" />
         </div>
 
-        <div class="form-section-title">Build after booking</div>
+        <div class="form-section-title">Optional checkout add-on</div>
         <div class="form-group">
-          <label>Concierge and add-on interests <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Optional. Select all that apply; these are finalized after the date is held.</span></label>
+          <label>Charged with the date hold <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Optional. This is the only add-on that changes checkout today.</span></label>
           <div class="checkbox-grid">
-            <label><input type="checkbox" name="interest" value="Total Wine guidance + ice service" data-direct-addon="total-wine-ice" data-requires-gobar /> Total Wine guidance + ice service (+$100)</label>
-            <label><input type="checkbox" name="interest" value="Signature cocktails" /> Signature cocktails</label>
-            <label><input type="checkbox" name="interest" value="Clear ice upgrades" data-requires-gobar /> Clear ice upgrades</label>
-            <label><input type="checkbox" name="interest" value="Smoked cocktails or smoke bubbles" data-requires-gobar /> Smoked cocktails or smoke bubbles</label>
-            <label><input type="checkbox" name="interest" value="Espresso martini service" data-requires-gobar /> Espresso martinis</label>
-            <label><input type="checkbox" name="interest" value="Custom infusions" data-requires-gobar /> Custom infusions</label>
-            <label><input type="checkbox" name="interest" value="Organic California dehydrated citrus" data-requires-gobar /> Organic California dehydrated citrus</label>
-            <label><input type="checkbox" name="interest" value="Premium garnish styling" data-requires-gobar /> Premium garnish styling</label>
-            <label><input type="checkbox" name="interest" value="Custom menu display/signage" data-requires-gobar /> Custom menu display/signage</label>
-            <label><input type="checkbox" name="interest" value="Custom branded Tossware or glassware rental" /> Custom branded Tossware or glassware rental</label>
-            <label><input type="checkbox" name="interest" value="Extra bartender" /> Extra bartender</label>
-            <label><input type="checkbox" name="interest" value="Wedding or brand event quote" /> Wedding or brand event quote</label>
+            <label>
+              <input type="checkbox" name="interest" value="Total Wine guidance + ice service" data-direct-addon="total-wine-ice" data-requires-gobar />
+              <span>Total Wine guidance + ice service (+$100)<small>Includes shopping guidance and ice coordination. Requires GoBar Pro or Elite when ice service is included.</small></span>
+            </label>
           </div>
+        </div>
+
+        <div class="form-group">
+          <label for="premium-notes">Premium details to discuss later <span style="color: var(--soft); font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 400; letter-spacing: 0; text-transform: none;">Optional. Not charged at checkout.</span></label>
+          <textarea id="premium-notes" name="premium_notes" rows="3" placeholder="Examples: clear ice, smoke, espresso martinis, custom infusions, dehydrated citrus, premium garnish, menu display, branded cups, extra bartender, or choose later."></textarea>
         </div>
 
         <div id="booking-estimate" class="booking-estimate" aria-live="polite">
@@ -3056,7 +3061,7 @@
 
         <div class="form-actions">
           <button id="reservation-submit" type="submit" class="button solid">Continue to secure date hold</button>
-          <p class="form-note">For instant-book eligible events, this opens secure Stripe checkout for the 50% date hold based on your base service, GoBar selection, and the optional Total Wine guidance + ice service bundle. Premium add-ons require GoBar Pro or Elite and are finalized after the date is protected. If your event is unavailable or outside the instant-book footprint, the deposit will be refunded or moved only with your approval. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
+          <p class="form-note">For instant-book eligible events, this opens secure Stripe checkout for the 50% date hold based on your base service, GoBar selection, and the optional Total Wine guidance + ice service bundle. Premium details are discussed after the date is protected and require GoBar Pro or Elite if they become part of the final bar plan. If your event is unavailable or outside the instant-book footprint, the deposit will be refunded or moved only with your approval. If your event is within the next 14 days, submit the form and text (562) 444-8030.</p>
         </div>
       </form>
 
@@ -3092,7 +3097,6 @@
     const estimateTotal = document.querySelector("[data-estimate-total]");
     const estimateDeposit = document.querySelector("[data-estimate-deposit]");
     const estimateRule = document.querySelector("[data-estimate-rule]");
-    const premiumInterestFields = [...document.querySelectorAll("[data-requires-gobar]")];
     const directAddonFields = [...document.querySelectorAll("[data-direct-addon]")];
     const directDepositPackages = [
       "Base Bartending - 3 hours",
@@ -3155,8 +3159,8 @@
       return payload;
     }
 
-    function selectedPremiumAddOnRequiresGoBar() {
-      return premiumInterestFields.some((field) => field.checked);
+    function selectedDirectAddonRequiresGoBar() {
+      return directAddonFields.some((field) => field.matches("[data-requires-gobar]") && field.checked);
     }
 
     function directAddonAmount() {
@@ -3177,8 +3181,8 @@
         return "GoBar Elite is required for 41+ guests so the bar has the right footprint, workflow, and guest-facing polish.";
       }
 
-      if (selectedPremiumAddOnRequiresGoBar() && selectedGoBar === "none") {
-        return "Premium upgrades require a Full Proof bar rental so we can control presentation, workflow, ice handling, and guest experience.";
+      if (selectedDirectAddonRequiresGoBar() && selectedGoBar === "none") {
+        return "The Total Wine guidance + ice service bundle requires GoBar Pro or Elite so ice handling, storage, and guest-facing service stay clean.";
       }
 
       if (band === "126+") {
@@ -3203,7 +3207,7 @@
         && bookingIntent?.value === "Reserve instant-book package"
         && !requiresManualReview()
         && !goBarRuleMessage().startsWith("GoBar Elite is required")
-        && !goBarRuleMessage().startsWith("Premium upgrades require");
+        && !goBarRuleMessage().startsWith("The Total Wine guidance");
     }
 
     function formatUsd(cents) {
@@ -3250,13 +3254,13 @@
       });
     });
 
-    [packageChoice, bookingIntent, guestBand, goBarSelection, ...premiumInterestFields, ...directAddonFields].forEach((field) => {
+    [packageChoice, bookingIntent, guestBand, goBarSelection, ...directAddonFields].forEach((field) => {
       field?.addEventListener("change", updateSubmitLabel);
     });
 
     reservationForm?.addEventListener("submit", async (event) => {
       const ruleMessage = goBarRuleMessage();
-      if (ruleMessage.startsWith("GoBar Elite is required") || ruleMessage.startsWith("Premium upgrades require")) {
+      if (ruleMessage.startsWith("GoBar Elite is required") || ruleMessage.startsWith("The Total Wine guidance")) {
         event.preventDefault();
         alert(ruleMessage);
         goBarSelection?.focus();
