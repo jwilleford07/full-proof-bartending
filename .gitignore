@@ -6,3 +6,4 @@ dist/
 tmp/
 .env
 .env.*
+agent-system/private-crm/

@@ -1,38 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 260" role="img" aria-labelledby="title desc">
   <title id="title">Full Proof Bartending horizontal lockup</title>
-  <desc id="desc">Horizontal lockup with the FP seal and Full Proof Bartending wordmark.</desc>
+  <desc id="desc">Refined horizontal lockup with the FP seal and Full Proof Bartending wordmark.</desc>
   <rect width="1420" height="260" fill="none"/>
-  <g transform="translate(80 54)">
-    <circle cx="76" cy="76" r="66" fill="none" stroke="#C8A46A" stroke-width="4"/>
-    <circle cx="76" cy="76" r="55" fill="none" stroke="#EEE3CF" stroke-width="2"/>
-    <text x="76" y="91"
+  <g transform="translate(78 52)">
+    <circle cx="78" cy="78" r="68" fill="none" stroke="#C8A46A" stroke-width="4"/>
+    <circle cx="78" cy="78" r="57" fill="none" stroke="#EEE3CF" stroke-width="1.6" opacity="0.86"/>
+    <circle cx="78" cy="78" r="46" fill="none" stroke="#C8A46A" stroke-width="1" opacity="0.62"/>
+    <text x="78" y="93"
       text-anchor="middle"
       fill="#EEE3CF"
       font-family="Playfair Display, Didot, Bodoni 72, Georgia, serif"
-      font-size="66"
+      font-size="64"
       font-weight="800"
-      letter-spacing="-5">
+      letter-spacing="-4">
       FP
     </text>
   </g>
-  <path d="M270 52 V208" stroke="#C8A46A" stroke-width="2"/>
+  <path d="M272 54 V206" stroke="#C8A46A" stroke-width="2" opacity="0.8"/>
   <text x="340" y="118"
     fill="#EEE3CF"
     font-family="Playfair Display, Didot, Bodoni 72, Georgia, serif"
     font-size="88"
     font-weight="800"
-    letter-spacing="3">
+    letter-spacing="2.2">
     FULL PROOF
   </text>
   <text x="344" y="179"
-    fill="#D3AE68"
-    stroke="#050505"
-    stroke-width="0.9"
-    paint-order="stroke fill"
+    fill="#C8A46A"
     font-family="Montserrat, Inter, Helvetica, Arial, sans-serif"
-    font-size="25"
+    font-size="24"
     font-weight="700"
-    letter-spacing="19">
+    letter-spacing="18">
     BARTENDING
   </text>
 </svg>
