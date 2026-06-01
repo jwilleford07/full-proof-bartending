@@ -8,12 +8,12 @@ Thank you for reaching out. We have [Date] available and would be glad to handle
 
 The goal is to make the bar feel completely handled so you can actually be present at your event. Based on your guest count of [Guest Count], here is the recommended service plan to keep lines moving and your guests taken care of.
 
-### Recommended Plan: [Base Bartending + GoBar Path]
+### Recommended Plan: [Base Bartending + Full Proof bar Path]
 - **Service Time:** [X] hours of active service, plus setup and clean down.
 - **Staffing:** [X] professional bartender(s).
-- **The Setup:** [Base service / GoBar Pro / GoBar Elite]. GoBar Pro is recommended for up to 40 guests when presentation matters. GoBar Elite is required for 41-125 guests and optional for smaller events that want the larger luxury footprint.
+- **The Setup:** [Base service / Full Proof Pro Bar / Full Proof Elite Bar]. Full Proof Pro Bar is recommended for up to 40 guests when presentation matters. Full Proof Elite Bar is required for 41-125 guests and optional for smaller events that want the larger luxury footprint.
 - **Menu Path:** [Rotating menu / custom menu / choose later].
-- **Add-ons:** Premium upgrades like clear ice features, smoke, espresso martinis, custom infusions, dehydrated citrus, garnish styling, and menu signage require GoBar Pro or Elite.
+- **Add-ons:** Premium upgrades like clear ice features, smoke, espresso martinis, custom infusions, dehydrated citrus, garnish styling, and menu signage require Full Proof Pro Bar or Elite.
 
 **Total Quote:** $[Amount]
 
@@ -41,6 +41,6 @@ joe@fullproofbartending.com
 
 *For a [Guest Count]-person party for [Duration] hours, you’re looking at about [Total Drinks] drinks. At a venue charging $16 a drink, plus the standard 20% service charge and taxes, your bar tab alone would be around $[Venue Cost].*
 
-*With Full Proof, base bartending starts at $599 for 3 hours or $699 for 4 hours. GoBar Pro adds $100 for a polished smaller-event footprint, and GoBar Elite adds $200 for 41-125 guests or smaller events that want the larger luxury setup. Your alcohol, purchased at retail without a markup, will likely only run about $[Retail Cost]. That means your total cost is closer to $[Total Dry Hire Cost]—saving you around $[Savings] compared to a venue, while giving you a private craft bar experience without the lines.*
+*With Full Proof, base bartending starts at $599 for 3 hours or $699 for 4 hours. Full Proof Pro Bar adds $100 for a polished smaller-event footprint, and Full Proof Elite Bar adds $200 for 41-125 guests or smaller events that want the larger luxury setup. Your alcohol, purchased at retail without a markup, will likely only run about $[Retail Cost]. That means your total cost is closer to $[Total Dry Hire Cost]—saving you around $[Savings] compared to a venue, while giving you a private craft bar experience without the lines.*
 
 *Let me know if you’d like to see a custom shopping breakdown!*

@@ -32,10 +32,10 @@ The former public anchor of `$599 / 3 hours` and `$699 / 4 hours` was approachab
 Use this structure publicly:
 
 - **Base Bartending:** `$599 / 3 hours` or `$699 / 4 hours`.
-- **GoBar Pro:** `+$100`, recommended for up to `40` guests.
-- **GoBar Elite:** `+$200`, required for `41-125` guests and optional for smaller events that want a larger luxury footprint.
+- **Full Proof Pro Bar:** `+$100`, recommended for up to `40` guests.
+- **Full Proof Elite Bar:** `+$200`, required for `41-125` guests and optional for smaller events that want a larger luxury footprint.
 - **126+ guests:** manual review before instant booking.
-- **Premium add-ons:** require GoBar Pro or Elite so presentation, workflow, ice handling, and guest experience stay controlled.
+- **Premium add-ons:** require Full Proof Pro Bar or Elite so presentation, workflow, ice handling, and guest experience stay controlled.
 
 ## Deposit Language
 

@@ -4,7 +4,7 @@
 
 **Tone guardrails:** Premium, calm, capable. Warm hospitality without corniness. Stress **real service details** (mobile bar, ice, garnish, flow of service)—not generic cocktail-influencer fluff. Avoid hype words (*ultimate, insane, viral, luxury overload, hurry, deal, discount*). Prefer plain confidence: what we bring, how it works, where we serve.
 
-**Conversion anchors:** Website `https://fullproofbartending.com/` · Reserve/date-hold CTA · `(562) 444-8030` · `joe@fullproofbartending.com` · Instant-book framing: approachable base pricing, GoBar Pro/Elite upgrades, and premium add-ons gated behind the right bar footprint.
+**Conversion anchors:** Website `https://fullproofbartending.com/` · Reserve/date-hold CTA · `(562) 444-8030` · `joe@fullproofbartending.com` · Instant-book framing: approachable base pricing, Full Proof Pro Bar/Elite upgrades, and premium add-ons gated behind the right bar footprint.
 
 **Geography reminders:** Long Beach base · LA · OC · Southern California private events.
 
@@ -76,7 +76,7 @@ GBP favors **short**, locally grounded updates + strong photos. Rotate types bel
 
 ### Template A — Availability / seasons
 
-> Private events in LA, Long Beach, and OC: we bring premium mobile bartending, clear pricing, professional tools, and GoBar Pro or Elite when the event needs a stronger guest-facing footprint. Hold the date now, choose the menu later at fullproofbartending.com or text **(562) 444-8030**.
+> Private events in LA, Long Beach, and OC: we bring premium mobile bartending, clear pricing, professional tools, and Full Proof Pro Bar or Elite when the event needs a stronger guest-facing footprint. Hold the date now, choose the menu later at fullproofbartending.com or text **(562) 444-8030**.
 
 ### Template B — Proof-led
 
@@ -166,7 +166,7 @@ Use, mix, or trim. Replace bracketed bits.
 
 **Instant-book / portfolio framing (honest)**
 
-- We’re building our published portfolio while delivering full-service hospitality. Base pricing stays approachable, and GoBar Pro or Elite unlocks the premium presentation details that photograph and serve best.
+- We’re building our published portfolio while delivering full-service hospitality. Base pricing stays approachable, and Full Proof Pro Bar or Elite unlocks the premium presentation details that photograph and serve best.
 
 **Soft CTAs**
 

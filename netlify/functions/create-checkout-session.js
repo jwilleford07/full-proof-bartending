@@ -13,17 +13,17 @@ const packages = {
   },
 };
 
-const goBarOptions = {
-  none: { label: "No GoBar", amount: 0 },
-  pro: { label: "GoBar Pro", amount: 10000 },
-  elite: { label: "GoBar Elite", amount: 20000 },
+const barOptions = {
+  none: { label: "No Full Proof bar", amount: 0 },
+  pro: { label: "Full Proof Pro Bar", amount: 10000 },
+  elite: { label: "Full Proof Elite Bar", amount: 20000 },
 };
 
 const directAddOns = {
-  "Espresso martini service": { label: "Espresso martinis", amount: 10000, requiresGoBar: true },
-  "ORI ice press service": { label: "ORI ice press", amount: 20000, requiresGoBar: true },
-  "Smoke package": { label: "Smoke package", amount: 10000, requiresGoBar: true },
-  "Smoke + bubble package": { label: "Smoke + bubble package", amount: 15000, requiresGoBar: true },
+  "Espresso martini service": { label: "Espresso martinis", amount: 10000, requiresBarRental: true },
+  "ORI ice press service": { label: "ORI ice press", amount: 20000, requiresBarRental: true },
+  "Smoke package": { label: "Smoke package", amount: 10000, requiresBarRental: true },
+  "Smoke + bubble package": { label: "Smoke + bubble package", amount: 15000, requiresBarRental: true },
 };
 
 const quantityAddOns = {
@@ -51,10 +51,10 @@ function selectedInterests(data) {
   return [];
 }
 
-function hasPremiumAddOnWithoutGoBar(data) {
-  const goBarSelection = String(data.gobar_selection || "");
-  if (goBarSelection && goBarSelection !== "none") return false;
-  return selectedInterests(data).some((interest) => directAddOns[String(interest)]?.requiresGoBar);
+function hasPremiumAddOnWithoutBarRental(data) {
+  const barSelection = String(data.bar_selection || "");
+  if (barSelection && barSelection !== "none") return false;
+  return selectedInterests(data).some((interest) => directAddOns[String(interest)]?.requiresBarRental);
 }
 
 function hasConflictingSmokePackages(data) {
@@ -90,23 +90,23 @@ function directAddOnAmount(data) {
 }
 
 function packageWithSelections(selectedPackage, data) {
-  const goBarSelection = String(data.gobar_selection || "none");
-  const goBar = goBarOptions[goBarSelection] || goBarOptions.none;
+  const barSelection = String(data.bar_selection || "none");
+  const bar = barOptions[barSelection] || barOptions.none;
   const addOnAmount = directAddOnAmount(data);
   const directAddons = directAddOnSummary(data);
-  const totalAmount = selectedPackage.totalAmount + goBar.amount + addOnAmount;
+  const totalAmount = selectedPackage.totalAmount + bar.amount + addOnAmount;
 
   return {
     ...selectedPackage,
     totalAmount,
     amount: Math.round(totalAmount / 2),
-    name: `${selectedPackage.name}${goBar.amount ? ` + ${goBar.label}` : ""}${directAddons ? " + instant upgrades" : ""}`,
+    name: `${selectedPackage.name}${bar.amount ? ` + ${bar.label}` : ""}${directAddons ? " + instant upgrades" : ""}`,
     description: [
       selectedPackage.description,
-      goBar.amount ? `${goBar.label} rental included in this date hold.` : "No GoBar selected for this date hold.",
+      bar.amount ? `${bar.label} rental included in this date hold.` : "No Full Proof bar selected for this date hold.",
       directAddons ? `Instant-book upgrades included: ${directAddons}.` : "",
     ].filter(Boolean).join(" "),
-    gobar_label: goBar.label,
+    bar_label: bar.label,
     direct_addons: directAddons,
   };
 }
@@ -124,7 +124,8 @@ function metadataFrom(data, checkoutPackage) {
     event_type: data.event_type,
     menu_path: data.menu_path,
     package_choice: data.package_choice,
-    gobar_selection: data.gobar_selection,
+    bar_selection: data.bar_selection,
+    bar_label: checkoutPackage.bar_label,
     package_total: checkoutPackage.totalAmount ? `$${(checkoutPackage.totalAmount / 100).toFixed(2)}` : "",
     deposit_amount: checkoutPackage.amount ? `$${(checkoutPackage.amount / 100).toFixed(2)}` : "",
     direct_addons: checkoutPackage.direct_addons,
@@ -179,7 +180,7 @@ exports.handler = async (event) => {
   }
 
   const guestBand = String(data.guest_count_band || "");
-  const goBarSelection = String(data.gobar_selection || "");
+  const barSelection = String(data.bar_selection || "");
   if (guestBand === "126+") {
     return {
       statusCode: 400,
@@ -187,17 +188,17 @@ exports.handler = async (event) => {
     };
   }
 
-  if ((guestBand === "41-75" || guestBand === "76-125") && goBarSelection !== "elite") {
+  if ((guestBand === "41-75" || guestBand === "76-125") && barSelection !== "elite") {
     return {
       statusCode: 400,
-      body: JSON.stringify({ error: "GoBar Elite is required for 41+ guests." }),
+      body: JSON.stringify({ error: "Full Proof Elite Bar is required for 41+ guests." }),
     };
   }
 
-  if (hasPremiumAddOnWithoutGoBar(data)) {
+  if (hasPremiumAddOnWithoutBarRental(data)) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ error: "Instant-book craft upgrades require GoBar Pro or GoBar Elite." }),
+      body: JSON.stringify({ error: "Instant-book craft upgrades require Full Proof Pro Bar or Full Proof Elite Bar." }),
     };
   }
 

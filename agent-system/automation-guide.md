@@ -32,7 +32,7 @@ Run Sales & Accounting. Review new leads, quote/deposit clarity, and money follo
 ```
 
 ```text
-Check whether this quote protects the GoBar rules and avoids giving away custom scope.
+Check whether this quote protects the bar rental rules and avoids giving away custom scope.
 ```
 
 ### Marketing Manager
@@ -48,7 +48,7 @@ Turn this event into a post, a story caption, and a review request. Keep it prem
 ### Website QA
 
 ```text
-Run Site QA before deploy. Check GoBar pricing, form logic, broken assets, stale promo-code language, and mobile readability.
+Run Site QA before deploy. Check bar rental pricing, form logic, broken assets, stale promo-code language, and mobile readability.
 ```
 
 ## Approval Rules
@@ -68,11 +68,11 @@ Run Site QA before deploy. Check GoBar pricing, form logic, broken assets, stale
 ## Pricing Language To Protect
 
 - Base Bartending: `$599 / 3 hours` or `$699 / 4 hours`.
-- GoBar Pro: `+$100`, recommended for events up to `40` guests when presentation matters.
-- GoBar Elite: `+$200`, required for `41-125` guests and optional for smaller events that want the larger luxury footprint.
+- Full Proof Pro Bar: `+$100`, recommended for events up to `40` guests when presentation matters.
+- Full Proof Elite Bar: `+$200`, required for `41-125` guests and optional for smaller events that want the larger luxury footprint.
 - `126+` guests require manual review before instant booking.
-- Premium visual/craft upgrades require GoBar Pro or Elite.
-- Total Wine guidance + ice service: `+$100`; requires GoBar when ice service is included.
+- Premium visual/craft upgrades require Full Proof Pro Bar or Elite.
+- Total Wine guidance + ice service: `+$100`; requires Full Proof bar when ice service is included.
 - 50% date-hold deposit for instant-book eligible events.
 
 ## When To Add More Access

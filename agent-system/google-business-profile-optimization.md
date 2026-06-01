@@ -47,17 +47,17 @@ Adding specific services with rich descriptions and clear pricing captures long-
 - **Price:** $699
 - **Description:** Four-hour base bartending for events that need a longer active service window, with the same planning, tools, setup/cleanup, shopping guidance, and menu flexibility.
 
-**GoBar Pro Rental**
+**Full Proof Pro Bar Rental**
 - **Price:** $100
 - **Description:** Compact premium mobile bar footprint recommended for up to 40 guests. Unlocks premium presentation upgrades while keeping smaller events efficient and polished.
 
-**GoBar Elite Rental**
+**Full Proof Elite Bar Rental**
 - **Price:** $200
-- **Description:** Larger luxury GoBar footprint required for 41-125 guests and optional for smaller events that want the bar to anchor the room visually.
+- **Description:** Larger luxury Full Proof bar footprint required for 41-125 guests and optional for smaller events that want the bar to anchor the room visually.
 
 **Premium Visual & Craft Add-ons**
 - **Price:** Custom Quote
-- **Description:** Clear ice upgrades, smoke or smoke bubbles, espresso martinis, custom infusions, organic California dehydrated citrus, garnish styling, and menu display/signage. Premium upgrades require GoBar Pro or GoBar Elite.
+- **Description:** Clear ice upgrades, smoke or smoke bubbles, espresso martinis, custom infusions, organic California dehydrated citrus, garnish styling, and menu display/signage. Premium upgrades require Full Proof Pro Bar or Full Proof Elite Bar.
 
 ## 4. Photo & Media Strategy
 
@@ -83,10 +83,10 @@ Google allows business owners to ask and answer their own questions. Seed these 
 **A:** We are based in Long Beach, CA, and provide premium private event and wedding bartending across Los Angeles, Orange County, and the broader Southern California area.
 
 **Q:** Can I book before choosing the cocktail menu?
-**A:** Yes. For good-fit events, you can hold the date first and choose a rotating, custom, or decide-later cocktail path after. Base bartending starts at $599 for 3 hours or $699 for 4 hours, with GoBar Pro and GoBar Elite available as clear upgrades.
+**A:** Yes. For good-fit events, you can hold the date first and choose a rotating, custom, or decide-later cocktail path after. Base bartending starts at $599 for 3 hours or $699 for 4 hours, with Full Proof Pro Bar and Full Proof Elite Bar available as clear upgrades.
 
 **Q:** Do premium upgrades require a bar rental?
-**A:** Yes. Clear ice upgrades, smoke, espresso martinis, custom infusions, dehydrated citrus, premium garnish styling, and menu signage require GoBar Pro or GoBar Elite so presentation, workflow, ice handling, and guest experience stay controlled.
+**A:** Yes. Clear ice upgrades, smoke, espresso martinis, custom infusions, dehydrated citrus, premium garnish styling, and menu signage require Full Proof Pro Bar or Full Proof Elite Bar so presentation, workflow, ice handling, and guest experience stay controlled.
 
 ## 6. Action Items for Joe
 

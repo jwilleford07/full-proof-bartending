@@ -49,7 +49,7 @@ Use publicly as:
 
 ### Self-Contained Bar Build
 
-Full Proof can operate without relying on a venue bar, house sink, running water, or house power. The professional mobile setup includes generator-capable power, fresh and gray water jugs, a 110v pump, pump-driven running water, an integrated Decent Espresso rinser, a custom utility sink, hand-wash capability, clean prep surfaces, a custom portable stainless steel ice bin, chilled condiment displays, service mats, glass drying mats, and Crew Supply Co bottles and tools. GoBar Pro and GoBar Elite protect the guest-facing footprint, and premium visual/craft upgrades are scoped with a Full Proof bar rental instead of being forced onto a flimsy setup.
+Full Proof can operate without relying on a venue bar, house sink, running water, or house power. The professional mobile setup includes generator-capable power, fresh and gray water jugs, a 110v pump, pump-driven running water, an integrated Decent Espresso rinser, a custom utility sink, hand-wash capability, clean prep surfaces, a custom portable stainless steel ice bin, chilled condiment displays, service mats, glass drying mats, and Crew Supply Co bottles and tools. Full Proof Pro Bar and Full Proof Elite Bar protect the guest-facing footprint, and premium visual/craft upgrades are scoped with a Full Proof bar rental instead of being forced onto a flimsy setup.
 
 Use publicly as:
 

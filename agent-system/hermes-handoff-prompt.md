@@ -37,22 +37,22 @@ Protect this framing:
 - Calm hospitality, warm but not corny.
 - Clear ice as a visible premium detail.
 - Premium add-ons create margin.
-- Base pricing is intentionally approachable while GoBar rental and premium add-ons protect margin.
+- Base pricing is intentionally approachable while Full Proof bar rental and premium add-ons protect margin.
 
 Current public pricing:
 
 - Base Bartending: `$599 / 3 hours`
 - Base Bartending: `$699 / 4 hours`
-- GoBar Pro: `+$100`, recommended for up to `40` guests
-- GoBar Elite: `+$200`, required for `41-125` guests
+- Full Proof Pro Bar: `+$100`, recommended for up to `40` guests
+- Full Proof Elite Bar: `+$200`, required for `41-125` guests
 - `126+` guests: manual review before instant booking
-- Total Wine guidance + ice service: `+$100`, requiring GoBar when ice service is included
-- Premium visual/craft add-ons: require GoBar Pro or Elite
+- Total Wine guidance + ice service: `+$100`, requiring Full Proof bar when ice service is included
+- Premium visual/craft add-ons: require Full Proof Pro Bar or Elite
 
 Use premium language:
 
 - “Luxury instant-book mobile bartending”
-- “Premium GoBar footprint”
+- “Premium Full Proof bar footprint”
 - “Hold the date now, choose the menu later”
 
 Avoid:
@@ -198,7 +198,7 @@ Known audit issues already addressed or partially addressed:
 - `robots.txt` should point at sitemap: addressed.
 - Contact conversion needed improvement: phone CTA and mailto inquiry are live.
 - Old-brand proof imagery needed removal: old front-facing “Two for the Road” image is no longer referenced.
-- Pricing needed low-friction premium framing: Base Bartending is `$599 / 3 hours` or `$699 / 4 hours`, GoBar Pro is `+$100`, GoBar Elite is `+$200`, 41-125 guests require Elite, 126+ guests require manual review, and premium upgrades require GoBar Pro or Elite.
+- Pricing needed low-friction premium framing: Base Bartending is `$599 / 3 hours` or `$699 / 4 hours`, Full Proof Pro Bar is `+$100`, Full Proof Elite Bar is `+$200`, 41-125 guests require Elite, 126+ guests require manual review, and premium upgrades require Full Proof Pro Bar or Elite.
 
 Still worth improving later:
 

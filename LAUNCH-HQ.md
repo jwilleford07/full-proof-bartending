@@ -14,8 +14,8 @@ Full Proof Bartending is a luxury mobile bartending service for private events a
 
 - Professional self-contained craft bar setup.
 - Power, running water, rinser, LED lighting, organized tools, and ice press capability.
-- GoBar Pro and GoBar Elite rental paths that protect presentation and workflow.
-- Clear ice expertise as proof; premium ice upgrades are scoped with GoBar Pro or Elite.
+- Full Proof Pro Bar and Full Proof Elite Bar rental paths that protect presentation and workflow.
+- Clear ice expertise as proof; premium ice upgrades are scoped with Full Proof Pro Bar or Elite.
 - Premium add-ons including smoke, espresso martinis, custom infusions, organic dehydrated citrus, premium garnish styling, and menu display/signage.
 - Founder expertise from building a clear ice program from zero into real Los Angeles bar and restaurant accounts.
 - Southern hospitality with Southern California polish.

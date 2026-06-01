@@ -38,7 +38,7 @@ Give me stronger calls to action for Full Proof that feel premium and direct.
 
 `/packages`
 
-Draft a simple package structure for Full Proof Bartending using the current ladder: Base Bartending at $599 / 3 hours or $699 / 4 hours, GoBar Pro +$100, GoBar Elite +$200, premium add-ons requiring GoBar, and 126+ guests requiring manual review.
+Draft a simple package structure for Full Proof Bartending using the current ladder: Base Bartending at $599 / 3 hours or $699 / 4 hours, Full Proof Pro Bar +$100, Full Proof Elite Bar +$200, premium add-ons requiring Full Proof bar, and 126+ guests requiring manual review.
 
 `/quote`
 

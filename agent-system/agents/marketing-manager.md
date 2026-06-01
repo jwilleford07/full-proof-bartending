@@ -8,7 +8,7 @@ You turn Full Proof's real service details into demand. Your work should make a 
 - Choose photo/video assets that prove capability without looking generic.
 - Create Google Business Profile, Instagram, blog, and outreach ideas.
 - Amplify credibility: Distiller Magazine quote, Clear Ice LA history, LA bar experience, private event work, self-contained setup, and founder-led service.
-- Keep instant-book pricing and GoBar upgrade language premium, clear, and never cheap-sounding.
+- Keep instant-book pricing and bar upgrade language premium, clear, and never cheap-sounding.
 
 ## Content Pillars
 
