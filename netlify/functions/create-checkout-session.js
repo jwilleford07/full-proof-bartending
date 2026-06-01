@@ -4,12 +4,12 @@ const packages = {
   "Base Bartending - 3 hours": {
     name: "Base Bartending - 3 hours - 50% date hold",
     totalAmount: 59900,
-    description: "50% date-hold deposit for Full Proof Bartending base service: 3 hours, one bartender, planning, professional tools, setup/cleanup, shopping guidance, and choose-later menu planning.",
+    description: "50% date-hold deposit for Full Proof Bartending base service: 3 hours, one bartender, planning, professional tools, setup/cleanup, shopping guidance, included bar supplies, and choose-later menu planning.",
   },
   "Base Bartending - 4 hours": {
     name: "Base Bartending - 4 hours - 50% date hold",
     totalAmount: 69900,
-    description: "50% date-hold deposit for Full Proof Bartending base service: 4 hours, one bartender, planning, professional tools, setup/cleanup, shopping guidance, and choose-later menu planning.",
+    description: "50% date-hold deposit for Full Proof Bartending base service: 4 hours, one bartender, planning, professional tools, setup/cleanup, shopping guidance, included bar supplies, and choose-later menu planning.",
   },
 };
 
@@ -19,9 +19,17 @@ const goBarOptions = {
   elite: { label: "GoBar Elite", amount: 20000 },
 };
 
-const premiumAddOnsRequiringGoBar = new Set([
-  "Total Wine guidance + ice service",
-]);
+const directAddOns = {
+  "Espresso martini service": { label: "Espresso martinis", amount: 10000, requiresGoBar: true },
+  "ORI ice press service": { label: "ORI ice press", amount: 20000, requiresGoBar: true },
+  "Smoke package": { label: "Smoke package", amount: 10000, requiresGoBar: true },
+  "Smoke + bubble package": { label: "Smoke + bubble package", amount: 15000, requiresGoBar: true },
+};
+
+const quantityAddOns = {
+  extra_signature_cocktails: { label: "Extra signature cocktail", amount: 10000 },
+  extra_bartender_hours: { label: "Extra bartender hour", amount: 10000 },
+};
 
 const PRODUCTION_ORIGIN = "https://fullproofbartending.com";
 const LOCAL_ORIGIN_PATTERN = /^https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?$/;
@@ -46,27 +54,60 @@ function selectedInterests(data) {
 function hasPremiumAddOnWithoutGoBar(data) {
   const goBarSelection = String(data.gobar_selection || "");
   if (goBarSelection && goBarSelection !== "none") return false;
-  return selectedInterests(data).some((interest) => premiumAddOnsRequiringGoBar.has(String(interest)));
+  return selectedInterests(data).some((interest) => directAddOns[String(interest)]?.requiresGoBar);
+}
+
+function hasConflictingSmokePackages(data) {
+  const interests = selectedInterests(data).map(String);
+  return interests.includes("Smoke package") && interests.includes("Smoke + bubble package");
+}
+
+function selectedDirectAddOns(data) {
+  return selectedInterests(data)
+    .map((interest) => directAddOns[String(interest)])
+    .filter(Boolean);
+}
+
+function selectedQuantityAddOns(data) {
+  return Object.entries(quantityAddOns)
+    .map(([field, option]) => {
+      const quantity = Math.max(0, Number.parseInt(data[field], 10) || 0);
+      return quantity ? { ...option, quantity } : null;
+    })
+    .filter(Boolean);
+}
+
+function directAddOnSummary(data) {
+  const fixedAddOns = selectedDirectAddOns(data).map((option) => option.label);
+  const countedAddOns = selectedQuantityAddOns(data).map((option) => `${option.quantity} ${option.label}${option.quantity === 1 ? "" : "s"}`);
+  return [...fixedAddOns, ...countedAddOns].join(", ");
+}
+
+function directAddOnAmount(data) {
+  const fixedAmount = selectedDirectAddOns(data).reduce((total, option) => total + option.amount, 0);
+  const quantityAmount = selectedQuantityAddOns(data).reduce((total, option) => total + option.quantity * option.amount, 0);
+  return fixedAmount + quantityAmount;
 }
 
 function packageWithSelections(selectedPackage, data) {
   const goBarSelection = String(data.gobar_selection || "none");
   const goBar = goBarOptions[goBarSelection] || goBarOptions.none;
-  const totalWineIceSelected = selectedInterests(data).includes("Total Wine guidance + ice service");
-  const totalAmount = selectedPackage.totalAmount + goBar.amount + (totalWineIceSelected ? 10000 : 0);
+  const addOnAmount = directAddOnAmount(data);
+  const directAddons = directAddOnSummary(data);
+  const totalAmount = selectedPackage.totalAmount + goBar.amount + addOnAmount;
 
   return {
     ...selectedPackage,
     totalAmount,
     amount: Math.round(totalAmount / 2),
-    name: `${selectedPackage.name}${goBar.amount ? ` + ${goBar.label}` : ""}${totalWineIceSelected ? " + Total Wine/Ice Bundle" : ""}`,
+    name: `${selectedPackage.name}${goBar.amount ? ` + ${goBar.label}` : ""}${directAddons ? " + instant upgrades" : ""}`,
     description: [
       selectedPackage.description,
       goBar.amount ? `${goBar.label} rental included in this date hold.` : "No GoBar selected for this date hold.",
-      totalWineIceSelected ? "Total Wine guidance + ice service bundle included." : "",
+      directAddons ? `Instant-book upgrades included: ${directAddons}.` : "",
     ].filter(Boolean).join(" "),
     gobar_label: goBar.label,
-    direct_addons: totalWineIceSelected ? "Total Wine guidance + ice service" : "",
+    direct_addons: directAddons,
   };
 }
 
@@ -89,6 +130,8 @@ function metadataFrom(data, checkoutPackage) {
     direct_addons: checkoutPackage.direct_addons,
     booking_intent: data.booking_intent,
     interests: Array.isArray(data.interest) ? data.interest.join(", ") : data.interest,
+    extra_signature_cocktails: data.extra_signature_cocktails,
+    extra_bartender_hours: data.extra_bartender_hours,
     premium_notes: data.premium_notes,
     notes: data.notes,
     source: data.source,
@@ -154,7 +197,14 @@ exports.handler = async (event) => {
   if (hasPremiumAddOnWithoutGoBar(data)) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ error: "Total Wine guidance + ice service requires GoBar Pro or GoBar Elite." }),
+      body: JSON.stringify({ error: "Instant-book craft upgrades require GoBar Pro or GoBar Elite." }),
+    };
+  }
+
+  if (hasConflictingSmokePackages(data)) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: "Choose either the smoke package or the smoke + bubble package, not both." }),
     };
   }
 
