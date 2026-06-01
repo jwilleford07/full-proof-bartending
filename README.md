@@ -10,4 +10,4 @@ This is a static website. Open `index.html` directly in a browser or deploy the 
 
 ## Brand Position
 
-Full Proof is not a bartender behind a folding table. It is a premium mobile bar experience built around warm hospitality, precise craft, clear ice expertise, and a fully equipped setup with running water, power, rinser, LED lighting, and organized tools. Launch pricing separates the entry service from the cups-and-garnishes package so hosts can choose the simplest fit.
+Full Proof is not a bartender behind a folding table. It is a premium mobile bar experience built around warm hospitality, precise craft, clear ice expertise, and a fully equipped setup with running water, power, rinser, LED lighting, and organized tools. Current pricing separates base bartending from GoBar Pro and GoBar Elite rentals so hosts can book simply while premium presentation stays protected.

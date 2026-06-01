@@ -1,65 +1,75 @@
-# Full Proof Bartending — Service & Packages
+# Full Proof Bartending - Service & Packages
 
-*Premium mobile bartending for events that deserve a calm, composed bar presence.*
+*Luxury instant-book mobile bartending with a clear GoBar upgrade path.*
 
 ---
 
-## Launch Special
+## Public Pricing
 
-| Package | Price | 50% date-hold deposit |
+| Path | Price | 50% date-hold deposit |
 |---|---:|---:|
-| **Basic** | **$699 / 3 hours** | **$349.50** |
-| **Cups + Garnishes** | **$799 / 3 hours** | **$399.50** |
+| **Base Bartending - 3 hours** | **$599** | **$299.50** |
+| **Base Bartending - 4 hours** | **$699** | **$349.50** |
+| **GoBar Pro rental** | **+$100** | **+$50** |
+| **GoBar Elite rental** | **+$200** | **+$100** |
 
-**Founder offer:** the first 10 eligible bookings using `FOUNDER` get Basic for **$599** with a **$299.50** deposit, and keep the **$699** base rate for similar future parties.
-
-Pricing is for good-fit private events in the single-bartender launch footprint. Final quotes reflect guest count, service length, staffing, travel, menu complexity, and add-ons.
+**Guest-count rule:** GoBar Pro is recommended for up to 40 guests. GoBar Elite is required for 41-125 guests. Events at 126+ guests require manual review before instant booking.
 
 ---
 
-## Basic Includes
+## Base Bartending Includes
 
 **Professional bartending**  
 One skilled bartender for active service, with setup and breakdown coordinated outside guest-facing hours as agreed.
 
 **Planning you can rely on**  
-Timeline touchpoints, pour logic, menu direction, and shopping guidance for host-provided alcohol, drinkware, and garnish groceries.
+Timeline touchpoints, pour logic, menu direction, and shopping guidance for host-provided alcohol and event supplies.
 
-**A guest-ready bar**  
-Professional tools and a composed bar station. For larger production or self-contained needs, the full mobile craft bar is scoped as its own line item.
+**A composed bar station**
+Professional tools, bottles, service mats, and organized service flow. GoBar rental adds the larger guest-facing footprint and unlocks premium add-ons.
 
-**Clear ice**  
-Hand-carved clear ice cubes for cocktails served by Full Proof. Specialty cuts, extra volume, and branded or custom cubes remain quoted add-ons.
+**Menu flexibility**
+Choose a rotating menu, custom menu, or choose-later path after the date is protected.
 
 **Closeout**  
 Cleanup aligned with venue rules and the scope agreed up front.
 
 ---
 
-## Cups + Garnishes Adds
+## GoBar Rentals
 
-Full Proof supplies service cups and a standard garnish kit so the host has fewer small items to source.
+**GoBar Pro - +$100**
+Recommended for up to 40 guests when the host wants a polished footprint, cleaner workflow, and access to premium visual/craft upgrades.
 
-Alcohol remains host-provided unless contracted otherwise.
+**GoBar Elite - +$200**
+Required for 41-125 guests and optional for smaller events that want the bar to anchor the room visually.
 
 ---
 
-## Add-ons
+## Premium Add-Ons
 
-**Ice & presentation**  
-Pressed spheres, Collins spears, specialty cuts, extra clear-ice volume, branded cubes, and premium garnish upgrades.
+Premium visual/craft upgrades require GoBar Pro or Elite:
 
-**Menu & production**  
-Signature cocktail development, batching support, and thoughtful low- and no-alcohol pairings.
+- Clear ice upgrades.
+- Smoke or smoke bubbles.
+- Espresso martinis.
+- Custom infusions.
+- Organic California dehydrated citrus.
+- Premium garnish styling.
+- Custom menu display/signage.
 
-**Service & staffing**  
-Additional bartenders, extended service, late-night extensions, and high-touch pacing for activations or VIP lanes.
+**Client-facing rule:** premium upgrades require a Full Proof bar rental so we can control presentation, workflow, ice handling, and guest experience.
 
-**Experience & logistics**  
-Full custom bar deployment, smoked cocktails, smoke bubbles, espresso martini service, custom menu cards, travel, access, and venue complexity.
+---
+
+## Concierge Bundle
+
+**Total Wine guidance + ice service: +$100**
+
+Recommended for hosts who want the lowest-friction shopping and ice path. Requires GoBar when ice service is included.
 
 ---
 
 ## Next Step
 
-Reply with your date, guest count, venue, and how long you’d like the bar open. Full Proof will confirm fit and send a clear line-item quote.
+Reply with your date, guest-count band, venue/location, service window, menu path, and GoBar preference. Full Proof will confirm fit and send the cleanest booking route.

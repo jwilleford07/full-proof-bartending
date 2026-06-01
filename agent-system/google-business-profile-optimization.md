@@ -39,21 +39,25 @@ Since we are a mobile service without a public storefront, ensure your address i
 
 Adding specific services with rich descriptions and clear pricing captures long-tail searches and builds immediate trust.
 
-**Launch Special Basic (3 Hours)**
+**Base Bartending - 3 Hours**
+- **Price:** $599
+- **Description:** Luxury mobile bartending for good-fit private events. Includes one professional bartender, service planning, professional tools, setup/cleanup, shopping guidance, and rotating, custom, or choose-later cocktail planning. Host provides alcohol unless separately arranged.
+
+**Base Bartending - 4 Hours**
 - **Price:** $699
-- **Description:** Premium mobile bartending service for good-fit private events. Includes one professional bartender, menu direction, shopping guidance, a composed bar station, and signature hand-carved clear ice cubes. Host provides alcohol, cups, and garnish groceries from our list. First 10 FOUNDER bookings get Basic for $599.
+- **Description:** Four-hour base bartending for events that need a longer active service window, with the same planning, tools, setup/cleanup, shopping guidance, and menu flexibility.
 
-**Launch Special with Cups + Garnishes (3 Hours)**
-- **Price:** $799
-- **Description:** Launch Special Basic plus Full Proof-provided service cups and a standard garnish kit, so hosts have fewer small items to source.
+**GoBar Pro Rental**
+- **Price:** $100
+- **Description:** Compact premium mobile bar footprint recommended for up to 40 guests. Unlocks premium presentation upgrades while keeping smaller events efficient and polished.
 
-**Full Mobile Craft Bar Setup**
+**GoBar Elite Rental**
+- **Price:** $200
+- **Description:** Larger luxury GoBar footprint required for 41-125 guests and optional for smaller events that want the bar to anchor the room visually.
+
+**Premium Visual & Craft Add-ons**
 - **Price:** Custom Quote
-- **Description:** Upgrade to our self-contained mobile craft bar featuring running water, an integrated glass rinser, and LED lighting. This tier brings a true brick-and-mortar cocktail bar experience directly to your venue.
-
-**Specialty Clear Ice & Cocktail Add-ons**
-- **Price:** Custom Quote
-- **Description:** Enhance your menu with pressed ice spheres, Collins spears, custom branded ice motifs, and advanced signature cocktail development including theatrical smoke presentations and dehydrated garnishes.
+- **Description:** Clear ice upgrades, smoke or smoke bubbles, espresso martinis, custom infusions, organic California dehydrated citrus, garnish styling, and menu display/signage. Premium upgrades require GoBar Pro or GoBar Elite.
 
 ## 4. Photo & Media Strategy
 
@@ -78,8 +82,11 @@ Google allows business owners to ask and answer their own questions. Seed these 
 **Q:** What areas do you serve?
 **A:** We are based in Long Beach, CA, and provide premium private event and wedding bartending across Los Angeles, Orange County, and the broader Southern California area.
 
-**Q:** What is included in your launch mobile bar package?
-**A:** Launch Special Basic includes one professional bartender, menu direction, shopping guidance, a composed bar station, and our signature hand-carved clear ice cubes. The $799 Cups + Garnishes path adds service cups and a standard garnish kit.
+**Q:** Can I book before choosing the cocktail menu?
+**A:** Yes. For good-fit events, you can hold the date first and choose a rotating, custom, or decide-later cocktail path after. Base bartending starts at $599 for 3 hours or $699 for 4 hours, with GoBar Pro and GoBar Elite available as clear upgrades.
+
+**Q:** Do premium upgrades require a bar rental?
+**A:** Yes. Clear ice upgrades, smoke, espresso martinis, custom infusions, dehydrated citrus, premium garnish styling, and menu signage require GoBar Pro or GoBar Elite so presentation, workflow, ice handling, and guest experience stay controlled.
 
 ## 6. Action Items for Joe
 

@@ -31,9 +31,11 @@ The former public anchor of `$599 / 3 hours` and `$699 / 4 hours` was approachab
 
 Use this structure publicly:
 
-- **Current launch structure:** Basic at `$699 / 3 hours`, Cups + Garnishes at `$799 / 3 hours`, first 10 `FOUNDER` Basic bookings at `$599`.
-- **Signature Bar Experience:** from `$1,250`.
-- **Weddings & Brand Events:** custom quotes from `$2,400`.
+- **Base Bartending:** `$599 / 3 hours` or `$699 / 4 hours`.
+- **GoBar Pro:** `+$100`, recommended for up to `40` guests.
+- **GoBar Elite:** `+$200`, required for `41-125` guests and optional for smaller events that want a larger luxury footprint.
+- **126+ guests:** manual review before instant booking.
+- **Premium add-ons:** require GoBar Pro or Elite so presentation, workflow, ice handling, and guest experience stay controlled.
 
 ## Deposit Language
 
@@ -45,7 +47,7 @@ Use date-hold language without wiring a payment link until Stripe or Square is r
 
 ## Guardrails
 
-- Keep the entry point approachable with `launch special`, not discount language.
+- Keep the entry point approachable with transparent base rates, not discount language.
 - Do not use `cheap`, `budget`, `discount`, or urgency gimmicks.
 - Do not make the whole brand feel on sale.
 - Do not bury high-touch weddings or brand events inside the standard price.

@@ -15,7 +15,10 @@ Make offers simple enough to buy and premium enough to justify a higher rate. Av
 
 ## Offer Principles
 
-- All packages include professional service, clear scope, and a composed bar setup. Do not imply cups or garnishes are included in Basic; those belong in the $799 Cups + Garnishes path or a custom quote.
-- Hand-carved clear ice is included as a signature detail.
-- Pressed spheres, specialty cuts, and custom ice can be add-ons.
+- Base service includes professional bartending, clear scope, planning, tools, setup/cleanup, shopping guidance, and a rotating/custom/choose-later menu path.
+- GoBar Pro is `+$100`, recommended for up to 40 guests, and unlocks premium add-ons.
+- GoBar Elite is `+$200`, required for 41-125 guests, and optional for smaller events that want a larger luxury footprint.
+- 126+ guests require manual review before instant booking.
+- Premium upgrades require GoBar Pro or Elite.
+- Clear ice skill is a signature proof point, but specialty ice volume, special cuts, and display moments remain scoped add-ons.
 - Simplicity beats cleverness.

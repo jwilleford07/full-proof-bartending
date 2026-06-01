@@ -1,95 +1,126 @@
-# Offers & Packages — Full Proof Bartending
+# Offers & Packages - Full Proof Bartending
 
-Internal reference for package structure, add-ons, quoting, and launch-window framing. Keep this aligned with `index.html`, `package-sheet.md`, and the Sales & Accounting Manager.
+Internal source of truth for public pricing, add-on gates, booking logic, and quote language. Keep this aligned with `index.html`, `package-sheet.md`, `netlify/functions/create-checkout-session.js`, and the Sales & Accounting Manager.
 
 ## Positioning
 
-- **Primary sale:** premium mobile bartending with calm service, composed bar presence, and thoughtful cocktails.
-- **Signature proof:** hand-carved clear ice is a visible premium detail, not the whole brand story.
-- **Economics:** use aggressive launch pricing to get good-fit events booked, then protect margin with clear add-ons and scope control.
+- **Primary sale:** premium mobile bartending with calm service, composed presentation, and low-friction booking.
+- **Offer strategy:** keep base bartending reasonable, then protect margin with GoBar rental, concierge support, and premium visual/craft add-ons.
+- **Differentiators:** self-contained bar workflow, clear ice skills, polished presentation, founder-led hospitality, and practical shopping/ice guidance.
+- **Booking promise:** the host can hold the date before the cocktail menu is finished.
 
-Avoid cheap-sounding language. Prefer "founder rate," "portfolio window," "launch path," and "good-fit private parties" over "deal" or "discount."
+Avoid cheap-sounding language. Use "instant-book," "date hold," "premium footprint," "GoBar Pro," "GoBar Elite," "concierge guidance," and "manual review" instead of discount framing.
 
-## Published Launch Pricing
+## Public Pricing Ladder
 
-| Package | Price | Deposit | Best fit |
+| Path | Public price | 50% date-hold deposit | Best fit |
 |---|---:|---:|---|
-| **Launch Special Basic** | **$699 / 3 hours** | **$349.50** | Hosts who want the strongest entry price and can provide drinkware and garnish groceries from Joe's list. |
-| **Launch Special Cups + Garnishes** | **$799 / 3 hours** | **$399.50** | Hosts who want service cups and a standard garnish kit handled by Full Proof. |
+| **Base Bartending - 3 hours** | **$599** | **$299.50** | Small/simple private events that need bartender, tools, setup/cleanup, and shopping guidance. |
+| **Base Bartending - 4 hours** | **$699** | **$349.50** | Events needing a longer active service window before add-ons. |
+| **GoBar Pro rental** | **+$100** | **+$50** | Recommended premium footprint for events up to 40 guests. |
+| **GoBar Elite rental** | **+$200** | **+$100** | Required for 41-125 guests and optional for smaller events wanting a larger luxury footprint. |
+| **126+ guests** | **Manual review** | **Manual review** | Requires staffing, footprint, load-in, and service-flow review before payment. |
 
-**FOUNDER:** first 10 eligible launch bookings get Basic for **$599** with a **$299.50** deposit and keep the **$699** base rate for future similar parties.
+## Core Rules
 
-The `FOUNDER` code applies to Basic only. In public copy, always make the Basic result unmistakable: **FOUNDER makes Basic $599**.
+- Base service can be booked without GoBar for small/simple events up to 40 guests.
+- GoBar Pro is recommended, not required, for 0-40 guests unless a premium add-on is selected.
+- GoBar Elite is required for 41-125 guests.
+- Events at 126+ guests do not use instant checkout.
+- Any premium visual/craft upgrade requires GoBar Pro or GoBar Elite.
+- Client can choose rotating menu, custom menu, or choose-later/custom after the date hold.
 
-## Basic Includes
+## Base Bartending Includes
 
-- One professional bartender for active service.
+- One professional bartender for the selected active service window.
 - Service planning, timeline touchpoints, pour logic, menu direction, and shopping guidance.
-- Crew Supply Co bottles and tools with a composed bar station appropriate to the quote.
-- House syrups, fresh lemon and lime juice, standard bitters, and menu guidance when included in scope.
-- Hand-carved clear ice cubes for cocktails served by Full Proof.
-- Setup, service, and cleanup aligned with venue rules.
+- Professional bottles, tools, service mats, setup, service, cleanup, and event-ready organization.
+- Host-provided alcohol unless separately arranged.
+- Menu path can be rotating, custom, or choose-later.
 
-**Basic does not automatically include:** alcohol, service cups, garnish groceries, specialty ice, additional bartenders, extended service, full custom bar deployment, venue complexity, or premium production.
+Base does not automatically include GoBar rental, alcohol, guest-facing bar furniture, specialty ice logistics, extra bartenders, extended service, premium garnish styling, espresso martini service, smoke, signage, or unusual venue logistics.
 
-## Cups + Garnishes Adds
+## GoBar Rentals
 
-- Service cups.
-- Standard garnish kit.
-- Fewer small shopping tasks for the host.
+### GoBar Pro - +$100
 
-Alcohol remains host-provided unless contracted otherwise.
+- Compact premium Full Proof bar footprint.
+- Recommended for up to 40 guests when presentation matters.
+- Unlocks premium add-ons for smaller events.
+- Best for patios, tight spaces, rooftops, and intimate private events.
 
-## Setup Tiers
+### GoBar Elite - +$200
 
-| Tier | Client-facing name | What it is |
-|---|---|---|
-| **A** | Professional bar station | Composed back bar, Crew Supply Co bottles and tools, mats, ice handling, and event-ready service flow. |
-| **B** | Full mobile craft bar | Self-sustained unit with generator-capable power, fresh and gray water, pump-driven running water, integrated rinser, custom utility sink, hand-wash capability, custom stainless ice bin, clean prep surfaces, and optional ice press / smoke / bubble / foam capabilities. |
+- Larger luxury bar footprint.
+- Required for 41-125 guests.
+- Optional upgrade for smaller events that want the bar to anchor the room.
+- Best for weddings, corporate gatherings, brand activations, and higher-visibility events.
 
-Tier B is quoted. Do not bury it inside Basic unless the quote reflects the load-in, equipment, and setup time.
+## Premium Add-On Gate
 
-## Add-on Menu
+These require GoBar Pro or GoBar Elite:
 
-**Ice & presentation:** pressed spheres, Collins spears, specialty cuts, extra clear-ice volume, branded cubes, and premium garnish upgrades.
+- Clear ice upgrades.
+- Smoke or smoke bubbles.
+- Espresso martinis.
+- Custom infusions.
+- Organic California dehydrated citrus.
+- Premium garnish styling.
+- Custom menu display/signage.
+- Any other visual/craft upgrade that depends on controlled workflow, ice handling, or guest-facing presentation.
 
-**Menu & production:** signature cocktail development, batching support, paired low- and no-alcohol options, espresso martinis, smoke, bubbles, foams, and custom menu cards.
+Use this explanation when needed:
 
-**Service & staffing:** additional bartenders, extended active service, late-night extensions, weddings, corporate events, and brand activations.
+> Premium upgrades require a Full Proof bar rental so we can control presentation, workflow, ice handling, and guest experience.
 
-**Logistics:** travel, parking, difficult load-in, venue access, outdoor heat, tight prep windows, and unusual timing.
+## Concierge Bundle
+
+**Total Wine guidance + ice service: +$100**
+
+- Keeps purchasing and ice logistics cleaner for the host.
+- Requires GoBar if the ice service portion is included.
+- Can be recommended as a launch friction-killer, especially for hosts who want the easiest path.
+
+## Booking Flow
+
+Public booking language should collect:
+
+1. Guest-count band.
+2. Service hours.
+3. Menu path: rotating, custom, or choose later.
+4. GoBar selection: none, Pro, or Elite.
+5. Add-on interests.
+
+Auto-selection logic:
+
+- 0-40 guests: recommend GoBar Pro.
+- 41-125 guests: require GoBar Elite.
+- 126+ guests: manual review.
+- Premium add-on selected with no GoBar: block instant checkout and explain the GoBar requirement.
 
 ## Quote Language
 
 ### Opening Anchor
 
-"For good-fit small private parties, Launch Special Basic is **$699 for 3 hours**. If you want Full Proof to handle service cups and standard garnishes, the launch path is **$799**. The first 10 eligible `FOUNDER` bookings get Basic for **$599** and keep the **$699** base rate for similar future parties."
+"For good-fit private events, base bartending is **$599 for 3 hours** or **$699 for 4 hours**. GoBar Pro adds **$100** for a polished smaller-event footprint, and GoBar Elite adds **$200** for 41-125 guests or smaller events that want the larger luxury setup. You can hold the date now and choose the cocktail menu later."
 
 ### Deposit
 
-"To hold the date, the deposit is 50%: **$349.50** for Basic or **$399.50** for Cups + Garnishes. If `FOUNDER` applies to Basic, the deposit is **$299.50**."
+"Instant-book eligible events use a 50% date-hold deposit based on the selected base service, GoBar path, and any direct concierge bundle."
 
 ### Scope Protection
 
-"Alcohol is host-provided. Basic hosts also provide drinkware and garnish groceries from my list; the $799 path lets Full Proof handle service cups and the standard garnish kit."
+"Premium upgrades like clear ice features, smoke, espresso martinis, custom infusions, organic dehydrated citrus, garnish styling, and menu signage require GoBar Pro or Elite so the event is set up to look and run properly."
 
-### Premium Upgrade
+### Manual Review
 
-"If you want the full self-contained mobile craft bar, extra service time, specialty ice, smoke, espresso, or additional staffing, I’ll quote those clearly so the event is priced to run well."
-
-## Booking Flow
-
-Public booking language should separate three decisions:
-
-1. Package: Basic, Cups + Garnishes, or Custom Quote.
-2. Intent: checking availability, ready for quote, or reserve Launch Special with 50% deposit.
-3. Promo: optional `FOUNDER`.
-
-Do not ask visitors to choose both "Launch Special" and "50% deposit" as if those are separate add-ons.
+"For 126+ guests, weddings with complex venue rules, brand activations, long service windows, or unusual load-ins, I’ll review the event before payment so staffing, bar footprint, and service pace are protected."
 
 ## Related Files
 
+- `index.html`
+- `netlify/functions/create-checkout-session.js`
+- `agent-system/package-sheet.md`
 - `agent-system/agents/offer-architect.md`
 - `agent-system/agents/sales-accounting-manager.md`
-- `agent-system/package-sheet.md`
 - `agent-system/client-quote-response-template.md`

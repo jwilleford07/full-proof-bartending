@@ -32,7 +32,7 @@ Run Sales & Accounting. Review new leads, quote/deposit clarity, and money follo
 ```
 
 ```text
-Check whether this quote protects the launch special and avoids giving away custom scope.
+Check whether this quote protects the GoBar rules and avoids giving away custom scope.
 ```
 
 ### Marketing Manager
@@ -48,7 +48,7 @@ Turn this event into a post, a story caption, and a review request. Keep it prem
 ### Website QA
 
 ```text
-Run Site QA before deploy. Check pricing, FOUNDER language, form logic, broken assets, and mobile readability.
+Run Site QA before deploy. Check GoBar pricing, form logic, broken assets, stale promo-code language, and mobile readability.
 ```
 
 ## Approval Rules
@@ -67,11 +67,13 @@ Run Site QA before deploy. Check pricing, FOUNDER language, form logic, broken a
 
 ## Pricing Language To Protect
 
-- Public launch special: `$699` basic 3-hour service for good-fit small private parties.
-- First 10 `FOUNDER` bookings: `$599` first booking.
-- Founder lock: first 10 `FOUNDER` clients keep the `$699` base rate for future similar parties.
-- Cups and garnishes package: `$799`.
-- 50% date-hold deposit after availability is confirmed.
+- Base Bartending: `$599 / 3 hours` or `$699 / 4 hours`.
+- GoBar Pro: `+$100`, recommended for events up to `40` guests when presentation matters.
+- GoBar Elite: `+$200`, required for `41-125` guests and optional for smaller events that want the larger luxury footprint.
+- `126+` guests require manual review before instant booking.
+- Premium visual/craft upgrades require GoBar Pro or Elite.
+- Total Wine guidance + ice service: `+$100`; requires GoBar when ice service is included.
+- 50% date-hold deposit for instant-book eligible events.
 
 ## When To Add More Access
 

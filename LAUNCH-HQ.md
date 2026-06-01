@@ -14,9 +14,9 @@ Full Proof Bartending is a luxury mobile bartending service for private events a
 
 - Professional self-contained craft bar setup.
 - Power, running water, rinser, LED lighting, organized tools, and ice press capability.
-- Cups and standard garnishes included in the $799 launch path or scoped into custom quotes.
-- Hand-carved clear ice included at every event.
-- Specialty ice add-ons including pressed spheres, Collins spears, and specialty cuts.
+- GoBar Pro and GoBar Elite rental paths that protect presentation and workflow.
+- Clear ice expertise as proof; premium ice upgrades are scoped with GoBar Pro or Elite.
+- Premium add-ons including smoke, espresso martinis, custom infusions, organic dehydrated citrus, premium garnish styling, and menu display/signage.
 - Founder expertise from building a clear ice program from zero into real Los Angeles bar and restaurant accounts.
 - Southern hospitality with Southern California polish.
 

@@ -21,9 +21,9 @@ Your job is to help Joe launch, sell, improve, and operate the business. Be proa
 - Domain registrar/DNS: Namecheap
 - Business email: `joe@fullproofbartending.com`
 - Phone: Google Voice, `5624448030`, displayed as `(562) 444-8030`
-- Primary CTA: `Check availability & get a quote`
+- Primary CTA: `Reserve your date`
 - Secondary CTAs: `Review packages`, `Call or text (562) 444-8030`
-- Booking flow today: mailto inquiry plus phone CTA. If a booking tool is added later, prefer the simplest reliable option that shows availability and does not weaken conversion.
+- Booking flow today: homepage inquiry form plus instant-book Stripe date hold for eligible base-service events. Manual-review events still submit without checkout.
 - Joe’s unavailable hours for scheduling: Sunday 9-3, Monday 9-3, Tuesday until 11.
 
 ## Brand And Offer Positioning
@@ -37,22 +37,23 @@ Protect this framing:
 - Calm hospitality, warm but not corny.
 - Clear ice as a visible premium detail.
 - Premium add-ons create margin.
-- Launch pricing is intentionally approachable while the first public portfolio is built.
+- Base pricing is intentionally approachable while GoBar rental and premium add-ons protect margin.
 
-Current launch pricing:
+Current public pricing:
 
-- Launch Special Basic: `$699 / 3 hours`
-- Launch Special Cups + Garnishes: `$799 / 3 hours`
-- First 10 eligible `FOUNDER` bookings: Basic for `$599`
-- Founder rate lock: first 10 keep the `$699` base rate for similar future parties
-- Launch clear ice: included for Full Proof-served cocktails
-- Premium add-ons: quoted by event
+- Base Bartending: `$599 / 3 hours`
+- Base Bartending: `$699 / 4 hours`
+- GoBar Pro: `+$100`, recommended for up to `40` guests
+- GoBar Elite: `+$200`, required for `41-125` guests
+- `126+` guests: manual review before instant booking
+- Total Wine guidance + ice service: `+$100`, requiring GoBar when ice service is included
+- Premium visual/craft add-ons: require GoBar Pro or Elite
 
 Use premium language:
 
-- “Launch hospitality upgrade”
-- “Complimentary enhancements for our first ten events”
-- “We’re building our published portfolio”
+- “Luxury instant-book mobile bartending”
+- “Premium GoBar footprint”
+- “Hold the date now, choose the menu later”
 
 Avoid:
 
@@ -160,7 +161,7 @@ Recent important commits:
 - `32bc685` - Add site QA checks
 - `9337b1a` - Update bar setup photography
 - `ed070ad` - Update cocktail photography
-- `d7563b0` - Update launch pricing
+- `d7563b0` - Update pricing
 - `daca726` - Send booking inquiries to Joe
 
 ## Image Process Used
@@ -197,7 +198,7 @@ Known audit issues already addressed or partially addressed:
 - `robots.txt` should point at sitemap: addressed.
 - Contact conversion needed improvement: phone CTA and mailto inquiry are live.
 - Old-brand proof imagery needed removal: old front-facing “Two for the Road” image is no longer referenced.
-- Pricing needed launch-friendly framing: Basic is `$699 / 3 hours`, Cups + Garnishes is `$799 / 3 hours`, first 10 `FOUNDER` Basic bookings are `$599`, and clear ice remains included for Full Proof-served cocktails.
+- Pricing needed low-friction premium framing: Base Bartending is `$599 / 3 hours` or `$699 / 4 hours`, GoBar Pro is `+$100`, GoBar Elite is `+$200`, 41-125 guests require Elite, 126+ guests require manual review, and premium upgrades require GoBar Pro or Elite.
 
 Still worth improving later:
 

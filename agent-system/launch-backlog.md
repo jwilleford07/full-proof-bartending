@@ -12,7 +12,7 @@
 
 - Make sure the hero sells mobile bartending immediately.
 - Keep the professional setup section prominent.
-- Keep Basic vs Cups + Garnishes package language clear; do not imply drinkware/garnishes are included in Basic.
+- Keep base service vs GoBar rental language clear; do not imply premium visual/craft add-ons are available without GoBar Pro or Elite.
 - Use the ice story as credibility, not the main sales pitch.
 - Add founder hospitality copy with Atlanta roots in a restrained way.
 - Add a clean gallery with no blank tiles.
@@ -21,9 +21,9 @@
 
 ## Offers
 
-- Define 2-3 core service packages.
-- Define clear ice inclusions.
-- Price specialty ice add-ons: pressed spheres, Collins spears, logo ice, custom garnish.
+- Keep the public ladder simple: Base Bartending, GoBar Pro, GoBar Elite, and manual review for 126+ guests.
+- Define clear ice and premium garnish add-ons as GoBar-gated upgrades.
+- Price specialty ice add-ons only after the base GoBar rules stay stable.
 - Define what the client provides versus what Full Proof provides.
 - Add menu-efficiency planning as a premium hospitality differentiator: overlapping ingredients, smarter shopping, fewer unused bottles, and NA riffs built from the same craft system.
 - Build a quote calculator later, only after the simple packages are clear.

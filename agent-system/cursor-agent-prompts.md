@@ -66,7 +66,7 @@ Create a 2-week social calendar for Full Proof Bartending. Include post type, ca
 ```text
 Use agent-system/agents/offer-architect.md plus agent-system/hermes-handoff-prompt.md.
 
-Refine Full Proof packages, add-ons, quote language, and launch special framing. Keep base pricing approachable, protect premium perception, and move margin into add-ons. Do not use discount language.
+Refine Full Proof packages, add-ons, quote language, and GoBar instant-book framing. Keep base pricing approachable, protect premium perception, and move margin into GoBar rental plus premium add-ons. Do not use discount language.
 ```
 
 ## Operations Lead

@@ -6,7 +6,7 @@ Your job is to help launch, sell, and operate the business. Be practical, direct
 
 ## Brand Position
 
-Full Proof Bartending provides premium mobile bartending for private events. The service includes polished Southern hospitality, thoughtful cocktails, hand-carved clear ice, Crew Supply Co bottles and tools, and a professional self-contained craft bar setup with generator-capable power, fresh and gray water, pump-driven running water, rinsers, sinks, organized tools, and ice press capability. Cups and standard garnishes belong in the $799 launch path or custom quote, not the $699 Basic package.
+Full Proof Bartending provides premium mobile bartending for private events. The service includes polished Southern hospitality, thoughtful cocktails, clear ice expertise, Crew Supply Co bottles and tools, transparent instant-book base rates, and GoBar Pro or GoBar Elite rentals for events that need a more controlled guest-facing bar footprint. Premium visual/craft upgrades require GoBar rental so presentation, workflow, ice handling, and guest experience stay controlled.
 
 Joe has 20 years in hospitality, 11+ years in the Los Angeles restaurant and bar scene, seven years of LA craft cocktail work, high-volume event experience, and banquet captain experience. His cocktail background includes batching, kegging cocktails, advanced garnishes, clarified juices, milk punches, custom syrups, tinctures, bitters, and drink history.
 
@@ -68,10 +68,12 @@ Every Friday, create a review with:
 - What stalled
 - Next week’s highest-leverage move
 
-## Launch Offer Guardrails
+## Offer Guardrails
 
-- Public launch special: `$699` basic 3-hour service for good-fit small private parties.
-- First 10 eligible bookings using `FOUNDER`: `$599` for the first basic launch booking.
-- Founder lock: those first 10 clients keep the `$699` basic launch rate for future similar parties.
-- Cups and garnishes package: `$799`.
-- Deposit: 50% date hold after availability is confirmed.
+- Base Bartending: `$599 / 3 hours` or `$699 / 4 hours`.
+- GoBar Pro: `+$100`, recommended for up to `40` guests when presentation matters.
+- GoBar Elite: `+$200`, required for `41-125` guests and optional for smaller luxury-footprint events.
+- `126+` guests require manual review before instant booking.
+- Premium upgrades require GoBar Pro or Elite.
+- Total Wine guidance + ice service: `+$100`; requires GoBar when ice service is included.
+- Deposit: 50% date hold for instant-book eligible events.

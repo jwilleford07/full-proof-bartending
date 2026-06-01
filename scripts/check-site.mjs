@@ -52,12 +52,15 @@ const requiredHomepagePatterns = [
   /joe@fullproofbartending\.com/i,
   /\(?562\)?[\s.-]*444[\s.-]*8030/,
   /Reserve your date/i,
-  /Launch Special/i,
-  /FOUNDER/i,
-  /\$699\s*\/\s*3 hours/i,
+  /instant-book/i,
+  /\$599\s*\/\s*3 hours/i,
+  /\$699\s*\/\s*4 hours/i,
+  /GoBar Pro/i,
+  /GoBar Elite/i,
+  /Premium upgrades require/i,
+  /Total Wine guidance \+ ice service/i,
   /premium Tossware/i,
-  /standard garnishes/i,
-  /Launch Special becomes \$599/i,
+  /premium garnish styling/i,
   /fresh-pulled espresso/i,
   /date-hold deposit/i,
   /full-proof-event-inquiry/i,
@@ -150,7 +153,7 @@ for (const file of htmlFiles) {
 if (exists("index.html")) {
   const homepage = read("index.html");
   for (const pattern of requiredHomepagePatterns) {
-    if (!pattern.test(homepage)) warnings.push(`Homepage may be missing launch/conversion signal: ${pattern}`);
+    if (!pattern.test(homepage)) warnings.push(`Homepage may be missing booking/conversion signal: ${pattern}`);
   }
 }
 

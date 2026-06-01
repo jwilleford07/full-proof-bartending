@@ -40,13 +40,13 @@ You are paying $2,500 just for the drinks. And you are drinking from their menu,
 
 Let's run the exact same 30-person, 4-hour party scenario with Full Proof Bartending:
 
-1. **The Service Fee:** $699 for Basic or $799 with Cups + Garnishes
-   *This includes the bartender, bar tools, menu planning, and our signature hand-carved clear ice. The $799 path adds service cups and a standard garnish kit.*
+1. **The Service Fee:** $699 for 4-hour base bartending, with GoBar Pro available for +$100 when presentation matters
+   *This includes the bartender, bar tools, menu planning, setup, service, cleanup, and shopping guidance. Premium upgrades like clear ice displays, smoke, espresso martinis, custom infusions, and garnish styling require GoBar Pro or Elite.*
 
 2. **The Alcohol (Retail Cost):** ~$350 to $400
    *If you are serving 120 drinks, you need about 7-8 bottles of spirits. At Total Wine or Costco, decent mid-tier to premium spirits (Tito's, Maker's Mark, Espolòn) run $25-$40 a bottle. Add in mixers, juices, and a wine/beer buffer, and a $400 budget is actually very generous.*
 
-**Your Total Cost: ~$1,099**
+**Your Total Cost: ~$1,099 with GoBar Pro**
 
 By paying the flat fee and buying your alcohol at retail, you just saved **over $1,400** on a 30-person party. And if you buy from places like Total Wine or Costco, you can usually return unopened, unchilled bottles the next day.
 

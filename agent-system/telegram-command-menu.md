@@ -38,7 +38,7 @@ Give me stronger calls to action for Full Proof that feel premium and direct.
 
 `/packages`
 
-Draft a simple package structure for Full Proof Bartending, including clear ice, the $699 Basic path, the $799 Cups + Garnishes path, professional setup, and optional add-ons like pressed spheres.
+Draft a simple package structure for Full Proof Bartending using the current ladder: Base Bartending at $599 / 3 hours or $699 / 4 hours, GoBar Pro +$100, GoBar Elite +$200, premium add-ons requiring GoBar, and 126+ guests requiring manual review.
 
 `/quote`
 
