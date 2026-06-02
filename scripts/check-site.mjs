@@ -87,6 +87,14 @@ const requiredHomepagePatterns = [
   /Orange County|OC/i,
 ];
 
+const requiredBookingPatterns = [
+  /Check My Date/i,
+  /full-proof-event-inquiry/i,
+  /HighLevel or Google Calendar/i,
+  /temporarily unavailable|working form|valid HighLevel or Google Calendar booking URL/i,
+  /joe@fullproofbartending\.com|\(?949\)?[\s.-]*771[\s.-]*7148/i,
+];
+
 function exists(relativePath) {
   return fs.existsSync(path.join(root, relativePath));
 }
@@ -163,6 +171,13 @@ if (exists("index.html")) {
   const homepage = read("index.html");
   for (const pattern of requiredHomepagePatterns) {
     if (!pattern.test(homepage)) warnings.push(`Homepage may be missing booking/conversion signal: ${pattern}`);
+  }
+}
+
+if (exists("booking/index.html")) {
+  const bookingPage = read("booking/index.html");
+  for (const pattern of requiredBookingPatterns) {
+    if (!pattern.test(bookingPage)) failures.push(`Booking page is missing required availability signal: ${pattern}`);
   }
 }
 
