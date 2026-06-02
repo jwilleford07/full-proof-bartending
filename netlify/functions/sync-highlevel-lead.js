@@ -11,6 +11,12 @@ function highLevelConfig() {
     locationId: env("FULL_PROOF_HIGHLEVEL_LOCATION_ID", "HIGHLEVEL_LOCATION_ID").trim(),
     pipelineId: env("FULL_PROOF_HIGHLEVEL_EVENT_PIPELINE_ID", "HIGHLEVEL_EVENT_PIPELINE_ID").trim(),
     stageId: env("FULL_PROOF_HIGHLEVEL_EVENT_STAGE_ID", "HIGHLEVEL_EVENT_STAGE_ID").trim(),
+    stageNeedsReplyId: env("FULL_PROOF_HIGHLEVEL_EVENT_STAGE_NEEDS_REPLY", "HIGHLEVEL_EVENT_STAGE_NEEDS_REPLY").trim(),
+    stageInstantBookEligibleId: env(
+      "FULL_PROOF_HIGHLEVEL_EVENT_STAGE_INSTANT_BOOK_ELIGIBLE",
+      "HIGHLEVEL_EVENT_STAGE_INSTANT_BOOK_ELIGIBLE"
+    ).trim(),
+    stageManualReviewId: env("FULL_PROOF_HIGHLEVEL_EVENT_STAGE_MANUAL_REVIEW", "HIGHLEVEL_EVENT_STAGE_MANUAL_REVIEW").trim(),
     assignedTo: env("FULL_PROOF_HIGHLEVEL_ASSIGNED_TO", "HIGHLEVEL_ASSIGNED_TO").trim(),
     createOwnerTasks: !["0", "false", "no", "off"].includes(
       env("FULL_PROOF_HIGHLEVEL_CREATE_OWNER_TASKS", "HIGHLEVEL_CREATE_OWNER_TASKS").trim().toLowerCase()
@@ -97,6 +103,13 @@ function ownerTaskBody(data, opportunityId = "") {
   ].filter((line) => line !== "").join("\n");
 }
 
+function ownerTaskTitle(data) {
+  const status = instantBookStatus(data);
+  if (status === "Eligible") return "Send package recommendation";
+  if (status === "Manual Review") return "Review event risk";
+  return "Qualify event fit";
+}
+
 function sameDayDueDate() {
   return new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString();
 }
@@ -112,6 +125,20 @@ function instantBookStatus(data) {
   if (premiumSelected && barSelection === "none") return "Manual Review";
   if (data.booking_intent === "Reserve instant-book package") return "Eligible";
   return "Not Yet Qualified";
+}
+
+function pipelineStageIdFor(data, config) {
+  const status = instantBookStatus(data);
+  if (status === "Eligible" && config.stageInstantBookEligibleId) {
+    return config.stageInstantBookEligibleId;
+  }
+  if (status === "Manual Review" && config.stageManualReviewId) {
+    return config.stageManualReviewId;
+  }
+  if (config.stageNeedsReplyId) {
+    return config.stageNeedsReplyId;
+  }
+  return config.stageId;
 }
 
 function guestCountBandValue(value = "") {
@@ -206,7 +233,7 @@ async function createOwnerTask(contactId, data, opportunityId = "") {
   }
 
   return highLevelRequest(`/contacts/${encodeURIComponent(contactId)}/tasks`, compact({
-    title: "Qualify event fit",
+    title: ownerTaskTitle(data),
     body: ownerTaskBody(data, opportunityId),
     dueDate: sameDayDueDate(),
     completed: false,
@@ -286,11 +313,13 @@ exports.handler = async (event) => {
       data.guest_count ? `${data.guest_count} guests` : "",
     ].filter(Boolean).join(" | ");
 
+    const pipelineStageId = pipelineStageIdFor(data, config);
+
     const opportunity = await highLevelRequest("/opportunities/", compact({
       locationId: config.locationId,
       contactId,
       pipelineId: config.pipelineId,
-      pipelineStageId: config.stageId,
+      pipelineStageId,
       assignedTo: config.assignedTo,
       name: opportunityName,
       status: "open",
@@ -318,6 +347,8 @@ exports.handler = async (event) => {
         taskError,
         contactId,
         opportunityId,
+        pipelineStageId,
+        instantBookStatus: instantBookStatus(data),
       }),
     };
   } catch (error) {
