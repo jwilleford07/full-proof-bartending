@@ -7,6 +7,7 @@ const warnings = [];
 
 const requiredFiles = [
   "index.html",
+  "booking/index.html",
   "pricing/index.html",
   "custom-mobile-bar/index.html",
   "why-mobile-bartender/index.html",
@@ -71,6 +72,7 @@ const requiredHomepagePatterns = [
   /Privacy Policy/i,
   /sms_consent/i,
   /full-proof-event-inquiry/i,
+  /\/booking\//i,
   /self-contained/i,
   /Full Proof bar build/i,
   /smoke bubbles/i,
@@ -176,7 +178,7 @@ if (exists("sitemap.xml")) {
   if (!/<loc>https:\/\/fullproofbartending\.com\/<\/loc>/i.test(sitemap)) {
     failures.push("sitemap.xml must include the canonical homepage URL.");
   }
-  for (const slug of ["pricing", "custom-mobile-bar", "why-mobile-bartender", "clear-ice", "smoked-cocktails"]) {
+  for (const slug of ["booking", "pricing", "custom-mobile-bar", "why-mobile-bartender", "clear-ice", "smoked-cocktails"]) {
     if (!new RegExp(`<loc>https://fullproofbartending\\.com/${slug}/</loc>`).test(sitemap)) {
       failures.push(`sitemap.xml must include /${slug}/.`);
     }
