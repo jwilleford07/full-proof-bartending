@@ -16,7 +16,7 @@ Build **discoverability and trust** for premium mobile bartending in **Los Angel
 - **Proof and permissions:** Do not invent testimonials, venue names, or portfolio claims. Use real event details only when permission is documented.
 - **Local pages:** Add **city/occasion landing pages** only if they can stay accurate and maintained; otherwise strengthen the homepage + a focused blog cluster.
 - **Technical content debt:** Longer-term, consider **FAQ structured data** and a simpler **booking/availability** flow; blog CTAs should match today’s **mailto + phone** primary path.
-- **Off-site alignment:** Keep language consistent with **Google Business Profile** (service area, categories, phone `562-444-8030`, email).
+- **Off-site alignment:** Keep language consistent with **Google Business Profile** (service area, categories, phone `949-771-7148`, email).
 
 ## Internal link targets (homepage anchors)
 
@@ -33,7 +33,7 @@ Use these as the primary internal destinations until dedicated landing pages exi
 | About | `https://fullproofbartending.com/#about` | Founder story, brand voice |
 | Contact / quote | `https://fullproofbartending.com/#contact` | **Primary CTA** on every post |
 
-**Default CTA copy (match site):** “Check availability & get a quote” → `#contact`. Secondary: “Review packages” → `#packages`; “Call or text (562) 444-…” when phone suits the intent.
+**Default CTA copy (match site):** “Check availability & get a quote” → `#contact`. Secondary: “Review packages” → `#packages`; “Call or text (949) 771-7148” when phone suits the intent.
 
 ---
 

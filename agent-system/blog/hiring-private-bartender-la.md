@@ -92,7 +92,7 @@ When you are ready, share your date, approximate guest count, venue type (home, 
 
 **[Check availability & get a quote →](https://fullproofbartending.com/#contact)**
 
-If your schedule is tight or you need same-week coordination, calling or texting **(562) 444-8030** is often the fastest path.
+If your schedule is tight or you need same-week coordination, calling or texting **(949) 771-7148** is often the fastest path.
 
 **[Review packages & hour blocks →](https://fullproofbartending.com/#packages)**
 

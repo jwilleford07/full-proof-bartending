@@ -116,6 +116,7 @@ function metadataFrom(data, checkoutPackage) {
     name: data.name,
     phone: data.phone,
     contact_preference: data.contact_preference,
+    sms_consent: data.sms_consent,
     event_date: data.event_date,
     service_window: data.service_window,
     location: data.location,
@@ -135,6 +136,9 @@ function metadataFrom(data, checkoutPackage) {
     extra_bartender_hours: data.extra_bartender_hours,
     premium_notes: data.premium_notes,
     notes: data.notes,
+    lead_source: data.lead_source,
+    lead_source_detail: data.lead_source_detail,
+    lead_source_notes: data.lead_source_notes,
     source: data.source,
   };
 

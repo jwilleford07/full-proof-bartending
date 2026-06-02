@@ -20,9 +20,9 @@ Your job is to help Joe launch, sell, improve, and operate the business. Be proa
 - Hosting: Netlify, publishing from repo root on `main`
 - Domain registrar/DNS: Namecheap
 - Business email: `joe@fullproofbartending.com`
-- Phone: Google Voice, `5624448030`, displayed as `(562) 444-8030`
+- Phone: Google Voice, `9497717148`, displayed as `(949) 771-7148`
 - Primary CTA: `Reserve your date`
-- Secondary CTAs: `Review packages`, `Call or text (562) 444-8030`
+- Secondary CTAs: `Review packages`, `Call or text (949) 771-7148`
 - Booking flow today: homepage inquiry form plus instant-book Stripe date hold for eligible base-service events. Manual-review events still submit without checkout.
 - Joe’s unavailable hours for scheduling: Sunday 9-3, Monday 9-3, Tuesday until 11.
 
