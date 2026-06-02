@@ -12,6 +12,9 @@ function highLevelConfig() {
     pipelineId: env("FULL_PROOF_HIGHLEVEL_EVENT_PIPELINE_ID", "HIGHLEVEL_EVENT_PIPELINE_ID").trim(),
     stageId: env("FULL_PROOF_HIGHLEVEL_EVENT_STAGE_ID", "HIGHLEVEL_EVENT_STAGE_ID").trim(),
     assignedTo: env("FULL_PROOF_HIGHLEVEL_ASSIGNED_TO", "HIGHLEVEL_ASSIGNED_TO").trim(),
+    createOwnerTasks: !["0", "false", "no", "off"].includes(
+      env("FULL_PROOF_HIGHLEVEL_CREATE_OWNER_TASKS", "HIGHLEVEL_CREATE_OWNER_TASKS").trim().toLowerCase()
+    ),
     customFieldIds: parseJsonMapping(
       env("FULL_PROOF_HIGHLEVEL_EVENT_CUSTOM_FIELD_IDS", "HIGHLEVEL_EVENT_CUSTOM_FIELD_IDS")
     ),
@@ -75,6 +78,27 @@ function leadSummary(data) {
     `SMS consent: ${data.sms_consent ? "Yes" : "No"}`,
     `Instant-book status: ${instantBookStatus(data)}`,
   ].join("\n");
+}
+
+function ownerTaskBody(data, opportunityId = "") {
+  return [
+    "Confirm event fit and decide the next pipeline move.",
+    "",
+    "Checklist:",
+    "- Event date, city/venue, guest count, event type, and service window",
+    "- Alcohol plan, GoBar interest, menu path, and preferred contact method",
+    "- Whether this is instant-book eligible, manual review, or missing info",
+    "- If eligible, send the simplest package recommendation and date-hold next step",
+    "- If review is needed, identify the risk before quoting",
+    "",
+    opportunityId ? `Opportunity ID: ${opportunityId}` : "",
+    "",
+    leadSummary(data),
+  ].filter((line) => line !== "").join("\n");
+}
+
+function sameDayDueDate() {
+  return new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString();
 }
 
 function instantBookStatus(data) {
@@ -171,6 +195,25 @@ function contactIdFrom(response) {
   return response?.contact?.id || response?.id || response?.contactId || "";
 }
 
+function opportunityIdFrom(response) {
+  return response?.opportunity?.id || response?.id || response?.opportunityId || "";
+}
+
+async function createOwnerTask(contactId, data, opportunityId = "") {
+  const config = highLevelConfig();
+  if (!config.createOwnerTasks || !contactId) {
+    return { skipped: true, reason: config.createOwnerTasks ? "Missing contact id." : "Owner task creation disabled." };
+  }
+
+  return highLevelRequest(`/contacts/${encodeURIComponent(contactId)}/tasks`, compact({
+    title: "Qualify event fit",
+    body: ownerTaskBody(data, opportunityId),
+    dueDate: sameDayDueDate(),
+    completed: false,
+    assignedTo: config.assignedTo,
+  }));
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return {
@@ -253,6 +296,15 @@ exports.handler = async (event) => {
       status: "open",
       customFields: eventCustomFields.length ? eventCustomFields : undefined,
     }));
+    const opportunityId = opportunityIdFrom(opportunity);
+
+    let taskResult = null;
+    let taskError = "";
+    try {
+      taskResult = await createOwnerTask(contactId, data, opportunityId);
+    } catch (error) {
+      taskError = error.message || "HighLevel task sync failed.";
+    }
 
     return {
       statusCode: 200,
@@ -261,8 +313,11 @@ exports.handler = async (event) => {
         configured: true,
         contactSynced: true,
         opportunitySynced: true,
+        taskSynced: Boolean(taskResult?.task?.id || taskResult?.id || taskResult?.taskId),
+        taskId: taskResult?.task?.id || taskResult?.id || taskResult?.taskId || "",
+        taskError,
         contactId,
-        opportunityId: opportunity?.opportunity?.id || opportunity?.id || "",
+        opportunityId,
       }),
     };
   } catch (error) {
