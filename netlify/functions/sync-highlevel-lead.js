@@ -12,7 +12,23 @@ function highLevelConfig() {
     pipelineId: env("FULL_PROOF_HIGHLEVEL_EVENT_PIPELINE_ID", "HIGHLEVEL_EVENT_PIPELINE_ID").trim(),
     stageId: env("FULL_PROOF_HIGHLEVEL_EVENT_STAGE_ID", "HIGHLEVEL_EVENT_STAGE_ID").trim(),
     assignedTo: env("FULL_PROOF_HIGHLEVEL_ASSIGNED_TO", "HIGHLEVEL_ASSIGNED_TO").trim(),
+    customFieldIds: parseJsonMapping(
+      env("FULL_PROOF_HIGHLEVEL_EVENT_CUSTOM_FIELD_IDS", "HIGHLEVEL_EVENT_CUSTOM_FIELD_IDS")
+    ),
   };
+}
+
+function parseJsonMapping(raw = "") {
+  if (!String(raw).trim()) return {};
+  try {
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
+    return Object.fromEntries(
+      Object.entries(parsed).filter(([, value]) => String(value || "").trim())
+    );
+  } catch {
+    return {};
+  }
 }
 
 function selectedInterests(data) {
@@ -74,10 +90,58 @@ function instantBookStatus(data) {
   return "Not Yet Qualified";
 }
 
-async function highLevelRequest(path, payload) {
+function guestCountBandValue(value = "") {
+  if (value === "0-40") return "Up to 40";
+  return value;
+}
+
+function barSelectionValue(value = "") {
+  if (value === "none") return "None";
+  if (value === "pro") return "GoBar Pro";
+  if (value === "elite") return "GoBar Elite";
+  return value;
+}
+
+function packageRecommendationValue(value = "") {
+  if (!value || value === "Not sure yet") return "";
+  if (value.includes("3 hours")) return "Base Bartending - 3 hours";
+  if (value.includes("4 hours")) return "Base Bartending - 4 hours";
+  return value;
+}
+
+function buildEventCustomFields(data, fieldIds = {}) {
+  const fieldValueMap = {
+    lead_source: data.lead_source || "Website",
+    lead_source_detail: data.lead_source_detail || data.lead_source || "Website",
+    best_contact_method: data.contact_preference,
+    event_type: data.event_type,
+    event_date: data.event_date,
+    venue: data.location,
+    guest_count: data.guest_count,
+    guest_count_band: guestCountBandValue(data.guest_count_band),
+    service_hours: data.service_window,
+    event_time_window: data.service_window,
+    menu_path: data.menu_path,
+    gobar_selection: barSelectionValue(data.bar_selection),
+    addon_interest: selectedInterests(data).join(", "),
+    instant_book_status: instantBookStatus(data),
+    package_recommendation: packageRecommendationValue(data.package_choice),
+    quote_status: "Not Sent",
+    contract_status: "Not Sent",
+    deposit_status: "Not Sent",
+    review_status: "Not Requested",
+    proof_status: "Not Requested",
+  };
+
+  return Object.entries(fieldIds)
+    .map(([key, id]) => ({ id, field_value: fieldValueMap[key] }))
+    .filter((field) => field.id && field.field_value !== undefined && field.field_value !== null && String(field.field_value).trim() !== "");
+}
+
+async function highLevelRequest(path, payload, method = "POST") {
   const config = highLevelConfig();
   const response = await fetch(`${HIGHLEVEL_API_BASE_URL}${path}`, {
-    method: "POST",
+    method,
     headers: {
       Authorization: `Bearer ${config.accessToken}`,
       "Content-Type": "application/json",
@@ -144,6 +208,8 @@ exports.handler = async (event) => {
   ].filter(Boolean);
 
   try {
+    const eventCustomFields = buildEventCustomFields(data, config.customFieldIds);
+
     const contact = await highLevelRequest("/contacts/upsert", compact({
       locationId: config.locationId,
       firstName,
@@ -153,6 +219,7 @@ exports.handler = async (event) => {
       phone: data.phone,
       source: data.lead_source_detail || data.lead_source || "Website",
       tags,
+      customFields: eventCustomFields.length ? eventCustomFields : undefined,
     }));
 
     const contactId = contactIdFrom(contact);
@@ -176,16 +243,15 @@ exports.handler = async (event) => {
       data.guest_count ? `${data.guest_count} guests` : "",
     ].filter(Boolean).join(" | ");
 
-    const opportunity = await highLevelRequest("/opportunities/upsert", compact({
+    const opportunity = await highLevelRequest("/opportunities/", compact({
       locationId: config.locationId,
       contactId,
       pipelineId: config.pipelineId,
-      stageId: config.stageId,
+      pipelineStageId: config.stageId,
       assignedTo: config.assignedTo,
       name: opportunityName,
       status: "open",
-      source: data.lead_source_detail || data.lead_source || "Website",
-      notes: leadSummary(data),
+      customFields: eventCustomFields.length ? eventCustomFields : undefined,
     }));
 
     return {

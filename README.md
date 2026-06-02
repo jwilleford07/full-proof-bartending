@@ -18,12 +18,15 @@ Required production env vars for HighLevel capture:
 - `FULL_PROOF_HIGHLEVEL_LOCATION_ID`
 - `FULL_PROOF_HIGHLEVEL_EVENT_PIPELINE_ID`
 - `FULL_PROOF_HIGHLEVEL_EVENT_STAGE_ID`
+- `FULL_PROOF_HIGHLEVEL_EVENT_CUSTOM_FIELD_IDS`
 
 Optional env vars:
 
 - `FULL_PROOF_HIGHLEVEL_ASSIGNED_TO`
 - `FULL_PROOF_HIGHLEVEL_API_BASE_URL`
-- `FULL_PROOF_HIGHLEVEL_API_VERSION`
+- `FULL_PROOF_HIGHLEVEL_API_VERSION` (use `2023-02-21`)
+
+`FULL_PROOF_HIGHLEVEL_EVENT_CUSTOM_FIELD_IDS` should be a JSON object mapping website/intake field keys to HighLevel custom field IDs. If it is missing, the function still creates the contact and opportunity, but richer event details remain only in Netlify Forms.
 
 Stripe checkout still requires `STRIPE_SECRET_KEY`.
 
